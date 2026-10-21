@@ -1,1 +1,138 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmNvbnN0IHsgdCB9ID0gdXNlSTE4bigpCgp1c2VTZW9NZXRhKHsKICB0aXRsZTogdCgnYWJvdXQudGl0bGUnKSwKICBkZXNjcmlwdGlvbjogdCgnYWJvdXQuaW50cm8nKSwKfSkKCmNvbnN0IG1lbWJlcnMgPSBjb21wdXRlZCgoKSA9PiBbCiAgeyBudW1iZXI6ICcwMScsIHJvbGU6ICdQQVBBJywgdGV4dDogdCgnYWJvdXQubWVtYmVyT25lJyksIGNvbG9yOiAnI2U4YjY1YicgfSwKICB7IG51bWJlcjogJzAyJywgcm9sZTogJ01BTUEnLCB0ZXh0OiB0KCdhYm91dC5tZW1iZXJUd28nKSwgY29sb3I6ICcjZWY3OTVjJyB9LAogIHsgbnVtYmVyOiAnMDMnLCByb2xlOiAnS0lERE8nLCB0ZXh0OiB0KCdhYm91dC5tZW1iZXJUaHJlZScpLCBjb2xvcjogJyM4ZGI5YTUnIH0sCl0pCgpjb25zdCB0aW1lbGluZSA9IGNvbXB1dGVkKCgpID0+IFsKICB7CiAgICB5ZWFyOiAnMjAxOScsCiAgICB0aXRsZTogdCgnYWJvdXQudGltZWxpbmVPbmVUaXRsZScpLAogICAgdGV4dDogdCgnYWJvdXQudGltZWxpbmVPbmVUZXh0JyksCiAgfSwKICB7CiAgICB5ZWFyOiAnMjAyMicsCiAgICB0aXRsZTogdCgnYWJvdXQudGltZWxpbmVUd29UaXRsZScpLAogICAgdGV4dDogdCgnYWJvdXQudGltZWxpbmVUd29UZXh0JyksCiAgfSwKICB7CiAgICB5ZWFyOiAnMjAyNicsCiAgICB0aXRsZTogdCgnYWJvdXQudGltZWxpbmVUaHJlZVRpdGxlJyksCiAgICB0ZXh0OiB0KCdhYm91dC50aW1lbGluZVRocmVlVGV4dCcpLAogIH0sCl0pCjwvc2NyaXB0PgoKPHRlbXBsYXRlPgogIDxkaXY+CiAgICA8UGFnZUludHJvCiAgICAgIDpleWVicm93PSJ0KCdhYm91dC5leWVicm93JykiCiAgICAgIDp0aXRsZT0idCgnYWJvdXQudGl0bGUnKSIKICAgICAgOmludHJvPSJ0KCdhYm91dC5pbnRybycpIgogICAgLz4KCiAgICA8c2VjdGlvbiBjbGFzcz0icGFnZS1zaGVsbCBweS0xMiBzbTpweS0yMCI+CiAgICAgIDxkaXYgY2xhc3M9ImdyaWQgZ2FwLTEyIGxnOmdyaWQtY29scy1bMC44NWZyXzEuMTVmcl0gbGc6aXRlbXMtc3RhcnQiPgogICAgICAgIDxkaXYgY2xhc3M9ImxnOnN0aWNreSBsZzp0b3AtMzIiPgogICAgICAgICAgPHAgY2xhc3M9ImV5ZWJyb3ciPgogICAgICAgICAgICBPVVIgU1RPUlkKICAgICAgICAgIDwvcD4KICAgICAgICAgIDxoMiBjbGFzcz0iZGlzcGxheSBtdC01IHRleHQtW2NsYW1wKDIuOHJlbSw1dncsNS4ycmVtKV0gbGVhZGluZy1bMC45Nl0iPgogICAgICAgICAgICB7eyB0KCdhYm91dC5zdG9yeVRpdGxlJykgfX0KICAgICAgICAgIDwvaDI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJtdC03IHNwYWNlLXktNSB0ZXh0LXNtIGxlYWRpbmctNyB0ZXh0LW11dGVkIHNtOnRleHQtYmFzZSBzbTpsZWFkaW5nLTgiPgogICAgICAgICAgICA8cD57eyB0KCdhYm91dC5zdG9yeU9uZScpIH19PC9wPgogICAgICAgICAgICA8cD57eyB0KCdhYm91dC5zdG9yeVR3bycpIH19PC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxkaXYgY2xhc3M9ImdyaWQgZ2FwLTQgc206Z3JpZC1jb2xzLTMgbGc6Z3JpZC1jb2xzLTEgeGw6Z3JpZC1jb2xzLTMiPgogICAgICAgICAgPGRpdgogICAgICAgICAgICB2LWZvcj0ibWVtYmVyIGluIG1lbWJlcnMiCiAgICAgICAgICAgIDprZXk9Im1lbWJlci5udW1iZXIiCiAgICAgICAgICAgIGNsYXNzPSJzdXJmYWNlLWNhcmQgZmxleCBtaW4taC02NCBmbGV4LWNvbCByb3VuZGVkLVsxLjVyZW1dIHAtNSBzbTpwLTYgbGc6bWluLWgtNzIiCiAgICAgICAgICA+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LVswLjYycmVtXSBmb250LWJvbGQgdHJhY2tpbmctWzAuMTVlbV0gdGV4dC1tdXRlZCI+e3sgbWVtYmVyLm51bWJlciB9fTwvc3Bhbj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0ibXQtYXV0byBwdC0xNiI+CiAgICAgICAgICAgICAgPHNwYW4KICAgICAgICAgICAgICAgIGNsYXNzPSJibG9jayBzaXplLTMgcm91bmRlZC1mdWxsIgogICAgICAgICAgICAgICAgOnN0eWxlPSJ7IGJhY2tncm91bmRDb2xvcjogbWVtYmVyLmNvbG9yIH0iCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICA8cCBjbGFzcz0ibXQtNCB0ZXh0LVswLjY0cmVtXSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjE4ZW1dIHRleHQtbXV0ZWQiPgogICAgICAgICAgICAgICAge3sgbWVtYmVyLnJvbGUgfX0KICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgICAgPHAgY2xhc3M9Im10LTMgdGV4dC1zbSBsZWFkaW5nLTYiPgogICAgICAgICAgICAgICAge3sgbWVtYmVyLnRleHQgfX0KICAgICAgICAgICAgICA8L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJiZy1bdmFyKC0tc3VyZmFjZS1zdHJvbmcpXSBweS0yMCBzbTpweS0yOCI+CiAgICAgIDxkaXYgY2xhc3M9InBhZ2Utc2hlbGwiPgogICAgICAgIDxkaXYgY2xhc3M9ImZsZXggZmxleC1jb2wgZ2FwLTcgc206ZmxleC1yb3cgc206aXRlbXMtZW5kIHNtOmp1c3RpZnktYmV0d2VlbiI+CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+CiAgICAgICAgICAgICAgVElNRUxJTkUKICAgICAgICAgICAgPC9wPgogICAgICAgICAgICA8aDIgY2xhc3M9ImRpc3BsYXkgbXQtNSB0ZXh0LVtjbGFtcCgyLjhyZW0sNnZ3LDUuOHJlbSldIGxlYWRpbmctWzAuOTZdIj4KICAgICAgICAgICAgICB7eyB0KCdhYm91dC50aW1lbGluZVRpdGxlJykgfX0KICAgICAgICAgICAgPC9oMj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPHAgY2xhc3M9Im1heC13LW1kIHRleHQtc20gbGVhZGluZy03IHRleHQtbXV0ZWQiPgogICAgICAgICAgICB7eyB0KCdob21lLnF1b3RlTm90ZScpIH19CiAgICAgICAgICA8L3A+CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxkaXYgY2xhc3M9Im10LTE0IGdyaWQgZ2FwLXB4IG92ZXJmbG93LWhpZGRlbiByb3VuZGVkLVsxLjVyZW1dIGJnLVt2YXIoLS1saW5lKV0gbWQ6Z3JpZC1jb2xzLTMiPgogICAgICAgICAgPGRpdgogICAgICAgICAgICB2LWZvcj0iaXRlbSBpbiB0aW1lbGluZSIKICAgICAgICAgICAgOmtleT0iaXRlbS55ZWFyIgogICAgICAgICAgICBjbGFzcz0iYmctW3ZhcigtLXN1cmZhY2Utc29saWQpXSBwLTYgc206cC04IgogICAgICAgICAgPgogICAgICAgICAgICA8cCBjbGFzcz0iZGlzcGxheSB0ZXh0LTV4bCB0ZXh0LVt2YXIoLS1hY2NlbnQpXSBzbTp0ZXh0LTZ4bCI+CiAgICAgICAgICAgICAge3sgaXRlbS55ZWFyIH19CiAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgPGgzIGNsYXNzPSJtdC0xMiB0ZXh0LWxnIGZvbnQtYm9sZCI+CiAgICAgICAgICAgICAge3sgaXRlbS50aXRsZSB9fQogICAgICAgICAgICA8L2gzPgogICAgICAgICAgICA8cCBjbGFzcz0ibXQtMyB0ZXh0LXNtIGxlYWRpbmctNyB0ZXh0LW11dGVkIj4KICAgICAgICAgICAgICB7eyBpdGVtLnRleHQgfX0KICAgICAgICAgICAgPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJwYWdlLXNoZWxsIHB5LTIwIHNtOnB5LTI4Ij4KICAgICAgPFNlY3Rpb25IZWFkaW5nCiAgICAgICAgZXllYnJvdz0iVU5ERVIgVEhFIEhPT0QiCiAgICAgICAgOnRpdGxlPSJ0KCdhYm91dC50ZWNoVGl0bGUnKSIKICAgICAgICBhbGlnbj0iY2VudGVyIgogICAgICAvPgoKICAgICAgPGRpdiBjbGFzcz0ibXgtYXV0byBtdC0xMiBncmlkIG1heC13LTV4bCBnYXAtNCBtZDpncmlkLWNvbHMtMyI+CiAgICAgICAgPGRpdgogICAgICAgICAgdi1mb3I9IihpdGVtLCBpbmRleCkgaW4gW3QoJ2Fib3V0LnRlY2hPbmUnKSwgdCgnYWJvdXQudGVjaFR3bycpLCB0KCdhYm91dC50ZWNoVGhyZWUnKV0iCiAgICAgICAgICA6a2V5PSJpdGVtIgogICAgICAgICAgY2xhc3M9InN1cmZhY2UtY2FyZCByb3VuZGVkLVsxLjNyZW1dIHAtNiIKICAgICAgICA+CiAgICAgICAgICA8c3BhbiBjbGFzcz0idGV4dC1bMC42MnJlbV0gZm9udC1ib2xkIHRyYWNraW5nLVswLjE1ZW1dIHRleHQtbXV0ZWQiPjB7eyBpbmRleCArIDEgfX08L3NwYW4+CiAgICAgICAgICA8cCBjbGFzcz0ibXQtMTAgdGV4dC1zbSBsZWFkaW5nLTciPgogICAgICAgICAgICB7eyBpdGVtIH19CiAgICAgICAgICA8L3A+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgogIDwvZGl2Pgo8L3RlbXBsYXRlPgo=
+<script setup lang="ts">
+const { t } = useI18n()
+
+useSeoMeta({
+  title: t('about.title'),
+  description: t('about.intro'),
+})
+
+const members = computed(() => [
+  { number: '01', role: 'PAPA', text: t('about.memberOne'), color: '#e8b65b' },
+  { number: '02', role: 'MAMA', text: t('about.memberTwo'), color: '#ef795c' },
+  { number: '03', role: 'KIDDO', text: t('about.memberThree'), color: '#8db9a5' },
+])
+
+const timeline = computed(() => [
+  {
+    year: '2019',
+    title: t('about.timelineOneTitle'),
+    text: t('about.timelineOneText'),
+  },
+  {
+    year: '2022',
+    title: t('about.timelineTwoTitle'),
+    text: t('about.timelineTwoText'),
+  },
+  {
+    year: '2026',
+    title: t('about.timelineThreeTitle'),
+    text: t('about.timelineThreeText'),
+  },
+])
+</script>
+
+<template>
+  <div>
+    <PageIntro
+      :eyebrow="t('about.eyebrow')"
+      :title="t('about.title')"
+      :intro="t('about.intro')"
+    />
+
+    <section class="page-shell py-12 sm:py-20">
+      <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div class="lg:sticky lg:top-32">
+          <p class="eyebrow">
+            OUR STORY
+          </p>
+          <h2 class="display mt-5 text-[clamp(2.8rem,5vw,5.2rem)] leading-[0.96]">
+            {{ t('about.storyTitle') }}
+          </h2>
+          <div class="mt-7 space-y-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
+            <p>{{ t('about.storyOne') }}</p>
+            <p>{{ t('about.storyTwo') }}</p>
+          </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+          <div
+            v-for="member in members"
+            :key="member.number"
+            class="surface-card flex min-h-64 flex-col rounded-[1.5rem] p-5 sm:p-6 lg:min-h-72"
+          >
+            <span class="text-[0.62rem] font-bold tracking-[0.15em] text-muted">{{ member.number }}</span>
+            <div class="mt-auto pt-16">
+              <span
+                class="block size-3 rounded-full"
+                :style="{ backgroundColor: member.color }"
+              />
+              <p class="mt-4 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-muted">
+                {{ member.role }}
+              </p>
+              <p class="mt-3 text-sm leading-6">
+                {{ member.text }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[var(--surface-strong)] py-20 sm:py-28">
+      <div class="page-shell">
+        <div class="flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="eyebrow">
+              TIMELINE
+            </p>
+            <h2 class="display mt-5 text-[clamp(2.8rem,6vw,5.8rem)] leading-[0.96]">
+              {{ t('about.timelineTitle') }}
+            </h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-muted">
+            {{ t('home.quoteNote') }}
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-px overflow-hidden rounded-[1.5rem] bg-[var(--line)] md:grid-cols-3">
+          <div
+            v-for="item in timeline"
+            :key="item.year"
+            class="bg-[var(--surface-solid)] p-6 sm:p-8"
+          >
+            <p class="display text-5xl text-[var(--accent)] sm:text-6xl">
+              {{ item.year }}
+            </p>
+            <h3 class="mt-12 text-lg font-bold">
+              {{ item.title }}
+            </h3>
+            <p class="mt-3 text-sm leading-7 text-muted">
+              {{ item.text }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-shell py-20 sm:py-28">
+      <SectionHeading
+        eyebrow="UNDER THE HOOD"
+        :title="t('about.techTitle')"
+        align="center"
+      />
+
+      <div class="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-3">
+        <div
+          v-for="(item, index) in [t('about.techOne'), t('about.techTwo'), t('about.techThree')]"
+          :key="item"
+          class="surface-card rounded-[1.3rem] p-6"
+        >
+          <span class="text-[0.62rem] font-bold tracking-[0.15em] text-muted">0{{ index + 1 }}</span>
+          <p class="mt-10 text-sm leading-7">
+            {{ item }}
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>

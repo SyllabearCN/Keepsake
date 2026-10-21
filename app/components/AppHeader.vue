@@ -1,1 +1,44 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmNvbnN0IHJvdXRlID0gdXNlUm91dGUoKQpjb25zdCB7IHQgfSA9IHVzZUkxOG4oKQoKY29uc3QgbGlua3MgPSBjb21wdXRlZCgoKSA9PiBbCiAgeyB0bzogJy8nLCBsYWJlbDogdCgnbmF2LmhvbWUnKSB9LAogIHsgdG86ICcvZ2FsbGVyeScsIGxhYmVsOiB0KCduYXYuZ2FsbGVyeScpIH0sCiAgeyB0bzogJy9qb3VybmV5cycsIGxhYmVsOiB0KCduYXYuam91cm5leXMnKSB9LAogIHsgdG86ICcvc3RvcmllcycsIGxhYmVsOiB0KCduYXYuc3RvcmllcycpIH0sCiAgeyB0bzogJy9hYm91dCcsIGxhYmVsOiB0KCduYXYuYWJvdXQnKSB9LApdKQoKZnVuY3Rpb24gaXNBY3RpdmUodG86IHN0cmluZykgewogIHJldHVybiB0byA9PT0gJy8nID8gcm91dGUucGF0aCA9PT0gJy8nIDogcm91dGUucGF0aC5zdGFydHNXaXRoKHRvKQp9Cjwvc2NyaXB0PgoKPHRlbXBsYXRlPgogIDxoZWFkZXIgY2xhc3M9ImZpeGVkIGluc2V0LXgtMCB0b3AtMCB6LTUwIHB4LTMgcHQtMyBzbTpweC01IHNtOnB0LTUiPgogICAgPGRpdiBjbGFzcz0icGFnZS1zaGVsbCBnbGFzcyBmbGV4IGgtWzQuMzVyZW1dIGl0ZW1zLWNlbnRlciByb3VuZGVkLWZ1bGwgcHgtNCBzbTpweC01Ij4KICAgICAgPEZhbWlseU1hcmsgLz4KCiAgICAgIDxuYXYgY2xhc3M9Im1sLWF1dG8gaGlkZGVuIGl0ZW1zLWNlbnRlciBnYXAtMSBsZzpmbGV4Ij4KICAgICAgICA8TnV4dExpbmsKICAgICAgICAgIHYtZm9yPSJsaW5rIGluIGxpbmtzIgogICAgICAgICAgOmtleT0ibGluay50byIKICAgICAgICAgIDp0bz0ibGluay50byIKICAgICAgICAgIGNsYXNzPSJyb3VuZGVkLWZ1bGwgcHgtNCBweS0yIHRleHQtWzAuOHJlbV0gZm9udC1zZW1pYm9sZCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgIDpjbGFzcz0iaXNBY3RpdmUobGluay50bykKICAgICAgICAgICAgPyAnYmctW3ZhcigtLWJyYW5kKV0gdGV4dC1bdmFyKC0tcGFnZSldJwogICAgICAgICAgICA6ICd0ZXh0LW11dGVkIGhvdmVyOmJnLVt2YXIoLS1zdXJmYWNlLXN0cm9uZyldIGhvdmVyOnRleHQtW3ZhcigtLXRleHQpXSciCiAgICAgICAgPgogICAgICAgICAge3sgbGluay5sYWJlbCB9fQogICAgICAgIDwvTnV4dExpbms+CiAgICAgIDwvbmF2PgoKICAgICAgPGRpdiBjbGFzcz0ibWwtYXV0byBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiBsZzptbC00Ij4KICAgICAgICA8VGhlbWVUb2dnbGUgY2xhc3M9ImhpZGRlbiBzbTpncmlkIiAvPgogICAgICAgIDxMb2NhbGVTd2l0Y2hlciBjbGFzcz0iaGlkZGVuIHNtOmdyaWQiIC8+CiAgICAgICAgPE1vYmlsZU5hdiAvPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvaGVhZGVyPgo8L3RlbXBsYXRlPgo=
+<script setup lang="ts">
+const route = useRoute()
+const { t } = useI18n()
+
+const links = computed(() => [
+  { to: '/', label: t('nav.home') },
+  { to: '/gallery', label: t('nav.gallery') },
+  { to: '/journeys', label: t('nav.journeys') },
+  { to: '/stories', label: t('nav.stories') },
+  { to: '/about', label: t('nav.about') },
+])
+
+function isActive(to: string) {
+  return to === '/' ? route.path === '/' : route.path.startsWith(to)
+}
+</script>
+
+<template>
+  <header class="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-5">
+    <div class="page-shell glass flex h-[4.35rem] items-center rounded-full px-4 sm:px-5">
+      <FamilyMark />
+
+      <nav class="ml-auto hidden items-center gap-1 lg:flex">
+        <NuxtLink
+          v-for="link in links"
+          :key="link.to"
+          :to="link.to"
+          class="rounded-full px-4 py-2 text-[0.8rem] font-semibold transition-colors"
+          :class="isActive(link.to)
+            ? 'bg-[var(--brand)] text-[var(--page)]'
+            : 'text-muted hover:bg-[var(--surface-strong)] hover:text-[var(--text)]'"
+        >
+          {{ link.label }}
+        </NuxtLink>
+      </nav>
+
+      <div class="ml-auto flex items-center gap-2 lg:ml-4">
+        <ThemeToggle class="hidden sm:grid" />
+        <LocaleSwitcher class="hidden sm:grid" />
+        <MobileNav />
+      </div>
+    </div>
+  </header>
+</template>

@@ -1,1 +1,13 @@
-Lm51eHQKLm91dHB1dAouZGF0YQouY29kZXgKLnZlcmNlbAoudG9vbHMKbm9kZV9tb2R1bGVzCmRpc3QKKi5sb2cKLmVudgouRFNfU3RvcmUKDQoudmVyY2VsDQo=
+.nuxt
+.output
+.data
+.codex
+.vercel
+.tools
+node_modules
+dist
+*.log
+.env
+.DS_Store
+
+.vercel

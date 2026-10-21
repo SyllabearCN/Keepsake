@@ -1,1 +1,37 @@
-aW1wb3J0IHR5cGUgeyBKb3VybmV5IH0gZnJvbSAnfi90eXBlcy9jb250ZW50JwoKLy8gUmVwbGFjZSB0aGVzZSBCaWxpYmlsaSBCViBpZHMgd2l0aCB5b3VyIG93biB0cmF2ZWwgdmxvZyBpZHMuCmV4cG9ydCBjb25zdCBqb3VybmV5czogSm91cm5leVtdID0gWwogIHsKICAgIGlkOiAnc3VtbWVyLWNvYXN0LXZsb2cnLAogICAgYnZpZDogJ0JWMXh4NDExYzdtRCcsCiAgICB0aXRsZTogeyB6aDogJ+W4puedgOWwj+aci+WPi+WOu+eci+a1tycsIGVuOiAnVGFraW5nIG91ciBsaXR0bGUgb25lIHRvIHRoZSBzZWEnIH0sCiAgICBkZXNjcmlwdGlvbjogeyB6aDogJ+Wbm+WkqeS4ieWknOeahOa1t+i+ueaFouaXheihjO+8jOS7peWPiuS4gOWPquS4jeiCr+emu+W8gOaymea7qeeahOWwj+iEmuS4q+OAgicsIGVuOiAnQSBmb3VyLWRheSBjb2FzdGFsIGVzY2FwZSBhbmQgYSB0aW55IHBhaXIgb2YgZmVldCB0aGF0IHJlZnVzZWQgdG8gbGVhdmUgdGhlIGJlYWNoLicgfSwKICAgIGxvY2F0aW9uOiB7IHpoOiAn5Y6m6ZeoJywgZW46ICdYaWFtZW4nIH0sCiAgICBkYXRlOiAnMjAyNi0wNy0yNCcsCiAgICBkdXJhdGlvbjogJzA4OjQyJywKICAgIGNvdmVyOiAnL2FsYnVtcy8yMDI2LXN1bW1lci8wMS1zZWEuanBnJywKICAgIGZlYXR1cmVkOiB0cnVlLAogIH0sCiAgewogICAgaWQ6ICd3aW50ZXItc25vdy12bG9nJywKICAgIGJ2aWQ6ICdCVjF4eDQxMWM3bUQnLAogICAgdGl0bGU6IHsgemg6ICfnrKzkuIDmrKHkuIDotbfnnIvpm6onLCBlbjogJ091ciBmaXJzdCBzbm93IHRvZ2V0aGVyJyB9LAogICAgZGVzY3JpcHRpb246IHsgemg6ICfmuKnms4njgIHng63lj6/lj6/lkozkuIDmlbTniYflronpnZnnmoTnmb3oibLmo67mnpfjgIInLCBlbjogJ0hvdCBzcHJpbmdzLCBjb2NvYSwgYW5kIGEgd2hvbGUgcXVpZXQgd2hpdGUgZm9yZXN0LicgfSwKICAgIGxvY2F0aW9uOiB7IHpoOiAn5YyX5rW36YGTJywgZW46ICdIb2trYWlkbycgfSwKICAgIGRhdGU6ICcyMDI1LTAxLTE4JywKICAgIGR1cmF0aW9uOiAnMTI6MDgnLAogICAgY292ZXI6ICcvYWxidW1zLzIwMjUtd2ludGVyLzAxLXNub3cuanBnJywKICB9LAogIHsKICAgIGlkOiAnd2Vla2VuZC1yb2FkLXZsb2cnLAogICAgYnZpZDogJ0JWMXh4NDExYzdtRCcsCiAgICB0aXRsZTogeyB6aDogJ+WRqOacq+mAg+emu+iuoeWIkicsIGVuOiAnQSB3ZWVrZW5kIGVzY2FwZSBwbGFuJyB9LAogICAgZGVzY3JpcHRpb246IHsgemg6ICfmsqHmnInmlLvnlaXnmoTlhazot6/ml4XooYzvvIzlj43ogIzmlLbojrfkuobmnIDmnb7lvJvnmoTlkajmnKvjgIInLCBlbjogJ0Egcm9hZCB0cmlwIHdpdGhvdXQgYSBwbGFuIGJlY2FtZSBvdXIgbW9zdCByZWxheGVkIHdlZWtlbmQuJyB9LAogICAgbG9jYXRpb246IHsgemg6ICfnmpbljZcnLCBlbjogJ1NvdXRoZXJuIEFuaHVpJyB9LAogICAgZGF0ZTogJzIwMjQtMTAtMDgnLAogICAgZHVyYXRpb246ICcwNjoxNicsCiAgICBjb3ZlcjogJy9hbGJ1bXMvMjAyNC1zbG93LWRheXMvMDMtcm9hZC5qcGcnLAogICAgZmVhdHVyZWQ6IHRydWUsCiAgfSwKXQo=
+import type { Journey } from '~/types/content'
+
+// Replace these Bilibili BV ids with your own travel vlog ids.
+export const journeys: Journey[] = [
+  {
+    id: 'summer-coast-vlog',
+    bvid: 'BV1xx411c7mD',
+    title: { zh: '带着小朋友去看海', en: 'Taking our little one to the sea' },
+    description: { zh: '四天三夜的海边慢旅行，以及一只不肯离开沙滩的小脚丫。', en: 'A four-day coastal escape and a tiny pair of feet that refused to leave the beach.' },
+    location: { zh: '厦门', en: 'Xiamen' },
+    date: '2026-07-24',
+    duration: '08:42',
+    cover: '/albums/2026-summer/01-sea.jpg',
+    featured: true,
+  },
+  {
+    id: 'winter-snow-vlog',
+    bvid: 'BV1xx411c7mD',
+    title: { zh: '第一次一起看雪', en: 'Our first snow together' },
+    description: { zh: '温泉、热可可和一整片安静的白色森林。', en: 'Hot springs, cocoa, and a whole quiet white forest.' },
+    location: { zh: '北海道', en: 'Hokkaido' },
+    date: '2025-01-18',
+    duration: '12:08',
+    cover: '/albums/2025-winter/01-snow.jpg',
+  },
+  {
+    id: 'weekend-road-vlog',
+    bvid: 'BV1xx411c7mD',
+    title: { zh: '周末逃离计划', en: 'A weekend escape plan' },
+    description: { zh: '没有攻略的公路旅行，反而收获了最松弛的周末。', en: 'A road trip without a plan became our most relaxed weekend.' },
+    location: { zh: '皖南', en: 'Southern Anhui' },
+    date: '2024-10-08',
+    duration: '06:16',
+    cover: '/albums/2024-slow-days/03-road.jpg',
+    featured: true,
+  },
+]

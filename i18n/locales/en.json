@@ -1,1 +1,105 @@
-ewogICJuYXYiOiB7CiAgICAiaG9tZSI6ICJIb21lIiwKICAgICJnYWxsZXJ5IjogIkFsYnVtIiwKICAgICJqb3VybmV5cyI6ICJKb3VybmV5cyIsCiAgICAic3RvcmllcyI6ICJTdG9yaWVzIiwKICAgICJhYm91dCI6ICJBYm91dCB1cyIsCiAgICAibWVudSI6ICJPcGVuIG1lbnUiLAogICAgImNsb3NlIjogIkNsb3NlIG1lbnUiCiAgfSwKICAiY29tbW9uIjogewogICAgInZpZXdBbGwiOiAiVmlldyBhbGwiLAogICAgInJlYWRNb3JlIjogIlJlYWQgc3RvcnkiLAogICAgIndhdGNoVmlkZW8iOiAiV2F0Y2ggdmlkZW8iLAogICAgImNsb3NlIjogIkNsb3NlIiwKICAgICJhbGwiOiAiQWxsIiwKICAgICJwaG90b3MiOiAicGhvdG9zIiwKICAgICJzYXZlZCI6ICJTYXZlZCIsCiAgICAic2F2ZSI6ICJTYXZlIHBob3RvIiwKICAgICJyZW1vdmVTYXZlZCI6ICJSZW1vdmUgZnJvbSBzYXZlZCIsCiAgICAiYmFja0hvbWUiOiAiQmFjayBob21lIiwKICAgICJsYW5ndWFnZSI6ICJDaGFuZ2UgbGFuZ3VhZ2UiLAogICAgInRoZW1lTGlnaHQiOiAiU3dpdGNoIHRvIGxpZ2h0IiwKICAgICJ0aGVtZURhcmsiOiAiU3dpdGNoIHRvIGRhcmsiCiAgfSwKICAiaG9tZSI6IHsKICAgICJleWVicm93IjogIkEgU01BTEwgQVJDSElWRSBPRiBVUyIsCiAgICAiaGVyb1RpdGxlIjogIkEgaG9tZSBmb3IgdGhlIGRheXNcbndlIHNwZW5kIHRvZ2V0aGVyLiIsCiAgICAiaW50cm8iOiAiVGhpcyBpcyBhIGtlZXBzYWtlIGZvciBvdXIgZmFtaWx5IG9mIHRocmVlLiBOb3QgYSBncmFuZCBzdG9yeeKAlGp1c3QgdGhlIHBsYWNlcyB3ZSBnbywgdGhlIHRoaW5ncyB3ZSBzYXksIGFuZCB0aGUgb3JkaW5hcnkgZGF5cyB3ZSB3YW50IHRpbWUgdG8gcmVtZW1iZXIgZm9yIHVzLiIsCiAgICAicHJpbWFyeUN0YSI6ICJPcGVuIG91ciBhbGJ1bSIsCiAgICAic2Vjb25kYXJ5Q3RhIjogIldhdGNoIG91ciBqb3VybmV5cyIsCiAgICAic2luY2UiOiAiT3VyIGxpdHRsZSB1bml2ZXJzZSIsCiAgICAic2luY2VWYWx1ZSI6ICJTSU5DRSAyMDE5IiwKICAgICJub3RlTGFiZWwiOiAiVGhpcyB3ZWVrIiwKICAgICJub3RlVGV4dCI6ICJBIHdpbmR5IGJpa2UgcmlkZSBieSB0aGUgcml2ZXIgb24gU3VuZGF5LiBXZSBhbGwgY2FtZSBob21lIHNtaWxpbmcgbGlrZSBmb29scy4iLAogICAgInNjcm9sbCI6ICJTY3JvbGwgdG8gYnJvd3NlIiwKICAgICJzdGF0c01lbWJlcnMiOiAiZmFtaWx5IG1lbWJlcnMiLAogICAgInN0YXRzVHJpcHMiOiAidHJhdmVsIGZpbG1zIiwKICAgICJzdGF0c1N0b3JpZXMiOiAic3RvcmllcyBrZXB0IiwKICAgICJhbGJ1bUV5ZWJyb3ciOiAiT1VSIERBWVMsIElOIFBJQ1RVUkVTIiwKICAgICJhbGJ1bVRpdGxlIjogIlJlbWVtYmVyIHRoZSBsaWdodCBmaXJzdC4iLAogICAgImFsYnVtSW50cm8iOiAiT3VyIGFsYnVtIGdyb3dzIHNsb3dseSB3aXRoIHRpbWUuIEl0IGlzIG5vdCBhYm91dCBwZXJmZWN0IGNvbXBvc2l0aW9uLCBvbmx5IGFib3V0IGtlZXBpbmcgb3VyIG1vbWVudHMgd2hlcmUgdGhleSBiZWxvbmcuIiwKICAgICJqb3VybmV5RXllYnJvdyI6ICJUUkFWRUwgRk9PVEFHRSIsCiAgICAiam91cm5leVRpdGxlIjogIlN0b3JpZXMgZnJvbSB0aGUgcm9hZC4iLAogICAgImpvdXJuZXlJbnRybyI6ICJPdXIgdmxvZ3MgbGl2ZSBvbiBCaWxpYmlsaS4gVGhpcyBzaXRlIGtlZXBzIHRoZSBkb29yd2F5IHRvIHRoZW0sIHdpdGhvdXQgbmVlZGluZyBhIHZpZGVvIHNlcnZlci4iLAogICAgInN0b3JpZXNFeWVicm93IjogIldPUkRTIFdFIEtFRVAiLAogICAgInN0b3JpZXNUaXRsZSI6ICJXcml0dGVuIGRvd24sIG9yZGluYXJ5IGRheXMgYmVnaW4gdG8gZWNoby4iLAogICAgInN0b3J5SW50cm8iOiAiVHJhdmVsIG5vdGVzLCBzbWFsbCBtaWxlc3RvbmVzLCBhbmQgdGhlIGxpdHRsZSB0aGluZ3Mgd2Ugb25seSBsZWFybiB0byB0cmVhc3VyZSBsYXRlci4iLAogICAgInF1b3RlIjogIkEga2VlcHNha2UgaXMgc2ltcGx5XG5zYXlpbmcgZ29vZGJ5ZSB0byB0b2RheSB3aXRoIGNhcmUuIiwKICAgICJxdW90ZU5vdGUiOiAiVGhlbiBnb2luZyBpbnRvIHRvbW9ycm93IHRvZ2V0aGVyLiIKICB9LAogICJnYWxsZXJ5IjogewogICAgImV5ZWJyb3ciOiAiT1VSIFBIT1RPIEFMQlVNIiwKICAgICJ0aXRsZSI6ICJBbGJ1bSIsCiAgICAiaW50cm8iOiAiUGhvdG9ncmFwaHMgYXJlIGdyb3VwZWQgYnkgdHJpcCBhbmQgdGltZS4gRXZlcnkgaW1hZ2UgY29tZXMgZnJvbSBhIGxvY2FsIGZvbGRlcuKAlHJlcGxhY2UgdGhlIGZpbGVzIGFuZCB1cGRhdGUgdGhlIGluZGV4LiIsCiAgICAiYWxidW1GaWx0ZXIiOiAiQnJvd3NlIGJ5IGFsYnVtIiwKICAgICJlbXB0eSI6ICJUaGVyZSBhcmUgbm8gcGhvdG9zIGluIHRoaXMgYWxidW0geWV0LiIsCiAgICAibG9jYWxIaW50IjogIkxvY2FsIGFsYnVtIGZvbGRlciIsCiAgICAibG9jYWxIaW50VGV4dCI6ICJQbGFjZSBwaG90b3MgaW4gcHVibGljL2FsYnVtcyBhbmQgcmVnaXN0ZXIgdGhlbSBpbiBhcHAvZGF0YS9hbGJ1bXMudHMuIgogIH0sCiAgImpvdXJuZXlzIjogewogICAgImV5ZWJyb3ciOiAiVFJBVkVMIFZMT0dTIiwKICAgICJ0aXRsZSI6ICJKb3VybmV5cyIsCiAgICAiaW50cm8iOiAiVmlkZW9zIGFyZSBwbGF5ZWQgdGhyb3VnaCBCaWxpYmlsaSdzIGVtYmVkZGVkIHBsYXllci4gRWFjaCBjYXJkIGlzIG9ubHkgYW4gaW5kZXggZW50cnksIHNvIHlvdSBkbyBub3QgbmVlZCB0byBob3N0IHRoZSB2aWRlbyB5b3Vyc2VsZi4iLAogICAgIndhdGNoT25CaWxpYmlsaSI6ICJPcGVuIG9uIEJpbGliaWxpIiwKICAgICJyZXBsYWNlSGludCI6ICJSZXBsYWNlIHRoZSBCViBpZHMgaW4gYXBwL2RhdGEvam91cm5leXMudHMgdG8gdXNlIHlvdXIgb3duIHZpZGVvcy4iCiAgfSwKICAic3RvcmllcyI6IHsKICAgICJleWVicm93IjogIldSSVRURU4gTUVNT1JJRVMiLAogICAgInRpdGxlIjogIlN0b3JpZXMiLAogICAgImludHJvIjogIkFydGljbGVzIGFyZSBzdG9yZWQgYXMgTWFya2Rvd24sIHNlcGFyYXRlIGZyb20gdGhlIHBhZ2UgbGF5b3V0LiBSZWRlc2lnbmluZyB0aGUgcmVhZGluZyBleHBlcmllbmNlIG5ldmVyIHJlcXVpcmVzIHRvdWNoaW5nIHRoZSB0ZXh0LiIsCiAgICAibWludXRlUmVhZCI6ICJtaW4gcmVhZCIsCiAgICAibmV3QXJ0aWNsZSI6ICJOZXcgYXJ0aWNsZSIsCiAgICAibmV3QXJ0aWNsZVRleHQiOiAiQ3JlYXRlIGEgTWFya2Rvd24gZmlsZSBpbiBjb250ZW50L3N0b3JpZXMgYW5kIGZpbGwgaW4gaXRzIGZyb250bWF0dGVyLiBJdCB3aWxsIGFwcGVhciBoZXJlIGF1dG9tYXRpY2FsbHkuIiwKICAgICJub3RGb3VuZCI6ICJUaGlzIHN0b3J5IGNvdWxkIG5vdCBiZSBmb3VuZC4iCiAgfSwKICAiYWJvdXQiOiB7CiAgICAiZXllYnJvdyI6ICJBQk9VVCBUSElTIExJVFRMRSBGQU1JTFkiLAogICAgInRpdGxlIjogIkFib3V0IHRoZSB0aHJlZSBvZiB1cyIsCiAgICAiaW50cm8iOiAiT25lIGZhdGhlciwgb25lIG1vdGhlciwgYW5kIG9uZSBsaXR0bGUgcGVyc29uIGdyb3dpbmcgdXAgZmFyIHRvbyBxdWlja2x5LiBXZSBsb3ZlIHdlZWtlbmQgYWR2ZW50dXJlcywgYW5kIGVxdWFsbHkgbG92ZSBkb2luZyBub3RoaW5nIGF0IGhvbWUuIiwKICAgICJzdG9yeVRpdGxlIjogIldoeSB3ZSBtYWRlIHRoaXMiLAogICAgInN0b3J5T25lIjogIlNvY2lhbCBtZWRpYSBmcmFnbWVudHMgb3VyIGxpdmVzIGFuZCB0aGUgZmVlZCBrZWVwcyBtb3ZpbmcuIFdlIHdhbnRlZCBhIHF1aWV0IHBsYWNlIHdoZXJlIHBob3RvcywgdmlkZW9zLCBhbmQgd29yZHMgY291bGQgc3RheSB0b2dldGhlci4iLAogICAgInN0b3J5VHdvIjogIkl0IGRvZXMgbm90IG5lZWQgdG8gYmUgc2VlbiBieSBtYW55IHBlb3BsZS4gSXQgb25seSBuZWVkcyB0byByZW1pbmQgdXMsIHllYXJzIGZyb20gbm93LCB3aGF0IHdlIGF0ZSwgd2hlcmUgdGhlIHdpbmQgdG91Y2hlZCB1cywgYW5kIHRoZSBsb3ZlbHkgdGhpbmdzIG91ciBjaGlsZCBzYWlkLiIsCiAgICAibWVtYmVyc1RpdGxlIjogIlRoZSB0aHJlZSBvZiB1cyIsCiAgICAibWVtYmVyT25lIjogIkRyaXZlcywgdGFrZXMgcGhvdG9zLCBhbmQgbWFrZXMgdGhlIGl0aW5lcmFyeSB0b28gYW1iaXRpb3VzLiIsCiAgICAibWVtYmVyVHdvIjogIkZpbmRzIGJlYXV0aWZ1bCBsaWdodCwgZ29vZCBmb29kLCBhbmQgdGhlIGV4YWN0IG1vbWVudCB0byBzdG9wIGFuZCByZXN0LiIsCiAgICAibWVtYmVyVGhyZWUiOiAiQ3JlYXRlcyBzdXJwcmlzZXMsIGFza3MgdGhlIG1vc3QgcXVlc3Rpb25zLCBhbmQgbWFrZXMgbW9zdCBvZiB0aGUgbGF1Z2h0ZXIuIiwKICAgICJ0aW1lbGluZVRpdGxlIjogIk91ciBqb3VybmV5IiwKICAgICJ0aW1lbGluZU9uZVRpdGxlIjogIkl0IGJlZ2FuIiwKICAgICJ0aW1lbGluZU9uZVRleHQiOiAiVHdvIHBlb3BsZSBkZWNpZGVkIHRvIHNoYXJlIGEgbGlmZSwgYW5kIHRvIGtlZXAgYSBmZXcgbW9yZSBwaG90b2dyYXBocy4iLAogICAgInRpbWVsaW5lVHdvVGl0bGUiOiAiVGhlbiB0aGVyZSB3ZXJlIHRocmVlIiwKICAgICJ0aW1lbGluZVR3b1RleHQiOiAiQSB0aW55IG5ldyBwZXJzb24gam9pbmVkIHRoZSBmYW1pbHksIGFuZCBldmVyeSBvdXRpbmcgZ2FpbmVkIGEgbGl0dGxlIGNoYWlyLiIsCiAgICAidGltZWxpbmVUaHJlZVRpdGxlIjogIldlIHN0YXJ0ZWQga2VlcGluZyIsCiAgICAidGltZWxpbmVUaHJlZVRleHQiOiAiS2VlcHNha2UgaXMgbGl2ZS4gV2UgaG9wZSBpdCBob2xkcyBtYW55IG1vcmUgb3JkaW5hcnkgd2Vla2VuZHMgdGhhdCBnbG93LiIsCiAgICAidGVjaFRpdGxlIjogIldoYXQgaXMgZWFzeSB0byBjaGFuZ2UiLAogICAgInRlY2hPbmUiOiAiQWxidW1zLCBzdG9yaWVzLCBhbmQgdmlkZW9zIGhhdmUgc2VwYXJhdGUgZGF0YTsgY29udGVudCBpcyBub3QgdHJhcHBlZCBpbiB0aGUgbGF5b3V0LiIsCiAgICAidGVjaFR3byI6ICJQaG90b3MgbGl2ZSBpbiB0aGUgbG9jYWwgcHVibGljIGRpcmVjdG9yeSB3aXRob3V0IGFuIGltYWdlLWhvc3Rpbmcgc2VydmljZS4iLAogICAgInRlY2hUaHJlZSI6ICJCaWxpYmlsaSB2aWRlb3MgYXJlIGVtYmVkZGVkIG9ubHksIHNvIHRoZSBzaXRlIHN0b3JlcyBubyB2aWRlbyBmaWxlcy4iCiAgfSwKICAiZm9vdGVyIjogewogICAgInRhZ2xpbmUiOiAiTWFraW5nIG9yZGluYXJ5IGRheXMgd29ydGgga2VlcGluZy4iLAogICAgInJpZ2h0cyI6ICJNYWRlIGZvciBvdXIgbGl0dGxlIGZhbWlseS4iLAogICAgImJhY2tUb3AiOiAiQmFjayB0byB0b3AiCiAgfQp9Cg==
+{
+  "nav": {
+    "home": "Home",
+    "gallery": "Album",
+    "journeys": "Journeys",
+    "stories": "Stories",
+    "about": "About us",
+    "menu": "Open menu",
+    "close": "Close menu"
+  },
+  "common": {
+    "viewAll": "View all",
+    "readMore": "Read story",
+    "watchVideo": "Watch video",
+    "close": "Close",
+    "all": "All",
+    "photos": "photos",
+    "saved": "Saved",
+    "save": "Save photo",
+    "removeSaved": "Remove from saved",
+    "backHome": "Back home",
+    "language": "Change language",
+    "themeLight": "Switch to light",
+    "themeDark": "Switch to dark"
+  },
+  "home": {
+    "eyebrow": "A SMALL ARCHIVE OF US",
+    "heroTitle": "A home for the days\nwe spend together.",
+    "intro": "This is a keepsake for our family of three. Not a grand story—just the places we go, the things we say, and the ordinary days we want time to remember for us.",
+    "primaryCta": "Open our album",
+    "secondaryCta": "Watch our journeys",
+    "since": "Our little universe",
+    "sinceValue": "SINCE 2019",
+    "noteLabel": "This week",
+    "noteText": "A windy bike ride by the river on Sunday. We all came home smiling like fools.",
+    "scroll": "Scroll to browse",
+    "statsMembers": "family members",
+    "statsTrips": "travel films",
+    "statsStories": "stories kept",
+    "albumEyebrow": "OUR DAYS, IN PICTURES",
+    "albumTitle": "Remember the light first.",
+    "albumIntro": "Our album grows slowly with time. It is not about perfect composition, only about keeping our moments where they belong.",
+    "journeyEyebrow": "TRAVEL FOOTAGE",
+    "journeyTitle": "Stories from the road.",
+    "journeyIntro": "Our vlogs live on Bilibili. This site keeps the doorway to them, without needing a video server.",
+    "storiesEyebrow": "WORDS WE KEEP",
+    "storiesTitle": "Written down, ordinary days begin to echo.",
+    "storyIntro": "Travel notes, small milestones, and the little things we only learn to treasure later.",
+    "quote": "A keepsake is simply\nsaying goodbye to today with care.",
+    "quoteNote": "Then going into tomorrow together."
+  },
+  "gallery": {
+    "eyebrow": "OUR PHOTO ALBUM",
+    "title": "Album",
+    "intro": "Photographs are grouped by trip and time. Every image comes from a local folder—replace the files and update the index.",
+    "albumFilter": "Browse by album",
+    "empty": "There are no photos in this album yet.",
+    "localHint": "Local album folder",
+    "localHintText": "Place photos in public/albums and register them in app/data/albums.ts."
+  },
+  "journeys": {
+    "eyebrow": "TRAVEL VLOGS",
+    "title": "Journeys",
+    "intro": "Videos are played through Bilibili's embedded player. Each card is only an index entry, so you do not need to host the video yourself.",
+    "watchOnBilibili": "Open on Bilibili",
+    "replaceHint": "Replace the BV ids in app/data/journeys.ts to use your own videos."
+  },
+  "stories": {
+    "eyebrow": "WRITTEN MEMORIES",
+    "title": "Stories",
+    "intro": "Articles are stored as Markdown, separate from the page layout. Redesigning the reading experience never requires touching the text.",
+    "minuteRead": "min read",
+    "newArticle": "New article",
+    "newArticleText": "Create a Markdown file in content/stories and fill in its frontmatter. It will appear here automatically.",
+    "notFound": "This story could not be found."
+  },
+  "about": {
+    "eyebrow": "ABOUT THIS LITTLE FAMILY",
+    "title": "About the three of us",
+    "intro": "One father, one mother, and one little person growing up far too quickly. We love weekend adventures, and equally love doing nothing at home.",
+    "storyTitle": "Why we made this",
+    "storyOne": "Social media fragments our lives and the feed keeps moving. We wanted a quiet place where photos, videos, and words could stay together.",
+    "storyTwo": "It does not need to be seen by many people. It only needs to remind us, years from now, what we ate, where the wind touched us, and the lovely things our child said.",
+    "membersTitle": "The three of us",
+    "memberOne": "Drives, takes photos, and makes the itinerary too ambitious.",
+    "memberTwo": "Finds beautiful light, good food, and the exact moment to stop and rest.",
+    "memberThree": "Creates surprises, asks the most questions, and makes most of the laughter.",
+    "timelineTitle": "Our journey",
+    "timelineOneTitle": "It began",
+    "timelineOneText": "Two people decided to share a life, and to keep a few more photographs.",
+    "timelineTwoTitle": "Then there were three",
+    "timelineTwoText": "A tiny new person joined the family, and every outing gained a little chair.",
+    "timelineThreeTitle": "We started keeping",
+    "timelineThreeText": "Keepsake is live. We hope it holds many more ordinary weekends that glow.",
+    "techTitle": "What is easy to change",
+    "techOne": "Albums, stories, and videos have separate data; content is not trapped in the layout.",
+    "techTwo": "Photos live in the local public directory without an image-hosting service.",
+    "techThree": "Bilibili videos are embedded only, so the site stores no video files."
+  },
+  "footer": {
+    "tagline": "Making ordinary days worth keeping.",
+    "rights": "Made for our little family.",
+    "backTop": "Back to top"
+  }
+}

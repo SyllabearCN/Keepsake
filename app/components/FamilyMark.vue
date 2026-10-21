@@ -1,1 +1,47 @@
-PHRlbXBsYXRlPgogIDxOdXh0TGluawogICAgdG89Ii8iCiAgICBjbGFzcz0iZ3JvdXAgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMiCiAgICBhcmlhLWxhYmVsPSJLZWVwc2FrZSBob21lIgogID4KICAgIDxzcGFuIGNsYXNzPSJyZWxhdGl2ZSBncmlkIHNpemUtMTAgcGxhY2UtaXRlbXMtY2VudGVyIHJvdW5kZWQtZnVsbCBiZy1bdmFyKC0tYnJhbmQpXSB0ZXh0LVt2YXIoLS1wYWdlKV0iPgogICAgICA8c3ZnCiAgICAgICAgdmlld0JveD0iMCAwIDQwIDQwIgogICAgICAgIGNsYXNzPSJzaXplLTciCiAgICAgICAgZmlsbD0ibm9uZSIKICAgICAgICBhcmlhLWhpZGRlbj0idHJ1ZSIKICAgICAgPgogICAgICAgIDxjaXJjbGUKICAgICAgICAgIGN4PSIxNSIKICAgICAgICAgIGN5PSIxNyIKICAgICAgICAgIHI9IjgiCiAgICAgICAgICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICAgICAgICAgIHN0cm9rZS13aWR0aD0iMS40IgogICAgICAgIC8+CiAgICAgICAgPGNpcmNsZQogICAgICAgICAgY3g9IjI1IgogICAgICAgICAgY3k9IjE3IgogICAgICAgICAgcj0iOCIKICAgICAgICAgIHN0cm9rZT0iY3VycmVudENvbG9yIgogICAgICAgICAgc3Ryb2tlLXdpZHRoPSIxLjQiCiAgICAgICAgLz4KICAgICAgICA8Y2lyY2xlCiAgICAgICAgICBjeD0iMjAiCiAgICAgICAgICBjeT0iMjUiCiAgICAgICAgICByPSI4IgogICAgICAgICAgc3Ryb2tlPSJjdXJyZW50Q29sb3IiCiAgICAgICAgICBzdHJva2Utd2lkdGg9IjEuNCIKICAgICAgICAvPgogICAgICAgIDxwYXRoCiAgICAgICAgICBkPSJNMjAgOC41djRNMjAgMjl2Mi41TTEyLjUgMjlsMS4zIDIiCiAgICAgICAgICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICAgICAgICAgIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIKICAgICAgICAvPgogICAgICA8L3N2Zz4KICAgIDwvc3Bhbj4KICAgIDxzcGFuIGNsYXNzPSJsZWFkaW5nLW5vbmUiPgogICAgICA8c3BhbiBjbGFzcz0iZGlzcGxheSBibG9jayB0ZXh0LVsxLjI1cmVtXSB0cmFja2luZy1bLTAuMDRlbV0iPktlZXBzYWtlPC9zcGFuPgogICAgICA8c3BhbiBjbGFzcz0ibXQtMSBibG9jayB0ZXh0LVswLjU1cmVtXSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjIyZW1dIHRleHQtbXV0ZWQiPlRoZSB0aHJlZSBvZiB1czwvc3Bhbj4KICAgIDwvc3Bhbj4KICA8L051eHRMaW5rPgo8L3RlbXBsYXRlPgo=
+<template>
+  <NuxtLink
+    to="/"
+    class="group flex items-center gap-3"
+    aria-label="Keepsake home"
+  >
+    <span class="relative grid size-10 place-items-center rounded-full bg-[var(--brand)] text-[var(--page)]">
+      <svg
+        viewBox="0 0 40 40"
+        class="size-7"
+        fill="none"
+        aria-hidden="true"
+      >
+        <circle
+          cx="15"
+          cy="17"
+          r="8"
+          stroke="currentColor"
+          stroke-width="1.4"
+        />
+        <circle
+          cx="25"
+          cy="17"
+          r="8"
+          stroke="currentColor"
+          stroke-width="1.4"
+        />
+        <circle
+          cx="20"
+          cy="25"
+          r="8"
+          stroke="currentColor"
+          stroke-width="1.4"
+        />
+        <path
+          d="M20 8.5v4M20 29v2.5M12.5 29l1.3 2"
+          stroke="currentColor"
+          stroke-linecap="round"
+        />
+      </svg>
+    </span>
+    <span class="leading-none">
+      <span class="display block text-[1.25rem] tracking-[-0.04em]">Keepsake</span>
+      <span class="mt-1 block text-[0.55rem] font-bold uppercase tracking-[0.22em] text-muted">The three of us</span>
+    </span>
+  </NuxtLink>
+</template>

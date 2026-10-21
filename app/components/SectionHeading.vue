@@ -1,1 +1,29 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmRlZmluZVByb3BzPHsKICBleWVicm93OiBzdHJpbmcKICB0aXRsZTogc3RyaW5nCiAgaW50cm8/OiBzdHJpbmcKICBhbGlnbj86ICdsZWZ0JyB8ICdjZW50ZXInCn0+KCkKPC9zY3JpcHQ+Cgo8dGVtcGxhdGU+CiAgPGRpdiA6Y2xhc3M9ImFsaWduID09PSAnY2VudGVyJyA/ICdteC1hdXRvIG1heC13LTN4bCB0ZXh0LWNlbnRlcicgOiAnbWF4LXctNHhsJyI+CiAgICA8cAogICAgICBjbGFzcz0iZXllYnJvdyIKICAgICAgOmNsYXNzPSJhbGlnbiA9PT0gJ2NlbnRlcicgPyAnanVzdGlmeS1jZW50ZXInIDogJyciCiAgICA+CiAgICAgIHt7IGV5ZWJyb3cgfX0KICAgIDwvcD4KICAgIDxoMiBjbGFzcz0iZGlzcGxheSBtdC01IHRleHQtW2NsYW1wKDIuNDVyZW0sNnZ3LDUuNnJlbSldIGxlYWRpbmctWzAuOThdIj4KICAgICAge3sgdGl0bGUgfX0KICAgIDwvaDI+CiAgICA8cAogICAgICB2LWlmPSJpbnRybyIKICAgICAgY2xhc3M9Im10LTYgbWF4LXctMnhsIHRleHQtc20gbGVhZGluZy03IHRleHQtbXV0ZWQgc206dGV4dC1iYXNlIHNtOmxlYWRpbmctOCIKICAgICAgOmNsYXNzPSJhbGlnbiA9PT0gJ2NlbnRlcicgPyAnbXgtYXV0bycgOiAnJyIKICAgID4KICAgICAge3sgaW50cm8gfX0KICAgIDwvcD4KICA8L2Rpdj4KPC90ZW1wbGF0ZT4K
+<script setup lang="ts">
+defineProps<{
+  eyebrow: string
+  title: string
+  intro?: string
+  align?: 'left' | 'center'
+}>()
+</script>
+
+<template>
+  <div :class="align === 'center' ? 'mx-auto max-w-3xl text-center' : 'max-w-4xl'">
+    <p
+      class="eyebrow"
+      :class="align === 'center' ? 'justify-center' : ''"
+    >
+      {{ eyebrow }}
+    </p>
+    <h2 class="display mt-5 text-[clamp(2.45rem,6vw,5.6rem)] leading-[0.98]">
+      {{ title }}
+    </h2>
+    <p
+      v-if="intro"
+      class="mt-6 max-w-2xl text-sm leading-7 text-muted sm:text-base sm:leading-8"
+      :class="align === 'center' ? 'mx-auto' : ''"
+    >
+      {{ intro }}
+    </p>
+  </div>
+</template>

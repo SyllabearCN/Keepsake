@@ -1,1 +1,76 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmltcG9ydCB0eXBlIHsgSm91cm5leSB9IGZyb20gJ34vdHlwZXMvY29udGVudCcKCmNvbnN0IHByb3BzID0gZGVmaW5lUHJvcHM8ewogIGpvdXJuZXk6IEpvdXJuZXkKICBsYXJnZT86IGJvb2xlYW4KfT4oKQoKY29uc3QgZW1pdCA9IGRlZmluZUVtaXRzPHsKICBvcGVuOiBbam91cm5leTogSm91cm5leV0KfT4oKQoKY29uc3QgbG9jYWxpemUgPSB1c2VMb2NhbGl6ZWRUZXh0KCkKY29uc3QgeyB0IH0gPSB1c2VJMThuKCkKPC9zY3JpcHQ+Cgo8dGVtcGxhdGU+CiAgPGFydGljbGUgY2xhc3M9Imdyb3VwIj4KICAgIDxidXR0b24KICAgICAgdHlwZT0iYnV0dG9uIgogICAgICBjbGFzcz0idy1mdWxsIHRleHQtbGVmdCIKICAgICAgQGNsaWNrPSJlbWl0KCdvcGVuJywgcHJvcHMuam91cm5leSkiCiAgICA+CiAgICAgIDxkaXYKICAgICAgICBjbGFzcz0iaW1hZ2UtcmV2ZWFsIHJlbGF0aXZlIG92ZXJmbG93LWhpZGRlbiByb3VuZGVkLVsxLjVyZW1dIGJnLVt2YXIoLS1zdXJmYWNlLXN0cm9uZyldIgogICAgICAgIDpjbGFzcz0ibGFyZ2UgPyAnYXNwZWN0LVsxNi85XScgOiAnYXNwZWN0LVs0LzNdJyIKICAgICAgPgogICAgICAgIDxOdXh0SW1nCiAgICAgICAgICA6c3JjPSJqb3VybmV5LmNvdmVyIgogICAgICAgICAgOmFsdD0ibG9jYWxpemUoam91cm5leS50aXRsZSkiCiAgICAgICAgICA6d2lkdGg9IjE2MDAiCiAgICAgICAgICA6aGVpZ2h0PSIxMDAwIgogICAgICAgICAgY2xhc3M9ImgtZnVsbCB3LWZ1bGwgb2JqZWN0LWNvdmVyIgogICAgICAgIC8+CiAgICAgICAgPGRpdiBjbGFzcz0iYWJzb2x1dGUgaW5zZXQtMCBiZy1ncmFkaWVudC10by10IGZyb20tYmxhY2svNjUgdmlhLXRyYW5zcGFyZW50IHRvLWJsYWNrLzE1IiAvPgoKICAgICAgICA8c3BhbiBjbGFzcz0iYWJzb2x1dGUgbGVmdC00IHRvcC00IHJvdW5kZWQtZnVsbCBiZy1ibGFjay80MCBweC0zIHB5LTEuNSB0ZXh0LVswLjYycmVtXSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjEzZW1dIHRleHQtd2hpdGUgYmFja2Ryb3AtYmx1ci1tZCI+CiAgICAgICAgICBCaWxpYmlsaQogICAgICAgIDwvc3Bhbj4KICAgICAgICA8c3BhbiBjbGFzcz0iYWJzb2x1dGUgYm90dG9tLTQgcmlnaHQtNCByb3VuZGVkLW1kIGJnLWJsYWNrLzU1IHB4LTIgcHktMSB0ZXh0LVswLjY0cmVtXSBmb250LXNlbWlib2xkIHRleHQtd2hpdGUiPgogICAgICAgICAge3sgam91cm5leS5kdXJhdGlvbiB9fQogICAgICAgIDwvc3Bhbj4KCiAgICAgICAgPHNwYW4gY2xhc3M9ImFic29sdXRlIGluc2V0LTAgZ3JpZCBwbGFjZS1pdGVtcy1jZW50ZXIiPgogICAgICAgICAgPHNwYW4gY2xhc3M9ImdyaWQgc2l6ZS0xNiBwbGFjZS1pdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItd2hpdGUvMzAgYmctd2hpdGUvMTUgdGV4dC13aGl0ZSBiYWNrZHJvcC1ibHVyLW1kIHRyYW5zaXRpb24tdHJhbnNmb3JtIGR1cmF0aW9uLTMwMCBncm91cC1ob3ZlcjpzY2FsZS0xMTAiPgogICAgICAgICAgICA8SWNvbgogICAgICAgICAgICAgIG5hbWU9Imx1Y2lkZTpwbGF5IgogICAgICAgICAgICAgIGNsYXNzPSJtbC0xIHNpemUtNiBmaWxsLXdoaXRlIgogICAgICAgICAgICAvPgogICAgICAgICAgPC9zcGFuPgogICAgICAgIDwvc3Bhbj4KICAgICAgPC9kaXY+CgogICAgICA8ZGl2IGNsYXNzPSJtdC01IGZsZXggaXRlbXMtc3RhcnQgZ2FwLTUiPgogICAgICAgIDxkaXYgY2xhc3M9Im1pbi13LTAgZmxleC0xIj4KICAgICAgICAgIDxwIGNsYXNzPSJ0ZXh0LVswLjYycmVtXSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjE1ZW1dIHRleHQtbXV0ZWQiPgogICAgICAgICAgICB7eyBsb2NhbGl6ZShqb3VybmV5LmxvY2F0aW9uKSB9fSDCtyB7eyBqb3VybmV5LmRhdGUuc2xpY2UoMCwgNCkgfX0KICAgICAgICAgIDwvcD4KICAgICAgICAgIDxoMyBjbGFzcz0iZGlzcGxheSBtdC0yIHRleHQtW2NsYW1wKDEuNTVyZW0sMi41dncsMi40cmVtKV0gbGVhZGluZy1bMS4wOF0iPgogICAgICAgICAgICB7eyBsb2NhbGl6ZShqb3VybmV5LnRpdGxlKSB9fQogICAgICAgICAgPC9oMz4KICAgICAgICAgIDxwIGNsYXNzPSJtdC0zIGxpbmUtY2xhbXAtMiB0ZXh0LXNtIGxlYWRpbmctNiB0ZXh0LW11dGVkIj4KICAgICAgICAgICAge3sgbG9jYWxpemUoam91cm5leS5kZXNjcmlwdGlvbikgfX0KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgICA8c3BhbiBjbGFzcz0ibXQtMSBncmlkIHNpemUtMTAgc2hyaW5rLTAgcGxhY2UtaXRlbXMtY2VudGVyIHJvdW5kZWQtZnVsbCBib3JkZXIgYm9yZGVyLVt2YXIoLS1saW5lKV0gdHJhbnNpdGlvbi1jb2xvcnMgZ3JvdXAtaG92ZXI6YmctW3ZhcigtLWJyYW5kKV0gZ3JvdXAtaG92ZXI6dGV4dC1bdmFyKC0tcGFnZSldIj4KICAgICAgICAgIDxJY29uCiAgICAgICAgICAgIG5hbWU9Imx1Y2lkZTphcnJvdy11cC1yaWdodCIKICAgICAgICAgICAgY2xhc3M9InNpemUtNCIKICAgICAgICAgIC8+CiAgICAgICAgPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPHNwYW4gY2xhc3M9InNyLW9ubHkiPnt7IHQoJ2NvbW1vbi53YXRjaFZpZGVvJykgfX08L3NwYW4+CiAgICA8L2J1dHRvbj4KICA8L2FydGljbGU+CjwvdGVtcGxhdGU+Cg==
+<script setup lang="ts">
+import type { Journey } from '~/types/content'
+
+const props = defineProps<{
+  journey: Journey
+  large?: boolean
+}>()
+
+const emit = defineEmits<{
+  open: [journey: Journey]
+}>()
+
+const localize = useLocalizedText()
+const { t } = useI18n()
+</script>
+
+<template>
+  <article class="group">
+    <button
+      type="button"
+      class="w-full text-left"
+      @click="emit('open', props.journey)"
+    >
+      <div
+        class="image-reveal relative overflow-hidden rounded-[1.5rem] bg-[var(--surface-strong)]"
+        :class="large ? 'aspect-[16/9]' : 'aspect-[4/3]'"
+      >
+        <NuxtImg
+          :src="journey.cover"
+          :alt="localize(journey.title)"
+          :width="1600"
+          :height="1000"
+          class="h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/15" />
+
+        <span class="absolute left-4 top-4 rounded-full bg-black/40 px-3 py-1.5 text-[0.62rem] font-bold uppercase tracking-[0.13em] text-white backdrop-blur-md">
+          Bilibili
+        </span>
+        <span class="absolute bottom-4 right-4 rounded-md bg-black/55 px-2 py-1 text-[0.64rem] font-semibold text-white">
+          {{ journey.duration }}
+        </span>
+
+        <span class="absolute inset-0 grid place-items-center">
+          <span class="grid size-16 place-items-center rounded-full border border-white/30 bg-white/15 text-white backdrop-blur-md transition-transform duration-300 group-hover:scale-110">
+            <Icon
+              name="lucide:play"
+              class="ml-1 size-6 fill-white"
+            />
+          </span>
+        </span>
+      </div>
+
+      <div class="mt-5 flex items-start gap-5">
+        <div class="min-w-0 flex-1">
+          <p class="text-[0.62rem] font-bold uppercase tracking-[0.15em] text-muted">
+            {{ localize(journey.location) }} · {{ journey.date.slice(0, 4) }}
+          </p>
+          <h3 class="display mt-2 text-[clamp(1.55rem,2.5vw,2.4rem)] leading-[1.08]">
+            {{ localize(journey.title) }}
+          </h3>
+          <p class="mt-3 line-clamp-2 text-sm leading-6 text-muted">
+            {{ localize(journey.description) }}
+          </p>
+        </div>
+        <span class="mt-1 grid size-10 shrink-0 place-items-center rounded-full border border-[var(--line)] transition-colors group-hover:bg-[var(--brand)] group-hover:text-[var(--page)]">
+          <Icon
+            name="lucide:arrow-up-right"
+            class="size-4"
+          />
+        </span>
+      </div>
+      <span class="sr-only">{{ t('common.watchVideo') }}</span>
+    </button>
+  </article>
+</template>

@@ -1,1 +1,19 @@
-aW1wb3J0IHsgZGVmaW5lQ29sbGVjdGlvbiwgZGVmaW5lQ29udGVudENvbmZpZywgeiB9IGZyb20gJ0BudXh0L2NvbnRlbnQnCgpleHBvcnQgZGVmYXVsdCBkZWZpbmVDb250ZW50Q29uZmlnKHsKICBjb2xsZWN0aW9uczogewogICAgc3RvcmllczogZGVmaW5lQ29sbGVjdGlvbih7CiAgICAgIHR5cGU6ICdwYWdlJywKICAgICAgc291cmNlOiAnc3Rvcmllcy8qLm1kJywKICAgICAgc2NoZW1hOiB6Lm9iamVjdCh7CiAgICAgICAgdGl0bGU6IHouc3RyaW5nKCksCiAgICAgICAgZGVzY3JpcHRpb246IHouc3RyaW5nKCksCiAgICAgICAgZGF0ZTogei5zdHJpbmcoKSwKICAgICAgICBjYXRlZ29yeTogei5zdHJpbmcoKSwKICAgICAgICBjb3Zlcjogei5zdHJpbmcoKSwKICAgICAgICBsb2NhdGlvbjogei5zdHJpbmcoKS5vcHRpb25hbCgpLAogICAgICAgIHJlYWRpbmdUaW1lOiB6Lm51bWJlcigpLm9wdGlvbmFsKCksCiAgICAgIH0pLAogICAgfSksCiAgfSwKfSkK
+import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+
+export default defineContentConfig({
+  collections: {
+    stories: defineCollection({
+      type: 'page',
+      source: 'stories/*.md',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        date: z.string(),
+        category: z.string(),
+        cover: z.string(),
+        location: z.string().optional(),
+        readingTime: z.number().optional(),
+      }),
+    }),
+  },
+})

@@ -1,1 +1,18 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmNvbnN0IHsgbG9jYWxlLCBzZXRMb2NhbGUsIHQgfSA9IHVzZUkxOG4oKQoKYXN5bmMgZnVuY3Rpb24gdG9nZ2xlTG9jYWxlKCkgewogIGF3YWl0IHNldExvY2FsZShsb2NhbGUudmFsdWUgPT09ICd6aC1DTicgPyAnZW4nIDogJ3poLUNOJykKfQo8L3NjcmlwdD4KCjx0ZW1wbGF0ZT4KICA8YnV0dG9uCiAgICB0eXBlPSJidXR0b24iCiAgICBjbGFzcz0iZ3JpZCBoLTEwIG1pbi13LTExIHBsYWNlLWl0ZW1zLWNlbnRlciByb3VuZGVkLWZ1bGwgYm9yZGVyIGJvcmRlci1bdmFyKC0tbGluZSldIGJnLVt2YXIoLS1zdXJmYWNlKV0gcHgtMyB0ZXh0LVswLjY4cmVtXSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjFlbV0gdHJhbnNpdGlvbi1jb2xvcnMgaG92ZXI6YmctW3ZhcigtLXN1cmZhY2Utc3Ryb25nKV0iCiAgICA6YXJpYS1sYWJlbD0idCgnY29tbW9uLmxhbmd1YWdlJykiCiAgICBAY2xpY2s9InRvZ2dsZUxvY2FsZSIKICA+CiAgICB7eyBsb2NhbGUgPT09ICd6aC1DTicgPyAnRU4nIDogJ+S4rScgfX0KICA8L2J1dHRvbj4KPC90ZW1wbGF0ZT4K
+<script setup lang="ts">
+const { locale, setLocale, t } = useI18n()
+
+async function toggleLocale() {
+  await setLocale(locale.value === 'zh-CN' ? 'en' : 'zh-CN')
+}
+</script>
+
+<template>
+  <button
+    type="button"
+    class="grid h-10 min-w-11 place-items-center rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 text-[0.68rem] font-bold uppercase tracking-[0.1em] transition-colors hover:bg-[var(--surface-strong)]"
+    :aria-label="t('common.language')"
+    @click="toggleLocale"
+  >
+    {{ locale === 'zh-CN' ? 'EN' : '中' }}
+  </button>
+</template>

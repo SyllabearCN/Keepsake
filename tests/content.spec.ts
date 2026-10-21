@@ -1,1 +1,24 @@
-aW1wb3J0IHsgZGVzY3JpYmUsIGV4cGVjdCwgaXQgfSBmcm9tICd2aXRlc3QnCmltcG9ydCB7IGFsYnVtcywgZ2FsbGVyeSB9IGZyb20gJy4uL2FwcC9kYXRhL2FsYnVtcycKaW1wb3J0IHsgam91cm5leXMgfSBmcm9tICcuLi9hcHAvZGF0YS9qb3VybmV5cycKCmRlc2NyaWJlKCdLZWVwc2FrZSBjb250ZW50IGluZGV4ZXMnLCAoKSA9PiB7CiAgaXQoJ3VzZXMgdW5pcXVlIHBob3RvIGFuZCB2aWRlbyBpZHMnLCAoKSA9PiB7CiAgICBleHBlY3QobmV3IFNldChnYWxsZXJ5Lm1hcChwaG90byA9PiBwaG90by5pZCkpLnNpemUpLnRvQmUoZ2FsbGVyeS5sZW5ndGgpCiAgICBleHBlY3QobmV3IFNldChqb3VybmV5cy5tYXAoam91cm5leSA9PiBqb3VybmV5LmlkKSkuc2l6ZSkudG9CZShqb3VybmV5cy5sZW5ndGgpCiAgfSkKCiAgaXQoJ2tlZXBzIGV2ZXJ5IHBob3RvIGxpbmtlZCB0byBhIGRlY2xhcmVkIGFsYnVtJywgKCkgPT4gewogICAgY29uc3QgYWxidW1JZHMgPSBuZXcgU2V0KGFsYnVtcy5tYXAoYWxidW0gPT4gYWxidW0uaWQpKQoKICAgIGZvciAoY29uc3QgcGhvdG8gb2YgZ2FsbGVyeSkgewogICAgICBleHBlY3QoYWxidW1JZHMuaGFzKHBob3RvLmFsYnVtKSkudG9CZSh0cnVlKQogICAgfQogIH0pCgogIGl0KCd1c2VzIGEgQmlsaWJpbGkgQlYgaWQgZm9yIGV2ZXJ5IGpvdXJuZXknLCAoKSA9PiB7CiAgICBmb3IgKGNvbnN0IGpvdXJuZXkgb2Ygam91cm5leXMpIHsKICAgICAgZXhwZWN0KGpvdXJuZXkuYnZpZCkudG9NYXRjaCgvXkJWLykKICAgIH0KICB9KQp9KQo=
+import { describe, expect, it } from 'vitest'
+import { albums, gallery } from '../app/data/albums'
+import { journeys } from '../app/data/journeys'
+
+describe('Keepsake content indexes', () => {
+  it('uses unique photo and video ids', () => {
+    expect(new Set(gallery.map(photo => photo.id)).size).toBe(gallery.length)
+    expect(new Set(journeys.map(journey => journey.id)).size).toBe(journeys.length)
+  })
+
+  it('keeps every photo linked to a declared album', () => {
+    const albumIds = new Set(albums.map(album => album.id))
+
+    for (const photo of gallery) {
+      expect(albumIds.has(photo.album)).toBe(true)
+    }
+  })
+
+  it('uses a Bilibili BV id for every journey', () => {
+    for (const journey of journeys) {
+      expect(journey.bvid).toMatch(/^BV/)
+    }
+  })
+})

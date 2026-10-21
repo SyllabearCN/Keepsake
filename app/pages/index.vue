@@ -1,1 +1,305 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmltcG9ydCB7IG1vdGlvbiB9IGZyb20gJ21vdGlvbi12JwppbXBvcnQgdHlwZSB7IEdhbGxlcnlQaG90bywgSm91cm5leSB9IGZyb20gJ34vdHlwZXMvY29udGVudCcKaW1wb3J0IHsgZ2FsbGVyeSB9IGZyb20gJ34vZGF0YS9hbGJ1bXMnCmltcG9ydCB7IGpvdXJuZXlzIH0gZnJvbSAnfi9kYXRhL2pvdXJuZXlzJwoKY29uc3QgeyB0IH0gPSB1c2VJMThuKCkKCnVzZVNlb01ldGEoewogIHRpdGxlOiAn5oiR5Lus5Luo55qE5a625bqt6K6w5b+G57C/JywKICBkZXNjcmlwdGlvbjogdCgnaG9tZS5pbnRybycpLAp9KQoKY29uc3QgeyBkYXRhOiBzdG9yaWVzIH0gPSBhd2FpdCB1c2VBc3luY0RhdGEoJ2hvbWUtc3RvcmllcycsICgpID0+IHsKICByZXR1cm4gcXVlcnlDb2xsZWN0aW9uKCdzdG9yaWVzJykub3JkZXIoJ2RhdGUnLCAnREVTQycpLmFsbCgpCn0pCgpjb25zdCBsYXRlc3RTdG9yaWVzID0gY29tcHV0ZWQoKCkgPT4gKHN0b3JpZXMudmFsdWUgPz8gW10pLnNsaWNlKDAsIDMpKQpjb25zdCBmZWF0dXJlZFBob3RvcyA9IGNvbXB1dGVkKCgpID0+IGdhbGxlcnkuc2xpY2UoMCwgMykpCmNvbnN0IGZlYXR1cmVkSm91cm5leXMgPSBqb3VybmV5cy5maWx0ZXIoam91cm5leSA9PiBqb3VybmV5LmZlYXR1cmVkKQoKY29uc3QgYWN0aXZlUGhvdG8gPSByZWY8R2FsbGVyeVBob3RvIHwgbnVsbD4obnVsbCkKY29uc3QgYWN0aXZlSm91cm5leSA9IHJlZjxKb3VybmV5IHwgbnVsbD4obnVsbCkKY29uc3QgcGhvdG9PcGVuID0gcmVmKGZhbHNlKQpjb25zdCB2aWRlb09wZW4gPSByZWYoZmFsc2UpCgpmdW5jdGlvbiBvcGVuUGhvdG8ocGhvdG86IEdhbGxlcnlQaG90bykgewogIGFjdGl2ZVBob3RvLnZhbHVlID0gcGhvdG8KICBwaG90b09wZW4udmFsdWUgPSB0cnVlCn0KCmZ1bmN0aW9uIG9wZW5Kb3VybmV5KGpvdXJuZXk6IEpvdXJuZXkpIHsKICBhY3RpdmVKb3VybmV5LnZhbHVlID0gam91cm5leQogIHZpZGVvT3Blbi52YWx1ZSA9IHRydWUKfQo8L3NjcmlwdD4KCjx0ZW1wbGF0ZT4KICA8ZGl2PgogICAgPHNlY3Rpb24gY2xhc3M9InJlbGF0aXZlIG1pbi1oLVs0OHJlbV0gb3ZlcmZsb3ctaGlkZGVuIGJnLVsjMTAyYzI2XSB0ZXh0LXdoaXRlIHNtOm1pbi1oLVs1NHJlbV0gbGc6bWluLWgtWzEwMHN2aF0iPgogICAgICA8TnV4dEltZwogICAgICAgIHNyYz0iL2FsYnVtcy8yMDI2LXN1bW1lci9oZXJvLWNvYXN0LmpwZyIKICAgICAgICBhbHQ9IuWxseiwt+S4juaaruiJsuS4reeahOmjjuaZryIKICAgICAgICB3aWR0aD0iMjAwMCIKICAgICAgICBoZWlnaHQ9IjEzMDAiCiAgICAgICAgcHJlbG9hZAogICAgICAgIGZldGNocHJpb3JpdHk9ImhpZ2giCiAgICAgICAgY2xhc3M9ImFic29sdXRlIGluc2V0LTAgaC1mdWxsIHctZnVsbCBvYmplY3QtY292ZXIiCiAgICAgIC8+CiAgICAgIDxkaXYgY2xhc3M9ImFic29sdXRlIGluc2V0LTAgYmctW2xpbmVhci1ncmFkaWVudCgxODBkZWcscmdiYSg2LDIzLDE5LC4yNClfMCUscmdiYSg2LDIzLDE5LC4xKV8zNSUscmdiYSg2LDIzLDE5LC44OClfMTAwJSldIiAvPgogICAgICA8ZGl2IGNsYXNzPSJhYnNvbHV0ZSBpbnNldC0wIGJnLVtyYWRpYWwtZ3JhZGllbnQoY2lyY2xlX2F0XzgyJV8yMiUscmdiYSgyMzIsMTgyLDkxLC4xNiksdHJhbnNwYXJlbnRfMjRyZW0pXSIgLz4KCiAgICAgIDxkaXYgY2xhc3M9InBhZ2Utc2hlbGwgcmVsYXRpdmUgZmxleCBtaW4taC1bNDhyZW1dIGZsZXgtY29sIHBiLTggcHQtMzIgc206bWluLWgtWzU0cmVtXSBzbTpwdC0zNiBsZzptaW4taC1bMTAwc3ZoXSI+CiAgICAgICAgPG1vdGlvbi5kaXYKICAgICAgICAgIDppbml0aWFsPSJ7IG9wYWNpdHk6IDAsIHk6IDI0IH0iCiAgICAgICAgICA6YW5pbWF0ZT0ieyBvcGFjaXR5OiAxLCB5OiAwIH0iCiAgICAgICAgICA6dHJhbnNpdGlvbj0ieyBkdXJhdGlvbjogMC43NSwgZGVsYXk6IDAuMTIsIGVhc2U6IFswLjIyLCAxLCAwLjM2LCAxXSB9IgogICAgICAgICAgY2xhc3M9Im10LWF1dG8gbWF4LXctNnhsIgogICAgICAgID4KICAgICAgICAgIDxwIGNsYXNzPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyB0ZXh0LVswLjY1cmVtXSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjIyZW1dIHRleHQtd2hpdGUvNzIiPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0iaC1weCB3LTggYmctWyNlOGI2NWJdIiAvPgogICAgICAgICAgICB7eyB0KCdob21lLmV5ZWJyb3cnKSB9fQogICAgICAgICAgPC9wPgoKICAgICAgICAgIDxoMSBjbGFzcz0iZGlzcGxheSBtdC02IHdoaXRlc3BhY2UtcHJlLWxpbmUgdGV4dC1bY2xhbXAoMi4yNXJlbSw5LjJ2dyw0LjJyZW0pXSBsZWFkaW5nLVswLjk0XSB0cmFja2luZy1bLTAuMDZlbV0gdGV4dC1bI2ZmZmFmMF0gbGc6dGV4dC1bY2xhbXAoNC44cmVtLDguMnZ3LDguMnJlbSldIGxnOmxlYWRpbmctWzAuOV0iPgogICAgICAgICAgICB7eyB0KCdob21lLmhlcm9UaXRsZScpIH19CiAgICAgICAgICA8L2gxPgoKICAgICAgICAgIDxkaXYgY2xhc3M9Im10LTkgZ3JpZCBnYXAtNyBzbTpncmlkLWNvbHMtW21pbm1heCgwLDM5cmVtKV9hdXRvXSBzbTppdGVtcy1lbmQiPgogICAgICAgICAgICA8cCBjbGFzcz0ibWF4LXctMnhsIHRleHQtc20gbGVhZGluZy03IHRleHQtd2hpdGUvNzAgc206dGV4dC1bMC45OHJlbV0gc206bGVhZGluZy04Ij4KICAgICAgICAgICAgICB7eyB0KCdob21lLmludHJvJykgfX0KICAgICAgICAgICAgPC9wPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJmbGV4IGZsZXgtd3JhcCBnYXAtMyBzbTpqdXN0aWZ5LWVuZCI+CiAgICAgICAgICAgICAgPE51eHRMaW5rCiAgICAgICAgICAgICAgICB0bz0iL2dhbGxlcnkiCiAgICAgICAgICAgICAgICBjbGFzcz0icGlsbC1idXR0b24gYmctWyNmNWVmZTJdIHRleHQtWyMxNzNiMzNdIGhvdmVyOmJnLXdoaXRlIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIHt7IHQoJ2hvbWUucHJpbWFyeUN0YScpIH19CiAgICAgICAgICAgICAgICA8SWNvbgogICAgICAgICAgICAgICAgICBuYW1lPSJsdWNpZGU6aW1hZ2VzIgogICAgICAgICAgICAgICAgICBjbGFzcz0ic2l6ZS00IgogICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICA8L051eHRMaW5rPgogICAgICAgICAgICAgIDxOdXh0TGluawogICAgICAgICAgICAgICAgdG89Ii9qb3VybmV5cyIKICAgICAgICAgICAgICAgIGNsYXNzPSJwaWxsLWJ1dHRvbiBib3JkZXIgYm9yZGVyLXdoaXRlLzI1IGJnLXdoaXRlLzggdGV4dC13aGl0ZSBiYWNrZHJvcC1ibHVyLXNtIGhvdmVyOmJnLXdoaXRlLzE1IgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIHt7IHQoJ2hvbWUuc2Vjb25kYXJ5Q3RhJykgfX0KICAgICAgICAgICAgICAgIDxJY29uCiAgICAgICAgICAgICAgICAgIG5hbWU9Imx1Y2lkZTpwbGF5IgogICAgICAgICAgICAgICAgICBjbGFzcz0ic2l6ZS00IgogICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICA8L051eHRMaW5rPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvbW90aW9uLmRpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0ibXQtMTIgZmxleCBpdGVtcy1lbmQganVzdGlmeS1iZXR3ZWVuIGdhcC00IGJvcmRlci10IGJvcmRlci13aGl0ZS8xNiBwdC01IHNtOm10LTE2Ij4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIHRleHQtd2hpdGUvNTUiPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0iZ3JpZCBzaXplLTggcGxhY2UtaXRlbXMtY2VudGVyIHJvdW5kZWQtZnVsbCBib3JkZXIgYm9yZGVyLXdoaXRlLzIwIj4KICAgICAgICAgICAgICA8SWNvbgogICAgICAgICAgICAgICAgbmFtZT0ibHVjaWRlOmFycm93LWRvd24iCiAgICAgICAgICAgICAgICBjbGFzcz0ic2l6ZS0zLjUiCiAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0idGV4dC1bMC42MXJlbV0gZm9udC1ib2xkIHVwcGVyY2FzZSB0cmFja2luZy1bMC4xOGVtXSI+CiAgICAgICAgICAgICAge3sgdCgnaG9tZS5zY3JvbGwnKSB9fQogICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICA8ZGl2IGNsYXNzPSJoaWRkZW4gbWF4LXctWzE4cmVtXSByb3VuZGVkLTJ4bCBib3JkZXIgYm9yZGVyLXdoaXRlLzE1IGJnLWJsYWNrLzIwIHAtNCBiYWNrZHJvcC1ibHVyLW1kIHNtOmJsb2NrIj4KICAgICAgICAgICAgPHAgY2xhc3M9InRleHQtWzAuNThyZW1dIGZvbnQtYm9sZCB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMTdlbV0gdGV4dC1bI2U4YjY1Yl0iPgogICAgICAgICAgICAgIHt7IHQoJ2hvbWUubm90ZUxhYmVsJykgfX0KICAgICAgICAgICAgPC9wPgogICAgICAgICAgICA8cCBjbGFzcz0ibXQtMiB0ZXh0LXhzIGxlYWRpbmctNSB0ZXh0LXdoaXRlLzY2Ij4KICAgICAgICAgICAgICB7eyB0KCdob21lLm5vdGVUZXh0JykgfX0KICAgICAgICAgICAgPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJib3JkZXItYiBib3JkZXItW3ZhcigtLWxpbmUpXSI+CiAgICAgIDxkaXYgY2xhc3M9InBhZ2Utc2hlbGwgZ3JpZCBncmlkLWNvbHMtMyBkaXZpZGUteCBkaXZpZGUtW3ZhcigtLWxpbmUpXSBweS03IHNtOnB5LTkiPgogICAgICAgIDxkaXYgY2xhc3M9InByLTMgdGV4dC1jZW50ZXIiPgogICAgICAgICAgPHAgY2xhc3M9ImRpc3BsYXkgdGV4dC0zeGwgc206dGV4dC01eGwiPgogICAgICAgICAgICAwMwogICAgICAgICAgPC9wPgogICAgICAgICAgPHAgY2xhc3M9Im10LTEgdGV4dC1bMC41OHJlbV0gZm9udC1ib2xkIHVwcGVyY2FzZSB0cmFja2luZy1bMC4xMmVtXSB0ZXh0LW11dGVkIHNtOnRleHQtWzAuNjVyZW1dIj4KICAgICAgICAgICAge3sgdCgnaG9tZS5zdGF0c01lbWJlcnMnKSB9fQogICAgICAgICAgPC9wPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9InB4LTMgdGV4dC1jZW50ZXIiPgogICAgICAgICAgPHAgY2xhc3M9ImRpc3BsYXkgdGV4dC0zeGwgc206dGV4dC01eGwiPgogICAgICAgICAgICB7eyBTdHJpbmcoam91cm5leXMubGVuZ3RoKS5wYWRTdGFydCgyLCAnMCcpIH19CiAgICAgICAgICA8L3A+CiAgICAgICAgICA8cCBjbGFzcz0ibXQtMSB0ZXh0LVswLjU4cmVtXSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjEyZW1dIHRleHQtbXV0ZWQgc206dGV4dC1bMC42NXJlbV0iPgogICAgICAgICAgICB7eyB0KCdob21lLnN0YXRzVHJpcHMnKSB9fQogICAgICAgICAgPC9wPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9InBsLTMgdGV4dC1jZW50ZXIiPgogICAgICAgICAgPHAgY2xhc3M9ImRpc3BsYXkgdGV4dC0zeGwgc206dGV4dC01eGwiPgogICAgICAgICAgICB7eyBTdHJpbmcobGF0ZXN0U3Rvcmllcy5sZW5ndGgpLnBhZFN0YXJ0KDIsICcwJykgfX0KICAgICAgICAgIDwvcD4KICAgICAgICAgIDxwIGNsYXNzPSJtdC0xIHRleHQtWzAuNThyZW1dIGZvbnQtYm9sZCB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMTJlbV0gdGV4dC1tdXRlZCBzbTp0ZXh0LVswLjY1cmVtXSI+CiAgICAgICAgICAgIHt7IHQoJ2hvbWUuc3RhdHNTdG9yaWVzJykgfX0KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L3NlY3Rpb24+CgogICAgPHNlY3Rpb24gY2xhc3M9InBhZ2Utc2hlbGwgcHktMjAgc206cHktMjgiPgogICAgICA8ZGl2IGNsYXNzPSJmbGV4IGZsZXgtY29sIGdhcC04IG1kOmZsZXgtcm93IG1kOml0ZW1zLWVuZCBtZDpqdXN0aWZ5LWJldHdlZW4iPgogICAgICAgIDxTZWN0aW9uSGVhZGluZwogICAgICAgICAgOmV5ZWJyb3c9InQoJ2hvbWUuYWxidW1FeWVicm93JykiCiAgICAgICAgICA6dGl0bGU9InQoJ2hvbWUuYWxidW1UaXRsZScpIgogICAgICAgICAgOmludHJvPSJ0KCdob21lLmFsYnVtSW50cm8nKSIKICAgICAgICAvPgogICAgICAgIDxOdXh0TGluawogICAgICAgICAgdG89Ii9nYWxsZXJ5IgogICAgICAgICAgY2xhc3M9InBpbGwtYnV0dG9uIHNlbGYtc3RhcnQgYm9yZGVyIGJvcmRlci1bdmFyKC0tbGluZSldIG1kOnNlbGYtYXV0byIKICAgICAgICA+CiAgICAgICAgICB7eyB0KCdjb21tb24udmlld0FsbCcpIH19CiAgICAgICAgICA8SWNvbgogICAgICAgICAgICBuYW1lPSJsdWNpZGU6YXJyb3ctdXAtcmlnaHQiCiAgICAgICAgICAgIGNsYXNzPSJzaXplLTQiCiAgICAgICAgICAvPgogICAgICAgIDwvTnV4dExpbms+CiAgICAgIDwvZGl2PgoKICAgICAgPGRpdiBjbGFzcz0ibXQtMTIgZ3JpZCBnYXAtNCBtZDpncmlkLWNvbHMtMiBtZDpncmlkLXJvd3MtMiI+CiAgICAgICAgPFBob3RvQ2FyZAogICAgICAgICAgdi1pZj0iZmVhdHVyZWRQaG90b3NbMF0iCiAgICAgICAgICA6cGhvdG89ImZlYXR1cmVkUGhvdG9zWzBdIgogICAgICAgICAgYXNwZWN0PSJsYW5kc2NhcGUiCiAgICAgICAgICBjbGFzcz0ibWQ6cm93LXNwYW4tMiBtZDpoLWZ1bGwgWyY+YnV0dG9uPmRpdl06aC1mdWxsIgogICAgICAgICAgcHJpb3JpdHkKICAgICAgICAgIEBvcGVuPSJvcGVuUGhvdG8iCiAgICAgICAgLz4KICAgICAgICA8UGhvdG9DYXJkCiAgICAgICAgICB2LWlmPSJmZWF0dXJlZFBob3Rvc1sxXSIKICAgICAgICAgIDpwaG90bz0iZmVhdHVyZWRQaG90b3NbMV0iCiAgICAgICAgICBhc3BlY3Q9ImxhbmRzY2FwZSIKICAgICAgICAgIEBvcGVuPSJvcGVuUGhvdG8iCiAgICAgICAgLz4KICAgICAgICA8ZGl2IGNsYXNzPSJncmlkIGdhcC00IHNtOmdyaWQtY29scy0yIj4KICAgICAgICAgIDxQaG90b0NhcmQKICAgICAgICAgICAgdi1pZj0iZmVhdHVyZWRQaG90b3NbMl0iCiAgICAgICAgICAgIDpwaG90bz0iZmVhdHVyZWRQaG90b3NbMl0iCiAgICAgICAgICAgIGFzcGVjdD0ic3F1YXJlIgogICAgICAgICAgICBAb3Blbj0ib3BlblBob3RvIgogICAgICAgICAgLz4KICAgICAgICAgIDxOdXh0TGluawogICAgICAgICAgICB0bz0iL2dhbGxlcnkiCiAgICAgICAgICAgIGNsYXNzPSJncm91cCBncmlkIG1pbi1oLTU2IHBsYWNlLWl0ZW1zLWNlbnRlciByb3VuZGVkLVsxLjRyZW1dIGJnLVt2YXIoLS1icmFuZCldIHAtNiB0ZXh0LWNlbnRlciB0ZXh0LVt2YXIoLS1wYWdlKV0iCiAgICAgICAgICA+CiAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im14LWF1dG8gZ3JpZCBzaXplLTEyIHBsYWNlLWl0ZW1zLWNlbnRlciByb3VuZGVkLWZ1bGwgYm9yZGVyIGJvcmRlci1jdXJyZW50LzI1IHRyYW5zaXRpb24tdHJhbnNmb3JtIGR1cmF0aW9uLTMwMCBncm91cC1ob3Zlcjpyb3RhdGUtMTIiPgogICAgICAgICAgICAgICAgPEljb24KICAgICAgICAgICAgICAgICAgbmFtZT0ibHVjaWRlOmltYWdlcyIKICAgICAgICAgICAgICAgICAgY2xhc3M9InNpemUtNSIKICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgPC9zcGFuPgogICAgICAgICAgICAgIDxwIGNsYXNzPSJkaXNwbGF5IG10LTUgdGV4dC0yeGwiPgogICAgICAgICAgICAgICAge3sgZ2FsbGVyeS5sZW5ndGggfX0ge3sgdCgnY29tbW9uLnBob3RvcycpIH19CiAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgIDxwIGNsYXNzPSJtdC0yIHRleHQtWzAuNjJyZW1dIGZvbnQtYm9sZCB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMTJlbV0gb3BhY2l0eS02MCI+CiAgICAgICAgICAgICAgICB7eyB0KCdjb21tb24udmlld0FsbCcpIH19IOKGkgogICAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L051eHRMaW5rPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvc2VjdGlvbj4KCiAgICA8c2VjdGlvbiBjbGFzcz0ib3ZlcmZsb3ctaGlkZGVuIGJnLVt2YXIoLS1zdXJmYWNlLXN0cm9uZyldIHB5LTIwIHNtOnB5LTI4Ij4KICAgICAgPGRpdiBjbGFzcz0icGFnZS1zaGVsbCI+CiAgICAgICAgPGRpdiBjbGFzcz0iZmxleCBmbGV4LWNvbCBnYXAtOCBtZDpmbGV4LXJvdyBtZDppdGVtcy1lbmQgbWQ6anVzdGlmeS1iZXR3ZWVuIj4KICAgICAgICAgIDxTZWN0aW9uSGVhZGluZwogICAgICAgICAgICA6ZXllYnJvdz0idCgnaG9tZS5qb3VybmV5RXllYnJvdycpIgogICAgICAgICAgICA6dGl0bGU9InQoJ2hvbWUuam91cm5leVRpdGxlJykiCiAgICAgICAgICAgIDppbnRybz0idCgnaG9tZS5qb3VybmV5SW50cm8nKSIKICAgICAgICAgIC8+CiAgICAgICAgICA8TnV4dExpbmsKICAgICAgICAgICAgdG89Ii9qb3VybmV5cyIKICAgICAgICAgICAgY2xhc3M9InBpbGwtYnV0dG9uIHNlbGYtc3RhcnQgYm9yZGVyIGJvcmRlci1bdmFyKC0tbGluZSldIG1kOnNlbGYtYXV0byIKICAgICAgICAgID4KICAgICAgICAgICAge3sgdCgnY29tbW9uLnZpZXdBbGwnKSB9fQogICAgICAgICAgICA8SWNvbgogICAgICAgICAgICAgIG5hbWU9Imx1Y2lkZTphcnJvdy11cC1yaWdodCIKICAgICAgICAgICAgICBjbGFzcz0ic2l6ZS00IgogICAgICAgICAgICAvPgogICAgICAgICAgPC9OdXh0TGluaz4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0ibXQtMTIgZ3JpZCBnYXAtOCBsZzpncmlkLWNvbHMtMiI+CiAgICAgICAgICA8Sm91cm5leUNhcmQKICAgICAgICAgICAgdi1mb3I9ImpvdXJuZXkgaW4gZmVhdHVyZWRKb3VybmV5cyIKICAgICAgICAgICAgOmtleT0iam91cm5leS5pZCIKICAgICAgICAgICAgOmpvdXJuZXk9ImpvdXJuZXkiCiAgICAgICAgICAgIGxhcmdlCiAgICAgICAgICAgIEBvcGVuPSJvcGVuSm91cm5leSIKICAgICAgICAgIC8+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJwYWdlLXNoZWxsIHB5LTIwIHNtOnB5LTI4Ij4KICAgICAgPGRpdiBjbGFzcz0iZmxleCBmbGV4LWNvbCBnYXAtOCBtZDpmbGV4LXJvdyBtZDppdGVtcy1lbmQgbWQ6anVzdGlmeS1iZXR3ZWVuIj4KICAgICAgICA8U2VjdGlvbkhlYWRpbmcKICAgICAgICAgIDpleWVicm93PSJ0KCdob21lLnN0b3JpZXNFeWVicm93JykiCiAgICAgICAgICA6dGl0bGU9InQoJ2hvbWUuc3Rvcmllc1RpdGxlJykiCiAgICAgICAgICA6aW50cm89InQoJ2hvbWUuc3RvcnlJbnRybycpIgogICAgICAgIC8+CiAgICAgICAgPE51eHRMaW5rCiAgICAgICAgICB0bz0iL3N0b3JpZXMiCiAgICAgICAgICBjbGFzcz0icGlsbC1idXR0b24gc2VsZi1zdGFydCBib3JkZXIgYm9yZGVyLVt2YXIoLS1saW5lKV0gbWQ6c2VsZi1hdXRvIgogICAgICAgID4KICAgICAgICAgIHt7IHQoJ2NvbW1vbi52aWV3QWxsJykgfX0KICAgICAgICAgIDxJY29uCiAgICAgICAgICAgIG5hbWU9Imx1Y2lkZTphcnJvdy11cC1yaWdodCIKICAgICAgICAgICAgY2xhc3M9InNpemUtNCIKICAgICAgICAgIC8+CiAgICAgICAgPC9OdXh0TGluaz4KICAgICAgPC9kaXY+CgogICAgICA8ZGl2IGNsYXNzPSJtdC0xMiBncmlkIGdhcC01IG1kOmdyaWQtY29scy0yIHhsOmdyaWQtY29scy0zIj4KICAgICAgICA8U3RvcnlDYXJkCiAgICAgICAgICB2LWZvcj0ic3RvcnkgaW4gbGF0ZXN0U3RvcmllcyIKICAgICAgICAgIDprZXk9InN0b3J5LnBhdGgiCiAgICAgICAgICA6c3Rvcnk9InN0b3J5IgogICAgICAgIC8+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJwYWdlLXNoZWxsIHBiLTQiPgogICAgICA8ZGl2IGNsYXNzPSJyZWxhdGl2ZSBvdmVyZmxvdy1oaWRkZW4gcm91bmRlZC1bMnJlbV0gYmctW3ZhcigtLWJyYW5kKV0gcHgtNiBweS0yMCB0ZXh0LWNlbnRlciB0ZXh0LVt2YXIoLS1wYWdlKV0gc206cHgtMTIgc206cHktMjgiPgogICAgICAgIDxkaXYgY2xhc3M9ImFic29sdXRlIC1sZWZ0LTE2IC10b3AtMjAgc2l6ZS03MiByb3VuZGVkLWZ1bGwgYm9yZGVyIGJvcmRlci1jdXJyZW50LzEwIiAvPgogICAgICAgIDxkaXYgY2xhc3M9ImFic29sdXRlIC1ib3R0b20tMzYgLXJpZ2h0LTIwIHNpemUtOTYgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItY3VycmVudC8xMCIgLz4KICAgICAgICA8ZGl2IGNsYXNzPSJhYnNvbHV0ZSBpbnNldC0wIG9wYWNpdHktWzAuMDddIFtiYWNrZ3JvdW5kLWltYWdlOnJhZGlhbC1ncmFkaWVudChjaXJjbGVfYXRfY2VudGVyLGN1cnJlbnRDb2xvcl8xcHgsdHJhbnNwYXJlbnRfMXB4KV0gW2JhY2tncm91bmQtc2l6ZToxOHB4XzE4cHhdIiAvPgogICAgICAgIDxkaXYgY2xhc3M9InJlbGF0aXZlIj4KICAgICAgICAgIDxwIGNsYXNzPSJleWVicm93IGp1c3RpZnktY2VudGVyICF0ZXh0LWN1cnJlbnQvNTUiPgogICAgICAgICAgICB7eyB0KCdob21lLnNpbmNlJykgfX0KICAgICAgICAgIDwvcD4KICAgICAgICAgIDxwIGNsYXNzPSJkaXNwbGF5IG14LWF1dG8gbXQtNyBtYXgtdy00eGwgd2hpdGVzcGFjZS1wcmUtbGluZSB0ZXh0LVtjbGFtcCgyLjhyZW0sN3Z3LDYuNHJlbSldIGxlYWRpbmctWzAuOTRdIj4KICAgICAgICAgICAge3sgdCgnaG9tZS5xdW90ZScpIH19CiAgICAgICAgICA8L3A+CiAgICAgICAgICA8cCBjbGFzcz0ibXQtNyB0ZXh0LXNtIHRleHQtY3VycmVudC81NSI+CiAgICAgICAgICAgIHt7IHQoJ2hvbWUucXVvdGVOb3RlJykgfX0KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L3NlY3Rpb24+CgogICAgPEdhbGxlcnlMaWdodGJveAogICAgICB2LWlmPSJhY3RpdmVQaG90byIKICAgICAgdi1tb2RlbDpvcGVuPSJwaG90b09wZW4iCiAgICAgIDpwaG90bz0iYWN0aXZlUGhvdG8iCiAgICAvPgogICAgPFZpZGVvRGlhbG9nCiAgICAgIHYtbW9kZWw6b3Blbj0idmlkZW9PcGVuIgogICAgICA6am91cm5leT0iYWN0aXZlSm91cm5leSIKICAgIC8+CiAgPC9kaXY+CjwvdGVtcGxhdGU+Cg==
+<script setup lang="ts">
+import { motion } from 'motion-v'
+import type { GalleryPhoto, Journey } from '~/types/content'
+import { gallery } from '~/data/albums'
+import { journeys } from '~/data/journeys'
+
+const { t } = useI18n()
+
+useSeoMeta({
+  title: '我们仨的家庭记忆簿',
+  description: t('home.intro'),
+})
+
+const { data: stories } = await useAsyncData('home-stories', () => {
+  return queryCollection('stories').order('date', 'DESC').all()
+})
+
+const latestStories = computed(() => (stories.value ?? []).slice(0, 3))
+const featuredPhotos = computed(() => gallery.slice(0, 3))
+const featuredJourneys = journeys.filter(journey => journey.featured)
+
+const activePhoto = ref<GalleryPhoto | null>(null)
+const activeJourney = ref<Journey | null>(null)
+const photoOpen = ref(false)
+const videoOpen = ref(false)
+
+function openPhoto(photo: GalleryPhoto) {
+  activePhoto.value = photo
+  photoOpen.value = true
+}
+
+function openJourney(journey: Journey) {
+  activeJourney.value = journey
+  videoOpen.value = true
+}
+</script>
+
+<template>
+  <div>
+    <section class="relative min-h-[48rem] overflow-hidden bg-[#102c26] text-white sm:min-h-[54rem] lg:min-h-[100svh]">
+      <NuxtImg
+        src="/albums/2026-summer/hero-coast.jpg"
+        alt="山谷与暮色中的风景"
+        width="2000"
+        height="1300"
+        preload
+        fetchpriority="high"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,23,19,.24)_0%,rgba(6,23,19,.1)_35%,rgba(6,23,19,.88)_100%)]" />
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_82%_22%,rgba(232,182,91,.16),transparent_24rem)]" />
+
+      <div class="page-shell relative flex min-h-[48rem] flex-col pb-8 pt-32 sm:min-h-[54rem] sm:pt-36 lg:min-h-[100svh]">
+        <motion.div
+          :initial="{ opacity: 0, y: 24 }"
+          :animate="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.75, delay: 0.12, ease: [0.22, 1, 0.36, 1] }"
+          class="mt-auto max-w-6xl"
+        >
+          <p class="flex items-center gap-3 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-white/72">
+            <span class="h-px w-8 bg-[#e8b65b]" />
+            {{ t('home.eyebrow') }}
+          </p>
+
+          <h1 class="display mt-6 whitespace-pre-line text-[clamp(2.25rem,9.2vw,4.2rem)] leading-[0.94] tracking-[-0.06em] text-[#fffaf0] lg:text-[clamp(4.8rem,8.2vw,8.2rem)] lg:leading-[0.9]">
+            {{ t('home.heroTitle') }}
+          </h1>
+
+          <div class="mt-9 grid gap-7 sm:grid-cols-[minmax(0,39rem)_auto] sm:items-end">
+            <p class="max-w-2xl text-sm leading-7 text-white/70 sm:text-[0.98rem] sm:leading-8">
+              {{ t('home.intro') }}
+            </p>
+            <div class="flex flex-wrap gap-3 sm:justify-end">
+              <NuxtLink
+                to="/gallery"
+                class="pill-button bg-[#f5efe2] text-[#173b33] hover:bg-white"
+              >
+                {{ t('home.primaryCta') }}
+                <Icon
+                  name="lucide:images"
+                  class="size-4"
+                />
+              </NuxtLink>
+              <NuxtLink
+                to="/journeys"
+                class="pill-button border border-white/25 bg-white/8 text-white backdrop-blur-sm hover:bg-white/15"
+              >
+                {{ t('home.secondaryCta') }}
+                <Icon
+                  name="lucide:play"
+                  class="size-4"
+                />
+              </NuxtLink>
+            </div>
+          </div>
+        </motion.div>
+
+        <div class="mt-12 flex items-end justify-between gap-4 border-t border-white/16 pt-5 sm:mt-16">
+          <div class="flex items-center gap-3 text-white/55">
+            <span class="grid size-8 place-items-center rounded-full border border-white/20">
+              <Icon
+                name="lucide:arrow-down"
+                class="size-3.5"
+              />
+            </span>
+            <span class="text-[0.61rem] font-bold uppercase tracking-[0.18em]">
+              {{ t('home.scroll') }}
+            </span>
+          </div>
+
+          <div class="hidden max-w-[18rem] rounded-2xl border border-white/15 bg-black/20 p-4 backdrop-blur-md sm:block">
+            <p class="text-[0.58rem] font-bold uppercase tracking-[0.17em] text-[#e8b65b]">
+              {{ t('home.noteLabel') }}
+            </p>
+            <p class="mt-2 text-xs leading-5 text-white/66">
+              {{ t('home.noteText') }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-[var(--line)]">
+      <div class="page-shell grid grid-cols-3 divide-x divide-[var(--line)] py-7 sm:py-9">
+        <div class="pr-3 text-center">
+          <p class="display text-3xl sm:text-5xl">
+            03
+          </p>
+          <p class="mt-1 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-muted sm:text-[0.65rem]">
+            {{ t('home.statsMembers') }}
+          </p>
+        </div>
+        <div class="px-3 text-center">
+          <p class="display text-3xl sm:text-5xl">
+            {{ String(journeys.length).padStart(2, '0') }}
+          </p>
+          <p class="mt-1 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-muted sm:text-[0.65rem]">
+            {{ t('home.statsTrips') }}
+          </p>
+        </div>
+        <div class="pl-3 text-center">
+          <p class="display text-3xl sm:text-5xl">
+            {{ String(latestStories.length).padStart(2, '0') }}
+          </p>
+          <p class="mt-1 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-muted sm:text-[0.65rem]">
+            {{ t('home.statsStories') }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-shell py-20 sm:py-28">
+      <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+        <SectionHeading
+          :eyebrow="t('home.albumEyebrow')"
+          :title="t('home.albumTitle')"
+          :intro="t('home.albumIntro')"
+        />
+        <NuxtLink
+          to="/gallery"
+          class="pill-button self-start border border-[var(--line)] md:self-auto"
+        >
+          {{ t('common.viewAll') }}
+          <Icon
+            name="lucide:arrow-up-right"
+            class="size-4"
+          />
+        </NuxtLink>
+      </div>
+
+      <div class="mt-12 grid gap-4 md:grid-cols-2 md:grid-rows-2">
+        <PhotoCard
+          v-if="featuredPhotos[0]"
+          :photo="featuredPhotos[0]"
+          aspect="landscape"
+          class="md:row-span-2 md:h-full [&>button>div]:h-full"
+          priority
+          @open="openPhoto"
+        />
+        <PhotoCard
+          v-if="featuredPhotos[1]"
+          :photo="featuredPhotos[1]"
+          aspect="landscape"
+          @open="openPhoto"
+        />
+        <div class="grid gap-4 sm:grid-cols-2">
+          <PhotoCard
+            v-if="featuredPhotos[2]"
+            :photo="featuredPhotos[2]"
+            aspect="square"
+            @open="openPhoto"
+          />
+          <NuxtLink
+            to="/gallery"
+            class="group grid min-h-56 place-items-center rounded-[1.4rem] bg-[var(--brand)] p-6 text-center text-[var(--page)]"
+          >
+            <div>
+              <span class="mx-auto grid size-12 place-items-center rounded-full border border-current/25 transition-transform duration-300 group-hover:rotate-12">
+                <Icon
+                  name="lucide:images"
+                  class="size-5"
+                />
+              </span>
+              <p class="display mt-5 text-2xl">
+                {{ gallery.length }} {{ t('common.photos') }}
+              </p>
+              <p class="mt-2 text-[0.62rem] font-bold uppercase tracking-[0.12em] opacity-60">
+                {{ t('common.viewAll') }} →
+              </p>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden bg-[var(--surface-strong)] py-20 sm:py-28">
+      <div class="page-shell">
+        <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <SectionHeading
+            :eyebrow="t('home.journeyEyebrow')"
+            :title="t('home.journeyTitle')"
+            :intro="t('home.journeyIntro')"
+          />
+          <NuxtLink
+            to="/journeys"
+            class="pill-button self-start border border-[var(--line)] md:self-auto"
+          >
+            {{ t('common.viewAll') }}
+            <Icon
+              name="lucide:arrow-up-right"
+              class="size-4"
+            />
+          </NuxtLink>
+        </div>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-2">
+          <JourneyCard
+            v-for="journey in featuredJourneys"
+            :key="journey.id"
+            :journey="journey"
+            large
+            @open="openJourney"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="page-shell py-20 sm:py-28">
+      <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+        <SectionHeading
+          :eyebrow="t('home.storiesEyebrow')"
+          :title="t('home.storiesTitle')"
+          :intro="t('home.storyIntro')"
+        />
+        <NuxtLink
+          to="/stories"
+          class="pill-button self-start border border-[var(--line)] md:self-auto"
+        >
+          {{ t('common.viewAll') }}
+          <Icon
+            name="lucide:arrow-up-right"
+            class="size-4"
+          />
+        </NuxtLink>
+      </div>
+
+      <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <StoryCard
+          v-for="story in latestStories"
+          :key="story.path"
+          :story="story"
+        />
+      </div>
+    </section>
+
+    <section class="page-shell pb-4">
+      <div class="relative overflow-hidden rounded-[2rem] bg-[var(--brand)] px-6 py-20 text-center text-[var(--page)] sm:px-12 sm:py-28">
+        <div class="absolute -left-16 -top-20 size-72 rounded-full border border-current/10" />
+        <div class="absolute -bottom-36 -right-20 size-96 rounded-full border border-current/10" />
+        <div class="absolute inset-0 opacity-[0.07] [background-image:radial-gradient(circle_at_center,currentColor_1px,transparent_1px)] [background-size:18px_18px]" />
+        <div class="relative">
+          <p class="eyebrow justify-center !text-current/55">
+            {{ t('home.since') }}
+          </p>
+          <p class="display mx-auto mt-7 max-w-4xl whitespace-pre-line text-[clamp(2.8rem,7vw,6.4rem)] leading-[0.94]">
+            {{ t('home.quote') }}
+          </p>
+          <p class="mt-7 text-sm text-current/55">
+            {{ t('home.quoteNote') }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <GalleryLightbox
+      v-if="activePhoto"
+      v-model:open="photoOpen"
+      :photo="activePhoto"
+    />
+    <VideoDialog
+      v-model:open="videoOpen"
+      :journey="activeJourney"
+    />
+  </div>
+</template>

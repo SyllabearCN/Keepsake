@@ -1,1 +1,90 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmltcG9ydCB7CiAgRGlhbG9nQ2xvc2UsCiAgRGlhbG9nQ29udGVudCwKICBEaWFsb2dEZXNjcmlwdGlvbiwKICBEaWFsb2dPdmVybGF5LAogIERpYWxvZ1BvcnRhbCwKICBEaWFsb2dSb290LAogIERpYWxvZ1RpdGxlLAp9IGZyb20gJ3Jla2EtdWknCmltcG9ydCB0eXBlIHsgSm91cm5leSB9IGZyb20gJ34vdHlwZXMvY29udGVudCcKCmNvbnN0IHByb3BzID0gZGVmaW5lUHJvcHM8ewogIGpvdXJuZXk6IEpvdXJuZXkgfCBudWxsCn0+KCkKCmNvbnN0IG9wZW4gPSBkZWZpbmVNb2RlbDxib29sZWFuPignb3BlbicsIHsgZGVmYXVsdDogZmFsc2UgfSkKY29uc3QgbG9jYWxpemUgPSB1c2VMb2NhbGl6ZWRUZXh0KCkKY29uc3QgeyB0IH0gPSB1c2VJMThuKCkKCmNvbnN0IGVtYmVkVXJsID0gY29tcHV0ZWQoKCkgPT4gewogIGlmICghcHJvcHMuam91cm5leSkgcmV0dXJuICcnCiAgcmV0dXJuIGBodHRwczovL3BsYXllci5iaWxpYmlsaS5jb20vcGxheWVyLmh0bWw/aXNPdXRzaWRlPXRydWUmYnZpZD0ke3Byb3BzLmpvdXJuZXkuYnZpZH0mcD0xJmF1dG9wbGF5PTEmZGFubWFrdT0wYAp9KQoKY29uc3Qgd2F0Y2hVcmwgPSBjb21wdXRlZCgoKSA9PiB7CiAgaWYgKCFwcm9wcy5qb3VybmV5KSByZXR1cm4gJ2h0dHBzOi8vd3d3LmJpbGliaWxpLmNvbScKICByZXR1cm4gYGh0dHBzOi8vd3d3LmJpbGliaWxpLmNvbS92aWRlby8ke3Byb3BzLmpvdXJuZXkuYnZpZH1gCn0pCjwvc2NyaXB0PgoKPHRlbXBsYXRlPgogIDxEaWFsb2dSb290IHYtbW9kZWw6b3Blbj0ib3BlbiI+CiAgICA8RGlhbG9nUG9ydGFsPgogICAgICA8RGlhbG9nT3ZlcmxheSBjbGFzcz0iZml4ZWQgaW5zZXQtMCB6LVsxMDBdIGJnLWJsYWNrLzc1IGJhY2tkcm9wLWJsdXItbWQiIC8+CiAgICAgIDxEaWFsb2dDb250ZW50IGNsYXNzPSJmaXhlZCBpbnNldC0wIHotWzExMF0gZ3JpZCBwbGFjZS1pdGVtcy1jZW50ZXIgcC0zIG91dGxpbmUtbm9uZSBzbTpwLTgiPgogICAgICAgIDxkaXYgY2xhc3M9InctZnVsbCBtYXgtdy02eGwgb3ZlcmZsb3ctaGlkZGVuIHJvdW5kZWQtWzEuNHJlbV0gYm9yZGVyIGJvcmRlci13aGl0ZS8xMCBiZy1bIzBkMWYxYV0gdGV4dC13aGl0ZSBzaGFkb3ctMnhsIj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZsZXggaXRlbXMtY2VudGVyIGdhcC00IGJvcmRlci1iIGJvcmRlci13aGl0ZS8xMCBweC01IHB5LTQiPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJtaW4tdy0wIGZsZXgtMSI+CiAgICAgICAgICAgICAgPERpYWxvZ1RpdGxlCiAgICAgICAgICAgICAgICB2LWlmPSJqb3VybmV5IgogICAgICAgICAgICAgICAgY2xhc3M9InRydW5jYXRlIGZvbnQtc2VyaWYgdGV4dC14bCIKICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICB7eyBsb2NhbGl6ZShqb3VybmV5LnRpdGxlKSB9fQogICAgICAgICAgICAgIDwvRGlhbG9nVGl0bGU+CiAgICAgICAgICAgICAgPERpYWxvZ0Rlc2NyaXB0aW9uCiAgICAgICAgICAgICAgICB2LWlmPSJqb3VybmV5IgogICAgICAgICAgICAgICAgY2xhc3M9Im10LTEgdGV4dC14cyB0ZXh0LXdoaXRlLzQ1IgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIHt7IGxvY2FsaXplKGpvdXJuZXkubG9jYXRpb24pIH19IMK3IHt7IGpvdXJuZXkuZGF0ZSB9fQogICAgICAgICAgICAgIDwvRGlhbG9nRGVzY3JpcHRpb24+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8YQogICAgICAgICAgICAgIHYtaWY9ImpvdXJuZXkiCiAgICAgICAgICAgICAgOmhyZWY9IndhdGNoVXJsIgogICAgICAgICAgICAgIHRhcmdldD0iX2JsYW5rIgogICAgICAgICAgICAgIHJlbD0ibm9vcGVuZXIgbm9yZWZlcnJlciIKICAgICAgICAgICAgICBjbGFzcz0iaGlkZGVuIHJvdW5kZWQtZnVsbCBib3JkZXIgYm9yZGVyLXdoaXRlLzE1IHB4LTQgcHktMiB0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdGV4dC13aGl0ZS83NSB0cmFuc2l0aW9uLWNvbG9ycyBob3ZlcjpiZy13aGl0ZS8xMCBzbTppbmxpbmUtZmxleCIKICAgICAgICAgICAgPgogICAgICAgICAgICAgIHt7IHQoJ2pvdXJuZXlzLndhdGNoT25CaWxpYmlsaScpIH19CiAgICAgICAgICAgIDwvYT4KICAgICAgICAgICAgPERpYWxvZ0Nsb3NlIGFzLWNoaWxkPgogICAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICAgIHR5cGU9ImJ1dHRvbiIKICAgICAgICAgICAgICAgIGNsYXNzPSJncmlkIHNpemUtOSBzaHJpbmstMCBwbGFjZS1pdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItd2hpdGUvMTUiCiAgICAgICAgICAgICAgICA6YXJpYS1sYWJlbD0idCgnY29tbW9uLmNsb3NlJykiCiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgPEljb24KICAgICAgICAgICAgICAgICAgbmFtZT0ibHVjaWRlOngiCiAgICAgICAgICAgICAgICAgIGNsYXNzPSJzaXplLTQiCiAgICAgICAgICAgICAgICAvPgogICAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgICA8L0RpYWxvZ0Nsb3NlPgogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgPGRpdiBjbGFzcz0iYXNwZWN0LXZpZGVvIHctZnVsbCBiZy1ibGFjayI+CiAgICAgICAgICAgIDxpZnJhbWUKICAgICAgICAgICAgICB2LWlmPSJvcGVuICYmIGpvdXJuZXkiCiAgICAgICAgICAgICAgOnNyYz0iZW1iZWRVcmwiCiAgICAgICAgICAgICAgOnRpdGxlPSJsb2NhbGl6ZShqb3VybmV5LnRpdGxlKSIKICAgICAgICAgICAgICBjbGFzcz0iaC1mdWxsIHctZnVsbCIKICAgICAgICAgICAgICBhbGxvdz0iYXV0b3BsYXk7IGZ1bGxzY3JlZW47IHBpY3R1cmUtaW4tcGljdHVyZSIKICAgICAgICAgICAgICBhbGxvd2Z1bGxzY3JlZW4KICAgICAgICAgICAgLz4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L0RpYWxvZ0NvbnRlbnQ+CiAgICA8L0RpYWxvZ1BvcnRhbD4KICA8L0RpYWxvZ1Jvb3Q+CjwvdGVtcGxhdGU+Cg==
+<script setup lang="ts">
+import {
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogOverlay,
+  DialogPortal,
+  DialogRoot,
+  DialogTitle,
+} from 'reka-ui'
+import type { Journey } from '~/types/content'
+
+const props = defineProps<{
+  journey: Journey | null
+}>()
+
+const open = defineModel<boolean>('open', { default: false })
+const localize = useLocalizedText()
+const { t } = useI18n()
+
+const embedUrl = computed(() => {
+  if (!props.journey) return ''
+  return `https://player.bilibili.com/player.html?isOutside=true&bvid=${props.journey.bvid}&p=1&autoplay=1&danmaku=0`
+})
+
+const watchUrl = computed(() => {
+  if (!props.journey) return 'https://www.bilibili.com'
+  return `https://www.bilibili.com/video/${props.journey.bvid}`
+})
+</script>
+
+<template>
+  <DialogRoot v-model:open="open">
+    <DialogPortal>
+      <DialogOverlay class="fixed inset-0 z-[100] bg-black/75 backdrop-blur-md" />
+      <DialogContent class="fixed inset-0 z-[110] grid place-items-center p-3 outline-none sm:p-8">
+        <div class="w-full max-w-6xl overflow-hidden rounded-[1.4rem] border border-white/10 bg-[#0d1f1a] text-white shadow-2xl">
+          <div class="flex items-center gap-4 border-b border-white/10 px-5 py-4">
+            <div class="min-w-0 flex-1">
+              <DialogTitle
+                v-if="journey"
+                class="truncate font-serif text-xl"
+              >
+                {{ localize(journey.title) }}
+              </DialogTitle>
+              <DialogDescription
+                v-if="journey"
+                class="mt-1 text-xs text-white/45"
+              >
+                {{ localize(journey.location) }} · {{ journey.date }}
+              </DialogDescription>
+            </div>
+            <a
+              v-if="journey"
+              :href="watchUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hidden rounded-full border border-white/15 px-4 py-2 text-xs font-semibold text-white/75 transition-colors hover:bg-white/10 sm:inline-flex"
+            >
+              {{ t('journeys.watchOnBilibili') }}
+            </a>
+            <DialogClose as-child>
+              <button
+                type="button"
+                class="grid size-9 shrink-0 place-items-center rounded-full border border-white/15"
+                :aria-label="t('common.close')"
+              >
+                <Icon
+                  name="lucide:x"
+                  class="size-4"
+                />
+              </button>
+            </DialogClose>
+          </div>
+
+          <div class="aspect-video w-full bg-black">
+            <iframe
+              v-if="open && journey"
+              :src="embedUrl"
+              :title="localize(journey.title)"
+              class="h-full w-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+        </div>
+      </DialogContent>
+    </DialogPortal>
+  </DialogRoot>
+</template>

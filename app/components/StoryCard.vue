@@ -1,1 +1,68 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmludGVyZmFjZSBTdG9yeVN1bW1hcnkgewogIHBhdGg6IHN0cmluZwogIHRpdGxlOiBzdHJpbmcKICBkZXNjcmlwdGlvbjogc3RyaW5nCiAgZGF0ZTogc3RyaW5nCiAgY2F0ZWdvcnk6IHN0cmluZwogIGNvdmVyOiBzdHJpbmcKICByZWFkaW5nVGltZT86IG51bWJlcgp9CgpkZWZpbmVQcm9wczx7CiAgc3Rvcnk6IFN0b3J5U3VtbWFyeQogIGZlYXR1cmVkPzogYm9vbGVhbgp9PigpCgpjb25zdCB7IHQgfSA9IHVzZUkxOG4oKQo8L3NjcmlwdD4KCjx0ZW1wbGF0ZT4KICA8YXJ0aWNsZSBjbGFzcz0iZ3JvdXAgaC1mdWxsIj4KICAgIDxOdXh0TGluawogICAgICA6dG89InN0b3J5LnBhdGgiCiAgICAgIGNsYXNzPSJzdXJmYWNlLWNhcmQgZmxleCBoLWZ1bGwgZmxleC1jb2wgb3ZlcmZsb3ctaGlkZGVuIHJvdW5kZWQtWzEuNHJlbV0gdHJhbnNpdGlvbi10cmFuc2Zvcm0gZHVyYXRpb24tMzAwIGhvdmVyOi10cmFuc2xhdGUteS0xIgogICAgPgogICAgICA8ZGl2IGNsYXNzPSJpbWFnZS1yZXZlYWwgYXNwZWN0LVsxNi8xMF0gYmctW3ZhcigtLXN1cmZhY2Utc3Ryb25nKV0iPgogICAgICAgIDxOdXh0SW1nCiAgICAgICAgICA6c3JjPSJzdG9yeS5jb3ZlciIKICAgICAgICAgIDphbHQ9InN0b3J5LnRpdGxlIgogICAgICAgICAgOndpZHRoPSIxNjAwIgogICAgICAgICAgOmhlaWdodD0iMTAwMCIKICAgICAgICAgIGNsYXNzPSJoLWZ1bGwgdy1mdWxsIG9iamVjdC1jb3ZlciIKICAgICAgICAvPgogICAgICA8L2Rpdj4KCiAgICAgIDxkaXYgY2xhc3M9ImZsZXggZmxleC0xIGZsZXgtY29sIHAtNSBzbTpwLTYiPgogICAgICAgIDxkaXYgY2xhc3M9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHRleHQtWzAuNjFyZW1dIGZvbnQtYm9sZCB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMTRlbV0gdGV4dC1tdXRlZCI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0idGV4dC1bdmFyKC0tYWNjZW50KV0iPnt7IHN0b3J5LmNhdGVnb3J5IH19PC9zcGFuPgogICAgICAgICAgPHNwYW4+wrc8L3NwYW4+CiAgICAgICAgICA8c3Bhbj57eyBzdG9yeS5kYXRlLnJlcGxhY2VBbGwoJy0nLCAnLicpIH19PC9zcGFuPgogICAgICAgIDwvZGl2PgoKICAgICAgICA8aDMKICAgICAgICAgIGNsYXNzPSJkaXNwbGF5IG10LTQgdGV4dC1bY2xhbXAoMS41NXJlbSwzdncsMi4zcmVtKV0gbGVhZGluZy1bMS4wOF0iCiAgICAgICAgICA6Y2xhc3M9ImZlYXR1cmVkID8gJ3NtOnRleHQtNHhsJyA6ICcnIgogICAgICAgID4KICAgICAgICAgIHt7IHN0b3J5LnRpdGxlIH19CiAgICAgICAgPC9oMz4KICAgICAgICA8cCBjbGFzcz0ibXQtMyBsaW5lLWNsYW1wLTMgdGV4dC1zbSBsZWFkaW5nLTYgdGV4dC1tdXRlZCI+CiAgICAgICAgICB7eyBzdG9yeS5kZXNjcmlwdGlvbiB9fQogICAgICAgIDwvcD4KCiAgICAgICAgPGRpdiBjbGFzcz0ibXQtYXV0byBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gcHQtNyB0ZXh0LXhzIGZvbnQtc2VtaWJvbGQiPgogICAgICAgICAgPHNwYW4gY2xhc3M9InRleHQtbXV0ZWQiPgogICAgICAgICAgICB7eyBzdG9yeS5yZWFkaW5nVGltZSA/PyA0IH19IHt7IHQoJ3N0b3JpZXMubWludXRlUmVhZCcpIH19CiAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHRleHQtW3ZhcigtLXRleHQpXSI+CiAgICAgICAgICAgIHt7IHQoJ2NvbW1vbi5yZWFkTW9yZScpIH19CiAgICAgICAgICAgIDxJY29uCiAgICAgICAgICAgICAgbmFtZT0ibHVjaWRlOmFycm93LXJpZ2h0IgogICAgICAgICAgICAgIGNsYXNzPSJzaXplLTMuNSB0cmFuc2l0aW9uLXRyYW5zZm9ybSBncm91cC1ob3Zlcjp0cmFuc2xhdGUteC0xIgogICAgICAgICAgICAvPgogICAgICAgICAgPC9zcGFuPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvTnV4dExpbms+CiAgPC9hcnRpY2xlPgo8L3RlbXBsYXRlPgo=
+<script setup lang="ts">
+interface StorySummary {
+  path: string
+  title: string
+  description: string
+  date: string
+  category: string
+  cover: string
+  readingTime?: number
+}
+
+defineProps<{
+  story: StorySummary
+  featured?: boolean
+}>()
+
+const { t } = useI18n()
+</script>
+
+<template>
+  <article class="group h-full">
+    <NuxtLink
+      :to="story.path"
+      class="surface-card flex h-full flex-col overflow-hidden rounded-[1.4rem] transition-transform duration-300 hover:-translate-y-1"
+    >
+      <div class="image-reveal aspect-[16/10] bg-[var(--surface-strong)]">
+        <NuxtImg
+          :src="story.cover"
+          :alt="story.title"
+          :width="1600"
+          :height="1000"
+          class="h-full w-full object-cover"
+        />
+      </div>
+
+      <div class="flex flex-1 flex-col p-5 sm:p-6">
+        <div class="flex items-center gap-2 text-[0.61rem] font-bold uppercase tracking-[0.14em] text-muted">
+          <span class="text-[var(--accent)]">{{ story.category }}</span>
+          <span>·</span>
+          <span>{{ story.date.replaceAll('-', '.') }}</span>
+        </div>
+
+        <h3
+          class="display mt-4 text-[clamp(1.55rem,3vw,2.3rem)] leading-[1.08]"
+          :class="featured ? 'sm:text-4xl' : ''"
+        >
+          {{ story.title }}
+        </h3>
+        <p class="mt-3 line-clamp-3 text-sm leading-6 text-muted">
+          {{ story.description }}
+        </p>
+
+        <div class="mt-auto flex items-center justify-between pt-7 text-xs font-semibold">
+          <span class="text-muted">
+            {{ story.readingTime ?? 4 }} {{ t('stories.minuteRead') }}
+          </span>
+          <span class="inline-flex items-center gap-2 text-[var(--text)]">
+            {{ t('common.readMore') }}
+            <Icon
+              name="lucide:arrow-right"
+              class="size-3.5 transition-transform group-hover:translate-x-1"
+            />
+          </span>
+        </div>
+      </div>
+    </NuxtLink>
+  </article>
+</template>

@@ -1,1 +1,117 @@
-aW1wb3J0IHRhaWx3aW5kY3NzIGZyb20gJ0B0YWlsd2luZGNzcy92aXRlJwoKZXhwb3J0IGRlZmF1bHQgZGVmaW5lTnV4dENvbmZpZyh7CiAgbW9kdWxlczogWwogICAgJ0BudXh0L2NvbnRlbnQnLAogICAgJ0BudXh0L2ltYWdlJywKICAgICdAbnV4dGpzL2kxOG4nLAogICAgJ0BwaW5pYS9udXh0JywKICAgICdAdml0ZS1wd2EvbnV4dCcsCiAgICAnQG51eHQvaWNvbicsCiAgICAnQG51eHQvZXNsaW50JywKICBdLAogIHNzcjogdHJ1ZSwKICBkZXZ0b29sczogeyBlbmFibGVkOiB0cnVlIH0sCgogIGFwcDogewogICAgaGVhZDogewogICAgICB0aXRsZVRlbXBsYXRlOiAnJXMgwrcgS2VlcHNha2UnLAogICAgICB0aXRsZTogJ+aIkeS7rOS7qOeahOWutuW6reiusOW/huewvycsCiAgICAgIGh0bWxBdHRyczogeyBsYW5nOiAnemgtQ04nIH0sCiAgICAgIG1ldGE6IFsKICAgICAgICB7CiAgICAgICAgICBuYW1lOiAnZGVzY3JpcHRpb24nLAogICAgICAgICAgY29udGVudDogJ+aKiuaXheihjOOAgeaXpeW4uOWSjOaWh+Wtl++8jOaFouaFouaUtui/m+WxnuS6juaIkeS7rOS4gOWutuS4ieWPo+eahCBLZWVwc2FrZeOAgicsCiAgICAgICAgfSwKICAgICAgICB7IG5hbWU6ICd0aGVtZS1jb2xvcicsIGNvbnRlbnQ6ICcjMTczYjMzJyB9LAogICAgICAgIHsgcHJvcGVydHk6ICdvZzp0eXBlJywgY29udGVudDogJ3dlYnNpdGUnIH0sCiAgICAgICAgeyBwcm9wZXJ0eTogJ29nOnRpdGxlJywgY29udGVudDogJ0tlZXBzYWtlIMK3IOaIkeS7rOS7qCcgfSwKICAgICAgICB7CiAgICAgICAgICBwcm9wZXJ0eTogJ29nOmRlc2NyaXB0aW9uJywKICAgICAgICAgIGNvbnRlbnQ6ICfkuIDkuKroo4Xmu6Hml4XooYzjgIHnhafniYflkozmlYXkuovnmoTlrrbluq3orrDlv4bnsL/jgIInLAogICAgICAgIH0sCiAgICAgICAgeyBwcm9wZXJ0eTogJ29nOmltYWdlJywgY29udGVudDogJy9hbGJ1bXMvMjAyNi1zdW1tZXIvaGVyby1jb2FzdC5qcGcnIH0sCiAgICAgIF0sCiAgICAgIGxpbms6IFsKICAgICAgICB7IHJlbDogJ2ljb24nLCB0eXBlOiAnaW1hZ2Uvc3ZnK3htbCcsIGhyZWY6ICcvaWNvbnMvZmF2aWNvbi5zdmcnIH0sCiAgICAgICAgeyByZWw6ICdhcHBsZS10b3VjaC1pY29uJywgaHJlZjogJy9pY29ucy9hcHBsZS10b3VjaC1pY29uLnN2ZycgfSwKICAgICAgXSwKICAgICAgc2NyaXB0OiBbCiAgICAgICAgewogICAgICAgICAga2V5OiAna2VlcHNha2UtdGhlbWUnLAogICAgICAgICAgaW5uZXJIVE1MOgogICAgICAgICAgICAndHJ5e2NvbnN0IHQ9bG9jYWxTdG9yYWdlLmdldEl0ZW0oXCdrZWVwc2FrZS10aGVtZVwnKTtkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuZGF0YXNldC50aGVtZT10PT09XCdkYXJrXCd8fCh0PT09bnVsbCYmbWF0Y2hNZWRpYShcJyhwcmVmZXJzLWNvbG9yLXNjaGVtZTogZGFyaylcJykubWF0Y2hlcyk/XCdkYXJrXCc6XCdsaWdodFwnfWNhdGNoKGUpe2RvY3VtZW50LmRvY3VtZW50RWxlbWVudC5kYXRhc2V0LnRoZW1lPVwnbGlnaHRcJ30nLAogICAgICAgIH0sCiAgICAgIF0sCiAgICB9LAogICAgcGFnZVRyYW5zaXRpb246IHsKICAgICAgbmFtZTogJ3BhZ2UnLAogICAgICBtb2RlOiAnb3V0LWluJywKICAgIH0sCiAgfSwKCiAgY3NzOiBbJ34vYXNzZXRzL2Nzcy9tYWluLmNzcyddLAogIGNvbXBhdGliaWxpdHlEYXRlOiAnMjAyNi0xMC0yMScsCgogIHZpdGU6IHsKICAgIHBsdWdpbnM6IFt0YWlsd2luZGNzcygpXSwKICB9LAogIHRlbGVtZXRyeTogZmFsc2UsCgogIGVzbGludDogewogICAgY29uZmlnOiB7CiAgICAgIHN0eWxpc3RpYzogdHJ1ZSwKICAgIH0sCiAgfSwKCiAgaTE4bjogewogICAgZGVmYXVsdExvY2FsZTogJ3poLUNOJywKICAgIHN0cmF0ZWd5OiAnbm9fcHJlZml4JywKICAgIGxhbmdEaXI6ICdsb2NhbGVzJywKICAgIGxvY2FsZXM6IFsKICAgICAgeyBjb2RlOiAnemgtQ04nLCBuYW1lOiAn5Lit5paHJywgZmlsZTogJ3poLUNOLmpzb24nIH0sCiAgICAgIHsgY29kZTogJ2VuJywgbmFtZTogJ0VuZ2xpc2gnLCBmaWxlOiAnZW4uanNvbicgfSwKICAgIF0sCiAgICBkZXRlY3RCcm93c2VyTGFuZ3VhZ2U6IGZhbHNlLAogIH0sCgogIGltYWdlOiB7CiAgICBxdWFsaXR5OiA4MiwKICAgIGZvcm1hdDogWyd3ZWJwJ10sCiAgICBkZW5zaXRpZXM6IFsxXSwKICB9LAoKICBwd2E6IHsKICAgIHJlZ2lzdGVyVHlwZTogJ2F1dG9VcGRhdGUnLAogICAgbWFuaWZlc3Q6IHsKICAgICAgbmFtZTogJ0tlZXBzYWtlIMK3IOaIkeS7rOS7qCcsCiAgICAgIHNob3J0X25hbWU6ICdLZWVwc2FrZScsCiAgICAgIGRlc2NyaXB0aW9uOiAn5LiA5Liq6KOF5ruh5peF6KGM44CB54Wn54mH5ZKM5pWF5LqL55qE5a625bqt6K6w5b+G57C/44CCJywKICAgICAgdGhlbWVfY29sb3I6ICcjMTczYjMzJywKICAgICAgYmFja2dyb3VuZF9jb2xvcjogJyNmN2YyZTgnLAogICAgICBkaXNwbGF5OiAnc3RhbmRhbG9uZScsCiAgICAgIHN0YXJ0X3VybDogJy8nLAogICAgICBpY29uczogWwogICAgICAgIHsKICAgICAgICAgIHNyYzogJy9pY29ucy9hcHAtaWNvbi5zdmcnLAogICAgICAgICAgc2l6ZXM6ICdhbnknLAogICAgICAgICAgdHlwZTogJ2ltYWdlL3N2Zyt4bWwnLAogICAgICAgICAgcHVycG9zZTogJ2FueScsCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICBzcmM6ICcvaWNvbnMvbWFza2FibGUtaWNvbi5zdmcnLAogICAgICAgICAgc2l6ZXM6ICdhbnknLAogICAgICAgICAgdHlwZTogJ2ltYWdlL3N2Zyt4bWwnLAogICAgICAgICAgcHVycG9zZTogJ21hc2thYmxlJywKICAgICAgICB9LAogICAgICBdLAogICAgfSwKICAgIHdvcmtib3g6IHsKICAgICAgbmF2aWdhdGVGYWxsYmFjazogJy8nLAogICAgICBnbG9iUGF0dGVybnM6IFsnKiovKi57anMsY3NzLGh0bWwscG5nLGpwZyxqcGVnLHN2Zyx3ZWJwLHdvZmYyfSddLAogICAgfSwKICAgIGRldk9wdGlvbnM6IHsKICAgICAgZW5hYmxlZDogZmFsc2UsCiAgICB9LAogIH0sCn0pCg==
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineNuxtConfig({
+  modules: [
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxtjs/i18n',
+    '@pinia/nuxt',
+    '@vite-pwa/nuxt',
+    '@nuxt/icon',
+    '@nuxt/eslint',
+  ],
+  ssr: true,
+  devtools: { enabled: true },
+
+  app: {
+    head: {
+      titleTemplate: '%s · Keepsake',
+      title: '我们仨的家庭记忆簿',
+      htmlAttrs: { lang: 'zh-CN' },
+      meta: [
+        {
+          name: 'description',
+          content: '把旅行、日常和文字，慢慢收进属于我们一家三口的 Keepsake。',
+        },
+        { name: 'theme-color', content: '#173b33' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: 'Keepsake · 我们仨' },
+        {
+          property: 'og:description',
+          content: '一个装满旅行、照片和故事的家庭记忆簿。',
+        },
+        { property: 'og:image', content: '/albums/2026-summer/hero-coast.jpg' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon.svg' },
+        { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon.svg' },
+      ],
+      script: [
+        {
+          key: 'keepsake-theme',
+          innerHTML:
+            'try{const t=localStorage.getItem(\'keepsake-theme\');document.documentElement.dataset.theme=t===\'dark\'||(t===null&&matchMedia(\'(prefers-color-scheme: dark)\').matches)?\'dark\':\'light\'}catch(e){document.documentElement.dataset.theme=\'light\'}',
+        },
+      ],
+    },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in',
+    },
+  },
+
+  css: ['~/assets/css/main.css'],
+  compatibilityDate: '2026-10-21',
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  telemetry: false,
+
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
+
+  i18n: {
+    defaultLocale: 'zh-CN',
+    strategy: 'no_prefix',
+    langDir: 'locales',
+    locales: [
+      { code: 'zh-CN', name: '中文', file: 'zh-CN.json' },
+      { code: 'en', name: 'English', file: 'en.json' },
+    ],
+    detectBrowserLanguage: false,
+  },
+
+  image: {
+    quality: 82,
+    format: ['webp'],
+    densities: [1],
+  },
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Keepsake · 我们仨',
+      short_name: 'Keepsake',
+      description: '一个装满旅行、照片和故事的家庭记忆簿。',
+      theme_color: '#173b33',
+      background_color: '#f7f2e8',
+      display: 'standalone',
+      start_url: '/',
+      icons: [
+        {
+          src: '/icons/app-icon.svg',
+          sizes: 'any',
+          type: 'image/svg+xml',
+          purpose: 'any',
+        },
+        {
+          src: '/icons/maskable-icon.svg',
+          sizes: 'any',
+          type: 'image/svg+xml',
+          purpose: 'maskable',
+        },
+      ],
+    },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,jpg,jpeg,svg,webp,woff2}'],
+    },
+    devOptions: {
+      enabled: false,
+    },
+  },
+})

@@ -1,1 +1,4 @@
-ZXhwb3J0IGRlZmF1bHQgZGVmaW5lTnV4dFBsdWdpbigoKSA9PiB7CiAgY29uc3QgcHJlZmVyZW5jZXMgPSB1c2VQcmVmZXJlbmNlc1N0b3JlKCkKICBwcmVmZXJlbmNlcy5zeW5jVGhlbWUoKQp9KQo=
+export default defineNuxtPlugin(() => {
+  const preferences = usePreferencesStore()
+  preferences.syncTheme()
+})

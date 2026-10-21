@@ -1,1 +1,105 @@
-ewogICJuYXYiOiB7CiAgICAiaG9tZSI6ICLpppbpobUiLAogICAgImdhbGxlcnkiOiAi55u45YaMIiwKICAgICJqb3VybmV5cyI6ICLml4XooYzlvbHlg48iLAogICAgInN0b3JpZXMiOiAi5paH5a2X6K6w5b2VIiwKICAgICJhYm91dCI6ICLlhbPkuo7miJHku6wiLAogICAgIm1lbnUiOiAi5omT5byA6I+c5Y2VIiwKICAgICJjbG9zZSI6ICLlhbPpl63oj5zljZUiCiAgfSwKICAiY29tbW9uIjogewogICAgInZpZXdBbGwiOiAi5p+l55yL5YWo6YOoIiwKICAgICJyZWFkTW9yZSI6ICLnu6fnu63pmIXor7siLAogICAgIndhdGNoVmlkZW8iOiAi5pKt5pS+6KeG6aKRIiwKICAgICJjbG9zZSI6ICLlhbPpl60iLAogICAgImFsbCI6ICLlhajpg6giLAogICAgInBob3RvcyI6ICLlvKDnhafniYciLAogICAgInNhdmVkIjogIuW3suaUtuiXjyIsCiAgICAic2F2ZSI6ICLmlLbol4/nhafniYciLAogICAgInJlbW92ZVNhdmVkIjogIuWPlua2iOaUtuiXjyIsCiAgICAiYmFja0hvbWUiOiAi5Zue5Yiw6aaW6aG1IiwKICAgICJsYW5ndWFnZSI6ICLliIfmjaLor63oqIAiLAogICAgInRoZW1lTGlnaHQiOiAi5YiH5o2i5Li65rWF6ImyIiwKICAgICJ0aGVtZURhcmsiOiAi5YiH5o2i5Li65rex6ImyIgogIH0sCiAgImhvbWUiOiB7CiAgICAiZXllYnJvdyI6ICJBIFNNQUxMIEFSQ0hJVkUgT0YgVVMiLAogICAgImhlcm9UaXRsZSI6ICLmiorkuIDotbfotbDov4fnmoTml6XlrZDvvIxcbuaFouaFouaUtui/m+i/memHjOOAgiIsCiAgICAiaW50cm8iOiAi6L+Z6YeM5piv5bGe5LqO5oiR5Lus5LiA5a625LiJ5Y+j55qE5a625bqt6K6w5b+G57C/44CC5rKh5pyJ5a6P5aSn55qE5Y+Z5LqL77yM5Y+q5pyJ5LiA6LW35Y676L+H55qE5Zyw5pa544CB6K+06L+H55qE6Zey6K+d77yM5ZKM6YKj5Lqb5oOz6K6p5pe26Ze05pu/5oiR5Lus6K6w5L2P55qE5pmu6YCa5LiA5aSp44CCIiwKICAgICJwcmltYXJ5Q3RhIjogIue/u+W8gOaIkeS7rOeahOebuOWGjCIsCiAgICAic2Vjb25kYXJ5Q3RhIjogIuWOu+eci+aXheihjOW9seWDjyIsCiAgICAic2luY2UiOiAi5oiR5Lus55qE5bCP5a6H5a6ZIiwKICAgICJzaW5jZVZhbHVlIjogIuWni+S6jiAyMDE5IiwKICAgICJub3RlTGFiZWwiOiAi5pys5ZGo5bCP5LqLIiwKICAgICJub3RlVGV4dCI6ICLlkajml6XljrvmsrPovrnpqpHovabvvIzpo47lvojlpKfvvIzlm57lrrbml7bkuInkuKrkurrpg73nrJHlvpfmnInngrnlgrvjgIIiLAogICAgInNjcm9sbCI6ICLlkJHkuIvnv7vpmIUiLAogICAgInN0YXRzTWVtYmVycyI6ICLkvY3lrrbluq3miJDlkZgiLAogICAgInN0YXRzVHJpcHMiOiAi5q615peF6KGM5b2x5YOPIiwKICAgICJzdGF0c1N0b3JpZXMiOiAi56+H55Sf5rS76K6w5b2VIiwKICAgICJhbGJ1bUV5ZWJyb3ciOiAiT1VSIERBWVMsIElOIFBJQ1RVUkVTIiwKICAgICJhbGJ1bVRpdGxlIjogIuWFiOiusOS9j+WFie+8jOWGjeiusOS9j+aXpeWtkOOAgiIsCiAgICAiYWxidW1JbnRybyI6ICLnm7jlhozmjInnhafml7bpl7TmhaLmhaLnlJ/plb/jgILlroPkuI3ov73msYLlroznvo7mnoTlm77vvIzlj6rmg7PmiorlsZ7kuo7miJHku6znmoTnnqzpl7TnlZnlnKjljp/lpITjgIIiLAogICAgImpvdXJuZXlFeWVicm93IjogIlRSQVZFTCBGT09UQUdFIiwKICAgICJqb3VybmV5VGl0bGUiOiAi6Lev5LiK5Y+R55Sf55qE5pWF5LqL44CCIiwKICAgICJqb3VybmV5SW50cm8iOiAi5peF6KGM6KeG6aKR5a2Y5pS+5ZyoIEIg56uZ77yM572R56uZ5Y+q5L+d55WZ5pKt5pS+5YWl5Y+j77yM5LiN6aKd5aSW6LSt5Lmw6KeG6aKR5pyN5Yqh5Zmo44CCIiwKICAgICJzdG9yaWVzRXllYnJvdyI6ICJXT1JEUyBXRSBLRUVQIiwKICAgICJzdG9yaWVzVGl0bGUiOiAi5YaZ5LiL5p2l77yM5pel5a2Q5bCx5pyJ5LqG5Zue5aOw44CCIiwKICAgICJzdG9yeUludHJvIjogIuS4gOS6m+aXheihjOS9nOaWh+OAgeaIkOmVv+iusOW9le+8jOi/mOacieaIkOW5tOWQjuaJjeWPkeeOsOWAvOW+l+iusOS9j+eahOWwj+S6i+OAgiIsCiAgICAicXVvdGUiOiAi5omA6LCT57qq5b+177yMXG7lsLHmmK/orqTnnJ/lnLDlkozku4rlpKnlkYrliKvjgIIiLAogICAgInF1b3RlTm90ZSI6ICLnhLblkI7lho3kuIDotbfvvIzljrvov4fmmI7lpKnjgIIiCiAgfSwKICAiZ2FsbGVyeSI6IHsKICAgICJleWVicm93IjogIk9VUiBQSE9UTyBBTEJVTSIsCiAgICAidGl0bGUiOiAi55u45YaMIiwKICAgICJpbnRybyI6ICLnhafniYfmjInml4XooYzlkozml7bpl7TlvZLmoaPjgILmiYDmnInlm77niYfpg73mnaXoh6rmnKzlnLDnm67lvZXvvIzmm7/mjaLmlofku7blubbmm7TmlrDntKLlvJXljbPlj6/jgIIiLAogICAgImFsYnVtRmlsdGVyIjogIuaMieebuOWGjOa1j+iniCIsCiAgICAiZW1wdHkiOiAi6L+Z5Liq55u45YaM6L+Y5rKh5pyJ54Wn54mH44CCIiwKICAgICJsb2NhbEhpbnQiOiAi5pys5Zyw55u45YaM55uu5b2VIiwKICAgICJsb2NhbEhpbnRUZXh0IjogIuaKiueFp+eJh+aUvui/myBwdWJsaWMvYWxidW1z77yM5YaN5ZyoIGFwcC9kYXRhL2FsYnVtcy50cyDph4znmbvorrDljbPlj6/jgIIiCiAgfSwKICAiam91cm5leXMiOiB7CiAgICAiZXllYnJvdyI6ICJUUkFWRUwgVkxPR1MiLAogICAgInRpdGxlIjogIuaXheihjOW9seWDjyIsCiAgICAiaW50cm8iOiAi6KeG6aKR6YCa6L+HIEJpbGliaWxpIOWGhee9ruaSreaUvuWZqOWxleekuuOAguavj+S4quWNoeeJh+mDveWPquaYr+S4gOS7veinhumikee0ouW8le+8jOS4jeWNoOeUqOS9oOeahOacjeWKoeWZqOepuumXtOOAgiIsCiAgICAid2F0Y2hPbkJpbGliaWxpIjogIuWcqCBCIOermeaJk+W8gCIsCiAgICAicmVwbGFjZUhpbnQiOiAi5pu/5o2iIGFwcC9kYXRhL2pvdXJuZXlzLnRzIOS4reeahCBCViDlj7fljbPlj6/mjqXlhaXkvaDnmoTop4bpopHjgIIiCiAgfSwKICAic3RvcmllcyI6IHsKICAgICJleWVicm93IjogIldSSVRURU4gTUVNT1JJRVMiLAogICAgInRpdGxlIjogIuaWh+Wtl+iusOW9lSIsCiAgICAiaW50cm8iOiAi5paH56ug5L2/55SoIE1hcmtkb3duIOS/neWtmO+8jOWGheWuueS4jumhtemdoue7hOS7tuW9vOatpOeLrOeri++8jOS/ruaUuemYheivu+S9k+mqjOaXtuS4jeeUqOeisOato+aWh+OAgiIsCiAgICAibWludXRlUmVhZCI6ICLliIbpkp/pmIXor7siLAogICAgIm5ld0FydGljbGUiOiAi5paw5aKe5paH56ugIiwKICAgICJuZXdBcnRpY2xlVGV4dCI6ICLlnKggY29udGVudC9zdG9yaWVzIOaWsOW7uiBNYXJrZG93biDmlofku7bvvIzloavlhpkgZnJvbnRtYXR0ZXIg5ZCO5Lya6Ieq5Yqo5Ye6546w5Zyo6L+Z6YeM44CCIiwKICAgICJub3RGb3VuZCI6ICLov5nnr4fmlofnq6Dov5jmsqHmnInooqvmib7liLDjgIIiCiAgfSwKICAiYWJvdXQiOiB7CiAgICAiZXllYnJvdyI6ICJBQk9VVCBUSElTIExJVFRMRSBGQU1JTFkiLAogICAgInRpdGxlIjogIuWFs+S6juaIkeS7rOS7qCIsCiAgICAiaW50cm8iOiAi5LiA5Liq54i454i444CB5LiA5Liq5aaI5aaI77yM5ZKM5LiA5Liq5q2j5Zyo6aOe5b+r6ZW/5aSn55qE5bCP5pyL5Y+L44CC5oiR5Lus5Zac5qyi5Zyo5ZGo5pyr5Ye66Zeo77yM5Lmf5Zac5qyi5b6F5Zyo5a626YeM5LuA5LmI6YO95LiN5YGa44CCIiwKICAgICJzdG9yeVRpdGxlIjogIuaIkeS7rOS4uuS7gOS5iOWBmui/meS4que9keermSIsCiAgICAic3RvcnlPbmUiOiAi56S+5Lqk5aqS5L2T5Lya5oqK55Sf5rS75YiH5b6X5b6I56KO77yM5pyL5Y+L5ZyI5Y+I5Lya5LiN5pat5b6A5YmN5rua44CC5oiR5Lus5oOz6KaB5LiA5Liq5a6J6Z2Z55qE5Zyw5pa577yM5oqK54Wn54mH44CB6KeG6aKR5ZKM5paH5a2X5pS+5Zyo5LiA6LW344CCIiwKICAgICJzdG9yeVR3byI6ICLlroPkuI3pnIDopoHooqvlvojlpJrkurrnnIvop4HjgILlroPlj6rpnIDopoHlnKjorrjlpJrlubTku6XlkI7vvIzov5jog73orqnmiJHku6zmg7Potbfku4rlpKnmmZrppa3lkIPkuobku4DkuYjjgIHlnKjlk6rph4zlkLnov4fpo47vvIzku6Xlj4rlranlrZDor7Tov4fmgI7moLflj6/niLHnmoTor53jgIIiLAogICAgIm1lbWJlcnNUaXRsZSI6ICLkuIDlrrbkuInlj6MiLAogICAgIm1lbWJlck9uZSI6ICLotJ/otKPlvIDovabjgIHmi43nhafvvIzku6Xlj4rmiorml4XooYzorqHliJLmjpLlvpfov4fmu6HnmoTkurrjgIIiLAogICAgIm1lbWJlclR3byI6ICLotJ/otKPlj5HnjrDlpb3nnIvnmoTlhYnjgIHlpb3lkIPnmoTlupfvvIzku6Xlj4rlj4rml7bllorlgZznmoTkurrjgIIiLAogICAgIm1lbWJlclRocmVlIjogIui0n+i0o+WItumAoOaEj+WkluOAgeaPkOWHuuacgOWkmumXrumimO+8jOS5n+i0oeeMruacgOWkmueskeWjsOeahOS6uuOAgiIsCiAgICAidGltZWxpbmVUaXRsZSI6ICLkuIDotbfotbDov4ciLAogICAgInRpbWVsaW5lT25lVGl0bGUiOiAi5pWF5LqL5byA5aeLIiwKICAgICJ0aW1lbGluZU9uZVRleHQiOiAi5Lik5Liq5Lq65Yaz5a6a5oqK5Lul5ZCO55qE5Lq655Sf5pS+5Zyo5LiA6LW377yM5Lmf5Yaz5a6a5aSa55WZ5LiA5Lqb54Wn54mH44CCIiwKICAgICJ0aW1lbGluZVR3b1RpdGxlIjogIuaIkeS7rOaIkOS6huS4ieS4quS6uiIsCiAgICAidGltZWxpbmVUd29UZXh0IjogIuWutumHjOWkmuS6huS4gOS4quWwj+Wwj+eahOS6uu+8jOS7juatpOavj+S4gOi2n+WHuumXqOmDveWkmuS6huS4gOaKiuWEv+erpeakheOAgiIsCiAgICAidGltZWxpbmVUaHJlZVRpdGxlIjogIuW8gOWni+iusOW9lSIsCiAgICAidGltZWxpbmVUaHJlZVRleHQiOiAiS2VlcHNha2Ug5LiK57q/44CC5biM5pyb5a6D6IO96KOF5LiL5pyq5p2l5b6I5aSa5Liq5pmu6YCa5Y+I5Y+R5YWJ55qE5ZGo5pyr44CCIiwKICAgICJ0ZWNoVGl0bGUiOiAi6L+Z5Liq5qih5p2/6aG65omL5pS55LqG5ZOq5Lqb5Zyw5pa5IiwKICAgICJ0ZWNoT25lIjogIuebuOWGjOOAgeaWh+eroOWSjOinhumikemDveaYr+eLrOeri+aVsOaNru+8jOS4jeaKiuWGheWuueWGmeatu+WcqOW4g+WxgOmHjOOAgiIsCiAgICAidGVjaFR3byI6ICLnhafniYfmnaXoh6rmnKzlnLAgcHVibGljIOebruW9le+8jOS4jeS+nei1luWbvueJh+aJmOeuoeacjeWKoeOAgiIsCiAgICAidGVjaFRocmVlIjogIkIg56uZ6KeG6aKR5Y+q5bWM5YWl5pKt5pS+5Zmo77yM572R56uZ5pys6Lqr5LiN5a2Y5YKo6KeG6aKR5paH5Lu244CCIgogIH0sCiAgImZvb3RlciI6IHsKICAgICJ0YWdsaW5lIjogIuaKiuaZrumAmueahOaXpeWtkO+8jOi/h+aIkOWAvOW+l+aUtuiXj+eahOagt+WtkOOAgiIsCiAgICAicmlnaHRzIjogIk1hZGUgZm9yIG91ciBsaXR0bGUgZmFtaWx5LiIsCiAgICAiYmFja1RvcCI6ICLlm57liLDpobbpg6giCiAgfQp9Cg==
+{
+  "nav": {
+    "home": "首页",
+    "gallery": "相册",
+    "journeys": "旅行影像",
+    "stories": "文字记录",
+    "about": "关于我们",
+    "menu": "打开菜单",
+    "close": "关闭菜单"
+  },
+  "common": {
+    "viewAll": "查看全部",
+    "readMore": "继续阅读",
+    "watchVideo": "播放视频",
+    "close": "关闭",
+    "all": "全部",
+    "photos": "张照片",
+    "saved": "已收藏",
+    "save": "收藏照片",
+    "removeSaved": "取消收藏",
+    "backHome": "回到首页",
+    "language": "切换语言",
+    "themeLight": "切换为浅色",
+    "themeDark": "切换为深色"
+  },
+  "home": {
+    "eyebrow": "A SMALL ARCHIVE OF US",
+    "heroTitle": "把一起走过的日子，\n慢慢收进这里。",
+    "intro": "这里是属于我们一家三口的家庭记忆簿。没有宏大的叙事，只有一起去过的地方、说过的闲话，和那些想让时间替我们记住的普通一天。",
+    "primaryCta": "翻开我们的相册",
+    "secondaryCta": "去看旅行影像",
+    "since": "我们的小宇宙",
+    "sinceValue": "始于 2019",
+    "noteLabel": "本周小事",
+    "noteText": "周日去河边骑车，风很大，回家时三个人都笑得有点傻。",
+    "scroll": "向下翻阅",
+    "statsMembers": "位家庭成员",
+    "statsTrips": "段旅行影像",
+    "statsStories": "篇生活记录",
+    "albumEyebrow": "OUR DAYS, IN PICTURES",
+    "albumTitle": "先记住光，再记住日子。",
+    "albumIntro": "相册按照时间慢慢生长。它不追求完美构图，只想把属于我们的瞬间留在原处。",
+    "journeyEyebrow": "TRAVEL FOOTAGE",
+    "journeyTitle": "路上发生的故事。",
+    "journeyIntro": "旅行视频存放在 B 站，网站只保留播放入口，不额外购买视频服务器。",
+    "storiesEyebrow": "WORDS WE KEEP",
+    "storiesTitle": "写下来，日子就有了回声。",
+    "storyIntro": "一些旅行作文、成长记录，还有成年后才发现值得记住的小事。",
+    "quote": "所谓纪念，\n就是认真地和今天告别。",
+    "quoteNote": "然后再一起，去过明天。"
+  },
+  "gallery": {
+    "eyebrow": "OUR PHOTO ALBUM",
+    "title": "相册",
+    "intro": "照片按旅行和时间归档。所有图片都来自本地目录，替换文件并更新索引即可。",
+    "albumFilter": "按相册浏览",
+    "empty": "这个相册还没有照片。",
+    "localHint": "本地相册目录",
+    "localHintText": "把照片放进 public/albums，再在 app/data/albums.ts 里登记即可。"
+  },
+  "journeys": {
+    "eyebrow": "TRAVEL VLOGS",
+    "title": "旅行影像",
+    "intro": "视频通过 Bilibili 内置播放器展示。每个卡片都只是一份视频索引，不占用你的服务器空间。",
+    "watchOnBilibili": "在 B 站打开",
+    "replaceHint": "替换 app/data/journeys.ts 中的 BV 号即可接入你的视频。"
+  },
+  "stories": {
+    "eyebrow": "WRITTEN MEMORIES",
+    "title": "文字记录",
+    "intro": "文章使用 Markdown 保存，内容与页面组件彼此独立，修改阅读体验时不用碰正文。",
+    "minuteRead": "分钟阅读",
+    "newArticle": "新增文章",
+    "newArticleText": "在 content/stories 新建 Markdown 文件，填写 frontmatter 后会自动出现在这里。",
+    "notFound": "这篇文章还没有被找到。"
+  },
+  "about": {
+    "eyebrow": "ABOUT THIS LITTLE FAMILY",
+    "title": "关于我们仨",
+    "intro": "一个爸爸、一个妈妈，和一个正在飞快长大的小朋友。我们喜欢在周末出门，也喜欢待在家里什么都不做。",
+    "storyTitle": "我们为什么做这个网站",
+    "storyOne": "社交媒体会把生活切得很碎，朋友圈又会不断往前滚。我们想要一个安静的地方，把照片、视频和文字放在一起。",
+    "storyTwo": "它不需要被很多人看见。它只需要在许多年以后，还能让我们想起今天晚饭吃了什么、在哪里吹过风，以及孩子说过怎样可爱的话。",
+    "membersTitle": "一家三口",
+    "memberOne": "负责开车、拍照，以及把旅行计划排得过满的人。",
+    "memberTwo": "负责发现好看的光、好吃的店，以及及时喊停的人。",
+    "memberThree": "负责制造意外、提出最多问题，也贡献最多笑声的人。",
+    "timelineTitle": "一起走过",
+    "timelineOneTitle": "故事开始",
+    "timelineOneText": "两个人决定把以后的人生放在一起，也决定多留一些照片。",
+    "timelineTwoTitle": "我们成了三个人",
+    "timelineTwoText": "家里多了一个小小的人，从此每一趟出门都多了一把儿童椅。",
+    "timelineThreeTitle": "开始记录",
+    "timelineThreeText": "Keepsake 上线。希望它能装下未来很多个普通又发光的周末。",
+    "techTitle": "这个模板顺手改了哪些地方",
+    "techOne": "相册、文章和视频都是独立数据，不把内容写死在布局里。",
+    "techTwo": "照片来自本地 public 目录，不依赖图片托管服务。",
+    "techThree": "B 站视频只嵌入播放器，网站本身不存储视频文件。"
+  },
+  "footer": {
+    "tagline": "把普通的日子，过成值得收藏的样子。",
+    "rights": "Made for our little family.",
+    "backTop": "回到顶部"
+  }
+}

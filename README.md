@@ -59,10 +59,10 @@ Keepsake 是一个面向一家三口的家庭记忆网站模板，用来长期�
 
 ## 环境要求
 
-推荐使用 **Node.js 22.21.1**。项目在 `.nvmrc` 和 `package.json` 中限制了兼容版本，避免部署平台自动切换到不兼容的 Node.js。
+推荐使用 **Node.js 24.18.0**。项目的 `package.json` 要求 Node.js 24.15.0 或更高的 24.x 版本。部署到 EdgeOne 时，请直接在项目设置中选择预装版本，不要依赖 `.nvmrc` 自动切换。
 
 ```text
-Node.js >= 22
+Node.js >= 24.15.0
 npm >= 10
 ```
 
@@ -353,7 +353,7 @@ EdgeOne 项目设置：
 ```text
 Repository: SyllabearCN/Keepsake
 Branch: main
-Node.js Version: 22.21.1
+Node.js Version: 24.18.0
 Install Command: npm ci
 Build Command: npm run generate
 Output Directory: .output/public
@@ -372,15 +372,12 @@ Output Directory: .output/public
 
 ```text
 Switching error: Failed to switch to Node.js ...
+You can find preinstalled version in 'Project settings - Node.js Version'.
 ```
 
-先检查项目根目录的 `.nvmrc`。项目现在固定为：
+这段日志表示 EdgeOne 在依赖安装前切换 Node.js 失败。项目不再包含 `.nvmrc`，以避免平台把版本内容编码成错误字符串。
 
-```text
-22.21.1
-```
-
-同时在 EdgeOne 项目设置中选择 `Node.js Version: 22.21.1`。
+请在 EdgeOne 中打开 **Project settings → Node.js Version**，明确选择预装版本 `24.18.0`，保存后重新部署。
 
 如果只看到依赖安装失败，应确认它发生在 Node 版本切换成功之后。版本切换失败时，安装命令根本没有开始执行。
 

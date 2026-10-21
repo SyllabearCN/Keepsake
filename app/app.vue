@@ -1,1 +1,41 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmNvbnN0IHsgdCB9ID0gdXNlSTE4bigpCgp1c2VIZWFkKHsKICBib2R5QXR0cnM6IHsKICAgIGNsYXNzOiAnYW50aWFsaWFzZWQnLAogIH0sCn0pCgp1c2VTZW9NZXRhKHsKICBvZ1NpdGVOYW1lOiAnS2VlcHNha2Ugwrcg5oiR5Lus5LuoJywKICB0d2l0dGVyQ2FyZDogJ3N1bW1hcnlfbGFyZ2VfaW1hZ2UnLAp9KQoKdXNlSGVhZCh7CiAgc2NyaXB0OiBbCiAgICB7CiAgICAgIGtleTogJ2tlZXBzYWtlLXN0cnVjdHVyZWQtZGF0YScsCiAgICAgIHR5cGU6ICdhcHBsaWNhdGlvbi9sZCtqc29uJywKICAgICAgaW5uZXJIVE1MOiBKU09OLnN0cmluZ2lmeSh7CiAgICAgICAgJ0Bjb250ZXh0JzogJ2h0dHBzOi8vc2NoZW1hLm9yZycsCiAgICAgICAgJ0B0eXBlJzogJ1dlYlNpdGUnLAogICAgICAgICduYW1lJzogJ0tlZXBzYWtlIMK3IOaIkeS7rOS7qCcsCiAgICAgICAgJ2Rlc2NyaXB0aW9uJzogdCgnaG9tZS5pbnRybycpLAogICAgICAgICdpbkxhbmd1YWdlJzogJ3poLUNOJywKICAgICAgfSksCiAgICB9LAogIF0sCn0pCjwvc2NyaXB0PgoKPHRlbXBsYXRlPgogIDxkaXYgY2xhc3M9Im1pbi1oLXNjcmVlbiI+CiAgICA8TnV4dExvYWRpbmdJbmRpY2F0b3IgY29sb3I9InZhcigtLWFjY2VudCkiIC8+CiAgICA8QXBwSGVhZGVyIC8+CiAgICA8bWFpbj4KICAgICAgPE51eHRQYWdlIC8+CiAgICA8L21haW4+CiAgICA8QXBwRm9vdGVyIC8+CiAgPC9kaXY+CjwvdGVtcGxhdGU+Cg==
+<script setup lang="ts">
+const { t } = useI18n()
+
+useHead({
+  bodyAttrs: {
+    class: 'antialiased',
+  },
+})
+
+useSeoMeta({
+  ogSiteName: 'Keepsake · 我们仨',
+  twitterCard: 'summary_large_image',
+})
+
+useHead({
+  script: [
+    {
+      key: 'keepsake-structured-data',
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': 'Keepsake · 我们仨',
+        'description': t('home.intro'),
+        'inLanguage': 'zh-CN',
+      }),
+    },
+  ],
+})
+</script>
+
+<template>
+  <div class="min-h-screen">
+    <NuxtLoadingIndicator color="var(--accent)" />
+    <AppHeader />
+    <main>
+      <NuxtPage />
+    </main>
+    <AppFooter />
+  </div>
+</template>

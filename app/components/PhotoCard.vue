@@ -1,1 +1,73 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmltcG9ydCB0eXBlIHsgR2FsbGVyeVBob3RvIH0gZnJvbSAnfi90eXBlcy9jb250ZW50JwoKY29uc3QgcHJvcHMgPSB3aXRoRGVmYXVsdHMoZGVmaW5lUHJvcHM8ewogIHBob3RvOiBHYWxsZXJ5UGhvdG8KICBwcmlvcml0eT86IGJvb2xlYW4KICBhc3BlY3Q/OiAnbmF0dXJhbCcgfCAnbGFuZHNjYXBlJyB8ICdwb3J0cmFpdCcgfCAnc3F1YXJlJwp9PigpLCB7CiAgcHJpb3JpdHk6IGZhbHNlLAogIGFzcGVjdDogJ25hdHVyYWwnLAp9KQoKY29uc3QgZW1pdCA9IGRlZmluZUVtaXRzPHsKICBvcGVuOiBbcGhvdG86IEdhbGxlcnlQaG90b10KfT4oKQoKY29uc3QgbG9jYWxpemUgPSB1c2VMb2NhbGl6ZWRUZXh0KCkKCmNvbnN0IGFzcGVjdENsYXNzID0gY29tcHV0ZWQoKCkgPT4gewogIGNvbnN0IGNsYXNzZXMgPSB7CiAgICBuYXR1cmFsOiAnJywKICAgIGxhbmRzY2FwZTogJ2FzcGVjdC1bNC8zXScsCiAgICBwb3J0cmFpdDogJ2FzcGVjdC1bNC81XScsCiAgICBzcXVhcmU6ICdhc3BlY3Qtc3F1YXJlJywKICB9CgogIHJldHVybiBjbGFzc2VzW3Byb3BzLmFzcGVjdF0KfSkKPC9zY3JpcHQ+Cgo8dGVtcGxhdGU+CiAgPGFydGljbGUgY2xhc3M9Imdyb3VwIHJlbGF0aXZlIHctZnVsbCBicmVhay1pbnNpZGUtYXZvaWQgb3ZlcmZsb3ctaGlkZGVuIHJvdW5kZWQtWzEuNHJlbV0gYmctW3ZhcigtLXN1cmZhY2Utc3Ryb25nKV0iPgogICAgPGJ1dHRvbgogICAgICB0eXBlPSJidXR0b24iCiAgICAgIGNsYXNzPSJibG9jayB3LWZ1bGwgdGV4dC1sZWZ0IgogICAgICA6YXJpYS1sYWJlbD0ibG9jYWxpemUocGhvdG8udGl0bGUpIgogICAgICBAY2xpY2s9ImVtaXQoJ29wZW4nLCBwaG90bykiCiAgICA+CiAgICAgIDxkaXYKICAgICAgICBjbGFzcz0iaW1hZ2UtcmV2ZWFsIHJlbGF0aXZlIgogICAgICAgIDpjbGFzcz0iYXNwZWN0Q2xhc3MiCiAgICAgID4KICAgICAgICA8TnV4dEltZwogICAgICAgICAgOnNyYz0icGhvdG8uc3JjIgogICAgICAgICAgOmFsdD0icGhvdG8uYWx0IgogICAgICAgICAgOndpZHRoPSJwaG90by53aWR0aCIKICAgICAgICAgIDpoZWlnaHQ9InBob3RvLmhlaWdodCIKICAgICAgICAgIDpsb2FkaW5nPSJwcmlvcml0eSA/ICdlYWdlcicgOiAnbGF6eSciCiAgICAgICAgICA6ZmV0Y2hwcmlvcml0eT0icHJpb3JpdHkgPyAnaGlnaCcgOiAnYXV0byciCiAgICAgICAgICBjbGFzcz0iaC1mdWxsIHctZnVsbCBvYmplY3QtY292ZXIiCiAgICAgICAgLz4KICAgICAgICA8ZGl2IGNsYXNzPSJhYnNvbHV0ZSBpbnNldC0wIGJnLWdyYWRpZW50LXRvLXQgZnJvbS1ibGFjay83MCB2aWEtYmxhY2svMCB0by1ibGFjay8wIG9wYWNpdHktODUgdHJhbnNpdGlvbi1vcGFjaXR5IGR1cmF0aW9uLTMwMCBncm91cC1ob3ZlcjpvcGFjaXR5LTEwMCIgLz4KCiAgICAgICAgPGRpdiBjbGFzcz0iYWJzb2x1dGUgaW5zZXQteC0wIGJvdHRvbS0wIGZsZXggaXRlbXMtZW5kIGdhcC00IHAtNSB0ZXh0LXdoaXRlIHNtOnAtNiI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJtaW4tdy0wIGZsZXgtMSI+CiAgICAgICAgICAgIDxwIGNsYXNzPSJ0ZXh0LVswLjYycmVtXSBmb250LWJvbGQgdXBwZXJjYXNlIHRyYWNraW5nLVswLjE2ZW1dIHRleHQtd2hpdGUvNjUiPgogICAgICAgICAgICAgIHt7IGxvY2FsaXplKHBob3RvLmxvY2F0aW9uKSB9fSDCtyB7eyBwaG90by5kYXRlLnJlcGxhY2VBbGwoJy0nLCAnLicpIH19CiAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgPGgzIGNsYXNzPSJkaXNwbGF5IG10LTIgdGV4dC0yeGwgbGVhZGluZy10aWdodCI+CiAgICAgICAgICAgICAge3sgbG9jYWxpemUocGhvdG8udGl0bGUpIH19CiAgICAgICAgICAgIDwvaDM+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJncmlkIHNpemUtOSBzaHJpbmstMCBwbGFjZS1pdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItd2hpdGUvMjUgYmctYmxhY2svMTUgYmFja2Ryb3AtYmx1ci1zbSB0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi0zMDAgZ3JvdXAtaG92ZXI6cm90YXRlLTQ1Ij4KICAgICAgICAgICAgPEljb24KICAgICAgICAgICAgICBuYW1lPSJsdWNpZGU6YXJyb3ctdXAtcmlnaHQiCiAgICAgICAgICAgICAgY2xhc3M9InNpemUtNCIKICAgICAgICAgICAgLz4KICAgICAgICAgIDwvc3Bhbj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L2J1dHRvbj4KICA8L2FydGljbGU+CjwvdGVtcGxhdGU+Cg==
+<script setup lang="ts">
+import type { GalleryPhoto } from '~/types/content'
+
+const props = withDefaults(defineProps<{
+  photo: GalleryPhoto
+  priority?: boolean
+  aspect?: 'natural' | 'landscape' | 'portrait' | 'square'
+}>(), {
+  priority: false,
+  aspect: 'natural',
+})
+
+const emit = defineEmits<{
+  open: [photo: GalleryPhoto]
+}>()
+
+const localize = useLocalizedText()
+
+const aspectClass = computed(() => {
+  const classes = {
+    natural: '',
+    landscape: 'aspect-[4/3]',
+    portrait: 'aspect-[4/5]',
+    square: 'aspect-square',
+  }
+
+  return classes[props.aspect]
+})
+</script>
+
+<template>
+  <article class="group relative w-full break-inside-avoid overflow-hidden rounded-[1.4rem] bg-[var(--surface-strong)]">
+    <button
+      type="button"
+      class="block w-full text-left"
+      :aria-label="localize(photo.title)"
+      @click="emit('open', photo)"
+    >
+      <div
+        class="image-reveal relative"
+        :class="aspectClass"
+      >
+        <NuxtImg
+          :src="photo.src"
+          :alt="photo.alt"
+          :width="photo.width"
+          :height="photo.height"
+          :loading="priority ? 'eager' : 'lazy'"
+          :fetchpriority="priority ? 'high' : 'auto'"
+          class="h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-85 transition-opacity duration-300 group-hover:opacity-100" />
+
+        <div class="absolute inset-x-0 bottom-0 flex items-end gap-4 p-5 text-white sm:p-6">
+          <div class="min-w-0 flex-1">
+            <p class="text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">
+              {{ localize(photo.location) }} · {{ photo.date.replaceAll('-', '.') }}
+            </p>
+            <h3 class="display mt-2 text-2xl leading-tight">
+              {{ localize(photo.title) }}
+            </h3>
+          </div>
+          <span class="grid size-9 shrink-0 place-items-center rounded-full border border-white/25 bg-black/15 backdrop-blur-sm transition-transform duration-300 group-hover:rotate-45">
+            <Icon
+              name="lucide:arrow-up-right"
+              class="size-4"
+            />
+          </span>
+        </div>
+      </div>
+    </button>
+  </article>
+</template>

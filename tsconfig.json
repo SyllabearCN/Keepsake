@@ -1,1 +1,3 @@
-ewogICJleHRlbmRzIjogIi4vLm51eHQvdHNjb25maWcuanNvbiIKfQo=
+{
+  "extends": "./.nuxt/tsconfig.json"
+}

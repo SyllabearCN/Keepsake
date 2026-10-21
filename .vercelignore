@@ -1,1 +1,8 @@
-Lm51eHQKLm91dHB1dAouZGF0YQouY29kZXgKLnRvb2xzCm5vZGVfbW9kdWxlcwpkaXN0CioubG9nCg==
+.nuxt
+.output
+.data
+.codex
+.tools
+node_modules
+dist
+*.log

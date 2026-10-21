@@ -1,1 +1,41 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmNvbnN0IHsgdCB9ID0gdXNlSTE4bigpCgpmdW5jdGlvbiBzY3JvbGxUb1RvcCgpIHsKICB3aW5kb3cuc2Nyb2xsVG8oeyB0b3A6IDAsIGJlaGF2aW9yOiAnc21vb3RoJyB9KQp9Cjwvc2NyaXB0PgoKPHRlbXBsYXRlPgogIDxmb290ZXIgY2xhc3M9Im10LTI0IGJvcmRlci10IGJvcmRlci1bdmFyKC0tbGluZSldIHBiLTggcHQtMTQiPgogICAgPGRpdiBjbGFzcz0icGFnZS1zaGVsbCI+CiAgICAgIDxkaXYgY2xhc3M9ImdyaWQgZ2FwLTEwIG1kOmdyaWQtY29scy1bMWZyX2F1dG9dIG1kOml0ZW1zLWVuZCI+CiAgICAgICAgPGRpdj4KICAgICAgICAgIDxGYW1pbHlNYXJrIC8+CiAgICAgICAgICA8cCBjbGFzcz0iZGlzcGxheSBtdC04IG1heC13LXhsIHRleHQtW2NsYW1wKDEuOXJlbSw0dncsMy40cmVtKV0gbGVhZGluZy1bMS4wNV0iPgogICAgICAgICAgICB7eyB0KCdmb290ZXIudGFnbGluZScpIH19CiAgICAgICAgICA8L3A+CiAgICAgICAgPC9kaXY+CgogICAgICAgIDxkaXYgY2xhc3M9ImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIG1kOmp1c3RpZnktZW5kIj4KICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgICAgICBjbGFzcz0icGlsbC1idXR0b24gYm9yZGVyLVt2YXIoLS1saW5lKV0gdGV4dC1tdXRlZCBob3Zlcjpib3JkZXItW3ZhcigtLWJyYW5kKV0gaG92ZXI6dGV4dC1bdmFyKC0tdGV4dCldIgogICAgICAgICAgICBAY2xpY2s9InNjcm9sbFRvVG9wIgogICAgICAgICAgPgogICAgICAgICAgICB7eyB0KCdmb290ZXIuYmFja1RvcCcpIH19CiAgICAgICAgICAgIDxJY29uCiAgICAgICAgICAgICAgbmFtZT0ibHVjaWRlOmFycm93LXVwIgogICAgICAgICAgICAgIGNsYXNzPSJzaXplLTQiCiAgICAgICAgICAgIC8+CiAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CgogICAgICA8ZGl2IGNsYXNzPSJtdC0xNCBmbGV4IGZsZXgtY29sIGdhcC0yIGJvcmRlci10IGJvcmRlci1bdmFyKC0tbGluZSldIHB0LTYgdGV4dC1bMC42OHJlbV0gZm9udC1tZWRpdW0gdGV4dC1tdXRlZCBzbTpmbGV4LXJvdyBzbTppdGVtcy1jZW50ZXIgc206anVzdGlmeS1iZXR3ZWVuIj4KICAgICAgICA8c3Bhbj7CqSB7eyBuZXcgRGF0ZSgpLmdldEZ1bGxZZWFyKCkgfX0gS2VlcHNha2Ugwrcg5oiR5Lus5LuoPC9zcGFuPgogICAgICAgIDxzcGFuPnt7IHQoJ2Zvb3Rlci5yaWdodHMnKSB9fTwvc3Bhbj4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2Zvb3Rlcj4KPC90ZW1wbGF0ZT4K
+<script setup lang="ts">
+const { t } = useI18n()
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+</script>
+
+<template>
+  <footer class="mt-24 border-t border-[var(--line)] pb-8 pt-14">
+    <div class="page-shell">
+      <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+        <div>
+          <FamilyMark />
+          <p class="display mt-8 max-w-xl text-[clamp(1.9rem,4vw,3.4rem)] leading-[1.05]">
+            {{ t('footer.tagline') }}
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3 md:justify-end">
+          <button
+            type="button"
+            class="pill-button border-[var(--line)] text-muted hover:border-[var(--brand)] hover:text-[var(--text)]"
+            @click="scrollToTop"
+          >
+            {{ t('footer.backTop') }}
+            <Icon
+              name="lucide:arrow-up"
+              class="size-4"
+            />
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-14 flex flex-col gap-2 border-t border-[var(--line)] pt-6 text-[0.68rem] font-medium text-muted sm:flex-row sm:items-center sm:justify-between">
+        <span>© {{ new Date().getFullYear() }} Keepsake · 我们仨</span>
+        <span>{{ t('footer.rights') }}</span>
+      </div>
+    </div>
+  </footer>
+</template>

@@ -1,1 +1,117 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmltcG9ydCB0eXBlIHsgR2FsbGVyeVBob3RvIH0gZnJvbSAnfi90eXBlcy9jb250ZW50JwppbXBvcnQgeyBhbGJ1bXMsIGdhbGxlcnkgfSBmcm9tICd+L2RhdGEvYWxidW1zJwoKY29uc3QgeyB0IH0gPSB1c2VJMThuKCkKY29uc3QgbG9jYWxpemUgPSB1c2VMb2NhbGl6ZWRUZXh0KCkKY29uc3QgcHJlZmVyZW5jZXMgPSB1c2VQcmVmZXJlbmNlc1N0b3JlKCkKCnVzZVNlb01ldGEoewogIHRpdGxlOiB0KCdnYWxsZXJ5LnRpdGxlJyksCiAgZGVzY3JpcHRpb246IHQoJ2dhbGxlcnkuaW50cm8nKSwKfSkKCmNvbnN0IGZpbHRlcnMgPSBjb21wdXRlZCgoKSA9PiBbCiAgeyBpZDogJ2FsbCcsIGxhYmVsOiB0KCdjb21tb24uYWxsJykgfSwKICAuLi5hbGJ1bXMubWFwKGFsYnVtID0+ICh7IGlkOiBhbGJ1bS5pZCwgbGFiZWw6IGxvY2FsaXplKGFsYnVtLmxhYmVsKSB9KSksCl0pCgpjb25zdCBmaWx0ZXJlZFBob3RvcyA9IGNvbXB1dGVkKCgpID0+IHsKICBpZiAocHJlZmVyZW5jZXMuZ2FsbGVyeUFsYnVtID09PSAnYWxsJykgcmV0dXJuIGdhbGxlcnkKICByZXR1cm4gZ2FsbGVyeS5maWx0ZXIocGhvdG8gPT4gcGhvdG8uYWxidW0gPT09IHByZWZlcmVuY2VzLmdhbGxlcnlBbGJ1bSkKfSkKCmNvbnN0IGFjdGl2ZVBob3RvID0gcmVmPEdhbGxlcnlQaG90byB8IG51bGw+KG51bGwpCmNvbnN0IGxpZ2h0Ym94T3BlbiA9IHJlZihmYWxzZSkKCmZ1bmN0aW9uIG9wZW5QaG90byhwaG90bzogR2FsbGVyeVBob3RvKSB7CiAgYWN0aXZlUGhvdG8udmFsdWUgPSBwaG90bwogIGxpZ2h0Ym94T3Blbi52YWx1ZSA9IHRydWUKfQo8L3NjcmlwdD4KCjx0ZW1wbGF0ZT4KICA8ZGl2PgogICAgPFBhZ2VJbnRybwogICAgICA6ZXllYnJvdz0idCgnZ2FsbGVyeS5leWVicm93JykiCiAgICAgIDp0aXRsZT0idCgnZ2FsbGVyeS50aXRsZScpIgogICAgICA6aW50cm89InQoJ2dhbGxlcnkuaW50cm8nKSIKICAgIC8+CgogICAgPHNlY3Rpb24gY2xhc3M9InBhZ2Utc2hlbGwgcGItMjAiPgogICAgICA8ZGl2IGNsYXNzPSJtYi0xMCBmbGV4IGZsZXgtY29sIGdhcC01IGxnOmZsZXgtcm93IGxnOml0ZW1zLWNlbnRlciBsZzpqdXN0aWZ5LWJldHdlZW4iPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8cCBjbGFzcz0idGV4dC1bMC42MnJlbV0gZm9udC1ib2xkIHVwcGVyY2FzZSB0cmFja2luZy1bMC4xNWVtXSB0ZXh0LW11dGVkIj4KICAgICAgICAgICAge3sgdCgnZ2FsbGVyeS5hbGJ1bUZpbHRlcicpIH19CiAgICAgICAgICA8L3A+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJtdC00IGZsZXggZmxleC13cmFwIGdhcC0yIj4KICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgIHYtZm9yPSJmaWx0ZXIgaW4gZmlsdGVycyIKICAgICAgICAgICAgICA6a2V5PSJmaWx0ZXIuaWQiCiAgICAgICAgICAgICAgdHlwZT0iYnV0dG9uIgogICAgICAgICAgICAgIGNsYXNzPSJyb3VuZGVkLWZ1bGwgYm9yZGVyIHB4LTQgcHktMi41IHRleHQteHMgZm9udC1zZW1pYm9sZCB0cmFuc2l0aW9uLWNvbG9ycyIKICAgICAgICAgICAgICA6Y2xhc3M9InByZWZlcmVuY2VzLmdhbGxlcnlBbGJ1bSA9PT0gZmlsdGVyLmlkCiAgICAgICAgICAgICAgICA/ICdib3JkZXItW3ZhcigtLWJyYW5kKV0gYmctW3ZhcigtLWJyYW5kKV0gdGV4dC1bdmFyKC0tcGFnZSldJwogICAgICAgICAgICAgICAgOiAnYm9yZGVyLVt2YXIoLS1saW5lKV0gYmctW3ZhcigtLXN1cmZhY2UpXSB0ZXh0LW11dGVkIGhvdmVyOnRleHQtW3ZhcigtLXRleHQpXSciCiAgICAgICAgICAgICAgQGNsaWNrPSJwcmVmZXJlbmNlcy5nYWxsZXJ5QWxidW0gPSBmaWx0ZXIuaWQiCiAgICAgICAgICAgID4KICAgICAgICAgICAgICB7eyBmaWx0ZXIubGFiZWwgfX0KICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KCiAgICAgICAgPGRpdiBjbGFzcz0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMgdGV4dC14cyB0ZXh0LW11dGVkIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJkaXNwbGF5IHRleHQtMnhsIHRleHQtW3ZhcigtLXRleHQpXSI+e3sgU3RyaW5nKGZpbHRlcmVkUGhvdG9zLmxlbmd0aCkucGFkU3RhcnQoMiwgJzAnKSB9fTwvc3Bhbj4KICAgICAgICAgIDxzcGFuPnt7IHQoJ2NvbW1vbi5waG90b3MnKSB9fTwvc3Bhbj4KICAgICAgICAgIDxzcGFuCiAgICAgICAgICAgIHYtaWY9InByZWZlcmVuY2VzLmZhdm9yaXRlcy5sZW5ndGgiCiAgICAgICAgICAgIGNsYXNzPSJyb3VuZGVkLWZ1bGwgYmctW3ZhcigtLWJyYW5kLXNvZnQpXSBweC0zIHB5LTEuNSB0ZXh0LVt2YXIoLS10ZXh0KV0iCiAgICAgICAgICA+CiAgICAgICAgICAgIOKZpSB7eyBwcmVmZXJlbmNlcy5mYXZvcml0ZXMubGVuZ3RoIH19CiAgICAgICAgICA8L3NwYW4+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgoKICAgICAgPGRpdgogICAgICAgIHYtaWY9ImZpbHRlcmVkUGhvdG9zLmxlbmd0aCIKICAgICAgICBjbGFzcz0iY29sdW1ucy0xIGdhcC00IHNtOmNvbHVtbnMtMiB4bDpjb2x1bW5zLTMgWyY+Kl06bWItNCIKICAgICAgPgogICAgICAgIDxQaG90b0NhcmQKICAgICAgICAgIHYtZm9yPSJwaG90byBpbiBmaWx0ZXJlZFBob3RvcyIKICAgICAgICAgIDprZXk9InBob3RvLmlkIgogICAgICAgICAgOnBob3RvPSJwaG90byIKICAgICAgICAgIEBvcGVuPSJvcGVuUGhvdG8iCiAgICAgICAgLz4KICAgICAgPC9kaXY+CiAgICAgIDxwCiAgICAgICAgdi1lbHNlCiAgICAgICAgY2xhc3M9InJvdW5kZWQtMnhsIGJvcmRlciBib3JkZXItZGFzaGVkIGJvcmRlci1bdmFyKC0tbGluZSldIHAtMTAgdGV4dC1jZW50ZXIgdGV4dC1tdXRlZCIKICAgICAgPgogICAgICAgIHt7IHQoJ2dhbGxlcnkuZW1wdHknKSB9fQogICAgICA8L3A+CgogICAgICA8ZGl2IGNsYXNzPSJtdC0xMiBncmlkIGdhcC02IHJvdW5kZWQtWzEuNnJlbV0gYmctW3ZhcigtLXN1cmZhY2Utc3Ryb25nKV0gcC02IHNtOmdyaWQtY29scy1bYXV0b18xZnJdIHNtOml0ZW1zLWNlbnRlciBzbTpwLTgiPgogICAgICAgIDxzcGFuIGNsYXNzPSJncmlkIHNpemUtMTIgcGxhY2UtaXRlbXMtY2VudGVyIHJvdW5kZWQtZnVsbCBiZy1bdmFyKC0tYnJhbmQpXSB0ZXh0LVt2YXIoLS1wYWdlKV0iPgogICAgICAgICAgPEljb24KICAgICAgICAgICAgbmFtZT0ibHVjaWRlOmZvbGRlci1oZWFydCIKICAgICAgICAgICAgY2xhc3M9InNpemUtNSIKICAgICAgICAgIC8+CiAgICAgICAgPC9zcGFuPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8cCBjbGFzcz0idGV4dC1zbSBmb250LWJvbGQiPgogICAgICAgICAgICB7eyB0KCdnYWxsZXJ5LmxvY2FsSGludCcpIH19CiAgICAgICAgICA8L3A+CiAgICAgICAgICA8cCBjbGFzcz0ibXQtMSB0ZXh0LXNtIGxlYWRpbmctNiB0ZXh0LW11dGVkIj4KICAgICAgICAgICAge3sgdCgnZ2FsbGVyeS5sb2NhbEhpbnRUZXh0JykgfX0KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L3NlY3Rpb24+CgogICAgPEdhbGxlcnlMaWdodGJveAogICAgICB2LWlmPSJhY3RpdmVQaG90byIKICAgICAgdi1tb2RlbDpvcGVuPSJsaWdodGJveE9wZW4iCiAgICAgIDpwaG90bz0iYWN0aXZlUGhvdG8iCiAgICAvPgogIDwvZGl2Pgo8L3RlbXBsYXRlPgo=
+<script setup lang="ts">
+import type { GalleryPhoto } from '~/types/content'
+import { albums, gallery } from '~/data/albums'
+
+const { t } = useI18n()
+const localize = useLocalizedText()
+const preferences = usePreferencesStore()
+
+useSeoMeta({
+  title: t('gallery.title'),
+  description: t('gallery.intro'),
+})
+
+const filters = computed(() => [
+  { id: 'all', label: t('common.all') },
+  ...albums.map(album => ({ id: album.id, label: localize(album.label) })),
+])
+
+const filteredPhotos = computed(() => {
+  if (preferences.galleryAlbum === 'all') return gallery
+  return gallery.filter(photo => photo.album === preferences.galleryAlbum)
+})
+
+const activePhoto = ref<GalleryPhoto | null>(null)
+const lightboxOpen = ref(false)
+
+function openPhoto(photo: GalleryPhoto) {
+  activePhoto.value = photo
+  lightboxOpen.value = true
+}
+</script>
+
+<template>
+  <div>
+    <PageIntro
+      :eyebrow="t('gallery.eyebrow')"
+      :title="t('gallery.title')"
+      :intro="t('gallery.intro')"
+    />
+
+    <section class="page-shell pb-20">
+      <div class="mb-10 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <p class="text-[0.62rem] font-bold uppercase tracking-[0.15em] text-muted">
+            {{ t('gallery.albumFilter') }}
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button
+              v-for="filter in filters"
+              :key="filter.id"
+              type="button"
+              class="rounded-full border px-4 py-2.5 text-xs font-semibold transition-colors"
+              :class="preferences.galleryAlbum === filter.id
+                ? 'border-[var(--brand)] bg-[var(--brand)] text-[var(--page)]'
+                : 'border-[var(--line)] bg-[var(--surface)] text-muted hover:text-[var(--text)]'"
+              @click="preferences.galleryAlbum = filter.id"
+            >
+              {{ filter.label }}
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 text-xs text-muted">
+          <span class="display text-2xl text-[var(--text)]">{{ String(filteredPhotos.length).padStart(2, '0') }}</span>
+          <span>{{ t('common.photos') }}</span>
+          <span
+            v-if="preferences.favorites.length"
+            class="rounded-full bg-[var(--brand-soft)] px-3 py-1.5 text-[var(--text)]"
+          >
+            ♥ {{ preferences.favorites.length }}
+          </span>
+        </div>
+      </div>
+
+      <div
+        v-if="filteredPhotos.length"
+        class="columns-1 gap-4 sm:columns-2 xl:columns-3 [&>*]:mb-4"
+      >
+        <PhotoCard
+          v-for="photo in filteredPhotos"
+          :key="photo.id"
+          :photo="photo"
+          @open="openPhoto"
+        />
+      </div>
+      <p
+        v-else
+        class="rounded-2xl border border-dashed border-[var(--line)] p-10 text-center text-muted"
+      >
+        {{ t('gallery.empty') }}
+      </p>
+
+      <div class="mt-12 grid gap-6 rounded-[1.6rem] bg-[var(--surface-strong)] p-6 sm:grid-cols-[auto_1fr] sm:items-center sm:p-8">
+        <span class="grid size-12 place-items-center rounded-full bg-[var(--brand)] text-[var(--page)]">
+          <Icon
+            name="lucide:folder-heart"
+            class="size-5"
+          />
+        </span>
+        <div>
+          <p class="text-sm font-bold">
+            {{ t('gallery.localHint') }}
+          </p>
+          <p class="mt-1 text-sm leading-6 text-muted">
+            {{ t('gallery.localHintText') }}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <GalleryLightbox
+      v-if="activePhoto"
+      v-model:open="lightboxOpen"
+      :photo="activePhoto"
+    />
+  </div>
+</template>

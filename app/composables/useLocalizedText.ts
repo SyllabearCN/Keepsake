@@ -1,1 +1,9 @@
-aW1wb3J0IHR5cGUgeyBMb2NhbGl6ZWRUZXh0IH0gZnJvbSAnfi90eXBlcy9jb250ZW50JwoKZXhwb3J0IGZ1bmN0aW9uIHVzZUxvY2FsaXplZFRleHQoKSB7CiAgY29uc3QgeyBsb2NhbGUgfSA9IHVzZUkxOG4oKQoKICByZXR1cm4gKHZhbHVlOiBMb2NhbGl6ZWRUZXh0KSA9PiB7CiAgICByZXR1cm4gbG9jYWxlLnZhbHVlID09PSAnZW4nID8gdmFsdWUuZW4gOiB2YWx1ZS56aAogIH0KfQo=
+import type { LocalizedText } from '~/types/content'
+
+export function useLocalizedText() {
+  const { locale } = useI18n()
+
+  return (value: LocalizedText) => {
+    return locale.value === 'en' ? value.en : value.zh
+  }
+}

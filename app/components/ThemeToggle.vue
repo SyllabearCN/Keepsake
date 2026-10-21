@@ -1,1 +1,18 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmNvbnN0IHByZWZlcmVuY2VzID0gdXNlUHJlZmVyZW5jZXNTdG9yZSgpCmNvbnN0IHsgdCB9ID0gdXNlSTE4bigpCjwvc2NyaXB0PgoKPHRlbXBsYXRlPgogIDxidXR0b24KICAgIHR5cGU9ImJ1dHRvbiIKICAgIGNsYXNzPSJncmlkIHNpemUtMTAgcGxhY2UtaXRlbXMtY2VudGVyIHJvdW5kZWQtZnVsbCBib3JkZXIgYm9yZGVyLVt2YXIoLS1saW5lKV0gYmctW3ZhcigtLXN1cmZhY2UpXSB0cmFuc2l0aW9uLWNvbG9ycyBob3ZlcjpiZy1bdmFyKC0tc3VyZmFjZS1zdHJvbmcpXSIKICAgIDphcmlhLWxhYmVsPSJwcmVmZXJlbmNlcy50aGVtZSA9PT0gJ2RhcmsnID8gdCgnY29tbW9uLnRoZW1lTGlnaHQnKSA6IHQoJ2NvbW1vbi50aGVtZURhcmsnKSIKICAgIEBjbGljaz0icHJlZmVyZW5jZXMudG9nZ2xlVGhlbWUiCiAgPgogICAgPEljb24KICAgICAgOm5hbWU9InByZWZlcmVuY2VzLnRoZW1lID09PSAnZGFyaycgPyAnbHVjaWRlOnN1bicgOiAnbHVjaWRlOm1vb24nIgogICAgICBjbGFzcz0ic2l6ZS00IgogICAgLz4KICA8L2J1dHRvbj4KPC90ZW1wbGF0ZT4K
+<script setup lang="ts">
+const preferences = usePreferencesStore()
+const { t } = useI18n()
+</script>
+
+<template>
+  <button
+    type="button"
+    class="grid size-10 place-items-center rounded-full border border-[var(--line)] bg-[var(--surface)] transition-colors hover:bg-[var(--surface-strong)]"
+    :aria-label="preferences.theme === 'dark' ? t('common.themeLight') : t('common.themeDark')"
+    @click="preferences.toggleTheme"
+  >
+    <Icon
+      :name="preferences.theme === 'dark' ? 'lucide:sun' : 'lucide:moon'"
+      class="size-4"
+    />
+  </button>
+</template>

@@ -1,1 +1,25 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmRlZmluZVByb3BzPHsKICBleWVicm93OiBzdHJpbmcKICB0aXRsZTogc3RyaW5nCiAgaW50cm86IHN0cmluZwp9PigpCjwvc2NyaXB0PgoKPHRlbXBsYXRlPgogIDxzZWN0aW9uIGNsYXNzPSJwYWdlLXNoZWxsIHBiLTEwIHB0LTM2IHNtOnB0LTQ0Ij4KICAgIDxkaXYgY2xhc3M9ImdyaWQgZ2FwLTkgYm9yZGVyLWIgYm9yZGVyLVt2YXIoLS1saW5lKV0gcGItMTIgbGc6Z3JpZC1jb2xzLVsxZnJfMC41NWZyXSBsZzppdGVtcy1lbmQiPgogICAgICA8ZGl2PgogICAgICAgIDxwIGNsYXNzPSJleWVicm93Ij4KICAgICAgICAgIHt7IGV5ZWJyb3cgfX0KICAgICAgICA8L3A+CiAgICAgICAgPGgxIGNsYXNzPSJkaXNwbGF5IG10LTYgdGV4dC1bY2xhbXAoNHJlbSwxMXZ3LDkuNXJlbSldIGxlYWRpbmctWzAuODJdIHRyYWNraW5nLVstMC4wNmVtXSI+CiAgICAgICAgICB7eyB0aXRsZSB9fQogICAgICAgIDwvaDE+CiAgICAgIDwvZGl2PgogICAgICA8cCBjbGFzcz0ibWF4LXcteGwgdGV4dC1zbSBsZWFkaW5nLTcgdGV4dC1tdXRlZCBzbTp0ZXh0LWJhc2Ugc206bGVhZGluZy04IGxnOmp1c3RpZnktc2VsZi1lbmQiPgogICAgICAgIHt7IGludHJvIH19CiAgICAgIDwvcD4KICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KPC90ZW1wbGF0ZT4K
+<script setup lang="ts">
+defineProps<{
+  eyebrow: string
+  title: string
+  intro: string
+}>()
+</script>
+
+<template>
+  <section class="page-shell pb-10 pt-36 sm:pt-44">
+    <div class="grid gap-9 border-b border-[var(--line)] pb-12 lg:grid-cols-[1fr_0.55fr] lg:items-end">
+      <div>
+        <p class="eyebrow">
+          {{ eyebrow }}
+        </p>
+        <h1 class="display mt-6 text-[clamp(4rem,11vw,9.5rem)] leading-[0.82] tracking-[-0.06em]">
+          {{ title }}
+        </h1>
+      </div>
+      <p class="max-w-xl text-sm leading-7 text-muted sm:text-base sm:leading-8 lg:justify-self-end">
+        {{ intro }}
+      </p>
+    </div>
+  </section>
+</template>

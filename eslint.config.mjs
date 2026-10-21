@@ -1,1 +1,6 @@
-Ly8gQHRzLWNoZWNrCmltcG9ydCB3aXRoTnV4dCBmcm9tICcuLy5udXh0L2VzbGludC5jb25maWcubWpzJwoKZXhwb3J0IGRlZmF1bHQgd2l0aE51eHQoCiAgLy8gWW91ciBjdXN0b20gY29uZmlncyBoZXJlCikK
+// @ts-check
+import withNuxt from './.nuxt/eslint.config.mjs'
+
+export default withNuxt(
+  // Your custom configs here
+)

@@ -1,1 +1,78 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmltcG9ydCB0eXBlIHsgSm91cm5leSB9IGZyb20gJ34vdHlwZXMvY29udGVudCcKaW1wb3J0IHsgam91cm5leXMgfSBmcm9tICd+L2RhdGEvam91cm5leXMnCgpjb25zdCB7IHQgfSA9IHVzZUkxOG4oKQoKdXNlU2VvTWV0YSh7CiAgdGl0bGU6IHQoJ2pvdXJuZXlzLnRpdGxlJyksCiAgZGVzY3JpcHRpb246IHQoJ2pvdXJuZXlzLmludHJvJyksCn0pCgpjb25zdCBhY3RpdmVKb3VybmV5ID0gcmVmPEpvdXJuZXkgfCBudWxsPihudWxsKQpjb25zdCB2aWRlb09wZW4gPSByZWYoZmFsc2UpCgpmdW5jdGlvbiBvcGVuSm91cm5leShqb3VybmV5OiBKb3VybmV5KSB7CiAgYWN0aXZlSm91cm5leS52YWx1ZSA9IGpvdXJuZXkKICB2aWRlb09wZW4udmFsdWUgPSB0cnVlCn0KPC9zY3JpcHQ+Cgo8dGVtcGxhdGU+CiAgPGRpdj4KICAgIDxQYWdlSW50cm8KICAgICAgOmV5ZWJyb3c9InQoJ2pvdXJuZXlzLmV5ZWJyb3cnKSIKICAgICAgOnRpdGxlPSJ0KCdqb3VybmV5cy50aXRsZScpIgogICAgICA6aW50cm89InQoJ2pvdXJuZXlzLmludHJvJykiCiAgICAvPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJwYWdlLXNoZWxsIHB5LTEwIHNtOnB5LTE2Ij4KICAgICAgPGRpdiBjbGFzcz0iZ3JpZCBnYXAtMTAgbGc6Z3JpZC1jb2xzLTIiPgogICAgICAgIDxKb3VybmV5Q2FyZAogICAgICAgICAgdi1mb3I9Iihqb3VybmV5LCBpbmRleCkgaW4gam91cm5leXMiCiAgICAgICAgICA6a2V5PSJqb3VybmV5LmlkIgogICAgICAgICAgOmpvdXJuZXk9ImpvdXJuZXkiCiAgICAgICAgICA6bGFyZ2U9ImluZGV4ID09PSAwIgogICAgICAgICAgOmNsYXNzPSJpbmRleCA9PT0gMCA/ICdsZzpjb2wtc3Bhbi0yJyA6ICcnIgogICAgICAgICAgQG9wZW49Im9wZW5Kb3VybmV5IgogICAgICAgIC8+CiAgICAgIDwvZGl2PgoKICAgICAgPGRpdiBjbGFzcz0ibXQtMTYgZmxleCBmbGV4LWNvbCBnYXAtNSByb3VuZGVkLVsxLjVyZW1dIGJvcmRlciBib3JkZXItW3ZhcigtLWxpbmUpXSBwLTYgc206ZmxleC1yb3cgc206aXRlbXMtY2VudGVyIHNtOmp1c3RpZnktYmV0d2VlbiBzbTpwLTgiPgogICAgICAgIDxkaXYgY2xhc3M9ImZsZXggaXRlbXMtc3RhcnQgZ2FwLTQiPgogICAgICAgICAgPHNwYW4gY2xhc3M9ImdyaWQgc2l6ZS0xMCBzaHJpbmstMCBwbGFjZS1pdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJnLVt2YXIoLS1icmFuZC1zb2Z0KV0iPgogICAgICAgICAgICA8SWNvbgogICAgICAgICAgICAgIG5hbWU9Imx1Y2lkZTpjb2RlLXhtbCIKICAgICAgICAgICAgICBjbGFzcz0ic2l6ZS00IgogICAgICAgICAgICAvPgogICAgICAgICAgPC9zcGFuPgogICAgICAgICAgPGRpdj4KICAgICAgICAgICAgPHAgY2xhc3M9InRleHQtc20gZm9udC1ib2xkIj4KICAgICAgICAgICAgICBCaWxpYmlsaQogICAgICAgICAgICA8L3A+CiAgICAgICAgICAgIDxwIGNsYXNzPSJtdC0xIHRleHQtc20gbGVhZGluZy02IHRleHQtbXV0ZWQiPgogICAgICAgICAgICAgIHt7IHQoJ2pvdXJuZXlzLnJlcGxhY2VIaW50JykgfX0KICAgICAgICAgICAgPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPE51eHRMaW5rCiAgICAgICAgICB0bz0iaHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tIgogICAgICAgICAgdGFyZ2V0PSJfYmxhbmsiCiAgICAgICAgICByZWw9Im5vb3BlbmVyIG5vcmVmZXJyZXIiCiAgICAgICAgICBjbGFzcz0icGlsbC1idXR0b24gc2hyaW5rLTAgYm9yZGVyIGJvcmRlci1bdmFyKC0tbGluZSldIgogICAgICAgID4KICAgICAgICAgIHt7IHQoJ2pvdXJuZXlzLndhdGNoT25CaWxpYmlsaScpIH19CiAgICAgICAgICA8SWNvbgogICAgICAgICAgICBuYW1lPSJsdWNpZGU6YXJyb3ctdXAtcmlnaHQiCiAgICAgICAgICAgIGNsYXNzPSJzaXplLTQiCiAgICAgICAgICAvPgogICAgICAgIDwvTnV4dExpbms+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxWaWRlb0RpYWxvZwogICAgICB2LW1vZGVsOm9wZW49InZpZGVvT3BlbiIKICAgICAgOmpvdXJuZXk9ImFjdGl2ZUpvdXJuZXkiCiAgICAvPgogIDwvZGl2Pgo8L3RlbXBsYXRlPgo=
+<script setup lang="ts">
+import type { Journey } from '~/types/content'
+import { journeys } from '~/data/journeys'
+
+const { t } = useI18n()
+
+useSeoMeta({
+  title: t('journeys.title'),
+  description: t('journeys.intro'),
+})
+
+const activeJourney = ref<Journey | null>(null)
+const videoOpen = ref(false)
+
+function openJourney(journey: Journey) {
+  activeJourney.value = journey
+  videoOpen.value = true
+}
+</script>
+
+<template>
+  <div>
+    <PageIntro
+      :eyebrow="t('journeys.eyebrow')"
+      :title="t('journeys.title')"
+      :intro="t('journeys.intro')"
+    />
+
+    <section class="page-shell py-10 sm:py-16">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <JourneyCard
+          v-for="(journey, index) in journeys"
+          :key="journey.id"
+          :journey="journey"
+          :large="index === 0"
+          :class="index === 0 ? 'lg:col-span-2' : ''"
+          @open="openJourney"
+        />
+      </div>
+
+      <div class="mt-16 flex flex-col gap-5 rounded-[1.5rem] border border-[var(--line)] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div class="flex items-start gap-4">
+          <span class="grid size-10 shrink-0 place-items-center rounded-full bg-[var(--brand-soft)]">
+            <Icon
+              name="lucide:code-xml"
+              class="size-4"
+            />
+          </span>
+          <div>
+            <p class="text-sm font-bold">
+              Bilibili
+            </p>
+            <p class="mt-1 text-sm leading-6 text-muted">
+              {{ t('journeys.replaceHint') }}
+            </p>
+          </div>
+        </div>
+        <NuxtLink
+          to="https://www.bilibili.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pill-button shrink-0 border border-[var(--line)]"
+        >
+          {{ t('journeys.watchOnBilibili') }}
+          <Icon
+            name="lucide:arrow-up-right"
+            class="size-4"
+          />
+        </NuxtLink>
+      </div>
+    </section>
+
+    <VideoDialog
+      v-model:open="videoOpen"
+      :journey="activeJourney"
+    />
+  </div>
+</template>

@@ -1,1 +1,28 @@
-S2VlcHNha2Ug5pys5Zyw55u45YaM5L2/55So6K+05piOCgoxLiDlnKggcHVibGljL2FsYnVtcyDkuIvmjInml4XooYzmiJblubTku73mlrDlu7rmlofku7blpLnvvIzkvovlpoLvvJoKICAgcHVibGljL2FsYnVtcy8yMDI3LXNwcmluZy8KCjIuIOaKiuWbvueJh+aUvui/m+WvueW6lOaWh+S7tuWkueOAggoKMy4g5omT5byAIGFwcC9kYXRhL2FsYnVtcy50c++8jOWcqCBnYWxsZXJ5IOaVsOe7hOmHjOa3u+WKoOS4gOadoeiusOW9le+8mgogICB7CiAgICAgaWQ6ICJzcHJpbmctcmFpbiIsCiAgICAgc3JjOiAiL2FsYnVtcy8yMDI3LXNwcmluZy9zcHJpbmctcmFpbi5qcGciLAogICAgIGFsdDogIumbqOWQjueahOWxsemXtOWwj+i3ryIsCiAgICAgdGl0bGU6IHsgemg6ICLmmKXlpKnkuIvov4fpm6giLCBlbjogIkFmdGVyIHRoZSByYWluIiB9LAogICAgIGNhcHRpb246IHsgemg6ICLkuIDlj6XkuK3mlofor7TmmI4iLCBlbjogIkFuIEVuZ2xpc2ggbm90ZSIgfSwKICAgICBkYXRlOiAiMjAyNy0wNC0wOCIsCiAgICAgbG9jYXRpb246IHsgemg6ICLmna3lt54iLCBlbjogIkhhbmd6aG91IiB9LAogICAgIGFsYnVtOiAiMjAyNy1zcHJpbmciLAogICAgIHdpZHRoOiAxNjAwLAogICAgIGhlaWdodDogMTEwMAogICB9Cgo0LiDlpoLmnpzmlrDlop7kuobnm7jlhozliIbnsbvvvIzlho3lnKjlkIzkuIDkuKrmlofku7bnmoQgYWxidW1zIOaVsOe7hOS4rea3u+WKoOebuOWGjOWQjeensOOAggoK54Wn54mH5bu66K6u77yaCi0g5qiq5Zu+5a696auY5q+U57qmIDQ6MyDmiJYgMTY6MTAKLSDnq5blm77lrr3pq5jmr5TnuqYgNDo1IOaIliAzOjQKLSDljZXlvKDmlofku7blsL3ph4/mjqfliLblnKggMS0zIE1CCi0g5paH5Lu25ZCN5L2/55So6Iux5paH44CB5pWw5a2X5ZKM6L+e5a2X56ymCg==
+Keepsake 本地相册使用说明
+
+1. 在 public/albums 下按旅行或年份新建文件夹，例如：
+   public/albums/2027-spring/
+
+2. 把图片放进对应文件夹。
+
+3. 打开 app/data/albums.ts，在 gallery 数组里添加一条记录：
+   {
+     id: "spring-rain",
+     src: "/albums/2027-spring/spring-rain.jpg",
+     alt: "雨后的山间小路",
+     title: { zh: "春天下过雨", en: "After the rain" },
+     caption: { zh: "一句中文说明", en: "An English note" },
+     date: "2027-04-08",
+     location: { zh: "杭州", en: "Hangzhou" },
+     album: "2027-spring",
+     width: 1600,
+     height: 1100
+   }
+
+4. 如果新增了相册分类，再在同一个文件的 albums 数组中添加相册名称。
+
+照片建议：
+- 横图宽高比约 4:3 或 16:10
+- 竖图宽高比约 4:5 或 3:4
+- 单张文件尽量控制在 1-3 MB
+- 文件名使用英文、数字和连字符

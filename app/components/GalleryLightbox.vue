@@ -1,1 +1,88 @@
-PHNjcmlwdCBzZXR1cCBsYW5nPSJ0cyI+CmltcG9ydCB7CiAgRGlhbG9nQ2xvc2UsCiAgRGlhbG9nQ29udGVudCwKICBEaWFsb2dEZXNjcmlwdGlvbiwKICBEaWFsb2dPdmVybGF5LAogIERpYWxvZ1BvcnRhbCwKICBEaWFsb2dSb290LAogIERpYWxvZ1RpdGxlLAp9IGZyb20gJ3Jla2EtdWknCmltcG9ydCB0eXBlIHsgR2FsbGVyeVBob3RvIH0gZnJvbSAnfi90eXBlcy9jb250ZW50JwoKY29uc3Qgb3BlbiA9IGRlZmluZU1vZGVsPGJvb2xlYW4+KCdvcGVuJywgeyBkZWZhdWx0OiBmYWxzZSB9KQoKZGVmaW5lUHJvcHM8ewogIHBob3RvOiBHYWxsZXJ5UGhvdG8KfT4oKQoKY29uc3QgcHJlZmVyZW5jZXMgPSB1c2VQcmVmZXJlbmNlc1N0b3JlKCkKY29uc3QgbG9jYWxpemUgPSB1c2VMb2NhbGl6ZWRUZXh0KCkKY29uc3QgeyB0IH0gPSB1c2VJMThuKCkKPC9zY3JpcHQ+Cgo8dGVtcGxhdGU+CiAgPERpYWxvZ1Jvb3Qgdi1tb2RlbDpvcGVuPSJvcGVuIj4KICAgIDxEaWFsb2dQb3J0YWw+CiAgICAgIDxEaWFsb2dPdmVybGF5IGNsYXNzPSJmaXhlZCBpbnNldC0wIHotWzEwMF0gYmctYmxhY2svNzAgYmFja2Ryb3AtYmx1ci1tZCIgLz4KICAgICAgPERpYWxvZ0NvbnRlbnQgY2xhc3M9ImZpeGVkIGluc2V0LTAgei1bMTEwXSBncmlkIHBsYWNlLWl0ZW1zLWNlbnRlciBwLTMgb3V0bGluZS1ub25lIHNtOnAtOCI+CiAgICAgICAgPGRpdiBjbGFzcz0iZ3JpZCBtYXgtaC1bOTRzdmhdIHctZnVsbCBtYXgtdy03eGwgb3ZlcmZsb3ctaGlkZGVuIHJvdW5kZWQtWzEuNXJlbV0gYmctWyMwZDFmMWFdIHNoYWRvdy0yeGwgbGc6Z3JpZC1jb2xzLVttaW5tYXgoMCwxZnIpXzIycmVtXSI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJyZWxhdGl2ZSBtaW4taC0wIGJnLWJsYWNrLzMwIj4KICAgICAgICAgICAgPE51eHRJbWcKICAgICAgICAgICAgICA6c3JjPSJwaG90by5zcmMiCiAgICAgICAgICAgICAgOmFsdD0icGhvdG8uYWx0IgogICAgICAgICAgICAgIDp3aWR0aD0icGhvdG8ud2lkdGgiCiAgICAgICAgICAgICAgOmhlaWdodD0icGhvdG8uaGVpZ2h0IgogICAgICAgICAgICAgIGNsYXNzPSJtYXgtaC1bNjVzdmhdIHctZnVsbCBvYmplY3QtY29udGFpbiBsZzptYXgtaC1bOTBzdmhdIgogICAgICAgICAgICAvPgogICAgICAgICAgPC9kaXY+CgogICAgICAgICAgPGFzaWRlIGNsYXNzPSJmbGV4IG1pbi1oLTAgZmxleC1jb2wgcC02IHRleHQtd2hpdGUgc206cC04Ij4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIj4KICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0idGV4dC1bMC42MnJlbV0gZm9udC1ib2xkIHVwcGVyY2FzZSB0cmFja2luZy1bMC4xOGVtXSB0ZXh0LXdoaXRlLzQ1Ij4KICAgICAgICAgICAgICAgIHt7IHBob3RvLmRhdGUucmVwbGFjZUFsbCgnLScsICcuJykgfX0KICAgICAgICAgICAgICA8L3NwYW4+CiAgICAgICAgICAgICAgPERpYWxvZ0Nsb3NlIGFzLWNoaWxkPgogICAgICAgICAgICAgICAgPGJ1dHRvbgogICAgICAgICAgICAgICAgICB0eXBlPSJidXR0b24iCiAgICAgICAgICAgICAgICAgIGNsYXNzPSJncmlkIHNpemUtOSBwbGFjZS1pdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItd2hpdGUvMTUgdGV4dC13aGl0ZS82NSB0cmFuc2l0aW9uLWNvbG9ycyBob3ZlcjpiZy13aGl0ZS8xMCBob3Zlcjp0ZXh0LXdoaXRlIgogICAgICAgICAgICAgICAgICA6YXJpYS1sYWJlbD0idCgnY29tbW9uLmNsb3NlJykiCiAgICAgICAgICAgICAgICA+CiAgICAgICAgICAgICAgICAgIDxJY29uCiAgICAgICAgICAgICAgICAgICAgbmFtZT0ibHVjaWRlOngiCiAgICAgICAgICAgICAgICAgICAgY2xhc3M9InNpemUtNCIKICAgICAgICAgICAgICAgICAgLz4KICAgICAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgICAgIDwvRGlhbG9nQ2xvc2U+CiAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgPGRpdiBjbGFzcz0ibXQtYXV0byBwdC0xMCI+CiAgICAgICAgICAgICAgPHAgY2xhc3M9InRleHQtWzAuNjVyZW1dIGZvbnQtYm9sZCB1cHBlcmNhc2UgdHJhY2tpbmctWzAuMTZlbV0gdGV4dC1bI2U4YjY1Yl0iPgogICAgICAgICAgICAgICAge3sgbG9jYWxpemUocGhvdG8ubG9jYXRpb24pIH19CiAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgIDxEaWFsb2dUaXRsZSBjbGFzcz0iZGlzcGxheSBtdC0zIHRleHQtNHhsIGxlYWRpbmctWzEuMDJdIj4KICAgICAgICAgICAgICAgIHt7IGxvY2FsaXplKHBob3RvLnRpdGxlKSB9fQogICAgICAgICAgICAgIDwvRGlhbG9nVGl0bGU+CiAgICAgICAgICAgICAgPERpYWxvZ0Rlc2NyaXB0aW9uIGNsYXNzPSJtdC01IHRleHQtc20gbGVhZGluZy03IHRleHQtd2hpdGUvNTgiPgogICAgICAgICAgICAgICAge3sgbG9jYWxpemUocGhvdG8uY2FwdGlvbikgfX0KICAgICAgICAgICAgICA8L0RpYWxvZ0Rlc2NyaXB0aW9uPgoKICAgICAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgICAgICB0eXBlPSJidXR0b24iCiAgICAgICAgICAgICAgICBjbGFzcz0ibXQtNyBpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItd2hpdGUvMTUgcHgtNCBweS0yLjUgdGV4dC14cyBmb250LXNlbWlib2xkIHRyYW5zaXRpb24tY29sb3JzIGhvdmVyOmJnLXdoaXRlLzEwIgogICAgICAgICAgICAgICAgQGNsaWNrPSJwcmVmZXJlbmNlcy50b2dnbGVGYXZvcml0ZShwaG90by5pZCkiCiAgICAgICAgICAgICAgPgogICAgICAgICAgICAgICAgPEljb24KICAgICAgICAgICAgICAgICAgOm5hbWU9InByZWZlcmVuY2VzLmZhdm9yaXRlcy5pbmNsdWRlcyhwaG90by5pZCkgPyAnbHVjaWRlOmhlYXJ0JyA6ICdsdWNpZGU6aGVhcnQtcGx1cyciCiAgICAgICAgICAgICAgICAgIGNsYXNzPSJzaXplLTQiCiAgICAgICAgICAgICAgICAgIDpjbGFzcz0icHJlZmVyZW5jZXMuZmF2b3JpdGVzLmluY2x1ZGVzKHBob3RvLmlkKSA/ICdmaWxsLVt2YXIoLS1hY2NlbnQpXSB0ZXh0LVt2YXIoLS1hY2NlbnQpXScgOiAnJyIKICAgICAgICAgICAgICAgIC8+CiAgICAgICAgICAgICAgICB7eyBwcmVmZXJlbmNlcy5mYXZvcml0ZXMuaW5jbHVkZXMocGhvdG8uaWQpID8gdCgnY29tbW9uLnNhdmVkJykgOiB0KCdjb21tb24uc2F2ZScpIH19CiAgICAgICAgICAgICAgPC9idXR0b24+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9hc2lkZT4KICAgICAgICA8L2Rpdj4KICAgICAgPC9EaWFsb2dDb250ZW50PgogICAgPC9EaWFsb2dQb3J0YWw+CiAgPC9EaWFsb2dSb290Pgo8L3RlbXBsYXRlPgo=
+<script setup lang="ts">
+import {
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogOverlay,
+  DialogPortal,
+  DialogRoot,
+  DialogTitle,
+} from 'reka-ui'
+import type { GalleryPhoto } from '~/types/content'
+
+const open = defineModel<boolean>('open', { default: false })
+
+defineProps<{
+  photo: GalleryPhoto
+}>()
+
+const preferences = usePreferencesStore()
+const localize = useLocalizedText()
+const { t } = useI18n()
+</script>
+
+<template>
+  <DialogRoot v-model:open="open">
+    <DialogPortal>
+      <DialogOverlay class="fixed inset-0 z-[100] bg-black/70 backdrop-blur-md" />
+      <DialogContent class="fixed inset-0 z-[110] grid place-items-center p-3 outline-none sm:p-8">
+        <div class="grid max-h-[94svh] w-full max-w-7xl overflow-hidden rounded-[1.5rem] bg-[#0d1f1a] shadow-2xl lg:grid-cols-[minmax(0,1fr)_22rem]">
+          <div class="relative min-h-0 bg-black/30">
+            <NuxtImg
+              :src="photo.src"
+              :alt="photo.alt"
+              :width="photo.width"
+              :height="photo.height"
+              class="max-h-[65svh] w-full object-contain lg:max-h-[90svh]"
+            />
+          </div>
+
+          <aside class="flex min-h-0 flex-col p-6 text-white sm:p-8">
+            <div class="flex items-center justify-between">
+              <span class="text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white/45">
+                {{ photo.date.replaceAll('-', '.') }}
+              </span>
+              <DialogClose as-child>
+                <button
+                  type="button"
+                  class="grid size-9 place-items-center rounded-full border border-white/15 text-white/65 transition-colors hover:bg-white/10 hover:text-white"
+                  :aria-label="t('common.close')"
+                >
+                  <Icon
+                    name="lucide:x"
+                    class="size-4"
+                  />
+                </button>
+              </DialogClose>
+            </div>
+
+            <div class="mt-auto pt-10">
+              <p class="text-[0.65rem] font-bold uppercase tracking-[0.16em] text-[#e8b65b]">
+                {{ localize(photo.location) }}
+              </p>
+              <DialogTitle class="display mt-3 text-4xl leading-[1.02]">
+                {{ localize(photo.title) }}
+              </DialogTitle>
+              <DialogDescription class="mt-5 text-sm leading-7 text-white/58">
+                {{ localize(photo.caption) }}
+              </DialogDescription>
+
+              <button
+                type="button"
+                class="mt-7 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-xs font-semibold transition-colors hover:bg-white/10"
+                @click="preferences.toggleFavorite(photo.id)"
+              >
+                <Icon
+                  :name="preferences.favorites.includes(photo.id) ? 'lucide:heart' : 'lucide:heart-plus'"
+                  class="size-4"
+                  :class="preferences.favorites.includes(photo.id) ? 'fill-[var(--accent)] text-[var(--accent)]' : ''"
+                />
+                {{ preferences.favorites.includes(photo.id) ? t('common.saved') : t('common.save') }}
+              </button>
+            </div>
+          </aside>
+        </div>
+      </DialogContent>
+    </DialogPortal>
+  </DialogRoot>
+</template>

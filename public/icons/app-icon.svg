@@ -1,1 +1,9 @@
-PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExNiIgZmlsbD0iIzE3M2IzMyIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1ZWZlMiIgc3Ryb2tlLXdpZHRoPSIxOCI+CiAgICA8Y2lyY2xlIGN4PSIyMDgiIGN5PSIyMTgiIHI9IjkyIi8+CiAgICA8Y2lyY2xlIGN4PSIzMDQiIGN5PSIyMTgiIHI9IjkyIi8+CiAgICA8Y2lyY2xlIGN4PSIyNTYiIGN5PSIzMTIiIHI9IjkyIi8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjI1NiIgY3k9IjEwMiIgcj0iMjAiIGZpbGw9IiNlOGI2NWIiLz4KPC9zdmc+Cg==
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="116" fill="#173b33"/>
+  <g fill="none" stroke="#f5efe2" stroke-width="18">
+    <circle cx="208" cy="218" r="92"/>
+    <circle cx="304" cy="218" r="92"/>
+    <circle cx="256" cy="312" r="92"/>
+  </g>
+  <circle cx="256" cy="102" r="20" fill="#e8b65b"/>
+</svg>
