@@ -20,6 +20,7 @@ export interface Album {
   id: string
   label: LocalizedText
   description: LocalizedText
+  date?: string
 }
 
 export interface Journey {
@@ -30,6 +31,21 @@ export interface Journey {
   location: LocalizedText
   date: string
   duration: string
-  cover: string
   featured?: boolean
+}
+
+export interface MediaAsset {
+  src: string
+  filename: string
+  width: number
+  height: number
+}
+
+export interface MediaManifest {
+  generatedAt: string
+  albums: Album[]
+  gallery: GalleryPhoto[]
+  banners: MediaAsset[]
+  journeyCovers: MediaAsset[]
+  storyCovers: MediaAsset[]
 }

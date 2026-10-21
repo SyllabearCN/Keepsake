@@ -10,7 +10,6 @@ export default defineContentConfig({
         description: z.string(),
         date: z.string(),
         category: z.string(),
-        cover: z.string(),
         location: z.string().optional(),
         readingTime: z.number().optional(),
       }),

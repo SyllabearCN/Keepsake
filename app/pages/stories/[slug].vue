@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import { useMediaLibrary } from '~/composables/useMediaLibrary'
+
 const route = useRoute()
 const { t } = useI18n()
+const { media } = await useMediaLibrary()
 
 const { data: story } = await useAsyncData(`story-${route.path}`, () => {
   return queryCollection('stories').path(route.path).first()
+})
+
+const { data: allStories } = await useAsyncData('story-cover-order', () => {
+  return queryCollection('stories').order('date', 'DESC').all()
 })
 
 if (!story.value) {
@@ -13,10 +20,17 @@ if (!story.value) {
   })
 }
 
+const storyIndex = computed(() => {
+  return (allStories.value ?? []).findIndex(item => item.path === route.path)
+})
+const storyCover = computed(() => {
+  return media.value.storyCovers[storyIndex.value]?.src ?? '/icons/media-placeholder.svg'
+})
+
 useSeoMeta({
   title: story.value.title,
   description: story.value.description,
-  ogImage: story.value.cover,
+  ogImage: storyCover.value,
   ogType: 'article',
 })
 </script>
@@ -48,14 +62,14 @@ useSeoMeta({
       </div>
 
       <div class="mt-12 overflow-hidden rounded-[1.8rem] bg-[var(--surface-strong)] sm:mt-16">
-        <NuxtImg
-          :src="story.cover"
+        <img
+          :src="storyCover"
           :alt="story.title"
           width="2000"
           height="1200"
           class="max-h-[72svh] w-full object-cover"
-          preload
-        />
+          loading="eager"
+        >
       </div>
     </header>
 

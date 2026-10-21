@@ -28,13 +28,13 @@ const { t } = useI18n()
       <DialogContent class="fixed inset-0 z-[110] grid place-items-center p-3 outline-none sm:p-8">
         <div class="grid max-h-[94svh] w-full max-w-7xl overflow-hidden rounded-[1.5rem] bg-[#0d1f1a] shadow-2xl lg:grid-cols-[minmax(0,1fr)_22rem]">
           <div class="relative min-h-0 bg-black/30">
-            <NuxtImg
+            <img
               :src="photo.src"
               :alt="photo.alt"
               :width="photo.width"
               :height="photo.height"
               class="max-h-[65svh] w-full object-contain lg:max-h-[90svh]"
-            />
+            >
           </div>
 
           <aside class="flex min-h-0 flex-col p-6 text-white sm:p-8">

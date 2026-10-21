@@ -34,7 +34,7 @@
     "noteLabel": "This week",
     "noteText": "A windy bike ride by the river on Sunday. We all came home smiling like fools.",
     "scroll": "Scroll to browse",
-    "statsMembers": "family members",
+    "statsAlbums": "photo albums",
     "statsTrips": "travel films",
     "statsStories": "stories kept",
     "albumEyebrow": "OUR DAYS, IN PICTURES",
@@ -52,18 +52,21 @@
   "gallery": {
     "eyebrow": "OUR PHOTO ALBUM",
     "title": "Album",
-    "intro": "Photographs are grouped by trip and time. Every image comes from a local folder—replace the files and update the index.",
+    "intro": "Photographs are grouped by trip and time. Open an album to see all of its photos.",
     "albumFilter": "Browse by album",
+    "albumList": "Albums",
+    "backToAlbums": "Back to albums",
+    "noAlbums": "No albums were found.",
     "empty": "There are no photos in this album yet.",
     "localHint": "Local album folder",
-    "localHintText": "Place photos in public/albums and register them in app/data/albums.ts."
+    "localHintText": "Create an album folder in the local media library using “Album title YYYY-MM-DD”, then add numbered photos."
   },
   "journeys": {
     "eyebrow": "TRAVEL VLOGS",
     "title": "Journeys",
     "intro": "Videos are played through Bilibili's embedded player. Each card is only an index entry, so you do not need to host the video yourself.",
     "watchOnBilibili": "Open on Bilibili",
-    "replaceHint": "Replace the BV ids in app/data/journeys.ts to use your own videos."
+    "replaceHint": "Replace the BV id in the video index to use your own Bilibili video."
   },
   "stories": {
     "eyebrow": "WRITTEN MEMORIES",
@@ -71,7 +74,7 @@
     "intro": "Articles are stored as Markdown, separate from the page layout. Redesigning the reading experience never requires touching the text.",
     "minuteRead": "min read",
     "newArticle": "New article",
-    "newArticleText": "Create a Markdown file in content/stories and fill in its frontmatter. It will appear here automatically.",
+    "newArticleText": "Create a Markdown article with a title, summary, date, and category. It will appear here automatically.",
     "notFound": "This story could not be found."
   },
   "about": {
@@ -94,7 +97,7 @@
     "timelineThreeText": "Keepsake is live. We hope it holds many more ordinary weekends that glow.",
     "techTitle": "What is easy to change",
     "techOne": "Albums, stories, and videos have separate data; content is not trapped in the layout.",
-    "techTwo": "Photos live in the local public directory without an image-hosting service.",
+    "techTwo": "Photos are read directly by the local media service without copying them into the website or using an external image host.",
     "techThree": "Bilibili videos are embedded only, so the site stores no video files."
   },
   "footer": {

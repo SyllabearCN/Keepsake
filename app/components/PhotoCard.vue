@@ -40,7 +40,7 @@ const aspectClass = computed(() => {
         class="image-reveal relative"
         :class="aspectClass"
       >
-        <NuxtImg
+        <img
           :src="photo.src"
           :alt="photo.alt"
           :width="photo.width"
@@ -48,7 +48,7 @@ const aspectClass = computed(() => {
           :loading="priority ? 'eager' : 'lazy'"
           :fetchpriority="priority ? 'high' : 'auto'"
           class="h-full w-full object-cover"
-        />
+        >
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-85 transition-opacity duration-300 group-hover:opacity-100" />
 
         <div class="absolute inset-x-0 bottom-0 flex items-end gap-4 p-5 text-white sm:p-6">

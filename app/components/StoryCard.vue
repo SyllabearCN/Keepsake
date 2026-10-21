@@ -24,13 +24,14 @@ const { t } = useI18n()
       class="surface-card flex h-full flex-col overflow-hidden rounded-[1.4rem] transition-transform duration-300 hover:-translate-y-1"
     >
       <div class="image-reveal aspect-[16/10] bg-[var(--surface-strong)]">
-        <NuxtImg
+        <img
           :src="story.cover"
           :alt="story.title"
           :width="1600"
           :height="1000"
           class="h-full w-full object-cover"
-        />
+          loading="lazy"
+        >
       </div>
 
       <div class="flex flex-1 flex-col p-5 sm:p-6">

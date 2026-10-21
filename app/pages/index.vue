@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
-import type { GalleryPhoto, Journey } from '~/types/content'
-import { gallery } from '~/data/albums'
+import type { Journey } from '~/types/content'
 import { journeys } from '~/data/journeys'
+import { useMediaLibrary } from '~/composables/useMediaLibrary'
 
 const { t } = useI18n()
+const { media } = await useMediaLibrary()
+const router = useRouter()
+const preferences = usePreferencesStore()
 
 useSeoMeta({
   title: '我们仨的家庭记忆簿',
@@ -15,18 +18,31 @@ const { data: stories } = await useAsyncData('home-stories', () => {
   return queryCollection('stories').order('date', 'DESC').all()
 })
 
-const latestStories = computed(() => (stories.value ?? []).slice(0, 3))
-const featuredPhotos = computed(() => gallery.slice(0, 3))
-const featuredJourneys = journeys.filter(journey => journey.featured)
+const albumCountLabel = computed(() => String(media.value.albums.length).padStart(2, '0'))
+const featuredAlbums = computed(() => media.value.albums.slice(0, 3).flatMap((album) => {
+  const photos = media.value.gallery.filter(photo => photo.album === album.id)
+  return photos[0]
+    ? [{ album, cover: photos[0]!, photoCount: photos.length }]
+    : []
+}))
+const journeyCards = computed(() => journeys.map((journey, index) => ({
+  ...journey,
+  cover: media.value.journeyCovers[index]?.src ?? '/icons/media-placeholder.svg',
+})))
+const latestStories = computed(() => (stories.value ?? []).slice(0, 3).map((story, index) => ({
+  ...story,
+  cover: media.value.storyCovers[index]?.src ?? '/icons/media-placeholder.svg',
+})))
+const featuredJourneys = computed(() => journeyCards.value.filter(journey => journey.featured))
+const heroBanner = computed(() => media.value.banners[0])
+const heroBannerSrc = computed(() => heroBanner.value?.src ?? '/icons/media-placeholder.svg')
 
-const activePhoto = ref<GalleryPhoto | null>(null)
 const activeJourney = ref<Journey | null>(null)
-const photoOpen = ref(false)
 const videoOpen = ref(false)
 
-function openPhoto(photo: GalleryPhoto) {
-  activePhoto.value = photo
-  photoOpen.value = true
+async function openAlbum(albumId: string) {
+  preferences.galleryAlbum = albumId
+  await router.push('/gallery')
 }
 
 function openJourney(journey: Journey) {
@@ -38,15 +54,15 @@ function openJourney(journey: Journey) {
 <template>
   <div>
     <section class="relative min-h-[48rem] overflow-hidden bg-[#102c26] text-white sm:min-h-[54rem] lg:min-h-[100svh]">
-      <NuxtImg
-        src="/albums/2026-summer/hero-coast.jpg"
+      <img
+        :src="heroBannerSrc"
         alt="山谷与暮色中的风景"
-        width="2000"
-        height="1300"
-        preload
+        :width="heroBanner?.width ?? 1600"
+        :height="heroBanner?.height ?? 1000"
+        loading="eager"
         fetchpriority="high"
         class="absolute inset-0 h-full w-full object-cover"
-      />
+      >
       <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,23,19,.24)_0%,rgba(6,23,19,.1)_35%,rgba(6,23,19,.88)_100%)]" />
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_82%_22%,rgba(232,182,91,.16),transparent_24rem)]" />
 
@@ -124,15 +140,15 @@ function openJourney(journey: Journey) {
       <div class="page-shell grid grid-cols-3 divide-x divide-[var(--line)] py-7 sm:py-9">
         <div class="pr-3 text-center">
           <p class="display text-3xl sm:text-5xl">
-            03
+            {{ albumCountLabel }}
           </p>
           <p class="mt-1 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-muted sm:text-[0.65rem]">
-            {{ t('home.statsMembers') }}
+            {{ t('home.statsAlbums') }}
           </p>
         </div>
         <div class="px-3 text-center">
           <p class="display text-3xl sm:text-5xl">
-            {{ String(journeys.length).padStart(2, '0') }}
+            {{ String(journeyCards.length).padStart(2, '0') }}
           </p>
           <p class="mt-1 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-muted sm:text-[0.65rem]">
             {{ t('home.statsTrips') }}
@@ -168,49 +184,25 @@ function openJourney(journey: Journey) {
         </NuxtLink>
       </div>
 
-      <div class="mt-12 grid gap-4 md:grid-cols-2 md:grid-rows-2">
-        <PhotoCard
-          v-if="featuredPhotos[0]"
-          :photo="featuredPhotos[0]"
-          aspect="landscape"
-          class="md:row-span-2 md:h-full [&>button>div]:h-full"
-          priority
-          @open="openPhoto"
+      <div
+        v-if="featuredAlbums.length"
+        class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+      >
+        <AlbumCard
+          v-for="card in featuredAlbums"
+          :key="card.album.id"
+          :album="card.album"
+          :cover="card.cover"
+          :photo-count="card.photoCount"
+          @select="openAlbum"
         />
-        <PhotoCard
-          v-if="featuredPhotos[1]"
-          :photo="featuredPhotos[1]"
-          aspect="landscape"
-          @open="openPhoto"
-        />
-        <div class="grid gap-4 sm:grid-cols-2">
-          <PhotoCard
-            v-if="featuredPhotos[2]"
-            :photo="featuredPhotos[2]"
-            aspect="square"
-            @open="openPhoto"
-          />
-          <NuxtLink
-            to="/gallery"
-            class="group grid min-h-56 place-items-center rounded-[1.4rem] bg-[var(--brand)] p-6 text-center text-[var(--page)]"
-          >
-            <div>
-              <span class="mx-auto grid size-12 place-items-center rounded-full border border-current/25 transition-transform duration-300 group-hover:rotate-12">
-                <Icon
-                  name="lucide:images"
-                  class="size-5"
-                />
-              </span>
-              <p class="display mt-5 text-2xl">
-                {{ gallery.length }} {{ t('common.photos') }}
-              </p>
-              <p class="mt-2 text-[0.62rem] font-bold uppercase tracking-[0.12em] opacity-60">
-                {{ t('common.viewAll') }} →
-              </p>
-            </div>
-          </NuxtLink>
-        </div>
       </div>
+      <p
+        v-else
+        class="mt-12 rounded-2xl border border-dashed border-[var(--line)] p-10 text-center text-muted"
+      >
+        {{ t('gallery.noAlbums') }}
+      </p>
     </section>
 
     <section class="overflow-hidden bg-[var(--surface-strong)] py-20 sm:py-28">
@@ -238,6 +230,7 @@ function openJourney(journey: Journey) {
             v-for="journey in featuredJourneys"
             :key="journey.id"
             :journey="journey"
+            :cover="journey.cover"
             large
             @open="openJourney"
           />
@@ -292,11 +285,6 @@ function openJourney(journey: Journey) {
       </div>
     </section>
 
-    <GalleryLightbox
-      v-if="activePhoto"
-      v-model:open="photoOpen"
-      :photo="activePhoto"
-    />
     <VideoDialog
       v-model:open="videoOpen"
       :journey="activeJourney"

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useMediaLibrary } from '~/composables/useMediaLibrary'
+
 const { t } = useI18n()
+const { media } = await useMediaLibrary()
 
 useSeoMeta({
   title: t('stories.title'),
@@ -10,8 +13,12 @@ const { data: stories } = await useAsyncData('all-stories', () => {
   return queryCollection('stories').order('date', 'DESC').all()
 })
 
-const featuredStory = computed(() => stories.value?.[0])
-const remainingStories = computed(() => (stories.value ?? []).slice(1))
+const storiesWithCovers = computed(() => (stories.value ?? []).map((story, index) => ({
+  ...story,
+  cover: media.value.storyCovers[index]?.src ?? '/icons/media-placeholder.svg',
+})))
+const featuredStory = computed(() => storiesWithCovers.value[0])
+const remainingStories = computed(() => storiesWithCovers.value.slice(1))
 </script>
 
 <template>
