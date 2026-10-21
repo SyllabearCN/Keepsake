@@ -48,6 +48,7 @@ export interface MediaManifest {
   banners: MediaAsset[]
   journeyCovers: MediaAsset[]
   storyCovers: MediaAsset[]
+  aboutPhotos: MediaAsset[]
 }
 
 export interface StorySummary {

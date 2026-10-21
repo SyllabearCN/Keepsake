@@ -1,4 +1,8 @@
 {
+  "brand": {
+    "name": "Keepsake",
+    "homeLabel": "Keepsake home"
+  },
   "nav": {
     "home": "Home",
     "gallery": "Album",

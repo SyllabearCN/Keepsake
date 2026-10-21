@@ -10,7 +10,7 @@ const router = useRouter()
 const preferences = usePreferencesStore()
 
 useSeoMeta({
-  title: '我们仨的家庭记忆簿',
+  title: '首页',
   description: t('home.intro'),
 })
 

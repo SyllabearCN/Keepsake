@@ -46,19 +46,19 @@ watch(() => route.fullPath, () => {
     <DialogPortal>
       <DialogOverlay class="fixed inset-0 z-[80] bg-black/40 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out" />
       <DialogContent
-        class="fixed inset-y-0 right-0 z-[90] flex w-[min(88vw,24rem)] flex-col border-l border-[var(--line)] bg-[var(--page)] p-6 shadow-2xl outline-none"
+        class="fixed inset-y-0 right-0 z-[90] flex w-[min(78vw,18rem)] flex-col border-l border-[var(--line)] bg-[var(--page)] p-5 shadow-2xl outline-none"
       >
         <div class="flex items-center justify-between">
           <FamilyMark />
           <DialogClose as-child>
             <button
               type="button"
-              class="grid size-10 place-items-center rounded-full border border-[var(--line)]"
+              class="grid size-9 place-items-center rounded-full border border-[var(--line)]"
               :aria-label="t('nav.close')"
             >
               <Icon
                 name="lucide:x"
-                class="size-5"
+                class="size-4"
               />
             </button>
           </DialogClose>
@@ -69,19 +69,19 @@ watch(() => route.fullPath, () => {
           <DialogDescription>{{ t('nav.close') }}</DialogDescription>
         </VisuallyHidden>
 
-        <nav class="mt-12 flex flex-col">
+        <nav class="mt-8 flex flex-col">
           <NuxtLink
             v-for="(link, index) in links"
             :key="link.to"
             :to="link.to"
-            class="group flex items-center justify-between border-b border-[var(--line)] py-5 text-[2rem] tracking-[-0.04em]"
+            class="group flex items-center justify-between border-b border-[var(--line)] py-4 text-[1.35rem] tracking-[-0.035em]"
           >
             <span class="display">{{ link.label }}</span>
-            <span class="text-xs font-bold text-muted">0{{ index + 1 }}</span>
+            <span class="text-[0.65rem] font-bold text-muted">0{{ index + 1 }}</span>
           </NuxtLink>
         </nav>
 
-        <div class="mt-auto flex items-center gap-3 pt-10">
+        <div class="mt-auto flex items-center gap-2.5 pt-8">
           <ThemeToggle />
           <LocaleSwitcher />
           <span class="ml-auto text-[0.62rem] font-bold uppercase tracking-[0.14em] text-muted">

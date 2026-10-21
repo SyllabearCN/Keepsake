@@ -33,7 +33,7 @@ function scrollToTop() {
       </div>
 
       <div class="mt-14 flex flex-col gap-2 border-t border-[var(--line)] pt-6 text-[0.68rem] font-medium text-muted sm:flex-row sm:items-center sm:justify-between">
-        <span>© {{ new Date().getFullYear() }} Keepsake · 我们仨</span>
+        <span>© {{ new Date().getFullYear() }} {{ t('brand.name') }}</span>
         <span>{{ t('footer.rights') }}</span>
       </div>
     </div>

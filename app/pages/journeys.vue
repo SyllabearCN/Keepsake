@@ -37,7 +37,6 @@ function openJourney(journey: Journey) {
       :eyebrow="t('journeys.eyebrow')"
       :title="t('journeys.title')"
       :intro="t('journeys.intro')"
-      compact
     />
 
     <section class="page-shell pb-16 pt-4 sm:pb-20 sm:pt-6">

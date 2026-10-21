@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 useHead({
   bodyAttrs: {
@@ -8,11 +8,15 @@ useHead({
 })
 
 useSeoMeta({
-  ogSiteName: 'Keepsake · 我们仨',
+  ogSiteName: computed(() => t('brand.name')),
   twitterCard: 'summary_large_image',
 })
 
-useHead({
+useHead(() => ({
+  titleTemplate: `%s · ${t('brand.name')}`,
+  htmlAttrs: {
+    lang: locale.value,
+  },
   script: [
     {
       key: 'keepsake-structured-data',
@@ -20,13 +24,13 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        'name': 'Keepsake · 我们仨',
+        'name': t('brand.name'),
         'description': t('home.intro'),
-        'inLanguage': 'zh-CN',
+        'inLanguage': locale.value,
       }),
     },
   ],
-})
+}))
 </script>
 
 <template>

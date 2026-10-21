@@ -34,7 +34,6 @@ const remainingStories = computed(() => storiesWithCovers.value.slice(3))
       :eyebrow="t('stories.eyebrow')"
       :title="t('stories.title')"
       :intro="t('stories.intro')"
-      compact
     />
 
     <section class="page-shell pb-16 pt-4 sm:pb-20 sm:pt-6">

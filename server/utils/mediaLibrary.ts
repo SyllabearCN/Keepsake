@@ -5,7 +5,7 @@ import type { Album, GalleryPhoto, MediaAsset, MediaManifest } from '../../app/t
 
 const mediaRoot = resolve(process.env.KEEPSAKE_MEDIA_ROOT || 'G:\\照片')
 const imageExtensions = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif'])
-const specialFolders = new Set(['banner', 'journey', 'story'])
+const specialFolders = new Set(['about', 'banner', 'journey', 'story'])
 const collator = new Intl.Collator('zh-CN', { numeric: true, sensitivity: 'base' })
 const cacheDuration = 10_000
 
@@ -37,9 +37,10 @@ export function parseAlbumFolderName(folderName: string) {
   }
 }
 
-function assetUrl(path: string, width: number) {
+function assetUrl(path: string, width: number, version?: string) {
   const normalized = path.replaceAll(sep, '/')
-  return `/api/media/asset?path=${encodeURIComponent(normalized)}&w=${width}`
+  const versionQuery = version ? `&v=${version}` : ''
+  return `/api/media/asset?path=${encodeURIComponent(normalized)}&w=${width}${versionQuery}`
 }
 
 async function listImages(directory: string) {
@@ -50,12 +51,16 @@ async function listImages(directory: string) {
     .sort(collator.compare)
 }
 
-async function imageDimensions(source: string) {
-  const metadata = await sharp(source).metadata()
+async function imageInfo(source: string) {
+  const [metadata, file] = await Promise.all([
+    sharp(source).metadata(),
+    stat(source),
+  ])
   const rotated = metadata.orientation != null && metadata.orientation >= 5
   return {
     width: rotated ? metadata.height ?? 0 : metadata.width ?? 0,
     height: rotated ? metadata.width ?? 0 : metadata.height ?? 0,
+    version: `${Math.trunc(file.mtimeMs)}-${file.size}`,
   }
 }
 
@@ -67,9 +72,10 @@ async function scanSpecialFolder(folderName: string, width: number, descending =
 
   const assets: MediaAsset[] = []
   for (const filename of files) {
-    const dimensions = await imageDimensions(join(folderPath, filename))
+    const source = join(folderPath, filename)
+    const { version, ...dimensions } = await imageInfo(source)
     assets.push({
-      src: assetUrl(join(folderName, filename), width),
+      src: assetUrl(join(folderName, filename), width, version),
       filename,
       ...dimensions,
     })
@@ -101,12 +107,12 @@ async function scanAlbums() {
 
     for (const [photoIndex, filename] of files.entries()) {
       const source = join(folderPath, filename)
-      const dimensions = await imageDimensions(source)
+      const { version, ...dimensions } = await imageInfo(source)
       const sequence = String(photoIndex + 1).padStart(3, '0')
 
       gallery.push({
         id: `${albumId}-${photoIndex + 1}`,
-        src: assetUrl(relative(mediaRoot, source), 2000),
+        src: assetUrl(relative(mediaRoot, source), 2000, version),
         alt: `${album.title} - 照片 ${sequence}`,
         title: {
           zh: `${album.title} · ${sequence}`,
@@ -147,11 +153,12 @@ export async function getMediaLibrary(force = false): Promise<MediaManifest> {
   if (!force && cachedManifest && Date.now() - cachedAt < cacheDuration)
     return cachedManifest
 
-  const [{ albums, gallery }, banners, journeyCovers, storyCovers] = await Promise.all([
+  const [{ albums, gallery }, banners, journeyCovers, storyCovers, aboutPhotos] = await Promise.all([
     scanAlbums(),
     scanSpecialFolder('banner', 2400),
     scanSpecialFolder('journey', 1600),
     scanSpecialFolder('story', 1600, true),
+    scanSpecialFolder('about', 1200),
   ])
 
   cachedManifest = {
@@ -161,6 +168,7 @@ export async function getMediaLibrary(force = false): Promise<MediaManifest> {
     banners,
     journeyCovers,
     storyCovers,
+    aboutPhotos,
   }
   cachedAt = Date.now()
   return cachedManifest

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useMediaLibrary } from '~/composables/useMediaLibrary'
+
 const { t } = useI18n()
+const { media } = await useMediaLibrary()
 
 useSeoMeta({
   title: t('about.title'),
@@ -7,9 +10,27 @@ useSeoMeta({
 })
 
 const members = computed(() => [
-  { number: '01', role: 'PAPA', text: t('about.memberOne'), color: '#e8b65b' },
-  { number: '02', role: 'MAMA', text: t('about.memberTwo'), color: '#ef795c' },
-  { number: '03', role: 'KIDDO', text: t('about.memberThree'), color: '#8db9a5' },
+  {
+    number: '01',
+    role: 'PAPA',
+    text: t('about.memberOne'),
+    color: '#e8b65b',
+    photo: media.value.aboutPhotos[0],
+  },
+  {
+    number: '02',
+    role: 'MAMA',
+    text: t('about.memberTwo'),
+    color: '#ef795c',
+    photo: media.value.aboutPhotos[1],
+  },
+  {
+    number: '03',
+    role: 'KIDDO',
+    text: t('about.memberThree'),
+    color: '#8db9a5',
+    photo: media.value.aboutPhotos[2],
+  },
 ])
 
 const timeline = computed(() => [
@@ -58,18 +79,33 @@ const timeline = computed(() => [
           <div
             v-for="member in members"
             :key="member.number"
-            class="surface-card flex min-h-64 flex-col rounded-[1.5rem] p-5 sm:p-6 lg:min-h-72"
+            class="surface-card overflow-hidden rounded-[1.5rem]"
           >
-            <span class="text-[0.62rem] font-bold tracking-[0.15em] text-muted">{{ member.number }}</span>
-            <div class="mt-auto pt-16">
-              <span
-                class="block size-3 rounded-full"
-                :style="{ backgroundColor: member.color }"
-              />
-              <p class="mt-4 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-muted">
-                {{ member.role }}
-              </p>
-              <p class="mt-3 text-sm leading-6">
+            <div class="image-reveal relative aspect-[4/5] overflow-hidden bg-[var(--surface-strong)]">
+              <img
+                :src="member.photo?.src ?? '/icons/media-placeholder.svg'"
+                :alt="member.role"
+                :width="member.photo?.width"
+                :height="member.photo?.height"
+                loading="lazy"
+                class="h-full w-full object-cover"
+              >
+              <span class="absolute left-5 top-5 grid size-9 place-items-center rounded-full border border-white/25 bg-black/35 text-[0.62rem] font-bold tracking-[0.12em] text-white backdrop-blur-sm">
+                {{ member.number }}
+              </span>
+            </div>
+
+            <div class="p-5 sm:p-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="block size-3 rounded-full"
+                  :style="{ backgroundColor: member.color }"
+                />
+                <p class="text-[0.64rem] font-bold uppercase tracking-[0.18em] text-muted">
+                  {{ member.role }}
+                </p>
+              </div>
+              <p class="mt-4 text-sm leading-6">
                 {{ member.text }}
               </p>
             </div>

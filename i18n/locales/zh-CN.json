@@ -1,8 +1,12 @@
 {
+  "brand": {
+    "name": "纪念日",
+    "homeLabel": "纪念日首页"
+  },
   "nav": {
     "home": "首页",
     "gallery": "相册",
-    "journeys": "旅行影像",
+    "journeys": "影像",
     "stories": "文字记录",
     "about": "关于我们",
     "menu": "打开菜单",
@@ -30,12 +34,12 @@
     "heroTitle": "把一起走过的日子，\n慢慢收进这里。",
     "intro": "这里是属于我们一家三口的家庭记忆簿。没有宏大的叙事，只有一起去过的地方、说过的闲话，和那些想让时间替我们记住的普通一天。",
     "primaryCta": "翻开我们的相册",
-    "secondaryCta": "去看旅行影像",
+    "secondaryCta": "去看影像",
     "since": "我们的小宇宙",
     "sinceValue": "始于 2019",
     "scroll": "向下翻阅",
     "statsAlbums": "本相册",
-    "statsTrips": "段旅行影像",
+    "statsTrips": "段影像",
     "statsStories": "篇生活记录",
     "albumEyebrow": "OUR DAYS, IN PICTURES",
     "albumTitle": "先记住光，再记住日子。",
@@ -63,7 +67,7 @@
   },
   "journeys": {
     "eyebrow": "TRAVEL VLOGS",
-    "title": "旅行影像",
+    "title": "影像",
     "intro": "视频通过 Bilibili 内置播放器展示。每个卡片都只是一份视频索引，不占用你的服务器空间。",
     "watchOnBilibili": "在 B 站打开"
   },
@@ -80,7 +84,7 @@
   },
   "about": {
     "eyebrow": "ABOUT THIS LITTLE FAMILY",
-    "title": "关于我们仨",
+    "title": "关于我们",
     "intro": "一个爸爸、一个妈妈，和一个正在飞快长大的小朋友。我们喜欢在周末出门，也喜欢待在家里什么都不做。",
     "storyTitle": "我们为什么做这个网站",
     "storyOne": "社交媒体会把生活切得很碎，朋友圈又会不断往前滚。我们想要一个安静的地方，把照片、视频和文字放在一起。",
@@ -95,7 +99,7 @@
     "timelineTwoTitle": "我们成了三个人",
     "timelineTwoText": "家里多了一个小小的人，从此每一趟出门都多了一把儿童椅。",
     "timelineThreeTitle": "开始记录",
-    "timelineThreeText": "Keepsake 上线。希望它能装下未来很多个普通又发光的周末。",
+    "timelineThreeText": "纪念日上线。希望它能装下未来很多个普通又发光的周末。",
     "techTitle": "这个模板顺手改了哪些地方",
     "techOne": "相册、文章和视频都是独立数据，不把内容写死在布局里。",
     "techTwo": "照片由本地媒体服务实时读取，不复制到网站项目，也不依赖外部图床。",

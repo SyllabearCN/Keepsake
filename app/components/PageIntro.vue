@@ -1,21 +1,18 @@
 <script setup lang="ts">
+const { locale } = useI18n()
+
 defineProps<{
   eyebrow: string
   title: string
   intro: string
-  compact?: boolean
 }>()
+
+const singleLineIntro = computed(() => locale.value === 'zh-CN')
 </script>
 
 <template>
-  <section
-    class="page-shell"
-    :class="compact ? 'pb-4 pt-24 sm:pt-28' : 'pb-10 pt-36 sm:pt-44'"
-  >
-    <div
-      class="grid border-b border-[var(--line)] lg:grid-cols-[1fr_0.55fr] lg:items-end"
-      :class="compact ? 'gap-6 pb-6' : 'gap-9 pb-12'"
-    >
+  <section class="page-shell pb-10 pt-36 sm:pt-44">
+    <div class="grid gap-9 border-b border-[var(--line)] pb-12 lg:grid-cols-[minmax(15rem,0.42fr)_minmax(0,1fr)] lg:items-end">
       <div>
         <p class="eyebrow">
           {{ eyebrow }}
@@ -24,7 +21,12 @@ defineProps<{
           {{ title }}
         </h1>
       </div>
-      <p class="max-w-xl text-sm leading-7 text-muted sm:text-base sm:leading-8 lg:justify-self-end">
+      <p
+        class="text-sm leading-7 text-muted sm:text-base sm:leading-8 lg:justify-self-end"
+        :class="singleLineIntro
+          ? 'max-w-none lg:whitespace-nowrap lg:text-[clamp(0.5rem,calc(1.36vw_-_4px),0.99rem)] lg:leading-6'
+          : 'max-w-xl'"
+      >
         {{ intro }}
       </p>
     </div>

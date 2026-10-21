@@ -15,17 +15,17 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      titleTemplate: '%s · Keepsake',
+      titleTemplate: '%s · 纪念日',
       title: '我们仨的家庭记忆簿',
       htmlAttrs: { lang: 'zh-CN' },
       meta: [
         {
           name: 'description',
-          content: '把旅行、日常和文字，慢慢收进属于我们一家三口的 Keepsake。',
+          content: '把旅行、日常和文字，慢慢收进属于我们一家三口的纪念日。',
         },
         { name: 'theme-color', content: '#173b33' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Keepsake · 我们仨' },
+        { property: 'og:title', content: '纪念日 · 我们仨' },
         {
           property: 'og:description',
           content: '一个装满旅行、照片和故事的家庭记忆簿。',
@@ -84,8 +84,8 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
-      name: 'Keepsake · 我们仨',
-      short_name: 'Keepsake',
+      name: '纪念日 · 我们仨',
+      short_name: '纪念日',
       description: '一个装满旅行、照片和故事的家庭记忆簿。',
       theme_color: '#173b33',
       background_color: '#f7f2e8',

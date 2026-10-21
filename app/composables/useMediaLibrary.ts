@@ -7,6 +7,7 @@ const emptyManifest: MediaManifest = {
   banners: [],
   journeyCovers: [],
   storyCovers: [],
+  aboutPhotos: [],
 }
 
 export async function useMediaLibrary() {
