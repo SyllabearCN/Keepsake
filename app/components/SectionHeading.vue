@@ -15,7 +15,7 @@ defineProps<{
     >
       {{ eyebrow }}
     </p>
-    <h2 class="display mt-5 text-[clamp(2.45rem,6vw,5.6rem)] leading-[0.98]">
+    <h2 class="display mt-6 text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.04]">
       {{ title }}
     </h2>
     <p

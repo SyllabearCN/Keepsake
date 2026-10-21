@@ -21,7 +21,9 @@
     "backHome": "Back home",
     "language": "Change language",
     "themeLight": "Switch to light",
-    "themeDark": "Switch to dark"
+    "themeDark": "Switch to dark",
+    "cardView": "Cards",
+    "timelineView": "Timeline"
   },
   "home": {
     "eyebrow": "A SMALL ARCHIVE OF US",
@@ -31,8 +33,6 @@
     "secondaryCta": "Watch our journeys",
     "since": "Our little universe",
     "sinceValue": "SINCE 2019",
-    "noteLabel": "This week",
-    "noteText": "A windy bike ride by the river on Sunday. We all came home smiling like fools.",
     "scroll": "Scroll to browse",
     "statsAlbums": "photo albums",
     "statsTrips": "travel films",
@@ -65,13 +65,14 @@
     "eyebrow": "TRAVEL VLOGS",
     "title": "Journeys",
     "intro": "Videos are played through Bilibili's embedded player. Each card is only an index entry, so you do not need to host the video yourself.",
-    "watchOnBilibili": "Open on Bilibili",
-    "replaceHint": "Replace the BV id in the video index to use your own Bilibili video."
+    "watchOnBilibili": "Open on Bilibili"
   },
   "stories": {
     "eyebrow": "WRITTEN MEMORIES",
     "title": "Stories",
     "intro": "Articles are stored as Markdown, separate from the page layout. Redesigning the reading experience never requires touching the text.",
+    "featured": "Featured",
+    "allArticles": "All articles",
     "minuteRead": "min read",
     "newArticle": "New article",
     "newArticleText": "Create a Markdown article with a title, summary, date, and category. It will appear here automatically.",

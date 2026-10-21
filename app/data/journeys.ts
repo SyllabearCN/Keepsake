@@ -2,16 +2,29 @@ import type { Journey } from '~/types/content'
 
 export const journeys: Journey[] = [
   {
-    id: 'family-travel-vlog',
-    bvid: 'BV11etA69E8L',
+    id: 'hundred-day-photo',
+    bvid: 'BV1CFnq68Esj',
     title: {
-      zh: '带大疆Pocket4旅行不会拍？4个场景手把手教你抄作业！',
-      en: 'Traveling with DJI Pocket 4? Four scenes you can copy',
+      zh: '百日照',
+      en: '100-Day Photo Session',
     },
-    description: { zh: '来自 Bilibili 的家庭旅行记录。', en: 'A family travel memory from Bilibili.' },
-    location: { zh: '旅行', en: 'Travel' },
+    description: { zh: '记录宝宝百日照的拍摄花絮。', en: 'Behind the scenes of our baby’s 100-day photo session.' },
+    location: { zh: '家庭日常', en: 'Family moments' },
     date: '2026-10-21',
-    duration: 'Bilibili',
+    duration: '03:17',
+    featured: true,
+  },
+  {
+    id: 'hundred-day-record',
+    bvid: 'BV1zTnq6RE2v',
+    title: {
+      zh: '百日记录',
+      en: '100-Day Memories',
+    },
+    description: { zh: '属于宝宝百日的家庭成长记录。', en: 'A family keepsake from our baby’s first 100 days.' },
+    location: { zh: '成长记录', en: 'Growing up' },
+    date: '2026-10-21',
+    duration: '03:50',
     featured: true,
   },
 ]

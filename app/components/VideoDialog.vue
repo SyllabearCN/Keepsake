@@ -17,10 +17,16 @@ const props = defineProps<{
 const open = defineModel<boolean>('open', { default: false })
 const localize = useLocalizedText()
 const { t } = useI18n()
+const playbackSession = ref(0)
+
+watch(open, (isOpen) => {
+  if (isOpen)
+    playbackSession.value = Date.now()
+})
 
 const embedUrl = computed(() => {
   if (!props.journey) return ''
-  return `https://player.bilibili.com/player.html?isOutside=true&bvid=${props.journey.bvid}&p=1&autoplay=1&danmaku=0`
+  return `https://player.bilibili.com/player.html?isOutside=true&bvid=${props.journey.bvid}&p=1&autoplay=1&t=0&start=0&danmaku=0&session=${playbackSession.value}`
 })
 
 const watchUrl = computed(() => {
@@ -76,6 +82,7 @@ const watchUrl = computed(() => {
           <div class="aspect-video w-full bg-black">
             <iframe
               v-if="open && journey"
+              :key="`${journey.bvid}-${playbackSession}`"
               :src="embedUrl"
               :title="localize(journey.title)"
               class="h-full w-full"

@@ -21,7 +21,9 @@
     "backHome": "回到首页",
     "language": "切换语言",
     "themeLight": "切换为浅色",
-    "themeDark": "切换为深色"
+    "themeDark": "切换为深色",
+    "cardView": "卡片",
+    "timelineView": "时间轴"
   },
   "home": {
     "eyebrow": "A SMALL ARCHIVE OF US",
@@ -31,8 +33,6 @@
     "secondaryCta": "去看旅行影像",
     "since": "我们的小宇宙",
     "sinceValue": "始于 2019",
-    "noteLabel": "本周小事",
-    "noteText": "周日去河边骑车，风很大，回家时三个人都笑得有点傻。",
     "scroll": "向下翻阅",
     "statsAlbums": "本相册",
     "statsTrips": "段旅行影像",
@@ -65,13 +65,14 @@
     "eyebrow": "TRAVEL VLOGS",
     "title": "旅行影像",
     "intro": "视频通过 Bilibili 内置播放器展示。每个卡片都只是一份视频索引，不占用你的服务器空间。",
-    "watchOnBilibili": "在 B 站打开",
-    "replaceHint": "替换视频索引中的 BV 号即可接入你的 Bilibili 视频。"
+    "watchOnBilibili": "在 B 站打开"
   },
   "stories": {
     "eyebrow": "WRITTEN MEMORIES",
     "title": "文字记录",
     "intro": "文章使用 Markdown 保存，内容与页面组件彼此独立，修改阅读体验时不用碰正文。",
+    "featured": "精选",
+    "allArticles": "全部文章",
     "minuteRead": "分钟阅读",
     "newArticle": "新增文章",
     "newArticleText": "新建一篇 Markdown 文章，填写标题、摘要、日期和分类后即可自动显示。",

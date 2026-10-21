@@ -1,10 +1,15 @@
 import { defineStore } from 'pinia'
 
 export type Theme = 'light' | 'dark'
+export type GalleryView = 'grid' | 'timeline'
+export type ViewMode = 'grid' | 'timeline'
 
 export const usePreferencesStore = defineStore('preferences', () => {
   const theme = ref<Theme>('light')
   const galleryAlbum = ref('all')
+  const galleryView = ref<GalleryView>('grid')
+  const journeyView = ref<ViewMode>('grid')
+  const storyView = ref<ViewMode>('grid')
   const favorites = ref<string[]>([])
 
   function applyTheme(nextTheme: Theme) {
@@ -33,6 +38,11 @@ export const usePreferencesStore = defineStore('preferences', () => {
     catch {
       favorites.value = []
     }
+
+    const savedGalleryView = localStorage.getItem('keepsake-gallery-view')
+    galleryView.value = savedGalleryView === 'timeline' ? 'timeline' : 'grid'
+    journeyView.value = localStorage.getItem('keepsake-journey-view') === 'timeline' ? 'timeline' : 'grid'
+    storyView.value = localStorage.getItem('keepsake-story-view') === 'timeline' ? 'timeline' : 'grid'
   }
 
   function toggleFavorite(photoId: string) {
@@ -45,12 +55,36 @@ export const usePreferencesStore = defineStore('preferences', () => {
     }
   }
 
+  function setGalleryView(view: GalleryView) {
+    galleryView.value = view
+    if (import.meta.client)
+      localStorage.setItem('keepsake-gallery-view', view)
+  }
+
+  function setJourneyView(view: ViewMode) {
+    journeyView.value = view
+    if (import.meta.client)
+      localStorage.setItem('keepsake-journey-view', view)
+  }
+
+  function setStoryView(view: ViewMode) {
+    storyView.value = view
+    if (import.meta.client)
+      localStorage.setItem('keepsake-story-view', view)
+  }
+
   return {
     theme,
     galleryAlbum,
+    galleryView,
+    journeyView,
+    storyView,
     favorites,
     syncTheme,
     toggleTheme,
+    setGalleryView,
+    setJourneyView,
+    setStoryView,
     toggleFavorite,
   }
 })

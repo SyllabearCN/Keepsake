@@ -5,6 +5,12 @@ import { useMediaLibrary } from '~/composables/useMediaLibrary'
 
 const { t } = useI18n()
 const { media } = await useMediaLibrary()
+const preferences = usePreferencesStore()
+
+const journeyView = computed({
+  get: () => preferences.journeyView,
+  set: value => preferences.setJourneyView(value),
+})
 
 const journeyCards = computed(() => journeys.map((journey, index) => ({
   ...journey,
@@ -31,50 +37,41 @@ function openJourney(journey: Journey) {
       :eyebrow="t('journeys.eyebrow')"
       :title="t('journeys.title')"
       :intro="t('journeys.intro')"
+      compact
     />
 
-    <section class="page-shell py-10 sm:py-16">
-      <div class="grid gap-10 lg:grid-cols-2">
-        <JourneyCard
-          v-for="(journey, index) in journeyCards"
-          :key="journey.id"
-          :journey="journey"
-          :cover="journey.cover"
-          :large="index === 0"
-          :class="index === 0 ? 'lg:col-span-2' : ''"
-          @open="openJourney"
-        />
-      </div>
-
-      <div class="mt-16 flex flex-col gap-5 rounded-[1.5rem] border border-[var(--line)] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-        <div class="flex items-start gap-4">
-          <span class="grid size-10 shrink-0 place-items-center rounded-full bg-[var(--brand-soft)]">
-            <Icon
-              name="lucide:code-xml"
-              class="size-4"
-            />
-          </span>
-          <div>
-            <p class="text-sm font-bold">
-              Bilibili
-            </p>
-            <p class="mt-1 text-sm leading-6 text-muted">
-              {{ t('journeys.replaceHint') }}
-            </p>
-          </div>
+    <section class="page-shell pb-16 pt-4 sm:pb-20 sm:pt-6">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-8 flex justify-end">
+          <ViewModeToggle v-model="journeyView" />
         </div>
-        <NuxtLink
-          to="https://www.bilibili.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="pill-button shrink-0 border border-[var(--line)]"
+
+        <div
+          v-if="journeyView === 'grid'"
+          class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
-          {{ t('journeys.watchOnBilibili') }}
-          <Icon
-            name="lucide:arrow-up-right"
-            class="size-4"
+          <JourneyGridItem
+            v-for="journey in journeyCards"
+            :key="journey.id"
+            :journey="journey"
+            :cover="journey.cover"
+            @open="openJourney"
           />
-        </NuxtLink>
+        </div>
+
+        <div
+          v-else
+          class="timeline"
+        >
+          <JourneyTimelineItem
+            v-for="(journey, index) in journeyCards"
+            :key="journey.id"
+            :journey="journey"
+            :cover="journey.cover"
+            :index="index"
+            @open="openJourney"
+          />
+        </div>
       </div>
     </section>
 
@@ -84,3 +81,27 @@ function openJourney(journey: Journey) {
     />
   </div>
 </template>
+
+<style scoped>
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 0.75rem;
+  bottom: 1rem;
+  left: 0.55rem;
+  width: 1px;
+  background: linear-gradient(var(--accent), var(--line) 18%, var(--line) 82%, transparent);
+  content: "";
+}
+
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 9.57rem;
+  }
+}
+</style>

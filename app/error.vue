@@ -18,7 +18,7 @@ useSeoMeta({
     <AppHeader />
     <main class="page-shell grid min-h-[82svh] place-items-center pt-32 text-center">
       <div>
-        <p class="display text-[clamp(7rem,25vw,18rem)] leading-[0.7] text-[var(--brand)] opacity-15">
+        <p class="display text-[clamp(2.75rem,12vw,3.25rem)] leading-[0.9] text-[var(--brand)] opacity-15">
           {{ error.statusCode }}
         </p>
         <p class="display -mt-2 text-4xl">

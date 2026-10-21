@@ -78,7 +78,7 @@ function openJourney(journey: Journey) {
             {{ t('home.eyebrow') }}
           </p>
 
-          <h1 class="display mt-6 whitespace-pre-line text-[clamp(2.25rem,9.2vw,4.2rem)] leading-[0.94] tracking-[-0.06em] text-[#fffaf0] lg:text-[clamp(4.8rem,8.2vw,8.2rem)] lg:leading-[0.9]">
+          <h1 class="display mt-7 whitespace-pre-line text-[clamp(2.25rem,6vw,3.25rem)] leading-[1.06] tracking-[-0.045em] text-[#fffaf0]">
             {{ t('home.heroTitle') }}
           </h1>
 
@@ -122,15 +122,6 @@ function openJourney(journey: Journey) {
             <span class="text-[0.61rem] font-bold uppercase tracking-[0.18em]">
               {{ t('home.scroll') }}
             </span>
-          </div>
-
-          <div class="hidden max-w-[18rem] rounded-2xl border border-white/15 bg-black/20 p-4 backdrop-blur-md sm:block">
-            <p class="text-[0.58rem] font-bold uppercase tracking-[0.17em] text-[#e8b65b]">
-              {{ t('home.noteLabel') }}
-            </p>
-            <p class="mt-2 text-xs leading-5 text-white/66">
-              {{ t('home.noteText') }}
-            </p>
           </div>
         </div>
       </div>
@@ -275,7 +266,7 @@ function openJourney(journey: Journey) {
           <p class="eyebrow justify-center !text-current/55">
             {{ t('home.since') }}
           </p>
-          <p class="display mx-auto mt-7 max-w-4xl whitespace-pre-line text-[clamp(2.8rem,7vw,6.4rem)] leading-[0.94]">
+          <p class="display mx-auto mt-8 max-w-4xl whitespace-pre-line text-[clamp(2.1rem,5vw,3.25rem)] leading-[1.08]">
             {{ t('home.quote') }}
           </p>
           <p class="mt-7 text-sm text-current/55">

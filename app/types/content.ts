@@ -49,3 +49,13 @@ export interface MediaManifest {
   journeyCovers: MediaAsset[]
   storyCovers: MediaAsset[]
 }
+
+export interface StorySummary {
+  path: string
+  title: string
+  description: string
+  date: string
+  category: string
+  cover: string
+  readingTime?: number
+}

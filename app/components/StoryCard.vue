@@ -1,13 +1,5 @@
 <script setup lang="ts">
-interface StorySummary {
-  path: string
-  title: string
-  description: string
-  date: string
-  category: string
-  cover: string
-  readingTime?: number
-}
+import type { StorySummary } from '~/types/content'
 
 defineProps<{
   story: StorySummary

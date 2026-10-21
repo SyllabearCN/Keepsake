@@ -12,7 +12,7 @@ function scrollToTop() {
       <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
         <div>
           <FamilyMark />
-          <p class="display mt-8 max-w-xl text-[clamp(1.9rem,4vw,3.4rem)] leading-[1.05]">
+          <p class="display mt-8 whitespace-nowrap text-[clamp(0.95rem,3.2vw,2.1rem)] leading-[1.15]">
             {{ t('footer.tagline') }}
           </p>
         </div>

@@ -14,12 +14,12 @@ const members = computed(() => [
 
 const timeline = computed(() => [
   {
-    year: '2019',
+    year: '2023',
     title: t('about.timelineOneTitle'),
     text: t('about.timelineOneText'),
   },
   {
-    year: '2022',
+    year: '2026',
     title: t('about.timelineTwoTitle'),
     text: t('about.timelineTwoText'),
   },
@@ -45,7 +45,7 @@ const timeline = computed(() => [
           <p class="eyebrow">
             OUR STORY
           </p>
-          <h2 class="display mt-5 text-[clamp(2.8rem,5vw,5.2rem)] leading-[0.96]">
+          <h2 class="display mt-6 text-[clamp(2.15rem,4.5vw,3.25rem)] leading-[1.04]">
             {{ t('about.storyTitle') }}
           </h2>
           <div class="mt-7 space-y-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
@@ -85,7 +85,7 @@ const timeline = computed(() => [
             <p class="eyebrow">
               TIMELINE
             </p>
-            <h2 class="display mt-5 text-[clamp(2.8rem,6vw,5.8rem)] leading-[0.96]">
+            <h2 class="display mt-6 text-[clamp(2.15rem,4.5vw,3.25rem)] leading-[1.04]">
               {{ t('about.timelineTitle') }}
             </h2>
           </div>
@@ -100,7 +100,7 @@ const timeline = computed(() => [
             :key="item.year"
             class="bg-[var(--surface-solid)] p-6 sm:p-8"
           >
-            <p class="display text-5xl text-[var(--accent)] sm:text-6xl">
+            <p class="display text-4xl text-[var(--accent)] sm:text-5xl">
               {{ item.year }}
             </p>
             <h3 class="mt-12 text-lg font-bold">

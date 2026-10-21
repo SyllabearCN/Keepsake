@@ -150,7 +150,7 @@ export async function getMediaLibrary(force = false): Promise<MediaManifest> {
   const [{ albums, gallery }, banners, journeyCovers, storyCovers] = await Promise.all([
     scanAlbums(),
     scanSpecialFolder('banner', 2400),
-    scanSpecialFolder('journey', 1600, true),
+    scanSpecialFolder('journey', 1600),
     scanSpecialFolder('story', 1600, true),
   ])
 

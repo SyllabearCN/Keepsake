@@ -24,6 +24,11 @@ const selectedPhotos = computed(() => {
     : []
 })
 
+const galleryView = computed({
+  get: () => preferences.galleryView,
+  set: value => preferences.setGalleryView(value),
+})
+
 const filters = computed(() => [
   { id: 'all', label: t('common.all') },
   ...media.value.albums.map(album => ({
@@ -80,23 +85,31 @@ useSeoMeta({
           </div>
         </div>
 
-        <div class="flex shrink-0 items-center gap-3 text-xs text-muted">
-          <span class="display text-2xl text-[var(--text)]">
-            {{ String(selectedAlbum ? selectedPhotos.length : albumCards.length).padStart(2, '0') }}
-          </span>
-          <span>{{ selectedAlbum ? t('common.photos') : t('gallery.albumList') }}</span>
-          <span
-            v-if="preferences.favorites.length"
-            class="rounded-full bg-[var(--brand-soft)] px-3 py-1.5 text-[var(--text)]"
-          >
-            ♥ {{ preferences.favorites.length }}
-          </span>
+        <div class="flex shrink-0 flex-wrap items-center gap-3">
+          <ViewModeToggle
+            v-if="!selectedAlbum"
+            v-model="galleryView"
+          />
+
+          <div class="flex items-center gap-3 text-xs text-muted">
+            <span class="display text-2xl text-[var(--text)]">
+              {{ String(selectedAlbum ? selectedPhotos.length : albumCards.length).padStart(2, '0') }}
+            </span>
+            <span>{{ selectedAlbum ? t('common.photos') : t('gallery.albumList') }}</span>
+            <span
+              v-if="preferences.favorites.length"
+              class="rounded-full bg-[var(--brand-soft)] px-3 py-1.5 text-[var(--text)]"
+            >
+              ♥ {{ preferences.favorites.length }}
+            </span>
+          </div>
         </div>
       </div>
 
       <template v-if="!selectedAlbum">
         <div
           v-if="albumCards.length"
+          v-show="preferences.galleryView === 'grid'"
           class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
         >
           <AlbumCard
@@ -108,8 +121,24 @@ useSeoMeta({
             @select="selectAlbum"
           />
         </div>
+
+        <div
+          v-if="albumCards.length && preferences.galleryView === 'timeline'"
+          class="album-timeline mx-auto max-w-6xl"
+        >
+          <AlbumTimelineItem
+            v-for="(card, index) in albumCards"
+            :key="card.album.id"
+            :album="card.album"
+            :cover="card.cover"
+            :photo-count="card.photoCount"
+            :index="index"
+            @select="selectAlbum"
+          />
+        </div>
+
         <p
-          v-else
+          v-if="!albumCards.length"
           class="rounded-2xl border border-dashed border-[var(--line)] p-10 text-center text-muted"
         >
           {{ t('gallery.noAlbums') }}
@@ -180,3 +209,27 @@ useSeoMeta({
     />
   </div>
 </template>
+
+<style scoped>
+.album-timeline {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+}
+
+.album-timeline::before {
+  position: absolute;
+  top: 0.75rem;
+  bottom: 1rem;
+  left: 0.55rem;
+  width: 1px;
+  background: linear-gradient(var(--accent), var(--line) 18%, var(--line) 82%, transparent);
+  content: "";
+}
+
+@media (min-width: 768px) {
+  .album-timeline::before {
+    left: 9.57rem;
+  }
+}
+</style>

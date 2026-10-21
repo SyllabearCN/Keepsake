@@ -53,7 +53,7 @@ useSeoMeta({
         <p class="text-[0.64rem] font-bold uppercase tracking-[0.17em] text-[var(--accent)]">
           {{ story.category }} · {{ story.date.replaceAll('-', '.') }}
         </p>
-        <h1 class="display mx-auto mt-5 max-w-4xl text-[clamp(3rem,8vw,7rem)] leading-[0.92] tracking-[-0.055em]">
+        <h1 class="display mx-auto mt-6 max-w-4xl text-[clamp(2.35rem,5vw,3.25rem)] leading-[1.05] tracking-[-0.04em]">
           {{ story.title }}
         </h1>
         <p class="mx-auto mt-7 max-w-2xl text-sm leading-7 text-muted sm:text-base sm:leading-8">
