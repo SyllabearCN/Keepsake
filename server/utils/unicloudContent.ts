@@ -280,7 +280,7 @@ export async function getUniCloudContent(): Promise<{
 
   try {
     const [albumRows, videoRows, storyRows, bannerRows] = await Promise.all([
-      queryCollection<CloudAlbum>('keepsake_albums', { sort_order: 1 }),
+      queryCollection<CloudAlbum>('keepsake_albums', { date: -1, sort_order: 1 }),
       queryCollection<CloudVideo>('keepsake_videos', { sort_order: 1 }),
       queryCollection<CloudStory>('keepsake_stories', { sort_order: 1 }),
       queryCollection<CloudBanner>('keepsake_banners', { usage: 1, sort_order: 1 }, { active: true }),

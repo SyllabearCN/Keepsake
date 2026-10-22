@@ -59,6 +59,13 @@ export default defineNuxtConfig({
       clientSecret: '',
       endpoint: 'https://api.next.bspapp.com',
     },
+    cms: {
+      sessionSecret: '',
+      passwordPepper: '',
+    },
+  },
+  devServer: {
+    port: 3200,
   },
   compatibilityDate: '2026-10-21',
 

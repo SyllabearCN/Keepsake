@@ -10,7 +10,11 @@ const manifestPath = join(process.cwd(), '.generated', 'unicloud', manifestName)
 const statePath = join(process.cwd(), '.generated', 'unicloud', stateName)
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'))
 const requestedLimit = Math.max(0, Number(process.env.UNICLOUD_UPLOAD_LIMIT) || 0)
-const entries = requestedLimit ? manifest.entries.slice(0, requestedLimit) : manifest.entries
+const requestedPrefix = process.env.UNICLOUD_UPLOAD_PREFIX || ''
+const filteredEntries = requestedPrefix
+  ? manifest.entries.filter(entry => entry.key.startsWith(requestedPrefix))
+  : manifest.entries
+const entries = requestedLimit ? filteredEntries.slice(0, requestedLimit) : filteredEntries
 const concurrency = Math.max(1, Math.min(4, Number(process.env.UNICLOUD_UPLOAD_CONCURRENCY) || 2))
 const maxRetries = Math.max(1, Math.min(5, Number(process.env.UNICLOUD_UPLOAD_RETRIES) || 3))
 

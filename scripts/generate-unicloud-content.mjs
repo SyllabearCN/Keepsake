@@ -24,6 +24,14 @@ const albumSlugs = new Map([
   ['香港澳门行 2024-02-10', 'hong-kong-macau-2024-02-10'],
 ])
 
+const albumSlugByDate = new Map([
+  ['2026-06-28', 'changde-wildlife-park-2026-06-28'],
+])
+const albumDateOverrides = new Map([
+  ['hundred-day-feast-2026-09-06', '2026-06-16'],
+  ['hundred-day-photos-2026-09-06', '2026-06-16'],
+])
+
 function toUrl(key) {
   return `${cdnBase}/${key.split('/').map(encodeURIComponent).join('/')}`
 }
@@ -96,9 +104,10 @@ for (const folderName of topFolders.filter(name => !specialFolders.has(name))) {
   const parsed = parseAlbumFolder(folderName)
   if (!parsed)
     continue
-  const slug = albumSlugs.get(folderName)
+  const slug = albumSlugs.get(folderName) ?? albumSlugByDate.get(parsed.date)
   if (!slug)
     throw new Error(`Missing album slug mapping: ${folderName}`)
+  const date = albumDateOverrides.get(slug) ?? parsed.date
 
   const files = await listImages(join(photoRoot, folderName))
   const photos = []
@@ -115,7 +124,7 @@ for (const folderName of topFolders.filter(name => !specialFolders.has(name))) {
     _id: slug,
     title: parsed.title,
     slug,
-    date: parsed.date,
+    date,
     cover: photos[0]?.url ?? '',
     list: photos.map(photo => photo.url),
     photos: photos.map(photo => ({
@@ -130,6 +139,7 @@ for (const folderName of topFolders.filter(name => !specialFolders.has(name))) {
     sort_order: albumDocs.length,
     status: 'published',
   })
+  albumDocs.at(-1).description = albumDocs.at(-1).description.replace(parsed.date, date)
 }
 
 albumDocs.sort((left, right) => right.date.localeCompare(left.date) || left.title.localeCompare(right.title, 'zh-CN'))

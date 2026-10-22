@@ -1,0 +1,57 @@
+{
+  "bsonType": "object",
+  "required": ["username", "password_hash", "role", "active"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "用户唯一标识"
+    },
+    "username": {
+      "bsonType": "string",
+      "title": "登录账号"
+    },
+    "display_name": {
+      "bsonType": "string",
+      "title": "显示名称"
+    },
+    "password_hash": {
+      "bsonType": "string",
+      "title": "密码哈希",
+      "description": "仅保存带服务端 pepper 的 scrypt 哈希，不保存明文密码"
+    },
+    "role": {
+      "bsonType": "string",
+      "title": "角色",
+      "enum": ["admin", "editor"],
+      "defaultValue": "admin"
+    },
+    "active": {
+      "bsonType": "bool",
+      "title": "是否启用",
+      "defaultValue": true
+    },
+    "last_login_at": {
+      "bsonType": "timestamp",
+      "title": "最后登录时间"
+    },
+    "created_at": {
+      "bsonType": "timestamp",
+      "title": "创建时间",
+      "defaultValue": {
+        "$env": "now"
+      }
+    },
+    "updated_at": {
+      "bsonType": "timestamp",
+      "title": "更新时间",
+      "defaultValue": {
+        "$env": "now"
+      }
+    }
+  }
+}

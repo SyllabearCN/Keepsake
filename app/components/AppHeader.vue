@@ -25,16 +25,20 @@ function isActive(to: string) {
           v-for="link in links"
           :key="link.to"
           :to="link.to"
-          class="rounded-full px-4 py-2 text-[0.8rem] font-semibold transition-colors"
-          :class="isActive(link.to)
-            ? 'bg-[var(--brand)] text-[var(--page)]'
-            : 'text-muted hover:bg-[var(--surface-strong)] hover:text-[var(--text)]'"
+          class="app-nav-link"
+          :class="{ 'app-nav-link--active': isActive(link.to) }"
         >
           {{ link.label }}
         </NuxtLink>
       </nav>
 
       <div class="ml-auto flex items-center gap-2 lg:ml-4">
+        <NuxtLink
+          to="/cms"
+          class="inline-flex h-10 items-center rounded-full border border-[var(--line)] px-3.5 text-[0.72rem] font-semibold text-muted transition-colors hover:bg-[var(--surface-strong)] hover:text-[var(--text)]"
+        >
+          管理系统
+        </NuxtLink>
         <ThemeToggle class="hidden sm:grid" />
         <LocaleSwitcher class="hidden sm:grid" />
         <MobileNav />
@@ -42,3 +46,29 @@ function isActive(to: string) {
     </div>
   </header>
 </template>
+
+<style scoped>
+.app-nav-link {
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+.app-nav-link:hover {
+  color: var(--text);
+  background: var(--surface-strong);
+}
+
+.app-nav-link--active,
+.app-nav-link--active:hover {
+  color: var(--nav-active-text) !important;
+  background: var(--nav-active-bg) !important;
+  box-shadow: inset 0 0 0 1px rgba(219, 233, 223, 0.14);
+}
+</style>

@@ -26,6 +26,8 @@
   --brand-soft: #dce8df;
   --accent: #ee7257;
   --sun: #e6b45a;
+  --nav-active-bg: #173b33;
+  --nav-active-text: #fffaf0;
   --shadow: 0 24px 70px rgba(35, 53, 45, 0.12);
   --header: rgba(247, 242, 232, 0.82);
   color-scheme: light;
@@ -43,6 +45,8 @@
   --brand-soft: #24483d;
   --accent: #ff8b6f;
   --sun: #efc575;
+  --nav-active-bg: #285b4c;
+  --nav-active-text: #f5efe2;
   --shadow: 0 26px 80px rgba(0, 0, 0, 0.28);
   --header: rgba(11, 33, 28, 0.82);
   color-scheme: dark;

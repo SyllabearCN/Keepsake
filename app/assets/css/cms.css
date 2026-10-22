@@ -1,0 +1,241 @@
+:root {
+  --cms-page: #f5f1e8;
+  --cms-surface: #fffdf8;
+  --cms-surface-soft: #f8f5ed;
+  --cms-ink: #1d2f29;
+  --cms-muted: #6d7973;
+  --cms-line: #e7e2d8;
+  --cms-brand: #17644f;
+  --cms-brand-deep: #153c32;
+  --cms-accent: #e77d5f;
+  --cms-sun: #e9b75b;
+  --font-display: "Iowan Old Style", "Baskerville", "Songti SC", "STSong", serif;
+  color-scheme: light;
+}
+
+.auth-layout {
+  min-height: 100vh;
+  color: var(--cms-ink);
+  background:
+    radial-gradient(circle at 92% 4%, rgba(231, 125, 95, 0.07), transparent 26rem),
+    var(--cms-page);
+  font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cms-card {
+  border: 1px solid var(--cms-line);
+  border-radius: 1.2rem;
+  background: var(--cms-surface);
+}
+
+.cms-panel {
+  padding: clamp(1rem, 2vw, 1.4rem);
+}
+
+.cms-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cms-toolbar__filters {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.cms-table-card .ant-card-body {
+  padding: 0;
+}
+
+.cms-table-card .ant-table-wrapper {
+  overflow: hidden;
+  border-radius: 1.2rem;
+}
+
+.cms-table-card .ant-table-thead > tr > th {
+  border-bottom: 1px solid var(--cms-line);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cms-table-card .ant-table-tbody > tr > td {
+  border-bottom-color: #f0ede6;
+}
+
+.cms-pagination {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--cms-line);
+  padding: 0.85rem 1rem;
+}
+
+.cms-empty {
+  display: grid;
+  min-height: 18rem;
+  place-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cms-empty__orb {
+  display: grid;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 0 auto 1rem;
+  place-items: center;
+  border-radius: 1.8rem;
+  color: var(--cms-brand);
+  background: #e4efe8;
+  font-size: 1.7rem;
+}
+
+.cms-empty h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.cms-empty p {
+  max-width: 25rem;
+  margin: 0 auto 1rem;
+  color: var(--cms-muted);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.cms-resource-title {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.cms-resource-title__image {
+  width: 3.4rem;
+  height: 2.45rem;
+  flex: none;
+  border-radius: 0.65rem;
+  object-fit: cover;
+  background: #ece9e1;
+}
+
+.cms-resource-title__copy {
+  min-width: 0;
+}
+
+.cms-resource-title__copy strong {
+  display: block;
+  overflow: hidden;
+  color: var(--cms-ink);
+  font-size: 0.82rem;
+  font-weight: 680;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cms-resource-title__copy small {
+  display: block;
+  overflow: hidden;
+  margin-top: 0.18rem;
+  color: var(--cms-muted);
+  font-size: 0.66rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cms-row-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.35rem;
+}
+
+.cms-action-link {
+  border: 0;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.45rem;
+  color: var(--cms-brand);
+  background: transparent;
+  font-size: 0.72rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.cms-action-link:hover {
+  background: #edf5f0;
+}
+
+.cms-action-link--danger {
+  color: #c35443;
+}
+
+.cms-action-link--danger:hover {
+  background: #fdf0ed;
+}
+
+.cms-add-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  line-height: 1;
+}
+
+.cms-add-button .anticon {
+  display: inline-grid;
+  place-items: center;
+  margin: 0;
+  margin-inline-end: 0;
+  line-height: 1;
+}
+
+.cms-add-button .anticon + span {
+  margin-inline-start: 0 !important;
+}
+
+.cms-editor-drawer .ant-drawer-body {
+  padding: 1.4rem clamp(1rem, 2.5vw, 2rem) 6rem;
+}
+
+.cms-editor-footer {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  border-top: 1px solid var(--cms-line);
+  padding: 0.9rem 1.3rem;
+  background: rgba(255, 253, 248, 0.94);
+  backdrop-filter: blur(14px);
+}
+
+@media (max-width: 720px) {
+  .cms-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cms-toolbar__filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 7.2rem;
+  }
+
+  .cms-pagination {
+    justify-content: center;
+  }
+
+  .cms-editor-footer {
+    padding-inline: 0.85rem;
+  }
+
+  .cms-editor-footer .ant-btn {
+    flex: 1;
+  }
+}

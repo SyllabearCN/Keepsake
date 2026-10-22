@@ -23,6 +23,10 @@ const links = computed(() => [
   { to: '/about', label: t('nav.about') },
 ])
 
+function isActive(to: string) {
+  return to === '/' ? route.path === '/' : route.path.startsWith(to)
+}
+
 watch(() => route.fullPath, () => {
   open.value = false
 })
@@ -74,10 +78,13 @@ watch(() => route.fullPath, () => {
             v-for="(link, index) in links"
             :key="link.to"
             :to="link.to"
-            class="group flex items-center justify-between border-b border-[var(--line)] py-4 text-[1.35rem] tracking-[-0.035em]"
+            class="mobile-nav-link group flex items-center justify-between border-b border-[var(--line)] py-4 text-[1.35rem] tracking-[-0.035em]"
+            :class="{ 'mobile-nav-link--active': isActive(link.to) }"
           >
             <span class="display">{{ link.label }}</span>
-            <span class="text-[0.65rem] font-bold text-muted">0{{ index + 1 }}</span>
+            <span class="mobile-nav-link__index text-[0.65rem] font-bold text-muted">
+              {{ String(index + 1).padStart(2, '0') }}
+            </span>
           </NuxtLink>
         </nav>
 
@@ -96,6 +103,18 @@ watch(() => route.fullPath, () => {
 <style scoped>
 [data-state="open"] {
   animation: nav-in 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-nav-link {
+  color: var(--text);
+}
+
+.mobile-nav-link--active {
+  color: var(--accent);
+}
+
+.mobile-nav-link--active .mobile-nav-link__index {
+  color: var(--accent);
 }
 
 @keyframes nav-in {

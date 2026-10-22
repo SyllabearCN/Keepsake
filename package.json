@@ -18,10 +18,12 @@
     "unicloud:generate": "node scripts/generate-unicloud-content.mjs",
     "unicloud:upload": "node scripts/unicloud-admin-upload.mjs",
     "unicloud:apply-urls": "node scripts/apply-unicloud-upload-urls.mjs",
+    "cms:create-user": "node scripts/unicloud-create-cms-user.mjs",
     "unicloud:import": "node scripts/unicloud-import-via-console.mjs",
     "unicloud:snapshot": "node scripts/build-unicloud-snapshot.mjs"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
     "@dcloudio/uni-cloud": "^3.0.0-alpha-3000020210521002",
     "@dcloudio/uni-i18n": "^3.0.0-alpha-5030320261021002",
     "@nuxt/content": "^3.16.2",
@@ -32,6 +34,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@vite-pwa/nuxt": "^1.1.1",
     "@vueuse/core": "^15.0.0",
+    "ant-design-vue": "^4.2.6",
     "better-sqlite3": "^13.0.0",
     "marked": "^17.0.6",
     "motion-v": "^2.8.0",
