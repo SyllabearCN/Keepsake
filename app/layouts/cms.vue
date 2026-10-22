@@ -76,8 +76,12 @@ function refreshPage() {
 }
 
 async function logout() {
-  await request('/api/cms/auth/logout', { method: 'POST' })
-  await router.push('/cms/login')
+  try {
+    await request('/api/cms/auth/logout', { method: 'POST' })
+  }
+  finally {
+    await router.push('/cms/login')
+  }
 }
 
 async function handleUserMenu({ key }: { key: string }) {
@@ -112,7 +116,7 @@ async function handleUserMenu({ key }: { key: string }) {
               <span />
               <div v-if="!collapsed">
                 <strong>uniCloud</strong>
-                <small>服务端安全连接</small>
+                <small>云函数安全连接</small>
               </div>
             </div>
             <button

@@ -27,13 +27,14 @@ export function hashCmsPassword(password: string, pepper: string) {
 
 export function verifyCmsPassword(password: string, encoded: string, pepper: string) {
   const [algorithm, n, r, p, saltHex, hashHex] = encoded.split('$')
-  if (algorithm !== 'scrypt' || !n || !r || !p || !saltHex || !hashHex) {
+  if (!algorithm || !['scrypt', 'scrypt2'].includes(algorithm) || !n || !r || !p || !saltHex || !hashHex) {
     return false
   }
 
   try {
     const expected = Buffer.from(hashHex, 'hex')
-    const actual = scryptSync(derivePassword(password, pepper), Buffer.from(saltHex, 'hex'), expected.length, {
+    const source = algorithm === 'scrypt2' ? password : derivePassword(password, pepper)
+    const actual = scryptSync(source, Buffer.from(saltHex, 'hex'), expected.length, {
       N: Number(n),
       r: Number(r),
       p: Number(p),

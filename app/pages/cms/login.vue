@@ -182,7 +182,7 @@ function causeMessage(cause: unknown) {
 
         <div class="login-card__hint">
           <span />
-          uniCloud 数据由服务端安全代理
+          uniCloud 云函数安全处理
         </div>
       </div>
     </section>

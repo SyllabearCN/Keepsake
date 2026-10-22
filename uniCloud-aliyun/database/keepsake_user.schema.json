@@ -2,7 +2,7 @@
   "bsonType": "object",
   "required": ["username", "password_hash", "role", "active"],
   "permission": {
-    "read": true,
+    "read": false,
     "create": false,
     "update": false,
     "delete": false
@@ -22,7 +22,7 @@
     "password_hash": {
       "bsonType": "string",
       "title": "密码哈希",
-      "description": "仅保存带服务端 pepper 的 scrypt 哈希，不保存明文密码"
+      "description": "仅保存 scrypt 密码哈希，不保存明文密码"
     },
     "role": {
       "bsonType": "string",
@@ -34,6 +34,25 @@
       "bsonType": "bool",
       "title": "是否启用",
       "defaultValue": true
+    },
+    "sessions": {
+      "bsonType": "array",
+      "title": "CMS 登录会话",
+      "description": "仅由云函数维护的短期会话摘要",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "token_hash": {
+            "bsonType": "string"
+          },
+          "created_at": {
+            "bsonType": "timestamp"
+          },
+          "expires_at": {
+            "bsonType": "timestamp"
+          }
+        }
+      }
     },
     "last_login_at": {
       "bsonType": "timestamp",

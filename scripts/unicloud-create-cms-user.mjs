@@ -1,16 +1,11 @@
-import { createHmac, randomBytes, scryptSync } from 'node:crypto'
 import { readFile } from 'node:fs/promises'
 import { createRequire } from 'node:module'
 import { join } from 'node:path'
 
 const username = process.env.CMS_ADMIN_USERNAME || 'admin'
 const password = process.env.CMS_ADMIN_PASSWORD || ''
-const passwordPepper = process.env.CMS_PASSWORD_PEPPER || ''
 if (!password) {
   throw new Error('Set CMS_ADMIN_PASSWORD before running this script.')
-}
-if (!passwordPepper) {
-  throw new Error('Set CMS_PASSWORD_PEPPER before running this script.')
 }
 
 function readEnv(text) {
@@ -21,18 +16,6 @@ function readEnv(text) {
       .filter(Boolean)
       .map(match => [match[1].trim(), match[2].trim()]),
   )
-}
-
-function hashPassword(value) {
-  const salt = randomBytes(16)
-  const derived = createHmac('sha256', passwordPepper).update(value).digest()
-  const hash = scryptSync(derived, salt, 64, {
-    N: 16384,
-    r: 8,
-    p: 1,
-    maxmem: 64 * 1024 * 1024,
-  })
-  return `scrypt$16384$8$1$${salt.toString('hex')}$${hash.toString('hex')}`
 }
 
 const storage = new Map()
@@ -100,34 +83,21 @@ const cloud = uniCloudSdk.init({
   clientSecret: env.NUXT_UNICLOUD_CLIENT_SECRET,
   endpoint: env.NUXT_UNICLOUD_ENDPOINT || 'https://api.next.bspapp.com',
 })
-const collection = cloud.database().collection('keepsake_user')
-
-function rows(response) {
-  return response?.result?.data || response?.data || response?.result || []
+const cloudSecret = env.NUXT_CMS_CLOUD_SECRET || ''
+if (!cloudSecret) {
+  throw new Error('Set NUXT_CMS_CLOUD_SECRET before running this script.')
 }
 
-const existing = rows(
-  await collection.where({ username }).limit(1).get(),
-)
-const now = new Date()
-const record = {
-  username,
-  display_name: username,
-  password_hash: hashPassword(password),
-  role: 'admin',
-  active: true,
-  updated_at: now,
+const response = await cloud.callFunction({
+  name: 'keepsake-cms',
+  data: {
+    token: cloudSecret,
+    action: 'setPassword',
+    username,
+    password,
+  },
+})
+if (!response?.result?.ok) {
+  throw new Error('The cloud function did not update the CMS user.')
 }
-
-if (existing.length) {
-  await collection.doc(existing[0]._id).update(record)
-  console.log(`Updated CMS user "${username}" with a new password hash.`)
-}
-else {
-  await collection.add({
-    _id: username,
-    ...record,
-    created_at: now,
-  })
-  console.log(`Created CMS user "${username}" with a password hash.`)
-}
+console.log(`Updated CMS user "${username}" through the protected cloud function.`)

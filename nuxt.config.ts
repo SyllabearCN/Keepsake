@@ -54,6 +54,13 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
+    public: {
+      unicloud: {
+        spaceId: process.env.NUXT_UNICLOUD_SPACE_ID || '',
+        clientSecret: process.env.NUXT_UNICLOUD_CLIENT_SECRET || '',
+        endpoint: process.env.NUXT_UNICLOUD_ENDPOINT || 'https://api.next.bspapp.com',
+      },
+    },
     unicloud: {
       spaceId: '',
       clientSecret: '',
@@ -66,6 +73,7 @@ export default defineNuxtConfig({
     },
   },
   devServer: {
+    host: '0.0.0.0',
     port: 3200,
   },
   compatibilityDate: '2026-10-21',
