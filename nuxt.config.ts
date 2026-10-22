@@ -1,5 +1,11 @@
 import tailwindcss from '@tailwindcss/vite'
 
+const publicUniCloudConfig = {
+  spaceId: 'mp-174d4239-a43e-4e0a-9fdc-92547241a10b',
+  clientSecret: 'MdsJBD4BwpneNRkhLRf56A==',
+  endpoint: 'https://api.next.bspapp.com',
+}
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
@@ -56,9 +62,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       unicloud: {
-        spaceId: process.env.NUXT_UNICLOUD_SPACE_ID || '',
-        clientSecret: process.env.NUXT_UNICLOUD_CLIENT_SECRET || '',
-        endpoint: process.env.NUXT_UNICLOUD_ENDPOINT || 'https://api.next.bspapp.com',
+        spaceId: process.env.NUXT_UNICLOUD_SPACE_ID || publicUniCloudConfig.spaceId,
+        clientSecret: process.env.NUXT_UNICLOUD_CLIENT_SECRET || publicUniCloudConfig.clientSecret,
+        endpoint: process.env.NUXT_UNICLOUD_ENDPOINT || publicUniCloudConfig.endpoint,
       },
     },
     unicloud: {
