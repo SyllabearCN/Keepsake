@@ -1,0 +1,54 @@
+{
+  "bsonType": "object",
+  "required": ["title", "image_url", "usage", "sort_order", "active"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "横幅或固定图片唯一标识"
+    },
+    "title": {
+      "bsonType": "string",
+      "title": "标题"
+    },
+    "image_url": {
+      "bsonType": "string",
+      "title": "图片 CDN 地址"
+    },
+    "storage_key": {
+      "bsonType": "string",
+      "title": "云存储对象键"
+    },
+    "usage": {
+      "bsonType": "string",
+      "title": "用途",
+      "enum": ["hero", "about"]
+    },
+    "alt": {
+      "bsonType": "string",
+      "title": "无障碍说明"
+    },
+    "width": {
+      "bsonType": "int",
+      "title": "宽度"
+    },
+    "height": {
+      "bsonType": "int",
+      "title": "高度"
+    },
+    "sort_order": {
+      "bsonType": "int",
+      "title": "排序",
+      "defaultValue": 0
+    },
+    "active": {
+      "bsonType": "bool",
+      "title": "是否启用",
+      "defaultValue": true
+    }
+  }
+}

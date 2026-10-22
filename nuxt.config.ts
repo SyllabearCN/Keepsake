@@ -30,7 +30,10 @@ export default defineNuxtConfig({
           property: 'og:description',
           content: '一个装满旅行、照片和故事的家庭记忆簿。',
         },
-        { property: 'og:image', content: '/albums/2026-summer/hero-coast.jpg' },
+        {
+          property: 'og:image',
+          content: 'https://mp-174d4239-a43e-4e0a-9fdc-92547241a10b.cdn.bspapp.com/keepsake/banner/202607180001.jpg',
+        },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon.svg' },
@@ -49,8 +52,14 @@ export default defineNuxtConfig({
       mode: 'out-in',
     },
   },
-
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    unicloud: {
+      spaceId: '',
+      clientSecret: '',
+      endpoint: 'https://api.next.bspapp.com',
+    },
+  },
   compatibilityDate: '2026-10-21',
 
   vite: {

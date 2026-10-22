@@ -1,3 +1,6 @@
-export default defineEventHandler(() => {
-  return getMediaLibrary()
+import { getUniCloudContent } from '../../utils/unicloudContent'
+
+export default defineEventHandler(async () => {
+  const content = await getUniCloudContent()
+  return content.manifest
 })

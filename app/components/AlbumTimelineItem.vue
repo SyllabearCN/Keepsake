@@ -37,14 +37,13 @@ const dateParts = computed(() => props.album.date?.split('-') ?? [])
       @click="emit('select', album.id)"
     >
       <div class="image-reveal relative aspect-[4/3] overflow-hidden bg-[var(--surface-strong)]">
-        <img
+        <DeferredImage
           :src="cover.src"
           :alt="cover.alt"
           :width="cover.width"
           :height="cover.height"
-          loading="lazy"
           class="h-full w-full object-cover"
-        >
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <span class="absolute bottom-4 left-4 rounded-full bg-black/45 px-3 py-1.5 text-[0.62rem] font-semibold text-white backdrop-blur-md">
           {{ photoCount }} {{ t('common.photos') }}

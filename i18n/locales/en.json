@@ -62,8 +62,8 @@
     "backToAlbums": "Back to albums",
     "noAlbums": "No albums were found.",
     "empty": "There are no photos in this album yet.",
-    "localHint": "Local album folder",
-    "localHintText": "Create an album folder in the local media library using “Album title YYYY-MM-DD”, then add numbered photos."
+    "localHint": "uniCloud albums",
+    "localHintText": "Albums, photo URLs, and written stories are served by the uniCloud database and cloud storage."
   },
   "journeys": {
     "eyebrow": "TRAVEL VLOGS",
@@ -102,7 +102,7 @@
     "timelineThreeText": "Keepsake is live. We hope it holds many more ordinary weekends that glow.",
     "techTitle": "What is easy to change",
     "techOne": "Albums, stories, and videos have separate data; content is not trapped in the layout.",
-    "techTwo": "Photos are read directly by the local media service without copying them into the website or using an external image host.",
+    "techTwo": "Photos, covers, and story images are served from the uniCloud CDN; the site no longer depends on a local photo folder.",
     "techThree": "Bilibili videos are embedded only, so the site stores no video files."
   },
   "footer": {

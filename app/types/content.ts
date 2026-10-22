@@ -43,12 +43,15 @@ export interface MediaAsset {
 
 export interface MediaManifest {
   generatedAt: string
+  source: 'cloud' | 'snapshot'
   albums: Album[]
   gallery: GalleryPhoto[]
   banners: MediaAsset[]
   journeyCovers: MediaAsset[]
   storyCovers: MediaAsset[]
   aboutPhotos: MediaAsset[]
+  journeys: Journey[]
+  stories: StorySummary[]
 }
 
 export interface StorySummary {
@@ -59,4 +62,10 @@ export interface StorySummary {
   category: string
   cover: string
   readingTime?: number
+}
+
+export interface StoryDocument extends StorySummary {
+  slug: string
+  contentMarkdown: string
+  contentHtml: string
 }

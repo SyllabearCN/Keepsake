@@ -1,0 +1,71 @@
+{
+  "bsonType": "object",
+  "required": ["title", "bvid", "date", "duration", "sort_order", "status"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "影像唯一标识"
+    },
+    "title": {
+      "bsonType": "string",
+      "title": "中文标题"
+    },
+    "title_en": {
+      "bsonType": "string",
+      "title": "英文标题"
+    },
+    "description": {
+      "bsonType": "string",
+      "title": "中文说明"
+    },
+    "description_en": {
+      "bsonType": "string",
+      "title": "英文说明"
+    },
+    "location": {
+      "bsonType": "string",
+      "title": "中文地点"
+    },
+    "location_en": {
+      "bsonType": "string",
+      "title": "英文地点"
+    },
+    "bvid": {
+      "bsonType": "string",
+      "title": "Bilibili BV 编号"
+    },
+    "cover_url": {
+      "bsonType": "string",
+      "title": "封面地址"
+    },
+    "date": {
+      "bsonType": "string",
+      "title": "发布日期"
+    },
+    "duration": {
+      "bsonType": "string",
+      "title": "时长"
+    },
+    "featured": {
+      "bsonType": "bool",
+      "title": "首页推荐",
+      "defaultValue": false
+    },
+    "sort_order": {
+      "bsonType": "int",
+      "title": "排序",
+      "defaultValue": 0
+    },
+    "status": {
+      "bsonType": "string",
+      "title": "状态",
+      "enum": ["draft", "published", "archived"],
+      "defaultValue": "published"
+    }
+  }
+}

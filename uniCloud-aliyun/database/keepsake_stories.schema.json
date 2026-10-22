@@ -1,0 +1,62 @@
+{
+  "bsonType": "object",
+  "required": ["title", "slug", "description", "date", "category", "content_markdown", "sort_order", "status"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "文章唯一标识"
+    },
+    "title": {
+      "bsonType": "string",
+      "title": "标题"
+    },
+    "slug": {
+      "bsonType": "string",
+      "title": "URL 标识"
+    },
+    "description": {
+      "bsonType": "string",
+      "title": "摘要"
+    },
+    "date": {
+      "bsonType": "string",
+      "title": "发布日期"
+    },
+    "category": {
+      "bsonType": "string",
+      "title": "分类"
+    },
+    "location": {
+      "bsonType": "string",
+      "title": "地点"
+    },
+    "reading_time": {
+      "bsonType": "int",
+      "title": "预计阅读分钟",
+      "defaultValue": 4
+    },
+    "cover_url": {
+      "bsonType": "string",
+      "title": "封面地址"
+    },
+    "content_markdown": {
+      "bsonType": "string",
+      "title": "Markdown 正文"
+    },
+    "sort_order": {
+      "bsonType": "int",
+      "title": "排序"
+    },
+    "status": {
+      "bsonType": "string",
+      "title": "状态",
+      "enum": ["draft", "published", "archived"],
+      "defaultValue": "published"
+    }
+  }
+}

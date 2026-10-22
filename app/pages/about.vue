@@ -82,14 +82,13 @@ const timeline = computed(() => [
             class="surface-card overflow-hidden rounded-[1.5rem]"
           >
             <div class="image-reveal relative aspect-[4/5] overflow-hidden bg-[var(--surface-strong)]">
-              <img
+              <DeferredImage
                 :src="member.photo?.src ?? '/icons/media-placeholder.svg'"
                 :alt="member.role"
                 :width="member.photo?.width"
                 :height="member.photo?.height"
-                loading="lazy"
                 class="h-full w-full object-cover"
-              >
+              />
               <span class="absolute left-5 top-5 grid size-9 place-items-center rounded-full border border-white/25 bg-black/35 text-[0.62rem] font-bold tracking-[0.12em] text-white backdrop-blur-sm">
                 {{ member.number }}
               </span>

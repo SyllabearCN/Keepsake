@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
 import type { Journey } from '~/types/content'
-import { journeys } from '~/data/journeys'
+import { journeys as fallbackJourneys } from '~/data/journeys'
 import { useMediaLibrary } from '~/composables/useMediaLibrary'
 
 const { t } = useI18n()
@@ -25,14 +25,22 @@ const featuredAlbums = computed(() => media.value.albums.slice(0, 3).flatMap((al
     ? [{ album, cover: photos[0]!, photoCount: photos.length }]
     : []
 }))
-const journeyCards = computed(() => journeys.map((journey, index) => ({
-  ...journey,
-  cover: media.value.journeyCovers[index]?.src ?? '/icons/media-placeholder.svg',
-})))
-const latestStories = computed(() => (stories.value ?? []).slice(0, 3).map((story, index) => ({
-  ...story,
-  cover: media.value.storyCovers[index]?.src ?? '/icons/media-placeholder.svg',
-})))
+const journeyCards = computed(() => {
+  const source = media.value.journeys.length ? media.value.journeys : fallbackJourneys
+  return source.map((journey, index) => ({
+    ...journey,
+    cover: media.value.journeyCovers[index]?.src ?? '/icons/media-placeholder.svg',
+  }))
+})
+const latestStories = computed(() => {
+  if (media.value.stories.length)
+    return media.value.stories.slice(0, 3)
+
+  return (stories.value ?? []).slice(0, 3).map((story, index) => ({
+    ...story,
+    cover: media.value.storyCovers[index]?.src ?? '/icons/media-placeholder.svg',
+  }))
+})
 const featuredJourneys = computed(() => journeyCards.value.filter(journey => journey.featured))
 const heroBanner = computed(() => media.value.banners[0])
 const heroBannerSrc = computed(() => heroBanner.value?.src ?? '/icons/media-placeholder.svg')

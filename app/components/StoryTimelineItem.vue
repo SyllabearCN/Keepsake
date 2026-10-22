@@ -29,14 +29,13 @@ const dateParts = computed(() => props.story.date.split('-'))
       class="story-timeline-card group"
     >
       <div class="image-reveal relative aspect-[3/2] overflow-hidden bg-[var(--surface-strong)]">
-        <img
+        <DeferredImage
           :src="story.cover"
           :alt="story.title"
-          width="1600"
-          height="1000"
-          loading="lazy"
+          :width="1600"
+          :height="1000"
           class="h-full w-full object-cover"
-        >
+        />
         <span class="absolute bottom-3 left-3 rounded-full bg-black/45 px-3 py-1.5 text-[0.58rem] font-semibold text-white backdrop-blur-md">
           {{ story.category }}
         </span>

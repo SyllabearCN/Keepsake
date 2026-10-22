@@ -14,14 +14,13 @@ const { t } = useI18n()
     class="group surface-card flex h-full min-h-0 flex-col overflow-hidden rounded-[1.2rem] transition-transform duration-300 hover:-translate-y-1"
   >
     <div class="image-reveal aspect-[16/8] bg-[var(--surface-strong)]">
-      <img
+      <DeferredImage
         :src="story.cover"
         :alt="story.title"
-        width="1600"
-        height="1000"
-        loading="lazy"
+        :width="1600"
+        :height="1000"
         class="h-full w-full object-cover"
-      >
+      />
     </div>
 
     <div class="flex flex-1 flex-col p-4 sm:p-5">

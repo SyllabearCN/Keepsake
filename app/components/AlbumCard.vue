@@ -22,14 +22,13 @@ const localize = useLocalizedText()
     @click="emit('select', album.id)"
   >
     <div class="image-reveal relative aspect-[4/3] bg-[var(--surface-strong)]">
-      <img
+      <DeferredImage
         :src="cover.src"
         :alt="cover.alt"
         :width="cover.width"
         :height="cover.height"
-        loading="lazy"
         class="h-full w-full object-cover"
-      >
+      />
       <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-transparent" />
       <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 text-white">
         <div>

@@ -1,0 +1,84 @@
+{
+  "bsonType": "object",
+  "required": ["title", "slug", "date", "cover", "list", "sort_order", "status"],
+  "permission": {
+    "read": true,
+    "create": false,
+    "update": false,
+    "delete": false
+  },
+  "properties": {
+    "_id": {
+      "description": "相册唯一标识，由 Keepsake 生成"
+    },
+    "title": {
+      "bsonType": "string",
+      "title": "相册名称",
+      "description": "中文相册名称"
+    },
+    "slug": {
+      "bsonType": "string",
+      "title": "相册标识",
+      "description": "用于稳定引用相册的英文标识"
+    },
+    "date": {
+      "bsonType": "string",
+      "title": "相册日期",
+      "description": "YYYY-MM-DD"
+    },
+    "cover": {
+      "bsonType": "string",
+      "title": "封面地址",
+      "description": "uniCloud 云存储 CDN 地址"
+    },
+    "list": {
+      "bsonType": "array",
+      "title": "照片地址列表",
+      "description": "按展示顺序保存全部 uniCloud 云存储 CDN 地址",
+      "items": {
+        "bsonType": "string"
+      }
+    },
+    "photos": {
+      "bsonType": "array",
+      "title": "照片元数据",
+      "description": "可选：保存对象键、尺寸与原始文件名，便于后台管理",
+      "items": {
+        "bsonType": "object",
+        "properties": {
+          "id": { "bsonType": "string" },
+          "url": { "bsonType": "string" },
+          "key": { "bsonType": "string" },
+          "filename": { "bsonType": "string" },
+          "width": { "bsonType": "int" },
+          "height": { "bsonType": "int" }
+        }
+      }
+    },
+    "description": {
+      "bsonType": "string",
+      "title": "相册说明"
+    },
+    "sort_order": {
+      "bsonType": "int",
+      "title": "排序",
+      "defaultValue": 0
+    },
+    "status": {
+      "bsonType": "string",
+      "title": "状态",
+      "enum": ["draft", "published", "archived"],
+      "defaultValue": "published"
+    },
+    "created_at": {
+      "bsonType": "timestamp",
+      "title": "创建时间",
+      "defaultValue": { "$env": "now" }
+    },
+    "updated_at": {
+      "bsonType": "timestamp",
+      "title": "更新时间",
+      "defaultValue": { "$env": "now" }
+    }
+  }
+}

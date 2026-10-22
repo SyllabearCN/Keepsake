@@ -2,12 +2,15 @@ import type { MediaManifest } from '~/types/content'
 
 const emptyManifest: MediaManifest = {
   generatedAt: '',
+  source: 'snapshot',
   albums: [],
   gallery: [],
   banners: [],
   journeyCovers: [],
   storyCovers: [],
   aboutPhotos: [],
+  journeys: [],
+  stories: [],
 }
 
 export async function useMediaLibrary() {

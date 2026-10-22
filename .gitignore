@@ -8,6 +8,8 @@ node_modules
 dist
 *.log
 .env
+.env.local
+.generated
 .DS_Store
 app/generated
 public/media

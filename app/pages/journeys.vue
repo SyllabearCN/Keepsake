@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Journey } from '~/types/content'
-import { journeys } from '~/data/journeys'
+import { journeys as fallbackJourneys } from '~/data/journeys'
 import { useMediaLibrary } from '~/composables/useMediaLibrary'
 
 const { t } = useI18n()
@@ -12,10 +12,13 @@ const journeyView = computed({
   set: value => preferences.setJourneyView(value),
 })
 
-const journeyCards = computed(() => journeys.map((journey, index) => ({
-  ...journey,
-  cover: media.value.journeyCovers[index]?.src ?? '/icons/media-placeholder.svg',
-})))
+const journeyCards = computed(() => {
+  const source = media.value.journeys.length ? media.value.journeys : fallbackJourneys
+  return source.map((journey, index) => ({
+    ...journey,
+    cover: media.value.journeyCovers[index]?.src ?? '/icons/media-placeholder.svg',
+  }))
+})
 
 useSeoMeta({
   title: t('journeys.title'),

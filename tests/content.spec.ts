@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { journeys } from '../app/data/journeys'
-import { parseAlbumFolderName } from '../server/utils/mediaLibrary'
+import { parseAlbumFolderName } from '../shared/albumFolder'
 
 describe('Keepsake media rules', () => {
   it('parses album titles and upload dates', () => {

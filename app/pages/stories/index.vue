@@ -19,10 +19,15 @@ const { data: stories } = await useAsyncData('all-stories', () => {
   return queryCollection('stories').order('date', 'DESC').all()
 })
 
-const storiesWithCovers = computed(() => (stories.value ?? []).map((story, index) => ({
-  ...story,
-  cover: media.value.storyCovers[index]?.src ?? '/icons/media-placeholder.svg',
-})))
+const storiesWithCovers = computed(() => {
+  if (media.value.stories.length)
+    return media.value.stories
+
+  return (stories.value ?? []).map((story, index) => ({
+    ...story,
+    cover: media.value.storyCovers[index]?.src ?? '/icons/media-placeholder.svg',
+  }))
+})
 const featuredStory = computed(() => storiesWithCovers.value[0])
 const compactStories = computed(() => storiesWithCovers.value.slice(1, 3))
 const remainingStories = computed(() => storiesWithCovers.value.slice(3))

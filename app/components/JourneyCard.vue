@@ -26,14 +26,13 @@ const { t } = useI18n()
         class="image-reveal relative overflow-hidden rounded-[1.5rem] bg-[var(--surface-strong)]"
         :class="large ? 'aspect-[16/9]' : 'aspect-[4/3]'"
       >
-        <img
+        <DeferredImage
           :src="cover"
           :alt="localize(journey.title)"
           :width="1600"
           :height="1000"
           class="h-full w-full object-cover"
-          loading="lazy"
-        >
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-black/15" />
 
         <span class="absolute left-4 top-4 rounded-full bg-black/40 px-3 py-1.5 text-[0.62rem] font-bold uppercase tracking-[0.13em] text-white backdrop-blur-md">

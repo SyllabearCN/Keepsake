@@ -62,8 +62,8 @@
     "backToAlbums": "返回相册",
     "noAlbums": "还没有找到相册。",
     "empty": "这个相册还没有照片。",
-    "localHint": "本地相册目录",
-    "localHintText": "在本地媒体库中按“相册标题 YYYY-MM-DD”命名文件夹，再把编号照片放进去即可。"
+    "localHint": "uniCloud 云端相册",
+    "localHintText": "相册、照片地址和文本故事都由 uniCloud 云数据库与云存储统一提供。"
   },
   "journeys": {
     "eyebrow": "TRAVEL VLOGS",
@@ -102,7 +102,7 @@
     "timelineThreeText": "纪念日上线。希望它能装下未来很多个普通又发光的周末。",
     "techTitle": "这个模板顺手改了哪些地方",
     "techOne": "相册、文章和视频都是独立数据，不把内容写死在布局里。",
-    "techTwo": "照片由本地媒体服务实时读取，不复制到网站项目，也不依赖外部图床。",
+    "techTwo": "照片、封面和文章图片由 uniCloud CDN 提供，网站不再依赖本地照片目录。",
     "techThree": "B 站视频只嵌入播放器，网站本身不存储视频文件。"
   },
   "footer": {

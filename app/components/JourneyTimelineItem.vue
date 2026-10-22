@@ -38,14 +38,13 @@ const dateParts = computed(() => props.journey.date.split('-'))
       @click="emit('open', journey)"
     >
       <div class="image-reveal relative aspect-[16/10] overflow-hidden bg-[var(--surface-strong)]">
-        <img
+        <DeferredImage
           :src="cover"
           :alt="localize(journey.title)"
-          width="1600"
-          height="1000"
-          loading="lazy"
+          :width="1600"
+          :height="1000"
           class="h-full w-full object-cover"
-        >
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/5" />
         <span class="absolute left-4 top-4 rounded-full bg-black/45 px-3 py-1.5 text-[0.58rem] font-bold uppercase tracking-[0.13em] text-white backdrop-blur-md">
           Bilibili
