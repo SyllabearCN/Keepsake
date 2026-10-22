@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { message } from 'ant-design-vue'
-import type { BannerRecord } from '../../shared/cms'
-import { bannerUsageOptions } from '../../shared/cms'
+import type { BannerRecord } from '#shared/cms'
+import { bannerUsageOptions } from '#shared/cms'
 
 const props = defineProps<{
   open: boolean

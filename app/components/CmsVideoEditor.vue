@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { message } from 'ant-design-vue'
-import type { VideoRecord } from '../../shared/cms'
-import { statusOptions } from '../../shared/cms'
+import type { VideoRecord } from '#shared/cms'
+import { statusOptions } from '#shared/cms'
 
 const props = defineProps<{
   open: boolean

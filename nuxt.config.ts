@@ -62,6 +62,7 @@ export default defineNuxtConfig({
     cms: {
       sessionSecret: '',
       passwordPepper: '',
+      cloudSecret: '',
     },
   },
   devServer: {

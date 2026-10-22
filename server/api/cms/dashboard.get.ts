@@ -1,4 +1,4 @@
-import type { AlbumRecord, StoryRecord, VideoRecord } from '../../../shared/cms'
+import type { AlbumRecord, StoryRecord, VideoRecord } from '#shared/cms'
 
 export default defineEventHandler(async () => {
   const [albums, stories, videos, banners] = await Promise.all([

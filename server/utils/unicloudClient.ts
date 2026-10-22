@@ -1,4 +1,5 @@
-import uniCloudSdk from '@dcloudio/uni-cloud'
+import { createRequire } from 'node:module'
+import { join } from 'node:path'
 
 const storage = new Map<string, unknown>()
 
@@ -24,8 +25,26 @@ interface UniStorageOptions {
   success?: (result?: { data?: unknown }) => void
 }
 
+interface UniUploadResult {
+  statusCode: number
+  data: string
+}
+
+interface UniUploadOptions {
+  url: string
+  name?: string
+  formData?: Record<string, unknown>
+  filePath: File
+  fileType?: string
+  header?: Record<string, unknown>
+  success?: (result: UniUploadResult) => void
+  fail?: (result: { errMsg: string }) => void
+  complete?: (result: UniUploadResult | { errMsg: string }) => void
+}
+
 interface UniRuntime {
   request: (options: UniRequestOptions) => { abort: () => void }
+  uploadFile: (options: UniUploadOptions) => { abort: () => void }
   getStorageSync: (key: string) => unknown
   setStorageSync: (key: string, value: unknown) => void
   removeStorageSync: (key: string) => void
@@ -89,6 +108,44 @@ if (!runtimeGlobal.uni) {
 
       return { abort: () => controller.abort() }
     },
+    uploadFile(options) {
+      const controller = new AbortController()
+      const body = new FormData()
+      for (const [key, value] of Object.entries(options.formData || {})) {
+        body.append(key, String(value))
+      }
+      body.append(options.name || 'file', options.filePath, options.filePath.name)
+
+      fetch(options.url, {
+        method: 'POST',
+        body,
+        signal: controller.signal,
+      })
+        .then(async (response) => {
+          const data = await response.text()
+          if (!response.ok) {
+            const result = {
+              errMsg: `uploadFile:fail ${response.status}${data ? ` ${data.slice(0, 300)}` : ''}`,
+            }
+            options.fail?.(result)
+            options.complete?.(result)
+            return
+          }
+          const result = {
+            statusCode: response.status,
+            data,
+          }
+          options.success?.(result)
+          options.complete?.(result)
+        })
+        .catch((error) => {
+          const result = { errMsg: error instanceof Error ? error.message : String(error) }
+          options.fail?.(result)
+          options.complete?.(result)
+        })
+
+      return { abort: () => controller.abort() }
+    },
     getStorageSync: (key: string) => storage.get(key),
     setStorageSync: (key: string, value: unknown) => storage.set(key, value),
     removeStorageSync: (key: string) => storage.delete(key),
@@ -106,6 +163,10 @@ if (!runtimeGlobal.uni) {
 }
 
 process.env.VUE_APP_PLATFORM ||= 'h5'
+process.env.UNI_PLATFORM ||= 'h5'
+
+type UniCloudModule = typeof import('@dcloudio/uni-cloud')
+const uniCloudSdk = (createRequire(join(process.cwd(), 'package.json'))('@dcloudio/uni-cloud') as UniCloudModule).default
 
 let client: ReturnType<typeof uniCloudSdk.init> | undefined
 

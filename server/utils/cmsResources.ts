@@ -7,7 +7,7 @@ import type {
   ResourceRecord,
   StoryRecord,
   VideoRecord,
-} from '../../shared/cms'
+} from '#shared/cms'
 
 type ResourceInput = Record<string, unknown>
 
@@ -162,7 +162,6 @@ function normalizeRecord(resource: ResourceName, input: ResourceInput): Resource
       content_markdown: requireText(input, 'content_markdown', 'Markdown 正文'),
       sort_order: numberValue(input, 'sort_order'),
       status: statusValue(input),
-      updated_at: timestamp,
     }
   }
 
@@ -181,7 +180,6 @@ function normalizeRecord(resource: ResourceName, input: ResourceInput): Resource
       featured: booleanValue(input, 'featured'),
       sort_order: numberValue(input, 'sort_order'),
       status: statusValue(input),
-      updated_at: timestamp,
     }
   }
 
@@ -196,7 +194,6 @@ function normalizeRecord(resource: ResourceName, input: ResourceInput): Resource
     height: numberValue(input, 'height'),
     sort_order: numberValue(input, 'sort_order'),
     active: booleanValue(input, 'active', true),
-    updated_at: timestamp,
   }
 }
 
@@ -329,31 +326,66 @@ export async function getResource<T extends ResourceRecord>(resource: ResourceNa
   return normalizeRow(resource, row) as T
 }
 
+async function mutateCloudResource(
+  action: 'create' | 'update' | 'delete',
+  resource: ResourceName,
+  id: string | undefined,
+  data: Record<string, unknown>,
+) {
+  const token = useRuntimeConfig().cms.cloudSecret
+  if (!token) {
+    throw createError({
+      statusCode: 503,
+      statusMessage: 'CMS cloud function is not configured',
+      message: '请配置 NUXT_CMS_CLOUD_SECRET。',
+    })
+  }
+
+  const cloud = requireUniCloudClient() as unknown as {
+    callFunction: (options: {
+      name: string
+      data: Record<string, unknown>
+    }) => Promise<{ result?: { ok?: boolean, id?: string | null } }>
+  }
+
+  try {
+    const response = await cloud.callFunction({
+      name: 'keepsake-cms',
+      data: {
+        token,
+        action,
+        resource,
+        id,
+        data,
+      },
+    })
+    if (!response.result?.ok) {
+      throw new Error('CMS cloud function rejected the operation')
+    }
+    return { id: response.result.id ?? id ?? null }
+  }
+  catch (cause) {
+    throw createError({
+      statusCode: 502,
+      statusMessage: 'CMS cloud write failed',
+      message: '云端保存失败，请确认 keepsake-cms 云函数已部署。',
+      cause,
+    })
+  }
+}
+
 export async function createResource(resource: ResourceName, input: ResourceInput) {
-  const collection = getCmsDatabase().collection(
-    resourceDefinitions[resource].collection,
-  )
   const payload = normalizeRecord(resource, input)
-  const response = await collection.add({
-    ...payload,
-    created_at: new Date(),
-  })
-  return { id: resultId(response) }
+  return mutateCloudResource('create', resource, undefined, resource === 'albums'
+    ? { ...payload, created_at: new Date() }
+    : payload)
 }
 
 export async function updateResource(resource: ResourceName, id: string, input: ResourceInput) {
-  const collection = getCmsDatabase().collection(
-    resourceDefinitions[resource].collection,
-  )
   const payload = normalizeRecord(resource, input)
-  await collection.doc(id).update(payload)
-  return { id }
+  return mutateCloudResource('update', resource, id, payload)
 }
 
 export async function deleteResource(resource: ResourceName, id: string) {
-  const collection = getCmsDatabase().collection(
-    resourceDefinitions[resource].collection,
-  )
-  await collection.doc(id).remove()
-  return { id }
+  return mutateCloudResource('delete', resource, id, {})
 }

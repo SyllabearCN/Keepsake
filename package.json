@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
-    "@dcloudio/uni-cloud": "^3.0.0-alpha-3000020210521002",
+    "@dcloudio/uni-cloud": "^3.0.0-alpha-5030320261021002",
     "@dcloudio/uni-i18n": "^3.0.0-alpha-5030320261021002",
     "@nuxt/content": "^3.16.2",
     "@nuxt/icon": "^2.5.1",

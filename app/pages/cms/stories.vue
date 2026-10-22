@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { DeleteOutlined, EditOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons-vue'
 import { Modal, message } from 'ant-design-vue'
-import type { StoryRecord } from '../../../shared/cms'
-import { statusOptions } from '../../../shared/cms'
+import type { StoryRecord } from '#shared/cms'
+import { statusOptions } from '#shared/cms'
 
 definePageMeta({
   layout: 'cms',

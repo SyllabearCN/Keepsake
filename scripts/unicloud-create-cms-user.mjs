@@ -1,7 +1,7 @@
 import { createHmac, randomBytes, scryptSync } from 'node:crypto'
 import { readFile } from 'node:fs/promises'
+import { createRequire } from 'node:module'
 import { join } from 'node:path'
-import uniCloudSdk from '@dcloudio/uni-cloud'
 
 const username = process.env.CMS_ADMIN_USERNAME || 'admin'
 const password = process.env.CMS_ADMIN_PASSWORD || ''
@@ -87,6 +87,11 @@ globalThis.uni ||= {
   clearStorageSync: () => storage.clear(),
   getSystemInfoSync: () => ({ platform: 'server', deviceId: 'keepsake-cms-user-script' }),
 }
+
+process.env.UNI_PLATFORM ||= 'h5'
+process.env.VUE_APP_PLATFORM ||= 'h5'
+const uniCloudModule = createRequire(import.meta.url)('@dcloudio/uni-cloud')
+const uniCloudSdk = uniCloudModule.default
 
 const env = readEnv(await readFile(join(process.cwd(), '.env'), 'utf8'))
 const cloud = uniCloudSdk.init({

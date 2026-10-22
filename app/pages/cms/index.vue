@@ -6,7 +6,7 @@ import {
   PlusOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons-vue'
-import type { DashboardResponse } from '../../../shared/cms'
+import type { DashboardResponse } from '#shared/cms'
 
 definePageMeta({
   layout: 'cms',

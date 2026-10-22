@@ -1,4 +1,4 @@
-import type { ResourceName } from '../../../../../shared/cms'
+import type { ResourceName } from '#shared/cms'
 
 export default defineEventHandler(async (event) => {
   const resource = parseResource(getRouterParam(event, 'resource')) as ResourceName

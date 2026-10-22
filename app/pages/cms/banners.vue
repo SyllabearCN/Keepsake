@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DeleteOutlined, EditOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons-vue'
 import { Modal, message } from 'ant-design-vue'
-import type { BannerRecord } from '../../../shared/cms'
+import type { BannerRecord } from '#shared/cms'
 
 definePageMeta({
   layout: 'cms',

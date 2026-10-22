@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { message } from 'ant-design-vue'
 import { marked } from 'marked'
-import type { StoryRecord } from '../../shared/cms'
-import { statusOptions } from '../../shared/cms'
+import type { StoryRecord } from '#shared/cms'
+import { statusOptions } from '#shared/cms'
 
 const props = defineProps<{
   open: boolean

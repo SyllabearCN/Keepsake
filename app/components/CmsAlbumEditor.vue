@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { message } from 'ant-design-vue'
-import type { AlbumPhoto, AlbumRecord } from '../../shared/cms'
-import { statusOptions } from '../../shared/cms'
+import type { AlbumPhoto, AlbumRecord } from '#shared/cms'
+import { statusOptions } from '#shared/cms'
 
 const props = defineProps<{
   open: boolean

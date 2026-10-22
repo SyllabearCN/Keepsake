@@ -8,7 +8,7 @@ import {
   UploadOutlined,
 } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
-import type { AlbumPhoto } from '../../shared/cms'
+import type { AlbumPhoto } from '#shared/cms'
 
 const photos = defineModel<AlbumPhoto[]>({ required: true })
 const cover = defineModel<string>('cover', { default: '' })

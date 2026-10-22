@@ -1,4 +1,4 @@
-import type { ListResponse, ResourceName, ResourceRecord } from '../../shared/cms'
+import type { ListResponse, ResourceName, ResourceRecord } from '#shared/cms'
 
 export function useCmsResourceList<T extends ResourceRecord>(
   resource: ResourceName,
