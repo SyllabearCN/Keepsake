@@ -126,7 +126,8 @@ async function queryCollection<T>(
     return null
 
   let collection = db.database().collection(name)
-  collection = collection.where(query)
+  if (Object.keys(query).length)
+    collection = collection.where(query)
   for (const [field, direction] of Object.entries(sort))
     collection = collection.orderBy(field, direction > 0 ? 'asc' : 'desc')
   collection = collection.limit(1000)
