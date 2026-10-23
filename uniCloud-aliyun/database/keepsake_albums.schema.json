@@ -1,6 +1,6 @@
 {
   "bsonType": "object",
-  "required": ["title", "slug", "date", "cover", "list", "sort_order", "status"],
+  "required": ["title", "slug", "date", "cover", "list", "sort_order", "enabled"],
   "permission": {
     "read": true,
     "create": false,
@@ -64,11 +64,11 @@
       "title": "排序",
       "defaultValue": 0
     },
-    "status": {
-      "bsonType": "string",
-      "title": "状态",
-      "enum": ["draft", "published", "archived"],
-      "defaultValue": "published"
+    "enabled": {
+      "bsonType": "bool",
+      "title": "是否启用",
+      "description": "关闭后不在展厅和首页显示",
+      "defaultValue": true
     },
     "created_at": {
       "bsonType": "timestamp",

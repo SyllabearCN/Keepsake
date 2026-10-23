@@ -2,7 +2,6 @@
 import { message } from 'ant-design-vue'
 import { marked } from 'marked'
 import type { StoryRecord } from '#shared/cms'
-import { statusOptions } from '#shared/cms'
 
 const props = defineProps<{
   open: boolean
@@ -29,7 +28,7 @@ const form = reactive({
   cover_url: '',
   content_markdown: '',
   sort_order: 0,
-  status: 'published' as StoryRecord['status'],
+  enabled: true,
 })
 
 const renderedMarkdown = computed(() => marked.parse(
@@ -49,7 +48,7 @@ function reset() {
   form.cover_url = record?.cover_url ?? ''
   form.content_markdown = record?.content_markdown ?? ''
   form.sort_order = record?.sort_order ?? 0
-  form.status = record?.status ?? 'published'
+  form.enabled = record?.enabled ?? true
   activeTab.value = 'write'
   formRef.value?.clearValidate()
 }
@@ -173,10 +172,11 @@ async function save() {
             placeholder="留空自动生成"
           />
         </a-form-item>
-        <a-form-item label="发布状态">
-          <a-select
-            v-model:value="form.status"
-            :options="[...statusOptions]"
+        <a-form-item label="是否启用">
+          <a-switch
+            v-model:checked="form.enabled"
+            checked-children="启用"
+            un-checked-children="停用"
           />
         </a-form-item>
         <a-form-item label="排序">

@@ -42,9 +42,9 @@ const totalContent = computed(() => {
   return Math.max(1, (counts?.albums ?? 0) + (counts?.stories ?? 0) + (counts?.videos ?? 0))
 })
 
-const publishRatio = computed(() => {
-  const published = dashboard.value?.counts.published ?? 0
-  return totalContent.value ? Math.round((published / totalContent.value) * 100) : 0
+const enabledRatio = computed(() => {
+  const enabled = dashboard.value?.counts.enabled ?? 0
+  return totalContent.value ? Math.round((enabled / totalContent.value) * 100) : 0
 })
 
 const contentCategories = computed(() => {
@@ -229,23 +229,23 @@ onMounted(loadDashboard)
         <template v-else>
           <div class="health-summary">
             <div class="health-summary__ratio">
-              <span>发布覆盖</span>
-              <strong>{{ publishRatio }}<small>%</small></strong>
+              <span>启用覆盖</span>
+              <strong>{{ enabledRatio }}<small>%</small></strong>
             </div>
             <div class="health-summary__status">
               <span>
                 <i class="health-dot health-dot--success" />
-                已发布
-                <strong>{{ dashboard?.counts.published ?? 0 }}</strong>
+                已启用
+                <strong>{{ dashboard?.counts.enabled ?? 0 }}</strong>
               </span>
               <span>
-                <i class="health-dot health-dot--draft" />
-                草稿
-                <strong>{{ dashboard?.counts.drafts ?? 0 }}</strong>
+                <i class="health-dot health-dot--disabled" />
+                已停用
+                <strong>{{ dashboard?.counts.disabled ?? 0 }}</strong>
               </span>
             </div>
             <div class="health-summary__track">
-              <i :style="{ width: `${publishRatio}%` }" />
+              <i :style="{ width: `${enabledRatio}%` }" />
             </div>
           </div>
 
@@ -642,7 +642,7 @@ onMounted(loadDashboard)
   background: #4a8e70;
 }
 
-.health-dot--draft {
+.health-dot--disabled {
   background: #d26952;
 }
 

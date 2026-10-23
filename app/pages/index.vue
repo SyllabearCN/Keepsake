@@ -19,6 +19,7 @@ const { data: stories } = await useAsyncData('home-stories', () => {
 })
 
 const albumCountLabel = computed(() => String(media.value.albums.length).padStart(2, '0'))
+const usesCloudContent = computed(() => media.value.source === 'cloud')
 const featuredAlbums = computed(() => media.value.albums.slice(0, 3).flatMap((album) => {
   const photos = media.value.gallery.filter(photo => photo.album === album.id)
   return photos[0]
@@ -26,14 +27,14 @@ const featuredAlbums = computed(() => media.value.albums.slice(0, 3).flatMap((al
     : []
 }))
 const journeyCards = computed(() => {
-  const source = media.value.journeys.length ? media.value.journeys : fallbackJourneys
+  const source = usesCloudContent.value ? media.value.journeys : fallbackJourneys
   return source.map((journey, index) => ({
     ...journey,
     cover: media.value.journeyCovers[index]?.src ?? '/icons/media-placeholder.svg',
   }))
 })
 const latestStories = computed(() => {
-  if (media.value.stories.length)
+  if (usesCloudContent.value)
     return media.value.stories.slice(0, 3)
 
   return (stories.value ?? []).slice(0, 3).map((story, index) => ({

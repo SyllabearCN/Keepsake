@@ -2,7 +2,7 @@
 import { DeleteOutlined, EditOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons-vue'
 import { Modal, message } from 'ant-design-vue'
 import type { StoryRecord } from '#shared/cms'
-import { statusOptions } from '#shared/cms'
+import { enabledOptions } from '#shared/cms'
 
 definePageMeta({
   layout: 'cms',
@@ -19,7 +19,7 @@ const {
   page,
   pageSize,
   search,
-  status,
+  enabled,
   loading,
   error,
   load,
@@ -34,7 +34,7 @@ const columns = [
   { title: '分类', dataIndex: 'category', width: 130 },
   { title: '日期', dataIndex: 'date', width: 130 },
   { title: '阅读', key: 'reading_time', width: 90 },
-  { title: '状态', key: 'status', width: 120 },
+  { title: '是否启用', key: 'enabled', width: 110 },
   { title: '操作', key: 'actions', width: 150, align: 'right' as const },
 ]
 
@@ -124,8 +124,8 @@ onMounted(() => {
             </template>
           </a-input>
           <a-select
-            v-model:value="status"
-            :options="[{ label: '全部状态', value: 'all' }, ...statusOptions]"
+            v-model:value="enabled"
+            :options="[...enabledOptions]"
           />
         </div>
         <a-button @click="applyFilters">
@@ -157,8 +157,11 @@ onMounted(() => {
                 </div>
               </div>
             </template>
-            <template v-else-if="column.key === 'status'">
-              <CmsStatusTag :status="record.status" />
+            <template v-else-if="column.key === 'enabled'">
+              <CmsEnabledSwitch
+                resource="stories"
+                :record="record"
+              />
             </template>
             <template v-else-if="column.key === 'reading_time'">
               <span class="subtle-value">{{ record.reading_time }} 分钟</span>

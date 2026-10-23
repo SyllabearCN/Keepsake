@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   const query = getQuery(event)
   return listResource(resource, {
     search: typeof query.search === 'string' ? query.search : '',
-    status: typeof query.status === 'string' ? query.status : '',
+    enabled: typeof query.enabled === 'string' ? query.enabled : '',
     page: Number(query.page) || 1,
     pageSize: Number(query.pageSize) || 10,
   })

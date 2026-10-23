@@ -2,7 +2,6 @@ import type {
   AlbumPhoto,
   AlbumRecord,
   BannerRecord,
-  ContentStatus,
   ResourceName,
   ResourceRecord,
   StoryRecord,
@@ -60,13 +59,6 @@ function numberValue(input: ResourceInput, key: string, fallback = 0) {
 function booleanValue(input: ResourceInput, key: string, fallback = false) {
   const value = input[key]
   return typeof value === 'boolean' ? value : fallback
-}
-
-function statusValue(input: ResourceInput, fallback: ContentStatus = 'draft'): ContentStatus {
-  const status = stringValue(input, 'status')
-  return ['draft', 'published', 'archived'].includes(status)
-    ? status as ContentStatus
-    : fallback
 }
 
 function requireText(input: ResourceInput, key: string, label: string) {
@@ -144,7 +136,7 @@ function normalizeRecord(resource: ResourceName, input: ResourceInput): Resource
       photos,
       description: stringValue(input, 'description'),
       sort_order: numberValue(input, 'sort_order'),
-      status: statusValue(input),
+      enabled: booleanValue(input, 'enabled', true),
       updated_at: timestamp,
     }
   }
@@ -161,7 +153,7 @@ function normalizeRecord(resource: ResourceName, input: ResourceInput): Resource
       cover_url: stringValue(input, 'cover_url'),
       content_markdown: requireText(input, 'content_markdown', 'Markdown 正文'),
       sort_order: numberValue(input, 'sort_order'),
-      status: statusValue(input),
+      enabled: booleanValue(input, 'enabled', true),
     }
   }
 
@@ -179,7 +171,7 @@ function normalizeRecord(resource: ResourceName, input: ResourceInput): Resource
       duration: requireText(input, 'duration', '视频时长'),
       featured: booleanValue(input, 'featured'),
       sort_order: numberValue(input, 'sort_order'),
-      status: statusValue(input),
+      enabled: booleanValue(input, 'enabled', true),
     }
   }
 
@@ -211,7 +203,7 @@ function normalizeRow(resource: ResourceName, raw: ResourceInput): ResourceRecor
       photos,
       description: stringValue(raw, 'description'),
       sort_order: numberValue(raw, 'sort_order'),
-      status: statusValue(raw, 'published'),
+      enabled: booleanValue(raw, 'enabled', true),
     } as AlbumRecord
   }
 
@@ -229,7 +221,7 @@ function normalizeRow(resource: ResourceName, raw: ResourceInput): ResourceRecor
       cover_url: stringValue(raw, 'cover_url'),
       content_markdown: stringValue(raw, 'content_markdown'),
       sort_order: numberValue(raw, 'sort_order'),
-      status: statusValue(raw, 'published'),
+      enabled: booleanValue(raw, 'enabled', true),
     } as StoryRecord
   }
 
@@ -249,7 +241,7 @@ function normalizeRow(resource: ResourceName, raw: ResourceInput): ResourceRecor
       duration: stringValue(raw, 'duration'),
       featured: booleanValue(raw, 'featured'),
       sort_order: numberValue(raw, 'sort_order'),
-      status: statusValue(raw, 'published'),
+      enabled: booleanValue(raw, 'enabled', true),
     } as VideoRecord
   }
 
@@ -283,20 +275,21 @@ async function queryAll(resource: ResourceName) {
 
 export async function listResource(
   resource: ResourceName,
-  options: { search?: string, status?: string, page?: number, pageSize?: number },
+  options: { search?: string, enabled?: string, page?: number, pageSize?: number },
 ) {
   const rows = await queryAll(resource)
   const term = options.search?.trim().toLowerCase() ?? ''
   const filtered = rows.filter((row) => {
-    const statusMatches = !options.status
-      || options.status === 'all'
-      || ('status' in row && row.status === options.status)
-      || (resource === 'banners' && options.status === 'published' && 'active' in row && row.active)
+    const enabledMatches = !options.enabled
+      || options.enabled === 'all'
+      || (resource === 'banners'
+        ? ('active' in row && row.active === (options.enabled === 'true'))
+        : ('enabled' in row && row.enabled === (options.enabled === 'true')))
     const searchMatches = !term || resourceDefinitions[resource].searchFields.some((field) => {
       const value = (row as unknown as Record<string, unknown>)[field]
       return String(value ?? '').toLowerCase().includes(term)
     })
-    return statusMatches && searchMatches
+    return enabledMatches && searchMatches
   })
 
   const page = Math.max(1, options.page ?? 1)

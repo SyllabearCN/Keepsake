@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { message } from 'ant-design-vue'
 import type { VideoRecord } from '#shared/cms'
-import { statusOptions } from '#shared/cms'
 
 const props = defineProps<{
   open: boolean
@@ -29,7 +28,7 @@ const form = reactive({
   duration: '',
   featured: false,
   sort_order: 0,
-  status: 'published' as VideoRecord['status'],
+  enabled: true,
 })
 
 function reset() {
@@ -46,7 +45,7 @@ function reset() {
   form.duration = record?.duration ?? ''
   form.featured = record?.featured ?? false
   form.sort_order = record?.sort_order ?? 0
-  form.status = record?.status ?? 'published'
+  form.enabled = record?.enabled ?? true
   formRef.value?.clearValidate()
 }
 
@@ -147,10 +146,11 @@ async function save() {
         <a-form-item label="英文地点">
           <a-input v-model:value="form.location_en" />
         </a-form-item>
-        <a-form-item label="发布状态">
-          <a-select
-            v-model:value="form.status"
-            :options="[...statusOptions]"
+        <a-form-item label="是否启用">
+          <a-switch
+            v-model:checked="form.enabled"
+            checked-children="启用"
+            un-checked-children="停用"
           />
         </a-form-item>
         <a-form-item label="排序">

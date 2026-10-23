@@ -17,8 +17,8 @@ export default defineEventHandler(async () => {
       stories: stories.length,
       videos: videos.length,
       banners: banners.length,
-      published: records.filter(item => item.status === 'published').length,
-      drafts: records.filter(item => item.status === 'draft').length,
+      enabled: records.filter(item => item.enabled !== false).length,
+      disabled: records.filter(item => item.enabled === false).length,
     },
     recent: {
       albums: albums.slice(0, 4),

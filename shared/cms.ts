@@ -1,5 +1,4 @@
 export type ResourceName = 'albums' | 'stories' | 'videos' | 'banners'
-export type ContentStatus = 'draft' | 'published' | 'archived'
 export type BannerUsage = 'hero' | 'about'
 
 export interface AlbumPhoto {
@@ -21,7 +20,7 @@ export interface AlbumRecord {
   photos: AlbumPhoto[]
   description: string
   sort_order: number
-  status: ContentStatus
+  enabled: boolean
   created_at?: string
   updated_at?: string
 }
@@ -38,7 +37,7 @@ export interface StoryRecord {
   cover_url: string
   content_markdown: string
   sort_order: number
-  status: ContentStatus
+  enabled: boolean
   created_at?: string
   updated_at?: string
 }
@@ -57,7 +56,7 @@ export interface VideoRecord {
   duration: string
   featured: boolean
   sort_order: number
-  status: ContentStatus
+  enabled: boolean
   created_at?: string
   updated_at?: string
 }
@@ -93,8 +92,8 @@ export interface DashboardResponse {
     stories: number
     videos: number
     banners: number
-    published: number
-    drafts: number
+    enabled: number
+    disabled: number
   }
   recent: {
     albums: AlbumRecord[]
@@ -104,10 +103,10 @@ export interface DashboardResponse {
   cloudConnected: boolean
 }
 
-export const statusOptions = [
-  { label: '已发布', value: 'published' },
-  { label: '草稿', value: 'draft' },
-  { label: '已归档', value: 'archived' },
+export const enabledOptions = [
+  { label: '全部内容', value: 'all' },
+  { label: '已启用', value: 'true' },
+  { label: '已停用', value: 'false' },
 ] as const
 
 export const bannerUsageOptions = [

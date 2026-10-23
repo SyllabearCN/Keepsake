@@ -2,7 +2,7 @@
 import { DeleteOutlined, EditOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons-vue'
 import { Modal, message } from 'ant-design-vue'
 import type { AlbumRecord } from '#shared/cms'
-import { statusOptions } from '#shared/cms'
+import { enabledOptions } from '#shared/cms'
 
 definePageMeta({
   layout: 'cms',
@@ -19,7 +19,7 @@ const {
   page,
   pageSize,
   search,
-  status,
+  enabled,
   loading,
   error,
   load,
@@ -34,7 +34,7 @@ const columns = [
   { title: '相册', key: 'album', width: 330 },
   { title: '日期', dataIndex: 'date', width: 130 },
   { title: '照片', key: 'photos', width: 100 },
-  { title: '状态', key: 'status', width: 120 },
+  { title: '是否启用', key: 'enabled', width: 110 },
   { title: '排序', dataIndex: 'sort_order', width: 90 },
   { title: '操作', key: 'actions', width: 150, align: 'right' as const },
 ]
@@ -80,7 +80,7 @@ onMounted(() => {
     <CmsPageHeader
       eyebrow="PHOTO ALBUMS"
       title="家庭相册"
-      description="整理照片顺序、封面与发布状态，保存后会同步到 Keepsake 相册页面。"
+      description="整理照片顺序、封面与启用状态，保存后会同步到 Keepsake 相册页面。"
     >
       <template #actions>
         <a-button
@@ -125,8 +125,8 @@ onMounted(() => {
             </template>
           </a-input>
           <a-select
-            v-model:value="status"
-            :options="[{ label: '全部状态', value: 'all' }, ...statusOptions]"
+            v-model:value="enabled"
+            :options="[...enabledOptions]"
           />
         </div>
         <a-button @click="applyFilters">
@@ -161,8 +161,11 @@ onMounted(() => {
             <template v-else-if="column.key === 'photos'">
               <span class="photo-count">{{ record.photos.length }} 张</span>
             </template>
-            <template v-else-if="column.key === 'status'">
-              <CmsStatusTag :status="record.status" />
+            <template v-else-if="column.key === 'enabled'">
+              <CmsEnabledSwitch
+                resource="albums"
+                :record="record"
+              />
             </template>
             <template v-else-if="column.key === 'actions'">
               <div class="cms-row-actions">

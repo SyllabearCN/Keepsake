@@ -2,7 +2,7 @@
 import { DeleteOutlined, EditOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons-vue'
 import { Modal, message } from 'ant-design-vue'
 import type { VideoRecord } from '#shared/cms'
-import { statusOptions } from '#shared/cms'
+import { enabledOptions } from '#shared/cms'
 
 definePageMeta({
   layout: 'cms',
@@ -19,7 +19,7 @@ const {
   page,
   pageSize,
   search,
-  status,
+  enabled,
   loading,
   error,
   load,
@@ -34,8 +34,7 @@ const columns = [
   { title: 'BV 编号', dataIndex: 'bvid', width: 150 },
   { title: '日期', dataIndex: 'date', width: 125 },
   { title: '时长', dataIndex: 'duration', width: 90 },
-  { title: '推荐', key: 'featured', width: 90 },
-  { title: '状态', key: 'status', width: 120 },
+  { title: '是否启用', key: 'enabled', width: 110 },
   { title: '操作', key: 'actions', width: 150, align: 'right' as const },
 ]
 
@@ -125,8 +124,8 @@ onMounted(() => {
             </template>
           </a-input>
           <a-select
-            v-model:value="status"
-            :options="[{ label: '全部状态', value: 'all' }, ...statusOptions]"
+            v-model:value="enabled"
+            :options="[...enabledOptions]"
           />
         </div>
         <a-button @click="applyFilters">
@@ -158,20 +157,11 @@ onMounted(() => {
                 </div>
               </div>
             </template>
-            <template v-else-if="column.key === 'status'">
-              <CmsStatusTag :status="record.status" />
-            </template>
-            <template v-else-if="column.key === 'featured'">
-              <a-tag
-                v-if="record.featured"
-                color="gold"
-              >
-                推荐
-              </a-tag>
-              <span
-                v-else
-                class="subtle-value"
-              >否</span>
+            <template v-else-if="column.key === 'enabled'">
+              <CmsEnabledSwitch
+                resource="videos"
+                :record="record"
+              />
             </template>
             <template v-else-if="column.key === 'actions'">
               <div class="cms-row-actions">
@@ -237,8 +227,4 @@ onMounted(() => {
   margin-bottom: 1rem;
 }
 
-.subtle-value {
-  color: var(--cms-muted);
-  font-size: 0.72rem;
-}
 </style>

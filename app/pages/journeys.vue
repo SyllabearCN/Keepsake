@@ -13,7 +13,7 @@ const journeyView = computed({
 })
 
 const journeyCards = computed(() => {
-  const source = media.value.journeys.length ? media.value.journeys : fallbackJourneys
+  const source = media.value.source === 'cloud' ? media.value.journeys : fallbackJourneys
   return source.map((journey, index) => ({
     ...journey,
     cover: media.value.journeyCovers[index]?.src ?? '/icons/media-placeholder.svg',

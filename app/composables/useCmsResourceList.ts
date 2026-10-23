@@ -10,7 +10,7 @@ export function useCmsResourceList<T extends ResourceRecord>(
   const page = ref(1)
   const pageSize = ref(initialPageSize)
   const search = ref('')
-  const status = ref('all')
+  const enabled = ref('all')
   const loading = ref(false)
   const error = ref('')
 
@@ -21,7 +21,7 @@ export function useCmsResourceList<T extends ResourceRecord>(
       const response = await request<ListResponse<T>>(`/api/cms/resources/${resource}`, {
         query: {
           search: search.value,
-          status: status.value,
+          enabled: enabled.value,
           page: page.value,
           pageSize: pageSize.value,
         },
@@ -48,7 +48,7 @@ export function useCmsResourceList<T extends ResourceRecord>(
     void load()
   }
 
-  watch(status, applyFilters)
+  watch(enabled, applyFilters)
   onMounted(load)
 
   return {
@@ -57,7 +57,7 @@ export function useCmsResourceList<T extends ResourceRecord>(
     page,
     pageSize,
     search,
-    status,
+    enabled,
     loading,
     error,
     load,

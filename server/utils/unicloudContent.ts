@@ -29,6 +29,7 @@ interface CloudAlbum {
   photos?: CloudPhoto[]
   description?: string
   sort_order?: number
+  enabled?: boolean
 }
 
 interface CloudVideo {
@@ -45,6 +46,7 @@ interface CloudVideo {
   duration: string
   featured?: boolean
   sort_order?: number
+  enabled?: boolean
 }
 
 interface CloudStory {
@@ -59,6 +61,7 @@ interface CloudStory {
   cover_url?: string
   content_markdown: string
   sort_order?: number
+  enabled?: boolean
 }
 
 interface CloudBanner {
@@ -116,7 +119,7 @@ function resultRows<T>(response: unknown): T[] {
 async function queryCollection<T>(
   name: string,
   sort: Record<string, number>,
-  query: Record<string, unknown> = { status: 'published' },
+  query: Record<string, unknown> = {},
 ) {
   const db = getClient()
   if (!db)
@@ -224,7 +227,10 @@ function buildContent(
   manifest: MediaManifest
   stories: StoryDocument[]
 } {
-  const gallery = albums.flatMap((album) => {
+  const enabledAlbums = albums.filter(album => album.enabled !== false)
+  const enabledVideos = videos.filter(video => video.enabled !== false)
+  const enabledStories = stories.filter(story => story.enabled !== false)
+  const gallery = enabledAlbums.flatMap((album) => {
     const photos = album.photos?.length
       ? album.photos
       : album.list.map(url => ({ url }))
@@ -237,7 +243,7 @@ function buildContent(
     manifest: {
       generatedAt,
       source,
-      albums: albums.map(mapAlbum),
+      albums: enabledAlbums.map(mapAlbum),
       gallery,
       banners: heroBanners.map(banner => toAsset(
         banner.image_url,
@@ -245,18 +251,18 @@ function buildContent(
         banner.height,
         banner.storage_key,
       )),
-      journeyCovers: videos.map(video => toAsset(video.cover_url || '')),
-      storyCovers: stories.map(story => toAsset(story.cover_url || '')),
+      journeyCovers: enabledVideos.map(video => toAsset(video.cover_url || '')),
+      storyCovers: enabledStories.map(story => toAsset(story.cover_url || '')),
       aboutPhotos: aboutBanners.map(banner => toAsset(
         banner.image_url,
         banner.width,
         banner.height,
         banner.storage_key,
       )),
-      journeys: videos.map(mapVideo),
-      stories: stories.map(mapStorySummary),
+      journeys: enabledVideos.map(mapVideo),
+      stories: enabledStories.map(mapStorySummary),
     },
-    stories: stories.map(mapStoryDocument),
+    stories: enabledStories.map(mapStoryDocument),
   }
 }
 
@@ -290,10 +296,6 @@ export async function getUniCloudContent(): Promise<{
     const videos = videoRows ?? []
     const stories = storyRows ?? []
     const banners = bannerRows ?? []
-    if (!albums.length && fallbackContent.albums.length) {
-      console.warn('uniCloud returned no albums; using the committed cloud URL snapshot.')
-      return getFallbackContent()
-    }
     return buildContent(
       albums,
       videos,
@@ -315,13 +317,14 @@ export async function getUniCloudStory(slug: string) {
     try {
       const response = await db.database()
         .collection('keepsake_stories')
-        .where({ slug, status: 'published' })
+        .where({ slug })
         .limit(1)
         .get()
       const rows = resultRows<CloudStory>(response)
       const story = rows[0]
-      if (story)
+      if (story && story.enabled !== false)
         return mapStoryDocument(story)
+      return null
     }
     catch (error) {
       console.warn(`uniCloud story query failed for ${slug}; using snapshot.`, error)
@@ -329,7 +332,7 @@ export async function getUniCloudStory(slug: string) {
   }
 
   const story = fallbackContent.stories.find(item => (
-    item.slug === slug || item._id === slug
+    item.enabled !== false && (item.slug === slug || item._id === slug)
   ))
   return story ? mapStoryDocument(story) : null
 }

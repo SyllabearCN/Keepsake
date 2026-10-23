@@ -75,11 +75,6 @@ function booleanValue(input, key, fallback = false) {
   return typeof input?.[key] === 'boolean' ? input[key] : fallback
 }
 
-function statusValue(input, fallback = 'draft') {
-  const status = stringValue(input, 'status')
-  return ['draft', 'published', 'archived'].includes(status) ? status : fallback
-}
-
 function requiredText(input, key, label) {
   const value = stringValue(input, key)
   if (!value) {
@@ -146,7 +141,7 @@ function normalizeRecord(resource, input) {
       photos,
       description: stringValue(input, 'description'),
       sort_order: numberValue(input, 'sort_order'),
-      status: statusValue(input),
+      enabled: booleanValue(input, 'enabled', true),
     }
   }
 
@@ -162,7 +157,7 @@ function normalizeRecord(resource, input) {
       cover_url: stringValue(input, 'cover_url'),
       content_markdown: requiredText(input, 'content_markdown', 'Markdown 正文'),
       sort_order: numberValue(input, 'sort_order'),
-      status: statusValue(input),
+      enabled: booleanValue(input, 'enabled', true),
     }
   }
 
@@ -180,7 +175,7 @@ function normalizeRecord(resource, input) {
       duration: requiredText(input, 'duration', '视频时长'),
       featured: booleanValue(input, 'featured'),
       sort_order: numberValue(input, 'sort_order'),
-      status: statusValue(input),
+      enabled: booleanValue(input, 'enabled', true),
     }
   }
 
@@ -366,17 +361,17 @@ async function allRows(resourceName) {
 async function listResource(resourceName, input = {}) {
   const resource = getResource(resourceName)
   const search = stringValue(input, 'search').toLowerCase()
+  const enabled = stringValue(input, 'enabled')
   let data = await allRows(resourceName)
   data = data.filter((item) => {
-    const status = stringValue(input, 'status')
-    const statusMatches = !status
-      || status === 'all'
-      || item.status === status
-      || (resourceName === 'banners' && status === 'published' && item.active === true)
+    const itemEnabled = resourceName === 'banners' ? item.active !== false : item.enabled !== false
+    const enabledMatches = !enabled
+      || enabled === 'all'
+      || itemEnabled === (enabled === 'true')
     const searchMatches = !search || resource.searchFields.some(field => (
       String(item[field] || '').toLowerCase().includes(search)
     ))
-    return statusMatches && searchMatches
+    return enabledMatches && searchMatches
   })
   const page = Math.max(1, numberValue(input, 'page', 1))
   const pageSize = Math.min(100, Math.max(1, numberValue(input, 'pageSize', 10)))
@@ -441,8 +436,8 @@ async function dashboard() {
       stories: stories.length,
       videos: videos.length,
       banners: banners.length,
-      published: records.filter(item => item.status === 'published').length,
-      drafts: records.filter(item => item.status === 'draft').length,
+      enabled: records.filter(item => item.enabled !== false).length,
+      disabled: records.filter(item => item.enabled === false).length,
     },
     recent: {
       albums: albums.slice(0, 4),
@@ -451,6 +446,30 @@ async function dashboard() {
     },
     cloudConnected: true,
   }
+}
+
+async function migrateEnabled() {
+  const db = database()
+  const collections = [
+    ['albums', 'keepsake_albums'],
+    ['stories', 'keepsake_stories'],
+    ['videos', 'keepsake_videos'],
+  ]
+  const migrated = {}
+  for (const [resourceName, collectionName] of collections) {
+    const items = await allRows(resourceName)
+    for (const item of items) {
+      const enabled = typeof item.enabled === 'boolean'
+        ? item.enabled
+        : item.status !== 'draft' && item.status !== 'archived'
+      await db.collection(collectionName).doc(item._id).update({
+        enabled,
+        status: db.command.remove(),
+      })
+    }
+    migrated[collectionName] = items.length
+  }
+  return { ok: true, migrated }
 }
 
 exports.main = async (event = {}) => {
@@ -476,6 +495,13 @@ exports.main = async (event = {}) => {
       stringValue(event, 'username'),
       typeof event.password === 'string' ? event.password : '',
     )
+  }
+
+  if (action === 'migrateEnabled') {
+    if (!serviceRequest) {
+      throw new Error('Unauthorized CMS operation')
+    }
+    return await migrateEnabled()
   }
 
   let user = null

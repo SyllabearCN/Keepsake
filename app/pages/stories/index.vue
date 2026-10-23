@@ -20,7 +20,7 @@ const { data: stories } = await useAsyncData('all-stories', () => {
 })
 
 const storiesWithCovers = computed(() => {
-  if (media.value.stories.length)
+  if (media.value.source === 'cloud')
     return media.value.stories
 
   return (stories.value ?? []).map((story, index) => ({
