@@ -88,6 +88,11 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2026-10-21',
 
+  routeRules: {
+    '/': { swr: 60 },
+    '/api/home': { swr: 60 },
+  },
+
   nitro: {
     externals: {
       traceInclude: ['node_modules/@dcloudio/uni-cloud/dist/uni-cloud.cjs.js'],
