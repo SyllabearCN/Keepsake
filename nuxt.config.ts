@@ -156,7 +156,20 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,png,jpg,jpeg,svg,webp,woff2}'],
+      globPatterns: ['**/*.{css,html,png,jpg,jpeg,svg,webp,woff2}'],
+      runtimeCaching: [
+        {
+          urlPattern: /\/_nuxt\/.*\.js$/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'nuxt-scripts',
+            expiration: {
+              maxEntries: 80,
+              maxAgeSeconds: 60 * 60 * 24 * 30,
+            },
+          },
+        },
+      ],
     },
     devOptions: {
       enabled: false,
