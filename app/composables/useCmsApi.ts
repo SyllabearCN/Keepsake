@@ -51,7 +51,8 @@ export function useCmsApi() {
           return await callCmsCloud<T>('update', { resource, id, data: body })
         }
         if (method === 'DELETE') {
-          return await callCmsCloud<T>('delete', { resource, id })
+          const record = await callCmsCloud<Record<string, unknown>>('get', { resource, id })
+          return await callCmsCloud<T>('delete', { resource, id, data: record })
         }
         return await callCmsCloud<T>('get', { resource, id })
       }

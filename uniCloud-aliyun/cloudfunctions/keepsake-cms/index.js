@@ -398,8 +398,16 @@ async function getResourceById(resourceName, id) {
 
 async function saveResource(action, resourceName, id, input) {
   const resource = getResource(resourceName)
-  const data = normalizeRecord(resourceName, input || {})
   const collection = database().collection(resource.collection)
+  if (action === 'delete') {
+    if (!id) {
+      throw new Error('缺少内容编号。')
+    }
+    await collection.doc(id).remove()
+    return { ok: true, id }
+  }
+
+  const data = normalizeRecord(resourceName, input || {})
   if (action === 'create') {
     const payload = resourceName === 'albums'
       ? { ...data, created_at: new Date() }
@@ -414,8 +422,7 @@ async function saveResource(action, resourceName, id, input) {
     await collection.doc(id).update(data)
     return { ok: true, id }
   }
-  await collection.doc(id).remove()
-  return { ok: true, id }
+  throw new Error('不支持的内容操作。')
 }
 
 async function dashboard() {
