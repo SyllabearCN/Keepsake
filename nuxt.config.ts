@@ -30,6 +30,10 @@ export default defineNuxtConfig({
           content: '把旅行、日常和文字，慢慢收进属于我们一家三口的纪念日。',
         },
         { name: 'theme-color', content: '#173b33' },
+        { name: 'mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+        { name: 'apple-mobile-web-app-title', content: '纪念日' },
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: '纪念日 · 我们仨' },
         {
@@ -43,7 +47,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon.svg' },
-        { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon.svg' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/icons/apple-touch-icon.png' },
       ],
       script: [
         {
@@ -121,24 +125,31 @@ export default defineNuxtConfig({
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
+      id: '/',
       name: '纪念日 · 我们仨',
       short_name: '纪念日',
       description: '一个装满旅行、照片和故事的家庭记忆簿。',
       theme_color: '#173b33',
       background_color: '#f7f2e8',
       display: 'standalone',
+      lang: 'zh-CN',
       start_url: '/',
       icons: [
         {
-          src: '/icons/app-icon.svg',
-          sizes: 'any',
-          type: 'image/svg+xml',
+          src: '/icons/icon-192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: '/icons/icon-512.png',
+          sizes: '512x512',
+          type: 'image/png',
           purpose: 'any',
         },
         {
-          src: '/icons/maskable-icon.svg',
-          sizes: 'any',
-          type: 'image/svg+xml',
+          src: '/icons/maskable-icon-512.png',
+          sizes: '512x512',
+          type: 'image/png',
           purpose: 'maskable',
         },
       ],
