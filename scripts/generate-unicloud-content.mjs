@@ -137,7 +137,7 @@ for (const folderName of topFolders.filter(name => !specialFolders.has(name))) {
     })),
     description: `${parsed.title}，记录于 ${parsed.date}，共 ${photos.length} 张照片。`,
     sort_order: albumDocs.length,
-    status: 'published',
+    enabled: true,
   })
   albumDocs.at(-1).description = albumDocs.at(-1).description.replace(parsed.date, date)
 }
@@ -226,7 +226,7 @@ const videoDocs = journeys.map((journey, index) => ({
   duration: journey.duration,
   featured: journey.featured ?? false,
   sort_order: index,
-  status: 'published',
+  enabled: true,
 }))
 
 const storyFiles = (await readdir(join(projectRoot, 'content', 'stories')))
@@ -251,7 +251,7 @@ for (const [index, filename] of storyFiles.entries()) {
     cover_url: cover?.url ?? '',
     content_markdown: body,
     sort_order: index,
-    status: 'published',
+    enabled: true,
   })
 }
 storyDocs.sort((left, right) => right.date.localeCompare(left.date))
