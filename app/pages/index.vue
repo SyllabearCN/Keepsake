@@ -280,6 +280,32 @@ function openJourney(journey: Journey) {
       </div>
     </section>
 
+    <section class="page-shell pb-20 pt-4 sm:pb-28 sm:pt-10">
+      <SectionHeading
+        :eyebrow="t('home.nextEyebrow')"
+        :title="t('home.nextTitle')"
+        :intro="t('home.nextIntro')"
+      />
+
+      <article class="surface-card mt-10 overflow-hidden rounded-[1.5rem] sm:mt-12">
+        <div class="grid lg:grid-cols-[1.05fr_0.95fr]">
+          <div class="p-7 sm:p-10 lg:p-12">
+            <p class="eyebrow">
+              {{ t('home.nextPlanLabel') }}
+            </p>
+            <h3 class="display mt-6 text-[clamp(2rem,4vw,3rem)] leading-[1.04]">
+              {{ t('home.nextPlanTitle') }}
+            </h3>
+          </div>
+          <div class="border-t border-[var(--line)] p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
+            <p class="max-w-xl text-sm leading-7 text-muted sm:text-base sm:leading-8">
+              {{ t('home.nextPlanText') }}
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
     <section class="page-shell pb-4">
       <div class="relative overflow-hidden rounded-[2rem] bg-[var(--brand)] px-6 py-20 text-center text-[var(--page)] sm:px-12 sm:py-28">
         <div class="absolute -left-16 -top-20 size-72 rounded-full border border-current/10" />

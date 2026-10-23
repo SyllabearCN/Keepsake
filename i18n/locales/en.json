@@ -51,7 +51,13 @@
     "storiesTitle": "Written down, ordinary days begin to echo.",
     "storyIntro": "Travel notes, small milestones, and the little things we only learn to treasure later.",
     "quote": "A keepsake is simply\nsaying goodbye to today with care.",
-    "quoteNote": "Then going into tomorrow together."
+    "quoteNote": "Then going into tomorrow together.",
+    "nextEyebrow": "WHAT'S NEXT",
+    "nextTitle": "What comes next",
+    "nextIntro": "Life keeps moving, and so will the photos and stories. The next chapter is reserved for the sea.",
+    "nextPlanLabel": "Next stop",
+    "nextPlanTitle": "A city by the sea",
+    "nextPlanText": "We would like to take our little one to see the sea, walk on the beach, and capture the wind of another trip. A new album will follow once the city and dates are settled."
   },
   "gallery": {
     "eyebrow": "OUR PHOTO ALBUM",
@@ -110,11 +116,6 @@
     "creditsTitle": "Open-source credits",
     "creditsText": "Thank you to Nuxt, Vue.js, Tailwind CSS, Pinia, VueUse, Reka UI, Motion for Vue, Nuxt Content, Nuxt i18n, Nuxt Image, Nuxt Icon, Vite PWA, Sharp, Marked, Ant Design Vue, and all their maintainers and contributors.",
     "creditsNote": "These openly shared and carefully maintained tools let an ordinary family preserve its memories in its own way.",
-    "nextTitle": "What comes next",
-    "nextIntro": "Life keeps moving, and so will the photos and stories. The next chapter is reserved for the sea.",
-    "nextPlanLabel": "Next stop",
-    "nextPlanTitle": "A city by the sea",
-    "nextPlanText": "We would like to take our little one to see the sea, walk on the beach, and capture the wind of another trip. A new album will follow once the city and dates are settled.",
     "anniversaryEyebrow": "OUR ANNIVERSARY WALL",
     "anniversaryTitle": "Our wedding anniversaries",
     "anniversaryIntro": "Since the day we chose to walk side by side, we have kept one photo for every year. Photos age, life moves on, and we keep choosing each other.",
@@ -130,7 +131,6 @@
     "anniversaryQuote": "The photos change year after year. You are still the person beside me."
   },
   "footer": {
-    "tagline": "Making ordinary days worth keeping.",
     "rights": "Made for our little family.",
     "backTop": "Back to top"
   }

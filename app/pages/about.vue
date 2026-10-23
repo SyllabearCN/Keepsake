@@ -238,31 +238,7 @@ const anniversaryFrames = computed(() => [
     </section>
 
     <section class="page-shell py-20 sm:py-28">
-      <SectionHeading
-        eyebrow="WHAT'S NEXT"
-        :title="t('about.nextTitle')"
-        :intro="t('about.nextIntro')"
-      />
-
-      <article class="surface-card mt-12 overflow-hidden rounded-[1.5rem]">
-        <div class="grid lg:grid-cols-[1.05fr_0.95fr]">
-          <div class="p-7 sm:p-10 lg:p-12">
-            <p class="eyebrow">
-              {{ t('about.nextPlanLabel') }}
-            </p>
-            <h3 class="display mt-6 text-[clamp(2rem,4vw,3rem)] leading-[1.04]">
-              {{ t('about.nextPlanTitle') }}
-            </h3>
-          </div>
-          <div class="border-t border-[var(--line)] p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
-            <p class="max-w-xl text-sm leading-7 text-muted sm:text-base sm:leading-8">
-              {{ t('about.nextPlanText') }}
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <div class="anniversary-wall relative mt-20 overflow-hidden rounded-[2rem] px-4 py-12 sm:px-8 sm:py-16 lg:px-12">
+      <div class="anniversary-wall relative overflow-hidden rounded-[2rem] px-4 py-12 sm:px-8 sm:py-16 lg:px-12">
         <div
           class="pointer-events-none absolute -left-20 top-8 size-64 rounded-full bg-[#d9b26f]/20 blur-3xl"
           aria-hidden="true"
