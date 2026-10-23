@@ -153,6 +153,7 @@ function mapAlbum(album: CloudAlbum): Album {
       en: `${album.title}, captured on ${album.date}.`,
     },
     date: album.date,
+    photoCount: album.photos?.length ?? album.list?.length ?? 0,
   }
 }
 
@@ -276,6 +277,30 @@ function getFallbackContent() {
     fallbackContent.generatedAt,
     'snapshot',
   )
+}
+
+function toHomeContent(content: {
+  manifest: MediaManifest
+  stories: StoryDocument[]
+}) {
+  const manifest = content.manifest
+  const albumCovers = manifest.albums.flatMap((album) => {
+    const cover = manifest.gallery.find(photo => photo.album === album.id)
+    return cover ? [cover] : []
+  })
+  return {
+    ...manifest,
+    gallery: albumCovers,
+    banners: manifest.banners.slice(0, 1),
+    journeyCovers: manifest.journeyCovers.slice(0, manifest.journeys.length),
+    storyCovers: manifest.storyCovers.slice(0, 3),
+    aboutPhotos: [],
+    stories: manifest.stories.slice(0, 3),
+  }
+}
+
+export async function getHomeContent() {
+  return toHomeContent(await getUniCloudContent())
 }
 
 export async function getUniCloudContent(): Promise<{

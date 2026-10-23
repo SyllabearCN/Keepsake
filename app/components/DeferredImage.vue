@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { cmsThumbnail } from '~/utils/cmsThumbnail'
+
 const props = withDefaults(defineProps<{
   src: string
   alt: string
@@ -6,13 +8,16 @@ const props = withDefaults(defineProps<{
   height?: number | string
   priority?: boolean
   sizes?: string
+  thumbnailWidth?: number
 }>(), {
   priority: false,
+  thumbnailWidth: 960,
 })
 
 const imageElement = ref<HTMLImageElement | null>(null)
 const shouldLoad = ref(props.priority)
 const hasLoaded = ref(false)
+const displaySrc = computed(() => cmsThumbnail(props.src, props.thumbnailWidth))
 let observer: IntersectionObserver | undefined
 
 function disconnectObserver() {
@@ -68,7 +73,7 @@ watch(
 <template>
   <img
     ref="imageElement"
-    :src="shouldLoad ? src : undefined"
+    :src="shouldLoad ? displaySrc : undefined"
     :alt="alt"
     :width="width"
     :height="height"

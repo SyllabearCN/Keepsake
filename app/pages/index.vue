@@ -2,10 +2,11 @@
 import { motion } from 'motion-v'
 import type { Journey } from '~/types/content'
 import { journeys as fallbackJourneys } from '~/data/journeys'
-import { useMediaLibrary } from '~/composables/useMediaLibrary'
+import { useHomeContent } from '~/composables/useHomeContent'
+import { cmsThumbnail } from '~/utils/cmsThumbnail'
 
 const { t } = useI18n()
-const { media } = await useMediaLibrary()
+const { media } = await useHomeContent()
 const router = useRouter()
 const preferences = usePreferencesStore()
 
@@ -23,7 +24,7 @@ const usesCloudContent = computed(() => media.value.source === 'cloud')
 const featuredAlbums = computed(() => media.value.albums.slice(0, 3).flatMap((album) => {
   const photos = media.value.gallery.filter(photo => photo.album === album.id)
   return photos[0]
-    ? [{ album, cover: photos[0]!, photoCount: photos.length }]
+    ? [{ album, cover: photos[0]!, photoCount: album.photoCount ?? photos.length }]
     : []
 }))
 const journeyCards = computed(() => {
@@ -44,7 +45,18 @@ const latestStories = computed(() => {
 })
 const featuredJourneys = computed(() => journeyCards.value.filter(journey => journey.featured))
 const heroBanner = computed(() => media.value.banners[0])
-const heroBannerSrc = computed(() => heroBanner.value?.src ?? '/icons/media-placeholder.svg')
+const heroBannerSrc = computed(() => cmsThumbnail(
+  heroBanner.value?.src,
+  960,
+) || '/icons/media-placeholder.svg')
+const heroBannerSrcset = computed(() => {
+  const src = heroBanner.value?.src
+  if (!src)
+    return undefined
+  return [640, 960, 1280, 1600]
+    .map(width => `${cmsThumbnail(src, width)} ${width}w`)
+    .join(', ')
+})
 
 const activeJourney = ref<Journey | null>(null)
 const videoOpen = ref(false)
@@ -65,6 +77,8 @@ function openJourney(journey: Journey) {
     <section class="relative min-h-[48rem] overflow-hidden bg-[#102c26] text-white sm:min-h-[54rem] lg:min-h-[100svh]">
       <img
         :src="heroBannerSrc"
+        :srcset="heroBannerSrcset"
+        sizes="100vw"
         alt="山谷与暮色中的风景"
         :width="heroBanner?.width ?? 1600"
         :height="heroBanner?.height ?? 1000"

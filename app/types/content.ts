@@ -21,6 +21,7 @@ export interface Album {
   label: LocalizedText
   description: LocalizedText
   date?: string
+  photoCount?: number
 }
 
 export interface Journey {
