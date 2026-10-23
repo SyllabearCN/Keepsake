@@ -1,6 +1,19 @@
 <script setup lang="ts">
 import { useMediaLibrary } from '~/composables/useMediaLibrary'
 
+interface AnniversaryFrame {
+  id: string
+  kind: 'photo' | 'empty'
+  label: string
+  year: string
+  note: string
+  image: string
+  srcset: string
+  position: string
+  rotation: string
+  mark: string
+}
+
 const { t } = useI18n()
 const { media } = await useMediaLibrary()
 
@@ -72,7 +85,7 @@ const technologyStack = computed(() => [
   },
 ])
 
-const anniversaryFrames = computed(() => [
+const anniversaryFrames = computed<AnniversaryFrame[]>(() => [
   {
     id: '2024',
     kind: 'photo',
@@ -122,6 +135,18 @@ const anniversaryFrames = computed(() => [
     mark: '∞',
   },
 ])
+
+const activeAnniversaryFrame = ref<AnniversaryFrame | null>(null)
+const anniversaryLightboxOpen = ref(false)
+
+function openAnniversary(frame: AnniversaryFrame) {
+  if (frame.kind !== 'photo') {
+    return
+  }
+
+  activeAnniversaryFrame.value = frame
+  anniversaryLightboxOpen.value = true
+}
 </script>
 
 <template>
@@ -275,17 +300,30 @@ const anniversaryFrames = computed(() => [
               />
 
               <div class="relative aspect-[3/4] overflow-hidden rounded-[0.35rem] bg-[#e7decf]">
-                <img
+                <button
                   v-if="frame.kind === 'photo'"
-                  :src="frame.image"
-                  :srcset="frame.srcset"
-                  sizes="(min-width: 1024px) 23vw, 44vw"
-                  :alt="`${frame.label} ${frame.year}`"
-                  :style="{ objectPosition: frame.position }"
-                  loading="lazy"
-                  decoding="async"
-                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
+                  type="button"
+                  class="group/photo block h-full w-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#aa7c3e]"
+                  :aria-label="`${frame.label} ${frame.year}`"
+                  @click="openAnniversary(frame)"
                 >
+                  <img
+                    :src="frame.image"
+                    :srcset="frame.srcset"
+                    sizes="(min-width: 1024px) 23vw, 44vw"
+                    :alt="`${frame.label} ${frame.year}`"
+                    :style="{ objectPosition: frame.position }"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
+                  >
+                  <span class="absolute right-3 top-3 grid size-8 place-items-center rounded-full border border-white/25 bg-black/30 text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover/photo:opacity-100 group-focus-visible/photo:opacity-100">
+                    <Icon
+                      name="lucide:maximize-2"
+                      class="size-3.5"
+                    />
+                  </span>
+                </button>
                 <div
                   v-else
                   class="anniversary-empty flex h-full flex-col items-center justify-center px-4 text-center"
@@ -329,6 +367,16 @@ const anniversaryFrames = computed(() => [
         </div>
       </div>
     </section>
+
+    <AnniversaryLightbox
+      v-if="activeAnniversaryFrame"
+      v-model:open="anniversaryLightboxOpen"
+      :src="activeAnniversaryFrame.image"
+      :alt="`${activeAnniversaryFrame.label} ${activeAnniversaryFrame.year}`"
+      :title="activeAnniversaryFrame.label"
+      :year="activeAnniversaryFrame.year"
+      :note="activeAnniversaryFrame.note"
+    />
   </div>
 </template>
 
