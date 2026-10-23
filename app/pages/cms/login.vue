@@ -100,7 +100,7 @@ function causeMessage(cause: unknown) {
         </p>
       </div>
       <p class="login-story__footnote">
-        A quiet place for the three of us.
+        A quiet place for our family.
       </p>
     </section>
 

@@ -27,7 +27,7 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: '把旅行、日常和文字，慢慢收进属于我们一家三口的纪念日。',
+          content: '把旅行、日常和文字，慢慢收进属于我们一家人的纪念日。',
         },
         { name: 'theme-color', content: '#173b33' },
         { name: 'mobile-web-app-capable', content: 'yes' },

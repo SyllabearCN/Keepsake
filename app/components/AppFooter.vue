@@ -7,32 +7,27 @@ function scrollToTop() {
 </script>
 
 <template>
-  <footer class="mt-24 border-t border-[var(--line)] pb-8 pt-14">
+  <footer class="mt-24 border-t border-[var(--line)] pb-10 pt-12">
     <div class="page-shell">
-      <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
-        <div>
-          <FamilyMark />
-        </div>
-
-        <div class="flex items-center gap-3 md:justify-end">
-          <button
-            type="button"
-            class="pill-button border-[var(--line)] text-muted hover:border-[var(--brand)] hover:text-[var(--text)]"
-            @click="scrollToTop"
-          >
-            {{ t('footer.backTop') }}
-            <Icon
-              name="lucide:arrow-up"
-              class="size-4"
-            />
-          </button>
-        </div>
+      <div class="flex justify-center">
+        <button
+          type="button"
+          class="pill-button border-[var(--line)] text-muted hover:border-[var(--brand)] hover:text-[var(--text)]"
+          @click="scrollToTop"
+        >
+          {{ t('footer.backTop') }}
+          <Icon
+            name="lucide:arrow-up"
+            class="size-4"
+          />
+        </button>
       </div>
 
-      <div class="mt-14 flex flex-col gap-2 border-t border-[var(--line)] pt-6 text-[0.68rem] font-medium text-muted sm:flex-row sm:items-center sm:justify-between">
-        <span>© {{ new Date().getFullYear() }} {{ t('brand.name') }}</span>
-        <span>{{ t('footer.rights') }}</span>
-      </div>
+      <p class="mt-10 border-t border-[var(--line)] pt-6 text-center text-[0.68rem] font-medium text-muted">
+        © {{ new Date().getFullYear() }} {{ t('brand.name') }}
+        <span class="mx-2 text-[var(--line)]">·</span>
+        {{ t('footer.rights') }}
+      </p>
     </div>
   </footer>
 </template>
