@@ -7,6 +7,7 @@ import {
   VideoCameraOutlined,
 } from '@ant-design/icons-vue'
 import type { DashboardResponse } from '#shared/cms'
+import { cmsThumbnail } from '~/utils/cmsThumbnail'
 
 definePageMeta({
   layout: 'cms',
@@ -336,9 +337,10 @@ onMounted(loadDashboard)
             @click="router.push('/cms/albums')"
           >
             <img
-              :src="album.cover"
+              :src="cmsThumbnail(album.cover, 480)"
               :alt="album.title"
               loading="lazy"
+              decoding="async"
             >
             <span class="recent-album__shade" />
             <span class="recent-album__meta">

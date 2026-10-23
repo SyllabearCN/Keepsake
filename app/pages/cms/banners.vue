@@ -2,6 +2,7 @@
 import { DeleteOutlined, EditOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons-vue'
 import { Modal, message } from 'ant-design-vue'
 import type { BannerRecord } from '#shared/cms'
+import { cmsThumbnail } from '~/utils/cmsThumbnail'
 
 definePageMeta({
   layout: 'cms',
@@ -160,9 +161,10 @@ onMounted(() => {
               <div class="cms-resource-title">
                 <img
                   class="cms-resource-title__image banner-image"
-                  :src="record.image_url"
+                  :src="cmsThumbnail(record.image_url, 160)"
                   :alt="record.alt || record.title"
                   loading="lazy"
+                  decoding="async"
                 >
                 <div class="cms-resource-title__copy">
                   <strong>{{ record.title }}</strong>

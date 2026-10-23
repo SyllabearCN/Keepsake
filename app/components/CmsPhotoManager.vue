@@ -9,6 +9,7 @@ import {
 } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
 import type { AlbumPhoto } from '#shared/cms'
+import { cmsThumbnail } from '~/utils/cmsThumbnail'
 
 const photos = defineModel<AlbumPhoto[]>({ required: true })
 const cover = defineModel<string>('cover', { default: '' })
@@ -181,9 +182,10 @@ function move(index: number, offset: number) {
         :class="{ 'photo-tile--cover': cover === photo.url }"
       >
         <img
-          :src="photo.url"
+          :src="cmsThumbnail(photo.url, 480)"
           :alt="photo.filename || `照片 ${index + 1}`"
           loading="lazy"
+          decoding="async"
         >
         <span class="photo-tile__index">{{ String(index + 1).padStart(2, '0') }}</span>
         <button

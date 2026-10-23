@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { DeleteOutlined, PictureOutlined, UploadOutlined } from '@ant-design/icons-vue'
 import { message } from 'ant-design-vue'
+import { cmsThumbnail } from '~/utils/cmsThumbnail'
 
 const props = withDefaults(defineProps<{
   label?: string
@@ -104,8 +105,10 @@ async function upload({ file, onSuccess, onError }: CustomUploadOptions) {
       class="image-field__preview"
     >
       <img
-        :src="model"
+        :src="cmsThumbnail(model, 640)"
         alt="图片预览"
+        loading="lazy"
+        decoding="async"
       >
     </div>
   </div>

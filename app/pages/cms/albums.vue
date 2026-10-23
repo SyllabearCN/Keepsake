@@ -3,6 +3,7 @@ import { DeleteOutlined, EditOutlined, PlusOutlined, SearchOutlined } from '@ant
 import { Modal, message } from 'ant-design-vue'
 import type { AlbumRecord } from '#shared/cms'
 import { enabledOptions } from '#shared/cms'
+import { cmsThumbnail } from '~/utils/cmsThumbnail'
 
 definePageMeta({
   layout: 'cms',
@@ -148,9 +149,10 @@ onMounted(() => {
               <div class="cms-resource-title">
                 <img
                   class="cms-resource-title__image"
-                  :src="record.cover"
+                  :src="cmsThumbnail(record.cover, 160)"
                   :alt="record.title"
                   loading="lazy"
+                  decoding="async"
                 >
                 <div class="cms-resource-title__copy">
                   <strong>{{ record.title }}</strong>
