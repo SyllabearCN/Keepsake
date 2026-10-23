@@ -33,21 +33,42 @@ const members = computed(() => [
   },
 ])
 
-const timeline = computed(() => [
+const technologyStack = computed(() => [
   {
-    year: '2023',
-    title: t('about.timelineOneTitle'),
-    text: t('about.timelineOneText'),
+    number: '01',
+    title: t('about.stackFrontendTitle'),
+    text: t('about.stackFrontendText'),
+    href: 'https://nuxt.com',
   },
   {
-    year: '2026',
-    title: t('about.timelineTwoTitle'),
-    text: t('about.timelineTwoText'),
+    number: '02',
+    title: t('about.stackDesignTitle'),
+    text: t('about.stackDesignText'),
+    href: 'https://tailwindcss.com',
   },
   {
-    year: '2026',
-    title: t('about.timelineThreeTitle'),
-    text: t('about.timelineThreeText'),
+    number: '03',
+    title: t('about.stackCloudTitle'),
+    text: t('about.stackCloudText'),
+    href: 'https://unicloud.dcloud.net.cn',
+  },
+  {
+    number: '04',
+    title: t('about.stackContentTitle'),
+    text: t('about.stackContentText'),
+    href: 'https://content.nuxt.com',
+  },
+  {
+    number: '05',
+    title: t('about.stackInteractionTitle'),
+    text: t('about.stackInteractionText'),
+    href: 'https://pinia.vuejs.org',
+  },
+  {
+    number: '06',
+    title: t('about.stackDeliveryTitle'),
+    text: t('about.stackDeliveryText'),
+    href: 'https://vercel.com',
   },
 ])
 </script>
@@ -115,35 +136,51 @@ const timeline = computed(() => [
 
     <section class="bg-[var(--surface-strong)] py-20 sm:py-28">
       <div class="page-shell">
-        <div class="flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p class="eyebrow">
-              TIMELINE
-            </p>
-            <h2 class="display mt-6 text-[clamp(2.15rem,4.5vw,3.25rem)] leading-[1.04]">
-              {{ t('about.timelineTitle') }}
-            </h2>
-          </div>
-          <p class="max-w-md text-sm leading-7 text-muted">
-            {{ t('home.quoteNote') }}
-          </p>
-        </div>
+        <SectionHeading
+          eyebrow="TECH STACK & OPEN SOURCE"
+          :title="t('about.stackTitle')"
+          :intro="t('about.stackIntro')"
+        />
 
-        <div class="mt-14 grid gap-px overflow-hidden rounded-[1.5rem] bg-[var(--line)] md:grid-cols-3">
-          <div
-            v-for="item in timeline"
-            :key="item.year"
-            class="bg-[var(--surface-solid)] p-6 sm:p-8"
+        <div class="mt-14 grid gap-px overflow-hidden rounded-[1.5rem] bg-[var(--line)] md:grid-cols-2 xl:grid-cols-3">
+          <a
+            v-for="item in technologyStack"
+            :key="item.number"
+            :href="item.href"
+            target="_blank"
+            rel="noreferrer"
+            class="group bg-[var(--surface-solid)] p-6 transition-colors hover:bg-[var(--page)] sm:p-8"
           >
-            <p class="display text-4xl text-[var(--accent)] sm:text-5xl">
-              {{ item.year }}
-            </p>
-            <h3 class="mt-12 text-lg font-bold">
+            <div class="flex items-start justify-between gap-5">
+              <span class="text-[0.62rem] font-bold tracking-[0.15em] text-muted">
+                {{ item.number }}
+              </span>
+              <Icon
+                name="lucide:arrow-up-right"
+                class="size-4 text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--accent)]"
+              />
+            </div>
+            <h3 class="display mt-10 text-[clamp(1.4rem,2.3vw,1.9rem)] leading-[1.08]">
               {{ item.title }}
             </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
+            <p class="mt-4 text-sm leading-7 text-muted">
               {{ item.text }}
             </p>
+          </a>
+        </div>
+
+        <div class="mt-14 grid gap-7 border-t border-[var(--line)] pt-10 lg:grid-cols-[0.55fr_1.45fr] lg:gap-16">
+          <div>
+            <p class="eyebrow">
+              OPEN SOURCE CREDITS
+            </p>
+            <h3 class="display mt-5 text-3xl leading-[1.08]">
+              {{ t('about.creditsTitle') }}
+            </h3>
+          </div>
+          <div class="space-y-4 text-sm leading-7 text-muted sm:text-base sm:leading-8">
+            <p>{{ t('about.creditsText') }}</p>
+            <p>{{ t('about.creditsNote') }}</p>
           </div>
         </div>
       </div>
@@ -151,22 +188,42 @@ const timeline = computed(() => [
 
     <section class="page-shell py-20 sm:py-28">
       <SectionHeading
-        eyebrow="UNDER THE HOOD"
-        :title="t('about.techTitle')"
-        align="center"
+        eyebrow="WHAT'S NEXT"
+        :title="t('about.nextTitle')"
+        :intro="t('about.nextIntro')"
       />
 
-      <div class="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-3">
-        <div
-          v-for="(item, index) in [t('about.techOne'), t('about.techTwo'), t('about.techThree')]"
-          :key="item"
-          class="surface-card rounded-[1.3rem] p-6"
-        >
-          <span class="text-[0.62rem] font-bold tracking-[0.15em] text-muted">0{{ index + 1 }}</span>
-          <p class="mt-10 text-sm leading-7">
-            {{ item }}
+      <article class="surface-card mt-12 overflow-hidden rounded-[1.5rem]">
+        <div class="grid lg:grid-cols-[1.05fr_0.95fr]">
+          <div class="p-7 sm:p-10 lg:p-12">
+            <p class="eyebrow">
+              {{ t('about.nextPlanLabel') }}
+            </p>
+            <h3 class="display mt-6 text-[clamp(2rem,4vw,3rem)] leading-[1.04]">
+              {{ t('about.nextPlanTitle') }}
+            </h3>
+          </div>
+          <div class="border-t border-[var(--line)] p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12">
+            <p class="max-w-xl text-sm leading-7 text-muted sm:text-base sm:leading-8">
+              {{ t('about.nextPlanText') }}
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <div class="mt-8">
+        <div class="flex flex-col gap-3 border-b border-[var(--line)] pb-5 sm:flex-row sm:items-end sm:justify-between">
+          <h3 class="display text-[clamp(1.7rem,3vw,2.4rem)]">
+            {{ t('about.otherProjectsTitle') }}
+          </h3>
+          <p class="text-[0.62rem] font-bold uppercase tracking-[0.16em] text-muted">
+            WORK IN PROGRESS
           </p>
         </div>
+        <div
+          class="mt-5 min-h-32 rounded-[1.5rem] border border-dashed border-[var(--line)] bg-[var(--surface-strong)]/45"
+          aria-hidden="true"
+        />
       </div>
     </section>
   </div>
