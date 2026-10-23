@@ -78,7 +78,7 @@ watch(() => route.fullPath, () => {
             v-for="(link, index) in links"
             :key="link.to"
             :to="link.to"
-            class="mobile-nav-link group flex items-center justify-between border-b border-[var(--line)] py-3.5 text-[1.12rem] tracking-[-0.025em]"
+            class="mobile-nav-link group flex items-center justify-between border-b border-[var(--line)] py-3 text-[1rem] tracking-[-0.015em]"
             :class="{ 'mobile-nav-link--active': isActive(link.to) }"
           >
             <span class="display">{{ link.label }}</span>
