@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import zhCN from 'ant-design-vue/es/locale/zh_CN'
+import { ensureCmsAntd } from '~/utils/ensureCmsAntd'
 import {
   ExportOutlined,
   LogoutOutlined,
@@ -9,6 +10,8 @@ import {
   ReloadOutlined,
   UserOutlined,
 } from '@ant-design/icons-vue'
+
+await ensureCmsAntd()
 
 const cmsTheme = {
   token: {
