@@ -175,8 +175,6 @@ async function save() {
         <a-form-item label="是否启用">
           <a-switch
             v-model:checked="form.enabled"
-            checked-children="启用"
-            un-checked-children="停用"
           />
         </a-form-item>
         <a-form-item label="排序">

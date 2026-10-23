@@ -43,8 +43,6 @@ function change(checked: boolean) {
     :checked="record.enabled !== false"
     :loading="pending"
     size="small"
-    checked-children="开"
-    un-checked-children="关"
     @change="change"
   />
 </template>
