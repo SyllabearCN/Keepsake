@@ -72,7 +72,11 @@ export function useCmsApi() {
       if (!(file instanceof File)) {
         throw new Error('缺少需要上传的图片。')
       }
-      return await uploadCmsFile(file, String(options.query?.usage || 'albums')) as T
+      return await uploadCmsFile(
+        file,
+        String(options.query?.usage || 'albums'),
+        typeof options.query?.cloudPath === 'string' ? options.query.cloudPath : undefined,
+      ) as T
     }
 
     return await $fetch<T>(url, options as Parameters<typeof $fetch<T>>[1])

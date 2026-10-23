@@ -168,7 +168,7 @@ export function getCmsSessionToken() {
   return readStoredToken()
 }
 
-export async function uploadCmsFile(file: File, usage: string) {
+export async function uploadCmsFile(file: File, usage: string, preferredCloudPath?: string) {
   await callCmsCloud<{ authenticated: boolean }>('session')
 
   const settings = config()
@@ -181,7 +181,7 @@ export async function uploadCmsFile(file: File, usage: string) {
     .replace(/^-|-$/g, '')
     .slice(0, 60) || 'image'
   const now = new Date()
-  const cloudPath = [
+  const cloudPath = preferredCloudPath || [
     'keepsake/cms',
     usage,
     String(now.getUTCFullYear()),
@@ -193,6 +193,7 @@ export async function uploadCmsFile(file: File, usage: string) {
     params: JSON.stringify({
       env: 'public',
       filename: cloudPath,
+      fileId: cloudPath,
     }),
     spaceId: settings.spaceId,
     timestamp: Date.now(),
@@ -254,7 +255,7 @@ export async function uploadCmsFile(file: File, usage: string) {
   return {
     url: `https://${signature.cdnDomain}/${signature.ossPath}`,
     fileID: `https://${signature.cdnDomain}/${signature.ossPath}`,
-    key: cloudPath,
+    key: signature.ossPath,
     filename: file.name,
   }
 }

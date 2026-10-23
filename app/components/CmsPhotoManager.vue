@@ -12,8 +12,14 @@ import type { AlbumPhoto } from '#shared/cms'
 
 const photos = defineModel<AlbumPhoto[]>({ required: true })
 const cover = defineModel<string>('cover', { default: '' })
+const props = withDefaults(defineProps<{
+  albumSlug?: string
+}>(), {
+  albumSlug: '',
+})
 const newUrl = ref('')
 const uploading = ref(0)
+const nextPhotoIndex = ref(1)
 const { request, errorMessage } = useCmsApi()
 
 interface CustomUploadOptions {
@@ -22,9 +28,39 @@ interface CustomUploadOptions {
   onError?: (error: Error) => void
 }
 
+const extensionByType: Record<string, string> = {
+  'image/jpeg': 'jpg',
+  'image/png': 'png',
+  'image/webp': 'webp',
+  'image/gif': 'gif',
+}
+
+function refreshNextPhotoIndex() {
+  const prefix = `keepsake/albums/${props.albumSlug}/`
+  const highest = photos.value.reduce((max, photo) => {
+    const key = photo.key || ''
+    if (!key.startsWith(prefix))
+      return max
+    const match = key.slice(prefix.length).match(/^(\d{3})\./)
+    return match ? Math.max(max, Number(match[1])) : max
+  }, 0)
+  nextPhotoIndex.value = highest + 1
+}
+
+watch(
+  () => [props.albumSlug, photos.value.map(photo => photo.key || '').join('|')],
+  refreshNextPhotoIndex,
+  { immediate: true },
+)
+
 async function upload({ file, onSuccess, onError }: CustomUploadOptions) {
   uploading.value += 1
   try {
+    const extension = extensionByType[file.type]
+      || file.name.split('.').pop()?.toLowerCase().replace('jpeg', 'jpg')
+      || 'jpg'
+    const index = nextPhotoIndex.value++
+    const cloudPath = `keepsake/albums/${props.albumSlug}/${String(index).padStart(3, '0')}.${extension}`
     const body = new FormData()
     body.append('file', file)
     const result = await request<{
@@ -33,7 +69,7 @@ async function upload({ file, onSuccess, onError }: CustomUploadOptions) {
       filename: string
     }>('/api/cms/upload', {
       method: 'POST',
-      query: { usage: 'albums' },
+      query: { usage: 'albums', cloudPath },
       body,
     })
     photos.value = [...photos.value, {

@@ -25,6 +25,14 @@ const form = reactive({
   sort_order: 0,
   enabled: true,
 })
+const storageSlug = computed(() => {
+  const source = form.slug || `${form.title}-${form.date}`
+  const slug = source
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+  return slug || form.date || 'album'
+})
 
 function reset() {
   const record = props.record
@@ -56,6 +64,7 @@ async function save() {
   try {
     const body = {
       ...form,
+      slug: storageSlug.value,
       cover: cover.value || photos.value[0]?.url,
       photos: photos.value,
       list: photos.value.map(photo => photo.url),
@@ -160,6 +169,7 @@ async function save() {
       <CmsPhotoManager
         v-model="photos"
         v-model:cover="cover"
+        :album-slug="storageSlug"
       />
     </a-form>
 
