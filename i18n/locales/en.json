@@ -115,7 +115,19 @@
     "nextPlanLabel": "Next stop",
     "nextPlanTitle": "A city by the sea",
     "nextPlanText": "We would like to take our little one to see the sea, walk on the beach, and capture the wind of another trip. A new album will follow once the city and dates are settled.",
-    "otherProjectsTitle": "Other projects we want to make"
+    "anniversaryEyebrow": "OUR ANNIVERSARY WALL",
+    "anniversaryTitle": "Our wedding anniversaries",
+    "anniversaryIntro": "Since the day we chose to walk side by side, we have kept one photo for every year. Photos age, life moves on, and we keep choosing each other.",
+    "anniversaryOneLabel": "First anniversary",
+    "anniversaryOneNote": "Our first year celebrating together",
+    "anniversaryTwoLabel": "Second anniversary",
+    "anniversaryTwoNote": "Still my favorite place to lean in",
+    "anniversaryThreeLabel": "Third anniversary",
+    "anniversaryThreeNote": "Waiting for our next photo",
+    "anniversaryFutureLabel": "To be continued",
+    "anniversaryFutureYear": "FOREVER",
+    "anniversaryFutureNote": "Room for every year to come",
+    "anniversaryQuote": "The photos change year after year. You are still the person beside me."
   },
   "footer": {
     "tagline": "Making ordinary days worth keeping.",

@@ -162,7 +162,19 @@ export default defineNuxtConfig({
     workbox: {
       navigateFallback: '/',
       globPatterns: ['**/*.{css,html,png,jpg,jpeg,svg,webp,woff2}'],
+      globIgnores: ['images/anniversaries/**'],
       runtimeCaching: [
+        {
+          urlPattern: /\/images\/anniversaries\/.*\.webp$/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'anniversary-photos',
+            expiration: {
+              maxEntries: 8,
+              maxAgeSeconds: 60 * 60 * 24 * 365,
+            },
+          },
+        },
         {
           urlPattern: /\/_nuxt\/.*\.js$/,
           handler: 'StaleWhileRevalidate',

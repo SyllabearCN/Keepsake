@@ -115,7 +115,19 @@
     "nextPlanLabel": "下一站",
     "nextPlanTitle": "去一座海边城市",
     "nextPlanText": "想带孩子看看海，踩踩沙滩，也拍下下一次旅行的风。等城市和日期确定后，再把新的相册放进来。",
-    "otherProjectsTitle": "想要做的其他项目"
+    "anniversaryEyebrow": "OUR ANNIVERSARY WALL",
+    "anniversaryTitle": "我们的结婚纪念日",
+    "anniversaryIntro": "从决定并肩的那一天开始，每一年都留下一张合照。照片会旧，日子会向前，我们会继续把彼此放在身边。",
+    "anniversaryOneLabel": "结婚一周年",
+    "anniversaryOneNote": "第一次一起庆祝",
+    "anniversaryTwoLabel": "结婚两周年",
+    "anniversaryTwoNote": "还是最喜欢靠着你",
+    "anniversaryThreeLabel": "结婚三周年",
+    "anniversaryThreeNote": "等一张新的合照",
+    "anniversaryFutureLabel": "未完待续",
+    "anniversaryFutureYear": "以后",
+    "anniversaryFutureNote": "把以后每一年都放进来",
+    "anniversaryQuote": "一年一年，照片会变，身边的人一直是你。"
   },
   "footer": {
     "tagline": "把普通的日子，过成值得收藏的样子。",
