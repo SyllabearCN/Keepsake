@@ -84,6 +84,12 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2026-10-21',
 
+  nitro: {
+    externals: {
+      traceInclude: ['node_modules/@dcloudio/uni-cloud/dist/uni-cloud.cjs.js'],
+    },
+  },
+
   vite: {
     plugins: [tailwindcss()],
   },
