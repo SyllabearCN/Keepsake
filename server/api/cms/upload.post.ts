@@ -37,7 +37,7 @@ export default defineEventHandler(async (event) => {
   const uniqueName = `${Date.now()}-${crypto.randomUUID().slice(0, 8)}-${baseName}.${extension}`
   const requestedCloudPath = getQuery(event).cloudPath
   const cloudPath = typeof requestedCloudPath === 'string'
-    && /^keepsake\/(albums|stories|videos|banner|about)\/[a-zA-Z0-9/_-]+\.[a-zA-Z0-9]+$/.test(requestedCloudPath)
+    && /^keepsake\/(albums|journeys|stories|videos|banner|about)\/[a-zA-Z0-9/_-]+\.[a-zA-Z0-9]+$/.test(requestedCloudPath)
     ? requestedCloudPath
     : `keepsake/cms/${usage}/${year}/${month}/${uniqueName}`
   const upload = new File([new Uint8Array(file.data)], `${baseName}.${extension}`, {

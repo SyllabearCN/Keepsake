@@ -472,6 +472,44 @@ async function migrateEnabled() {
   return { ok: true, migrated }
 }
 
+async function moveStorageFile(sourceUrl, cloudPath) {
+  if (!/^https:\/\/[^/]+\.cdn\.bspapp\.com\/cloudstorage\/[^/]+$/i.test(sourceUrl)) {
+    throw new Error('Only cloudstorage files can be moved.')
+  }
+  if (!/^keepsake\/(albums|journeys|stories|videos|banner|about)\/[a-zA-Z0-9/_-]+\.[a-zA-Z0-9]+$/.test(cloudPath)) {
+    throw new Error('Invalid destination cloud path.')
+  }
+  const sourceResponse = await uniCloud.httpclient.request(sourceUrl, {
+    method: 'GET',
+    dataType: 'arraybuffer',
+    timeout: 60000,
+  })
+  if (!sourceResponse?.status || sourceResponse.status >= 400) {
+    throw new Error(`Unable to download the source file: HTTP ${sourceResponse?.status || 'unknown'}`)
+  }
+  const fileContent = Buffer.isBuffer(sourceResponse.data)
+    ? sourceResponse.data
+    : Buffer.from(sourceResponse.data)
+  if (!fileContent.length) {
+    throw new Error('Unable to download the source file.')
+  }
+  const uploaded = await uniCloud.uploadFile({
+    cloudPath,
+    fileContent,
+    cloudPathAsRealPath: true,
+  })
+  if (!uploaded?.fileID || uploaded.fileID.includes('/cloudstorage/')) {
+    throw new Error('The destination path was not preserved by cloud storage.')
+  }
+  await uniCloud.deleteFile({ fileList: [sourceUrl] })
+  return {
+    ok: true,
+    fileID: uploaded.fileID,
+    key: cloudPath,
+    bytes: fileContent.length,
+  }
+}
+
 exports.main = async (event = {}) => {
   const action = event.action
   const serviceRequest = authenticateService(event.token)
@@ -520,6 +558,15 @@ exports.main = async (event = {}) => {
 
   if (action === 'dashboard') {
     return dashboard()
+  }
+  if (action === 'moveStorageFile') {
+    if (!serviceRequest && !user) {
+      throw new Error('Unauthorized storage operation')
+    }
+    return await moveStorageFile(
+      stringValue(event, 'sourceUrl'),
+      stringValue(event, 'cloudPath'),
+    )
   }
   if (action === 'list') {
     return listResource(event.resource, event.query)

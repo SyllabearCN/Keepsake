@@ -188,13 +188,16 @@ export async function uploadCmsFile(file: File, usage: string, preferredCloudPat
     String(now.getUTCMonth() + 1).padStart(2, '0'),
     `${Date.now()}-${crypto.randomUUID().slice(0, 8)}-${safeName}.${extension}`,
   ].join('/')
+  const uploadParams = {
+    env: 'public',
+    filename: preferredCloudPath
+      ? cloudPath.split('/').pop() || `${safeName}.${extension}`
+      : cloudPath,
+    ...(preferredCloudPath ? { fileId: cloudPath } : {}),
+  }
   const payload = {
     method: 'serverless.file.resource.generateProximalSign',
-    params: JSON.stringify({
-      env: 'public',
-      filename: cloudPath,
-      fileId: cloudPath,
-    }),
+    params: JSON.stringify(uploadParams),
     spaceId: settings.spaceId,
     timestamp: Date.now(),
     token: accessToken,
@@ -252,9 +255,26 @@ export async function uploadCmsFile(file: File, usage: string, preferredCloudPat
     throw new Error(`图片上传失败（HTTP ${response.status}）。`)
   }
 
+  const sourceUrl = `https://${signature.cdnDomain}/${signature.ossPath}`
+  if (preferredCloudPath) {
+    const moved = await callCmsCloud<{
+      fileID: string
+      key: string
+    }>('moveStorageFile', {
+      sourceUrl,
+      cloudPath: preferredCloudPath,
+    })
+    return {
+      url: moved.fileID,
+      fileID: moved.fileID,
+      key: moved.key,
+      filename: file.name,
+    }
+  }
+
   return {
-    url: `https://${signature.cdnDomain}/${signature.ossPath}`,
-    fileID: `https://${signature.cdnDomain}/${signature.ossPath}`,
+    url: sourceUrl,
+    fileID: sourceUrl,
     key: signature.ossPath,
     filename: file.name,
   }
